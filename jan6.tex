@@ -26,6 +26,7 @@
 \newcommand{\ip}[2]{\left\langle#1,#2\right\rangle}
 \newcommand{\mb}[1]{\mathbf{#1}}
 \newcommand{\mbb}[1]{\mathbb{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
 \newcommand{\prt}[2]{{\frac{\partial {#1}}{\partial {#2}}}}
 \def\ries{{\hat{\mbb{C}}}}
 \newcommand{\reals}{\mbb{R}}
@@ -81,5 +82,37 @@ So, if we would like to define partial derivatives with respect to \(z\) and \(\
 In terms of \textit{this} expression, what's a third way of writing the Cauchy-Riemann equations? It's simply
 \[\prt{f}{\bar{z}} = 0\]
 And of course, this basically captures your ``feeling" of what a holomorphic function should be: it's supposed to be a function of \(z\), and not \(\bar{z}\). Ok, so this is the basic definition of holomorphic.
+
+We'll now say a few words about harmonic functions. Recall the following definition
+\begin{definition}[Harmonic]
+We say a real or complex valued function \(f(x, y)\) is \textbf{harmonic} if \(f\) is \(\mc{C}^2\) and
+\[\prt{^2f}{x^2} + \prt{^2f}{y^2} \iff \prt{^2f}{z\partial\bar{z}} = 0\]
+\end{definition}
+The above is known as \textbf{Laplace's equation}. It's immediate from the definition that a complex valued function is harmonic if and only if its real and imaginary parts are harmonic, and furthemore that every holomorphic function is harmonic. In particular, then, the real and imaginary parts of a holomorphic function are harmonic. On the other hand, maybe a slightly less immediate thing is that every real-valued harmonic function is, not necessarily everywhere but at least \textit{locally}, the real part of a holomorphic function. Why?
+
+Well let's look at Laplace's equation. We know that Laplace's equation is satisfied, which tells us that
+\[\prt{}{\bar{z}}\left(\prt{g}{z}\right) = 0\]
+So this of course tells us that \(\prt{g}{z}\) is holomorphic. And why does the result follow from this? Because every holomorphic function locally has a primitive which is holomorphic. Where does that come from? The fact that a closed form is locally exact, which is essentially saying it is a consequence of Cauchy's theorem. Another way of thinking about it, which is really also saying it is a consequence of Cauchy's theorem, is that \(\prt{g}{z}\) is given by a convergent power series and hence can be locally integrated into another convergent power series. So this is really ``one way or another by Cauchy's theorem".
+
+The global result, on the other hand, does not necessarily follow, in brief, because we can ``loop around once". For example, \(\log|z|\) is a real-valued harmonic function in \(\mbb{C} \setminus \{0\}\), but it's not \textit{globally} the real part of a holomorphic function in \(\mbb{C} \setminus \{0\}\), because \(\log z\) has no single-valued branch here. This is a counterexample, but not on \(\mbb{C}\). Whether there are counterexamples in \(\mbb{C}\) is a very good question, and we'll deal with that when we get to Cauchy's theorem. It definitely is a topological question.
+
+This is just a very brief recollection of the basic definitions of holomorphic and harmonic functions. I want to also recall, though maybe not all of you are familiar with this, the definitions of the various kinds of functions we're going to be working with as well as the spaces these functions are going to be defined on. In particular, everyone in a first-year course in complex variables has seen in some way the fact that its reasonable to say what you mean by ``holomorphic at \(\infty\)", and it can be useful to think about that. So, what \textit{do} you mean when you say that \(f(z)\) is holomorphic at \(\infty\)? Without introduing anything new, we can say that this means \(f(1/z)\) is holomorphic at \(0\). This is a very useful thing. We would like to make sense of this in a sort of well-structured way, and one does that by extending the complex plane to include the point at \(\infty\), or rather, to think of our functions not as on the complex plane, but on the extended complex plane including the point at \(\infty\), which is also called the Riemann sphere.
+
+We have to say what the complex structure of that space is in a neighborhood of infinity, in such a way that captures this intuition, such that our holomorphic functions are holomorphic functions defined on open neighborhoods of the Riemann sphere.
+Of course, complex-valued functions which are holomorphic on the \textit{whole} Riemann sphere are rather uninteresting, considering they are all constant by Liouville's principle. If we're allowed to consider holomorphic functions on the Riemann sphere \textit{with values on the Riemann sphere}, however, then we're back in interesting territory.
+
+\begin{definition}[Stereographic Projection]
+Consider the unit sphere \(S^2 = \{x^2 + y^2 + z^2 = 1\}\), and identify \(\reals^2\) with \(\mbb{C}\) by the isomorphism \((x, y) \mapsto z = x + iy\). Define the north pole \((0, 0, 1)\). We can define the \textbf{stereographic projection from the north pole} from \(\pi: S^2 \setminus N \to \mbb{C}\) to map a point \(s \in S \setminus N\) to the intersection of the line between \(s = (x, y, t)\) and \(N\) and the \(xy\) plane. Because the points \(s, N, (x/(1 - t), y/(1 - t), 0)\) must be colinear, we can define
+\[\pi(x, y, t) = \frac{x + iy}{1 - t}\]
+This is a homeomorphism from \(S^2 \setminus N\) to \(\mbb{C}\).
+\end{definition}
+A quick question: is this a \textit{metric} isomorphism? \textbf{No}: points very close together on the sphere can map to points very far from each other in the plane. This, however, is going to be a very important point in this course: we will study the behaviour of holomorphic functions according to the two natural metrics on the sphere: the induced metric on \(\reals^3\) i.e. the \textbf{chordal metric}, equivalent to the \textbf{geodesic metric}.
+
+So the above homeomorphism gives a complex structure to the unit sphere minus the north pole. If we wanted to, we could get a complex structure on the unit sphere minus the south pole \(S = (0, 0, -1)\) by taking the stereographic projection from there. But we don't want to do that, because the complex structure we'd get would be incompatible. Instead, we want to take the \textit{complex conjugate} of a stereographic projection from the south pole,
+\[z' = \frac{x - iy}{1 + t}\]
+So what was the point about compatibility? Well, what's the relationship between \(z\) and \(z'\)? We have
+\[z \cdot z' = \frac{x^2 + y^2}{(1 - t)^2} = 1 \implies z' = \frac{1}{z}\]
+This is a holomorphic function from \(\mbb{C} \setminus \{0\} \to \mbb{C} \setminus \{0\}\) with a holomorphic inverse. So the two complex structures defined on the sphere minus the north pole and the sphere minus the south pole are compatible. By a \textit{complex structure} on a set, we mean a homeomorphism between an open subset that set and an open subset of the complex plane. If you're familiar with the language of manifolds, each of these two mappings is a \textit{coordinate chart}. These are even better than manifolds, though, because the coordinate charts are not just differentiable or infinitely differentiable, but holomorphic, or even better, \textit{rational}.
+ 
 
 \end{document}
