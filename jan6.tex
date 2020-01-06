@@ -28,6 +28,7 @@
 \newcommand{\mbb}[1]{\mathbb{#1}}
 \newcommand{\prt}[2]{{\frac{\partial {#1}}{\partial {#2}}}}
 \def\ries{{\hat{\mbb{C}}}}
+\newcommand{\reals}{\mbb{R}}
 
 \newtheorem{definition}{Definition}
 \newtheorem{proposition}{Proposition}
@@ -38,6 +39,47 @@
 
 \maketitle
 
+The main objects of study in this course are holomorphic functions.
+\begin{definition}[Holomorphic function]
+\(f(t)\) is called \textbf{holomorphic at \(z \in \mbb{C}\)} if
+\[\lim_{h \to 0}\frac{f(z + h) - f(z)}{h}\]
+exists, i.e. there is \(c \in \mbb{C}\) such that
+\[f(z + h) = f(z) + c \cdot h + \varphi(h) \cdot h, \lim_{h \to 0}\varphi(h) = 0\]
+\end{definition}
+Now, from this perspective, this looks no different from the usual case of a differentiable function. But it is different, because the variables are complex, and hence we can write
+\[z = x + iy, \qquad f(z) = u(z) + iv(z)\]
+Hence, this function mapping \(z \mapsto f(z)\) is, from the real perspective, a function from
+\(\reals^2 \to \reals^2\), taking
+\[\begin{pmatrix} x \\ y \end{pmatrix} \mapsto \begin{pmatrix} u(x, y) \\ v(x, y) \end{pmatrix}\]
+Naturally, in the above definition, we can also write \(a + ib\) and \(h = \xi + i\eta\). Hence the derivative \(h \mapsto c \cdot h\) can be written as
+\[\begin{pmatrix} \xi \\ \eta \end{pmatrix} \mapsto
+\begin{pmatrix} a & -b \\ b & a \end{pmatrix}
+  \begin{pmatrix} \xi \\ \eta \end{pmatrix}
+= \begin{pmatrix}\prt{f}{x} & \prt{f}{y}\end{pmatrix}
+  \begin{pmatrix} \xi \\ \eta \end{pmatrix}\]
+In other words, this says that
+\[\prt{f}{x} + i\prt{f}{y} = 0
+\iff \prt{u}{x} = \prt{v}{y} \land \prt{u}{y} = -\prt{v}{x}\]
+These are what is called the Cauchy-Riemann equations. So the moral of the story is that holomorphic is \textit{not} the same as differentiable as a function of two real variables. It' the same as differentiable as a function of two real variables \textit{plus} satisfying the Cauchy-Riemann equations.
 
+It's going to convenient throughout this course to think about derivatives in terms of differential forms. Let's suppose, to begin a bit more generally, that we're considering a complex-valued \textit{differentiable} (not necessarily holomorphic) function \(f(x, y)\).
+\begin{definition}
+The \textbf{differential} of \(f\) is given by
+\[df = \prt{f}{x}dx + \prt{f}{x}dy\]
+\end{definition}
+But, we're thinking about \(x\) and \(y\) as parts of a complex number, with \(z = x + iy\) and \(\bar{z} = x - iy\). So we can solve for \(x\) and \(y\) in terms of \(z\) and \(\bar{z}\). We can also compute the differentials
+\[dz = dx + idy, \qquad d\bar{z} = dx - idy\]
+So we can solve for \(dz\) and \(d\bar{z}\) in terms of \(dz\) and \(d\bar{z}\), getting
+\[dx = \frac{1}{2}(dz + d\bar{z}), \qquad dy = \frac{1}{2i}(dz - d\bar{z})\]
+In particular, we can take \(df\) and rewrite it in terms of \(dz\) and \(d\bar{z}\) by substituting in these expressions. So if we do that we get
+\[df = \frac{1}{2}\left(\prt{f}{x} - i\prt{f}{y}\right)dz + \frac{1}{2}\left(\prt{f}{x} + i\prt{f}{y}\right)d\bar{z}\]
+So, if we would like to define partial derivatives with respect to \(z\) and \(\bar{z}\), how should we define them? Well... the coefficients above seem to be natural choices, giving
+\[\prt{f}{z} = \frac{1}{2}\left(\prt{f}{x} - i\prt{f}{y}\right),
+  \qquad \prt{f}{\bar{z}}
+= \frac{1}{2}\left(\prt{f}{x} + i\prt{f}{y}\right)
+\implies df = \prt{f}{z}dz + \prt{f}{\bar{z}}d\bar{z}\]
+In terms of \textit{this} expression, what's a third way of writing the Cauchy-Riemann equations? It's simply
+\[\prt{f}{\bar{z}} = 0\]
+And of course, this basically captures your ``feeling" of what a holomorphic function should be: it's supposed to be a function of \(z\), and not \(\bar{z}\). Ok, so this is the basic definition of holomorphic.
 
 \end{document}
