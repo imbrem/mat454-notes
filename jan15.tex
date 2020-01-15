@@ -46,6 +46,12 @@ Writing \(z = re^{i\theta}\), we get
 \[f(re^{i\theta}) = \sum_{n = 0}^\infty a_nr^ne^{in\theta}\]
 We can write out the following formula for these Fourier coefficients:
 \[a_nr^n = \frac{1}{2\pi}\int_0^{2\pi}e^{-in\theta}f(re^{i\theta})d\theta\]
-Today we're going to be looking at the consequences of this formula.
+Today we're going to be looking at the consequences of this formula. First of all, this formula gives a simple but useful upper bound on \(a_n\): if we take the maximum absolute value of \(f\) along the circle of radius \(r\), written
+\[M(r) = \sup_\theta|f(re^{i\theta})|\]
+we get
+\[|a_n| \leq \frac{M(r)}{r^n}\]
+These are called \textbf{Cauchy's inequalities}. These have some important consequences, like \textbf{Liouville's theorem}: a bounded holomorphic function on all of \(\mbb{C}\) is a constant. How does this follow? Well, if \(c\) is the upper bound of \(f\) on \(\mbb{C}\), we have each
+\[\forall r \in \reals^+, M(r) \leq c \implies |a_n| \leq \frac{M(r)}{r^n} \leq \frac{c}{r^n}\]
+Hence, for \(n \leq 0\), \(0 \leq c \leq \epsilon\) for all \(\epsilon > 0\), implying \(c = 0\).
 
 \end{document}
