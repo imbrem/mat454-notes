@@ -40,6 +40,12 @@
 
 \maketitle
 
-
+Let's, as we usually do, consider a holomorphic function \(f(z)\) in an open set \(\Omega \subseteq \mbb{C}\). Last time, we showed that \(f\) has a convergent power series expansion in any open disc in \(\Omega\) (centered at the center of the disc). For example, around \(a = 0 \in \Omega\), we can write
+\[f(z) = \sum_{n = 0}^\infty a_nz^n\]
+Writing \(z = re^{i\theta}\), we get
+\[f(re^{i\theta}) = \sum_{n = 0}^\infty a_nr^ne^{in\theta}\]
+We can write out the following formula for these Fourier coefficients:
+\[a_nr^n = \frac{1}{2\pi}\int_0^{2\pi}e^{-in\theta}f(re^{i\theta})d\theta\]
+Today we're going to be looking at the consequences of this formula.
 
 \end{document}
