@@ -73,4 +73,15 @@ We recall a sketch of the proof
 \begin{proof} (Sketch)
 By the convergent power series expansion, \(g(z) / z\) is holomorphic, and can hence have the maximum modulus principle applied to it.
 \end{proof}
+So let's spend a little time looking at functions with the MVP in general. Continuous functions with the MVP are precisely the \underline{harmonic functions}. The real and imaginary parts of a complex valued function with the MVP also satisfy the MVP. A real valued harmonic function \(g\) is locally the real part of a holomorphic function, uniquely determined up to addition of a constant:
+\[
+\prt{^2g}{z\partial\bar{z}} = 0 \implies \prt{g}{z} \ \text{holomorphic}
+\]
+Therefore, \(\prt{g}{z}\) locally has primitive \(f\), defined up to a constant. Since \(g\) is real valued, we can write
+\[df = \prt{g}{z}dz, \quad d\bar{f} = \prt{g}{\bar{z}}d\bar{z}\]
+Hence,
+\[d(f + \bar{f}) = dg \implies g = 2\Re f + \ \text{const}\]
+Why is this true, though? We have
+\[\overline{\prt{f}{z}} = \prt{\bar{f}}{\bar{z}}, \quad f = u + iv\]
+
 \end{document}
