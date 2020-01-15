@@ -52,6 +52,10 @@ we get
 \[|a_n| \leq \frac{M(r)}{r^n}\]
 These are called \textbf{Cauchy's inequalities}. These have some important consequences, like \textbf{Liouville's theorem}: a bounded holomorphic function on all of \(\mbb{C}\) is a constant. How does this follow? Well, if \(c\) is the upper bound of \(f\) on \(\mbb{C}\), we have each
 \[\forall r \in \reals^+, M(r) \leq c \implies |a_n| \leq \frac{M(r)}{r^n} \leq \frac{c}{r^n}\]
-Hence, for \(n > 0\), \(0 \leq a_n \leq \epsilon\) for all \(\epsilon > 0\), implying \(a_n = 0\). It follows that \(f = a_0 = c\), a constant.
+Hence, for \(n > 0\), \(0 \leq a_n \leq \epsilon\) for all \(\epsilon > 0\), implying \(a_n = 0\). It follows that \(f = a_0 = c\), a constant. Another consequence is that we can write, for any \(r\)
+\[f(0) = a_0 = a_0r^0 = \frac{1}{2\pi}\int_0^{2\pi}f(re^{i\theta})d\theta\]
+This generalizes readily to stating that holomorphic functions satisfy the \textbf{Mean Value Property (MVP)}:
+\[f(\text{center of disk}) = \ \text{mean value on boundary}\]
+Another property which we won't prove is the \textbf{Maximum Modulus Principle (MMP)}: if \(f\) is a continuous complex-valued function on an open \(\Omega \subseteq \mbb{C}\) with the MVP, then it satisfies the MMP, that is, if \(|f|\) has a local maximum at a point \(a\) of \(\Omega\), then \(f\) is constant in a neighborhood of \(a\).
 
 \end{document}
