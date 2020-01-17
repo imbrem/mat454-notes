@@ -70,4 +70,19 @@ So
 \[a_n = \frac{1}{2\pi i}\int_{\gamma_?}\frac{f(\xi)}{\xi^{n + 1}}d\xi\]
 So of course, this should be just like before for the positive part. Note that this is the integral over \(\gamma_1\) if \(n \geq 0\) and over \(\gamma_2\) if \(n < 0\).
 
+Previously, we talked about holomorphic functions on the Riemann sphere, noting there were very few of them: namely, constants. Now, there are a few more meromorphic functions on the Riemann sphere, but not much. Specifically,
+\begin{theorem}
+Every meromorphic function \(f\) on \(S^2\) is rational.
+\end{theorem}
+\begin{proof}
+This theorem uses what is probably the only thing in first year calculus you don't prove: the partial fraction decomposition. So we prove it now.
+Say \(f(z)\) has poles \(b_1,...,b_k\) (finite) and maybe \(\infty\). So what can we say about the Laurent expansion at a pole? There's only finitely many negative terms, specifically, the order of the pole.
+
+So these negative parts of the Laurent expansions around each \(b_j\) are like polynomials \(P_j(\frac{1}{z - b_j})\). We'll call these principal parts. What about the principal part at \(\infty\)? It's a polynomial in \(z\), as it's a polynomial in \(\frac{1}{z'}\), where \(z'\) is the coordinate at \(\infty\), which is \(1/z\). Call this \(P_\infty(z)\). So we can write
+\[f(z) - P_\infty(z) - \sum_{j = 1}^kP_j\left(\frac{1}{z - b_j}\right)\]
+which is holomorphic on \(S^2\), and hence must be a constant \(a\). So we can write
+\[f(z) = a + P_\infty(z) + \sum_{j = 1}^kP_j\left(\frac{1}{z - b_j}\right)\]
+And that's rational.
+\end{proof}
+
 \end{document}
