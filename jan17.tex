@@ -61,5 +61,10 @@ where \(f_1(z_0), g_1(z_0) \neq 0\). Near \(z_0\), then, the quotient looks like
 So what are the different possibilities? If \(k \geq \ell\), then this function extends to be holomorphic at \(z_0\). On the other hand, if \(k < \ell\), then, of course,
 \[\lim_{z \to z_0}\left|\frac{f(z)}{g(z)}\right| = \infty\]
 Note: \textit{not} undefined, but \(\infty\). In this case, we say that \(z_0\) is a pole of order \(\ell - k\).
+Holomorphic functions in an annulus \(r < |z| < R\) have a convergent Laurent expansion in an annulus
+\[\sum_{n = -\infty}^\infty a_nz^n = \sum_{n < 0}a_nz^n + \sum_{n \geq 0}a_nz^n\]
+Note that the LHS converges when \(r < |z|\), whereas the RHS converges when \(|z| < R\). This actually comes from Cauchy's theorem, just in the case of a convergent power series expansion of a holomorphic function. So this is from Cauchy's integral formula:
+\[f(z) = \frac{1}{2\pi i}\int_{\gamma_1}\frac{f(\xi)}{\xi - z}d\xi - \frac{1}{2\pi i}\int_{\gamma_2}\frac{f(\xi)}{\xi - z}d\xi\]
+for \(z\) between \(\gamma_1, \gamma_2\).
 
 \end{document}
