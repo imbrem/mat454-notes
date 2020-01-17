@@ -54,5 +54,12 @@ A function \(f\) is \textbf{meromorphic} on an open \(\Omega \subseteq \mbb{C}\)
 where \(g, h\) are holomorphic and \(h\) is not identically zero.
 \end{definition}
 Why is it interesting to work with meromorphic and not just holomorphic functions? Essentially, it's because meromorphic functions in a domain \(\Omega\) form a field (whereas holomorphic functions only form a ring). Note that, in this course, when we say ``domain", what we mean is a connected open set.
+If \(f(z), g(z)\) are holomorphic near \(z_0\), like before, we can write
+\[f(z) = (z - z_0)^kf_1(z), \qquad g(z) = (z - z_0)^\ell g_1(z)\]
+where \(f_1(z_0), g_1(z_0) \neq 0\). Near \(z_0\), then, the quotient looks like
+\[\frac{f(z)}{g(z)} = (z - z_0)^{k - \ell}\frac{f_1(z)}{g_1(z)}\]
+So what are the different possibilities? If \(k \geq \ell\), then this function extends to be holomorphic at \(z_0\). On the other hand, if \(k < \ell\), then, of course,
+\[\lim_{z \to z_0}\left|\frac{f(z)}{g(z)}\right| = \infty\]
+Note: \textit{not} undefined, but \(\infty\). In this case, we say that \(z_0\) is a pole of order \(\ell - k\).
 
 \end{document}
