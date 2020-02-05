@@ -89,4 +89,17 @@ Therefore, in the chart where \(y \neq 0\), \(X'\) consists of the points given 
 \[[x', 1, t' = 4x'^3 - 320a_2x'^7 + ...]\]
 Let's now consider a map \(\varphi' = \varphi\) on \(X\), \(\infty \mapsto \infty\) in the Riemann sphere. \(\varphi\) sends the above point to \(\frac{x'}{t'} \in \mbb{C}\) or\(\frac{t'}{x'}\) in coordinates at \(\infty\), i.e. to \([x', t'] \in \Prj{1}{\mbb{C}} = S^2\). So this is a well-defined holomorphic function.
 
+Now suppose
+\[
+a_2 = 3\sum_{\substack{w \in \Gamma \\ w \neq 0}}\frac{1}{w^4},
+\qquad a_4 = 5\sum_{\substack{w \in \Gamma \\ w \neq 0}}frac{1}{w^6}
+\]
+and let's look at the meromorphic mapping \((x, y) = (\wp(z), \wp'(z))\), i.e.
+\[z \mapsto [\wp(z), \wp'(z), 1]\]
+We claim that this defines a homeomorphism from \(\mbb{C}/\Gamma\) to \(X'\).
+
+If \(\wp'(z) \neq 0\), this is the same thing in homogeneous coordinates as
+\[\left[\frac{\wp(z)}{\wp'(z)}, 1, \frac{1}{\wp'(z)}\right]\]
+Now, what does this look like? \(\wp\) begins with \(a/z^2\), whereas \(\wp'\) begins with \(b/z^3\), so \(\frac{\wp}{\wp'}\) begins with \(cz\), whereas \(\frac{1}{\wp'}\) begins with \(dz^3\). On the other hand, \(0 \mapsto \infty\), and in fact \(\Gamma \mapsto \infty\).
+
 \end{document}
