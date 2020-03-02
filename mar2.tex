@@ -37,6 +37,7 @@
 \DeclareMathOperator{\Res}{Res}
 \DeclareMathOperator{\BigP}{P}
 \DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Arg}{arg}
 \newcommand{\Prj}[2]{\BigP^{#1}({#2})}
 
 \begin{document}
@@ -79,5 +80,41 @@ Let \(S \in \Aut\Omega\) be arbitrary. We have to show that \(S \in G\). To do s
 being the composition of elements of \(G\).
 \end{proof}
 So that's what we've shown here: the subgroup of automorphisms fixing \(\infty\) lies in this subgroup of fractional linear transformations, and the subgroup is transitive, and hence it composes the entire automorphism group \(\Aut S^2\).
+
+Time for another example: the unit disc \(D\). So what would \(\Aut D\) look like? What would we like to show here? I guess we'd like to show that they're all fractional linear transformations, but which ones? This is sort of like what Schwarz's lemma tells you: if you have an automorphism of the disk that fixes just zero, then it should be a rotation. So in general, it's like a rotation times a factor
+\[w = e^{i\theta}\frac{z - z_0}{1 - \bar{z_0}z}\]
+So how do you check that this actually is an automorphism of \(D\)? First of all, we should check that the boundary goes to the boundary. We can check this by just checking three points that are particularly nice, say \(1, i, -i\). Once we know this, we just need to check that the inside goes to the inside, since being an automorphism of \(S^2 \to S^2\), it either takes the inside to the inside biholomorphically or takes the inside to the outside. So if we add the condition \(|z_0| < 1\), we get that they take the inside to the inside.
+
+Now how do we show that these compose \textit{all} automorphisms. It's not actually going to be by the previous lemma, rather, we will use Schwarz's lemma. Suppose \(T \in \Aut D\), and consider
+\[S(z) = e^{i\theta}\frac{z - z_0}{1 - \bar{z_0}z}, \qquad \text{where} \ z_0 = T(0), \quad \theta = \Arg T'(z_0)\]
+We want to show that \(T = S\), by Schwarz's lemma. So what should we apply the lemma to? \(f = S \circ T^{-1}\) is an obvious choice (we could also try \(T \circ S^{-1}\), etc...). So what do we know? We have that:
+\begin{itemize}
+
+  \item \(f(0) = 0\)
+
+  \item \(f(D) = D \implies [|z| < 1 \implies |f(z)| < 1]\)
+
+\end{itemize}
+So by Schwarz's lemma \(|f(z)| \leq z\) for all \(z \in D\). We can also apply Scharz's lemma to \(f^{-1}\) and we get \(|z| \leq |f(z)|\), which says that in modulus
+\[|f(z)| = |z|\]
+which, again by Schwarz's lemma, says \(f\) is a rotation \(e^{i\alpha}z\). Now, we're basically done here, as choosing \(z_0 = 0\), this lies in the subgroup \(G\) and hence \(S \in G\). But we want to go further and show \(\alpha = 0\) implying \(S = T\). To do so, we merely note that
+\[S'(z_0) = T'(z_0) \implies \alpha = 0\]
+So this is in fact what we really need for the Riemann mapping theorem. Let's finish this up: what's the other nice domain we should look at? The upper half plane!
+
+So what's \(\Aut\mbb{H}^+\)? So first of all, the upper half-plane is actually biholomorphic to the unit disc \(D\), by, for example, the mapping
+\[\frac{z - i}{z + i}\]
+To see this, we note that the boundary goes to the boundary, by checking the three points \(0, 1, \infty\) (which go to \(-1, -i, 1\) respectively). Of course the upper half-plane goes to the interior of the disc since \(i \mapsto 0\). Hence, the automorphism groups of \(D\) and \(\mbb{H}^+\) are the same, as we can transport elements between the two by composing with a biholomorphism as above. Geometrically, however, this is not going to tell us the form of these holomorphisms. So what should \(\Aut\mbb{H}^+\) look like in terms of holomorphisms of the Riemann sphere? Well, it should be the one with real coefficients, as it should be the subgroup of \(\Aut S^2\) taking \(\mbb{H}^+\) to itself and hence the real line to itself. So I claim the best form is
+\[w = \frac{az + b}{cz + d}, \quad a, b, c, d \in \mbb{R}\]
+Since these are only determined up to a constant, for convenience we can say \(ad - bc = \pm 1\). This is the subgroup of \(\Aut S^2\) taking the real axis \(\mbb{R}\) to itself. But if it takes the upper half plane to itself, that says that
+\[\Im\left(\frac{ai + b}{ci + d}\right) = \frac{ad - bc}{c^2 + d^2} > 0 \iff ad - bc > 0 \iff ad > bc\]
+So we have a subgroup \(G\) of fractional linear transformations in the form above satisfying the given conditions, i.e. with
+\[w = \frac{az + b}{cz + d}, \quad ad - bc = 1, a, b, c, d \in \mbb{R}\]
+So we want to see that \(\Aut\mbb{H}^+ = G\). This time, we'll use the Lemma: \(G\) is a subgroup of \(\Aut\mbb{H}^+\), it's transitive on \(\Aut\mbb{H}^+\), as we can show that it can take \(i\) to any given element of \(\mbb{H}^+\), since
+\[i \mapsto ai + b, b > 0, ... TODO\]
+So we have to show that the subgroup of \(\Aut\mbb{H}^+\) which fixes some point lies inside of this. So which point do we want to use? \(i\). How do we show this?
+
+\(G\) is the subgroup of all fractional linear transformations which take the upper half-plane to itself. So all we have to do is show that this subgroup consists of fractional linear transformations. Why does it consist of fractional linear transformations? It's enough to show that the subgroup of \(\Aut\mbb{H}^+\) which fixes \(i\) consists of fractional linear transformations. That's because this subgroup of \(\Aut\mbb{H}^+\) which fixes \(i\) is just obtained from the group of automorphisms of \(D\) which fix zero by conjugation with \(\frac{z - i}{z + i}\). Anthing in here is a composite of three fractional linear transformations, and so is a fractional linear transformation.
+
+So this is meant to be an exercise which should essentially be recalling things. Next time we'll prove the Riemann mapping theorem using normal mappings and we'll at least need these.
 
 \end{document}
