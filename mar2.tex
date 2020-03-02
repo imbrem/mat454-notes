@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{MAT454 Notes}
+\author{Jad Elkhaleq Ghalayini}
+\date{March 2 2020}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{cancel}
+\usepackage{mathabx}
+
+\usepackage[margin=1in]{geometry}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{claim}{Claim}
+
+\newcommand{\brac}[1]{\left(#1\right)}
+\newcommand{\sbrac}[1]{\left[#1\right]}
+\newcommand{\eval}[3]{\left.#3\right|_{#1}^{#2}}
+\newcommand{\ip}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\mb}[1]{\mathbf{#1}}
+\newcommand{\mbb}[1]{\mathbb{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\prt}[2]{{\frac{\partial {#1}}{\partial {#2}}}}
+\def\ries{{\hat{\mbb{C}}}}
+\newcommand{\reals}{\mbb{R}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\BigP}{P}
+\DeclareMathOperator{\Aut}{Aut}
+\newcommand{\Prj}[2]{\BigP^{#1}({#2})}
+
+\begin{document}
+
+\maketitle
+
+\section*{The Conformal Mapping Problem}
+
+Let \(f\) be a holomorphism, and assume \(f'(z_0) = 0\). Then \(f^{-1}\) exists in a neighborhood of \(f(z)\), and \(f\) is \textbf{conformal} at \(z_0\) (preserves angles and their orientations). A nonconstant holomorphic mapping \(f: \Omega \to \mbb{C}\) is \textbf{open}, if it is one to one, then \(f\) is a homeomorphism onto its image \(f(\Omega)\), and \(f^{-1}\) is a holomorphism.
+\begin{definition}
+A \textbf{conformal} or \textbf{biholomorphic} mapping \(f: \Omega \to \Omega'\) is a holomorphic mapping with aholomorphic inverse.
+\end{definition}
+We are now faced with the \textbf{conformal mapping problem}:
+\begin{itemize}
+
+  \item Given domains \(\Omega, \Omega' \subset \mbb{C}\), are they biholomorphic?
+
+  \item If so, can we find all biholomorphisms?
+
+\end{itemize}
+We note that, for \(f, g: \Omega \to \Omega'\), \(f, g\) are biholomorphisms if and only if \(g^{-1} \circ f \in \Aut\Omega\), the group of biholomorphisms of \(\Omega\) with itself. Furthermore, \(f\) induces a conjugation map
+\[\Aut\Omega \to \Aut\Omega', \quad S \mapsto f \circ S \circ f^{-1}\]
+Now let's consider some examples, starting with the complex plane itself. We have that
+\[\Aut\mbb{C} = \{\text{linear transformations} \ w = az + b, \quad a \neq 0\}\]
+Suppose \(w = f(z) \in \Aut\mbb{C}\). At \(\infty\), \(f\) has either an essential signularity or a pole. But we can show we don't have an essential singularity. On the other hand, what about when \(f\) is a polynomial, say of degree \(n\), then that must mean it is not one-to-one, because
+\(f(z) = w\) has \(n\) distinct roots for almost every value of \(w\), except at roots of the derivative \(w = f(z), f'(z) = 0\). So \(n = 1\).
+
+\end{document}
