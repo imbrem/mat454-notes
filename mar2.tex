@@ -64,10 +64,20 @@ Now let's consider some examples, starting with the complex plane itself. We hav
 Suppose \(w = f(z) \in \Aut\mbb{C}\). At \(\infty\), \(f\) has either an essential signularity or a pole. But we can show we don't have an essential singularity. On the other hand, what about when \(f\) is a polynomial, say of degree \(n\), then that must mean it is not one-to-one, because
 \(f(z) = w\) has \(n\) distinct roots for almost every value of \(w\), except at roots of the derivative \(w = f(z), f'(z) = 0\). So \(n = 1\).
 
-What about the Riemann sphere, \(\Aut S^2\). What should this group of biholomorphisms look like? Fractional linear transformations
+What about the Riemann sphere, \(\Aut S^2\). What should this group of biholomorphisms look like? Wec consider fractional linear transformations
 \[w = \frac{az + b}{cz + d}, \quad ad - bc \neq 0\]
 These coefficient, of course, are not uniquely determined, being only determined up to a constant. The inverse of a fractional linear transformation is that given by the inverse matrix, namely
 \[\frac{dz - b}{-cz + a}\]
 (uniquely determined up to a constant, so we don't have to write the \(\frac{1}{ad - bc}\)).
+
+\begin{lemma}
+Suppose \(G\) is a subgroup of \(\Aut\Omega\) such that \(G\) is transitive on \(\Omega\) and for some \(z_0\) the subgroup of automorphisms which fix this point lies inside of \(G\). Then \(G = \Aut\Omega\).
+\end{lemma}
+\begin{proof}
+Let \(S \in \Aut\Omega\) be arbitrary. We have to show that \(S \in G\). To do so, we note that since \(G\) acts transitively, we can take \(T \in G\) such that \(T(z_0) = S(z_0)\). There exists such a \(T\) because it acts transitively. Then of course we can write
+\[S = T \circ (T^{-1} \circ S), \quad (T^{-1} \circ S)(z_0) = z_0 \implies T^{-1} \circ S \in G \implies S \in G\]
+being the composition of elements of \(G\).
+\end{proof}
+So that's what we've shown here: the subgroup of automorphisms fixing \(\infty\) lies in this subgroup of fractional linear transformations, and the subgroup is transitive, and hence it composes the entire automorphism group \(\Aut S^2\).
 
 \end{document}
