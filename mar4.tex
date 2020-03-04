@@ -60,9 +60,28 @@ Now, a primitive of \(\frac{1}{z - a}\) is like a branch of \(\log(z - a)\), whi
 One thing this tells us right away is that \(g(z)\) is one to one, because \(z - a\) is one to one and if the composition of a function with something else is one to one, then that function must be one to one.
 
 Take a point \(z_0 \in \Omega\). Since \(\Omega\) is open and \(g\) is one to one, implying it is nonconstant, there is an open disc centered at \(g(z_0)\) inside \(g(\Omega)\). Now, I claim that if you look at this disc translated by \(2\pi i\) it's outside of \(g(\Omega)\), i.e. \(E + 2\pi i \cap g(\Omega) = \varnothing\). Intuitively, this is the case because it's on a different branch of the log function. A cleaner way of saying this is that this is because \(\exp \circ g\) is one-to-one, but \(\exp\) will take two translated points to the same point, yielding a contradiction.
-
-So then, how do we get a biholomorphism of \(\Omega\) onto a bounded open subset of \(\mbb{C}\)? 
+So then, how do we get a biholomorphism of \(\Omega\) onto a bounded open subset of \(\mbb{C}\)? Well, we have that
+\[h(z) = \frac{1}{g(z) - (g(z_0) + 2\pi i)}\]
+is one to one and bounded on \(\Omega\). As \(g\) and \(h\) are biholomorphisms, there is a biholomorphism \(h \circ g\) from \(\Omega\) onto a bounded open set.
+\end{proof}
+So as we have a biholomorphsm from \(\Omega\) to a bounded open subset of \(\mbb{C}\), we can assume \(0 \in \Omega \subset D\) by simply making a translation and scaling appropriately. We're interested in defining a convenient normal family now, but it's going to come about in a very natural way. Let's look at the set of functions that are holomorphic in \(\Omega\) and are biholomorphisms into \(D\) taking the origin to itself, i.e. let
+\[\mc{A} = \{f \in \mc{H}(\Omega) : f \ \text{is one to one}, f(0) = 0, |f(z)| < 1\}\]
+We're going to find the element of this set with the largest possible derivative at the origin, which is going to force the image to be as large as possible. We'll show that that means it must be all of \(D\).
+We first show that the maximum derivative at zero is actually taken on
+\begin{lemma}
+\(\sup_{f \in \mc{A}}|f'(0)|\) is attained.
+\end{lemma}
+\begin{proof}
+This is going to be a very simple application of...
+\end{proof}
+We prove the second part of the above statement, completing the theorem
+\begin{lemma}
+Let \(g \in \mc{A}\). Then \(g(\Omega) = D\) if and only if
+\[|g'(0)| = \sup_{f \in \mc{A}}|f'(0)|\]
+\end{lemma}
+\begin{proof}
 
 \end{proof}
+
 
 \end{document}
