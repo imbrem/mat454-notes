@@ -59,7 +59,10 @@ Now, a primitive of \(\frac{1}{z - a}\) is like a branch of \(\log(z - a)\), whi
 \[z - a = e^{g(z)}\]
 One thing this tells us right away is that \(g(z)\) is one to one, because \(z - a\) is one to one and if the composition of a function with something else is one to one, then that function must be one to one.
 
-Take a point \(z_0 \in \Omega\). Since \(\Omega\) is open and \(g\) is one to one, implying it is nonconstant, there is an open disc centered at \(g(z_0)\) inside \(g(\Omega)\). Now, I claim that...
+Take a point \(z_0 \in \Omega\). Since \(\Omega\) is open and \(g\) is one to one, implying it is nonconstant, there is an open disc centered at \(g(z_0)\) inside \(g(\Omega)\). Now, I claim that if you look at this disc translated by \(2\pi i\) it's outside of \(g(\Omega)\), i.e. \(E + 2\pi i \cap g(\Omega) = \varnothing\). Intuitively, this is the case because it's on a different branch of the log function. A cleaner way of saying this is that this is because \(\exp \circ g\) is one-to-one, but \(\exp\) will take two translated points to the same point, yielding a contradiction.
+
+So then, how do we get a biholomorphism of \(\Omega\) onto a bounded open subset of \(\mbb{C}\)? 
+
 \end{proof}
 
 \end{document}
