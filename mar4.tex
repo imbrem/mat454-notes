@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{MAT454 Notes}
+\author{Jad Elkhaleq Ghalayini}
+\date{March 4 2020}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{cancel}
+\usepackage{mathabx}
+
+\usepackage[margin=1in]{geometry}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{claim}{Claim}
+
+\newcommand{\brac}[1]{\left(#1\right)}
+\newcommand{\sbrac}[1]{\left[#1\right]}
+\newcommand{\eval}[3]{\left.#3\right|_{#1}^{#2}}
+\newcommand{\ip}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\mb}[1]{\mathbf{#1}}
+\newcommand{\mbb}[1]{\mathbb{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\prt}[2]{{\frac{\partial {#1}}{\partial {#2}}}}
+\def\ries{{\hat{\mbb{C}}}}
+\newcommand{\reals}{\mbb{R}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\BigP}{P}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Arg}{arg}
+\newcommand{\Prj}[2]{\BigP^{#1}({#2})}
+
+\begin{document}
+
+\maketitle
+
+Today, our goal is to prove the Riemann mapping theorem:
+\begin{theorem}[Riemann mapping theorem]
+Any simply connected open \(\Omega \subset \mbb{C}\) except \(\mbb{C}\) itself has a biholomorphic mapping onto the open unit disc \(D\)
+\end{theorem}
+We will begin by proving a series of lemmas.
+\begin{lemma}
+There is a biholomorphism of \(\Omega\) onto a bounded open subset of \(\mbb{C}\)
+\end{lemma}
+\begin{proof}
+Let \(a \notin \Omega\) be a point, which exists as \(\Omega \neq \mbb{C}\). Then \(\frac{1}{z - a}\) is a nonvanishing holomorphic function on the simply connected open set \(\Omega\), and so it has a primitive, some holomorphic function \(g(z)\).
+
+Now, a primitive of \(\frac{1}{z - a}\) is like a branch of \(\log(z - a)\), which means that
+\[z - a = e^{g(z)}\]
+One thing this tells us right away is that \(g(z)\) is one to one, because \(z - a\) is one to one and if the composition of a function with something else is one to one, then that function must be one to one.
+
+Take a point \(z_0 \in \Omega\). Since \(\Omega\) is open and \(g\) is one to one, implying it is nonconstant, there is an open disc centered at \(g(z_0)\) inside \(g(\Omega)\). Now, I claim that...
+\end{proof}
+
+\end{document}
