@@ -90,7 +90,13 @@ Let \(g \in \mc{A}\). Then \(g(\Omega) = D\) if and only if
 \begin{proof}
 \begin{itemize}
 
-  \item ``Only if": suppose 
+  \item ``Only if": suppose \(g \in \mc{A}\), \(g(\Omega) = D\). Let \(f \in \mc{A}\), and let \(h = f \circ g^{-1}: D \to f(\Omega) \subset D\), \(h(0) = 0\). Then \(|h'(0)| \leq 1\) by Schwarz's lemma. \(f = h \circ g\), and \(|f'(0)| \leq |g'(0)|\).
+
+  \item ``if": suppose \(f \in \mc{A}\), \(a \in D \setminus f(\Omega)\). To find \(g \in \mc{A}\), \(|g'(0)| > |f'(0)|\), let
+  \[\varphi(z) = \frac{z - a}{1 - \bar{a}z} \implies (\varphi \circ f)(z) = \frac{f(z) - a}{1 - \bar{a}f(z)}\]
+  is non-vanishing on \(\Omega\). Since \(\Omega\) is simply connected, \(\varphi \circ f\) has holomorphic square root \(F(z)\). We let, where \(\theta(w) = w^2\),
+  \[f = \varphi^{-1} \circ \theta \circ F = \varphi^{-1} \circ \theta \circ \psi^{-1} \circ \psi \circ F, \quad \psi(\eta) = \frac{\eta - F(0)}{1 - \overline{F(0)}\eta}\]
+  We define \(g = \psi \circ F\), \(h = \varphi^{-1} \circ \theta \circ \Psi^{-1}\). We have \(g \in \mc{A}\), and \(h: D \to D\), \(h(0) = 0\) and \(|h'(0)| < 1\) by Schwarz's lemma, because \(h\) is not one to one and hence is not a rotation.
 
 \end{itemize}
 \end{proof}
