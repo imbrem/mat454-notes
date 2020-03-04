@@ -38,6 +38,7 @@
 \DeclareMathOperator{\BigP}{P}
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Arg}{arg}
+\DeclareMathOperator{\Id}{id}
 \newcommand{\Prj}[2]{\BigP^{#1}({#2})}
 
 \begin{document}
@@ -72,7 +73,14 @@ We first show that the maximum derivative at zero is actually taken on
 \(\sup_{f \in \mc{A}}|f'(0)|\) is attained.
 \end{lemma}
 \begin{proof}
-This is going to be a very simple application of...
+We note that the function from \(\mc{H}(\Omega) \to \mbb{C}\) taking \(f\) to \(|f'(0)|\) is continuous. Hence, taking
+\[\mc{B} = \{f \in \mc{A} : |f'(0) | \geq 1\} \supseteq \{\Id\} \neq \varnothing\]
+it is enough to show that \(\mc{B}\) is compact. \(\mc{B}\) is a normal family, i.e. locally bounded, as it is bounded uniformly on all of \(\Omega\). That means the only thing we really have to show is that \(\mc{B}\) is closed, i.e.,
+\[f \in \mc{H}(\Omega), \exists f_n \in \mc{B}, f = \lim_{n \to \infty}f_n \implies f \in \mc{B}\]
+We trivially have that
+\[f(0) = \lim_{n \to \infty}f_n(0) = \lim_{n \to \infty}0 = 0\]
+\[|f'(0)| = \lim_{n \to \infty}|f_n'(0)| \geq 1 \ \text{since} \ [1, \infty) \ \text{is closed}\]
+So \(f\) is one to one because it's not constant. Then the only other thing to prove is \(|f(z)| < 1\). So what about that? We know that \(|f(z)| \leq 1\) since \((-\infty, 1]\) is closed, but \(f(z) \neq 1\) at every point \(z \in \Omega\) by the maximum modulus principle (as if it was this would imply \(f\) was constant, contradicting both the fact that it is one-to-one and that \(f(0) = 0\)).
 \end{proof}
 We prove the second part of the above statement, completing the theorem
 \begin{lemma}
@@ -80,7 +88,11 @@ Let \(g \in \mc{A}\). Then \(g(\Omega) = D\) if and only if
 \[|g'(0)| = \sup_{f \in \mc{A}}|f'(0)|\]
 \end{lemma}
 \begin{proof}
+\begin{itemize}
 
+  \item ``Only if": suppose 
+
+\end{itemize}
 \end{proof}
 
 
