@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{MAT454 Notes}
+\author{Jad Elkhaleq Ghalayini}
+\date{March 11 2020}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{cancel}
+\usepackage{mathabx}
+
+\usepackage[margin=1in]{geometry}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{claim}{Claim}
+
+\newcommand{\brac}[1]{\left(#1\right)}
+\newcommand{\sbrac}[1]{\left[#1\right]}
+\newcommand{\eval}[3]{\left.#3\right|_{#1}^{#2}}
+\newcommand{\ip}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\mb}[1]{\mathbf{#1}}
+\newcommand{\mbb}[1]{\mathbb{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\prt}[2]{{\frac{\partial {#1}}{\partial {#2}}}}
+\def\ries{{\hat{\mbb{C}}}}
+\newcommand{\reals}{\mbb{R}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\BigP}{P}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Arg}{arg}
+\DeclareMathOperator{\Id}{id}
+\newcommand{\Prj}[2]{\BigP^{#1}({#2})}
+
+\begin{document}
+
+\maketitle
+
+\section*{Theorems of Montel and Picard}
+
+\subsection*{Picard's Big Theorem}
+
+Picard's big theorem says that in the neighborhood of an essential singularity a holomorphic function omits at most one complex value. That is,
+\begin{theorem}[Picard's Big Theorem]
+If \(z_0\) is an isolated essential singularity of a holomorphic function \(f(z)\), then \(f\) takes every complex value with one possible exception in any neighborhood \(\Omega\) of \(z_0\), i.e. \(\#(\mbb{C}\setminus f(\Omega)) \leq 1\).
+\end{theorem}
+So, is this \textit{really} the best possible statement of this kind: that is, is it really possible that a complex function can omit one possible value? Yes: for example, \(e^{1/z} \neq 0\), so it omits value \(0\) even though it has an essential singularity at the origin.
+
+So, there's also Picard's Little Theorem:
+\begin{theorem}[Picard's Little Theorem]
+A non-constant entire function \(f\) omits at most a point, i.e. \(\#(\mbb{C}\setminus f(\mbb{C})) \leq 1\)
+\end{theorem}
+\begin{proof}
+So why does Picard's Little Theorem follow from Picard's Big Theorem (of course, Picard proved the little theorem first)? Well, either \(\infty\) is a pole or it is an essential singularity.
+\begin{itemize}
+
+  \item If \(\infty\) is a pole, by the fundamental theorem of algebra we have that \(f\) is a polynomial (since there are no poles at any finite points). So in this case, it does take \textit{every} value.
+
+  \item If \(\infty\) is an essential singularity, then we can apply Picard's Big Theorem to a neighborhood of \(\infty\).
+
+\end{itemize}
+\end{proof}
+So, we're going to prove Picard's big theorem using the theory of normal families, and in fact we're going to deduce it as well as a closely related, very strong theorem by Montel, from a strange lemma.l
+
+\end{document}
