@@ -10,7 +10,8 @@
 \contentsline {subsection}{\numberline {1.9}Poisson's integral formula}{8}{subsection.1.9}% 
 \contentsline {subsection}{\numberline {1.10}Dirichlet's problem}{8}{subsection.1.10}% 
 \contentsline {section}{\numberline {2}Elliptic Functions}{8}{section.2}% 
-\contentsline {subsection}{\numberline {2.1}Complex Projective Space}{8}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.1}The Weierstrass \(\wp \)-function}{8}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}Complex Projective Space}{8}{subsection.2.2}% 
 \contentsline {section}{\numberline {3}Conformal Mapping}{10}{section.3}% 
 \contentsline {subsection}{\numberline {3.1}The Conformal Mapping Problem}{10}{subsection.3.1}% 
 \contentsline {subsection}{\numberline {3.2}The Riemann Mapping Theorem}{12}{subsection.3.2}% 
