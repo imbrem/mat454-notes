@@ -15,3 +15,5 @@
 \contentsline {section}{\numberline {3}Conformal Mapping}{10}{section.3}% 
 \contentsline {subsection}{\numberline {3.1}The Conformal Mapping Problem}{10}{subsection.3.1}% 
 \contentsline {subsection}{\numberline {3.2}The Riemann Mapping Theorem}{12}{subsection.3.2}% 
+\contentsline {section}{\numberline {4}Theorems of Montel and Picard}{15}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Picard's Big Theorem}{15}{subsection.4.1}% 
