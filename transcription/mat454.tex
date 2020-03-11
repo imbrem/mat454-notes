@@ -212,4 +212,61 @@ So we have to show that the subgroup of \(\Aut\mbb{H}^+\) which fixes some point
 
 So this is meant to be an exercise which should essentially be recalling things. Next time we'll prove the Riemann mapping theorem using normal mappings and we'll at least need these.
 
+
+Today, our goal is to prove the Riemann mapping theorem:
+\begin{theorem}[Riemann mapping theorem]
+Any simply connected open \(\Omega \subset \mbb{C}\) except \(\mbb{C}\) itself has a biholomorphic mapping onto the open unit disc \(D\)
+\end{theorem}
+We will begin by proving a series of lemmas.
+\begin{lemma}
+There is a biholomorphism of \(\Omega\) onto a bounded open subset of \(\mbb{C}\)
+\end{lemma}
+\begin{proof}
+Let \(a \notin \Omega\) be a point, which exists as \(\Omega \neq \mbb{C}\). Then \(\frac{1}{z - a}\) is a nonvanishing holomorphic function on the simply connected open set \(\Omega\), and so it has a primitive, some holomorphic function \(g(z)\).
+
+Now, a primitive of \(\frac{1}{z - a}\) is like a branch of \(\log(z - a)\), which means that
+\[z - a = e^{g(z)}\]
+One thing this tells us right away is that \(g(z)\) is one to one, because \(z - a\) is one to one and if the composition of a function with something else is one to one, then that function must be one to one.
+
+Take a point \(z_0 \in \Omega\). Since \(\Omega\) is open and \(g\) is one to one, implying it is nonconstant, there is an open disc centered at \(g(z_0)\) inside \(g(\Omega)\). Now, I claim that if you look at this disc translated by \(2\pi i\) it's outside of \(g(\Omega)\), i.e. \(E + 2\pi i \cap g(\Omega) = \varnothing\). Intuitively, this is the case because it's on a different branch of the log function. A cleaner way of saying this is that this is because \(\exp \circ g\) is one-to-one, but \(\exp\) will take two translated points to the same point, yielding a contradiction.
+So then, how do we get a biholomorphism of \(\Omega\) onto a bounded open subset of \(\mbb{C}\)? Well, we have that
+\[h(z) = \frac{1}{g(z) - (g(z_0) + 2\pi i)}\]
+is one to one and bounded on \(\Omega\). As \(g\) and \(h\) are biholomorphisms, there is a biholomorphism \(h \circ g\) from \(\Omega\) onto a bounded open set.
+\end{proof}
+So as we have a biholomorphsm from \(\Omega\) to a bounded open subset of \(\mbb{C}\), we can assume \(0 \in \Omega \subset D\) by simply making a translation and scaling appropriately. We're interested in defining a convenient normal family now, but it's going to come about in a very natural way. Let's look at the set of functions that are holomorphic in \(\Omega\) and are biholomorphisms into \(D\) taking the origin to itself, i.e. let
+\[\mc{A} = \{f \in \mc{H}(\Omega) : f \ \text{is one to one}, f(0) = 0, |f(z)| < 1\}\]
+We're going to find the element of this set with the largest possible derivative at the origin, which is going to force the image to be as large as possible. We'll show that that means it must be all of \(D\).
+We first show that the maximum derivative at zero is actually taken on
+\begin{lemma}
+\(\sup_{f \in \mc{A}}|f'(0)|\) is attained.
+\end{lemma}
+\begin{proof}
+We note that the function from \(\mc{H}(\Omega) \to \mbb{C}\) taking \(f\) to \(|f'(0)|\) is continuous. Hence, taking
+\[\mc{B} = \{f \in \mc{A} : |f'(0) | \geq 1\} \supseteq \{\Id\} \neq \varnothing\]
+it is enough to show that \(\mc{B}\) is compact. \(\mc{B}\) is a normal family, i.e. locally bounded, as it is bounded uniformly on all of \(\Omega\). That means the only thing we really have to show is that \(\mc{B}\) is closed, i.e.,
+\[f \in \mc{H}(\Omega), \exists f_n \in \mc{B}, f = \lim_{n \to \infty}f_n \implies f \in \mc{B}\]
+We trivially have that
+\[f(0) = \lim_{n \to \infty}f_n(0) = \lim_{n \to \infty}0 = 0\]
+\[|f'(0)| = \lim_{n \to \infty}|f_n'(0)| \geq 1 \ \text{since} \ [1, \infty) \ \text{is closed}\]
+So \(f\) is one to one because it's not constant. Then the only other thing to prove is \(|f(z)| < 1\). So what about that? We know that \(|f(z)| \leq 1\) since \((-\infty, 1]\) is closed, but \(f(z) \neq 1\) at every point \(z \in \Omega\) by the maximum modulus principle (as if it was this would imply \(f\) was constant, contradicting both the fact that it is one-to-one and that \(f(0) = 0\)).
+\end{proof}
+We prove the second part of the above statement, completing the theorem
+\begin{lemma}
+Let \(g \in \mc{A}\). Then \(g(\Omega) = D\) if and only if
+\[|g'(0)| = \sup_{f \in \mc{A}}|f'(0)|\]
+\end{lemma}
+\begin{proof}
+\begin{itemize}
+
+  \item ``Only if": suppose \(g \in \mc{A}\), \(g(\Omega) = D\). Let \(f \in \mc{A}\), and let \(h = f \circ g^{-1}: D \to f(\Omega) \subset D\), \(h(0) = 0\). Then \(|h'(0)| \leq 1\) by Schwarz's lemma. \(f = h \circ g\), and \(|f'(0)| \leq |g'(0)|\).
+
+  \item ``if": suppose \(f \in \mc{A}\), \(a \in D \setminus f(\Omega)\). To find \(g \in \mc{A}\), \(|g'(0)| > |f'(0)|\), let
+  \[\varphi(z) = \frac{z - a}{1 - \bar{a}z} \implies (\varphi \circ f)(z) = \frac{f(z) - a}{1 - \bar{a}f(z)}\]
+  is non-vanishing on \(\Omega\). Since \(\Omega\) is simply connected, \(\varphi \circ f\) has holomorphic square root \(F(z)\). We let, where \(\theta(w) = w^2\),
+  \[f = \varphi^{-1} \circ \theta \circ F = \varphi^{-1} \circ \theta \circ \psi^{-1} \circ \psi \circ F, \quad \psi(\eta) = \frac{\eta - F(0)}{1 - \overline{F(0)}\eta}\]
+  We define \(g = \psi \circ F\), \(h = \varphi^{-1} \circ \theta \circ \Psi^{-1}\). We have \(g \in \mc{A}\), and \(h: D \to D\), \(h(0) = 0\) and \(|h'(0)| < 1\) by Schwarz's lemma, because \(h\) is not one to one and hence is not a rotation.
+
+\end{itemize}
+\end{proof}
+
 \end{document}
