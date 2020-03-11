@@ -85,6 +85,13 @@ which is obviously nonconstant and entire. We know this from a proof from first 
 \[n\log(1 + z/n) \to z \iff \frac{\log(1 + z/n)}{z/n} \to 1\]
 So, how do you compute the spherical derivative of \(g\)? So, it's just from the formula,
 \[g^\sharp(z) = \frac{2|g'(z)|}{1 + |g(z)|^2} = \frac{2|e^z|}{1 + |e^z|^2} \implies g^\sharp(0) = \frac{2}{2} = 1, \quad g^\sharp(z) \leq 1 \impliedby \forall t \in \reals^+, 1 + t^2 \leq 2t\]
-So that's sort of a phenomenon.
+So that's sort of a phenomenon. Now let's prove it:
+\begin{proof}
+Suppose \(\mc{S}\) is normal. Then, by definition, any sequence \(\{f_n\} \subset \mc{S}\) has a convergent subsequence: let's relabel \(\{f_n\}\) to denote this subsequence, in other words, we can assume that \(\{f_n\} \to f\). Let's look at any choice of data \(\{a_n\} \to a_\infty \in \omega, \{\rho_n\} \to 0\) like in the theorem. We have
+\[g_n(z) = f_n(a_n + \rho_nz)\]
+By the Arzelà–Ascoli theorem, namely that normality is equivalent to equicontinuity, we have that the sequence \(\{f_n\}\) is equicontinuous, and in fact, if we want to restrict our attention to a relatively compact neighborhood of \(a_\infty\), it will tell us that \(\{f_n\}\) is uniformly equicontinuous in a neighborhood of \(a_\infty\). That means that
+\[g(z) = \lim_{n \to \infty}g_n(z) = \lim_{n \to \infty}f_n(a_n + \rho_nz) = f(a_\infty)\]
+i.e. \(g\) is a constant.
+\end{proof}
 
 \end{document}
