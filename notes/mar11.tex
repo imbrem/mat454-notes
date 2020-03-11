@@ -73,7 +73,18 @@ So, we're going to prove Picard's big theorem using the theory of normal familie
 \begin{lemma}[Zalcman's Lemma]
 Let \(\mc{S}\) be a family of meromorphic functions on a domain \(\Omega\). \(f\) is \underline{not} normal in the chordal metric if and only if there is a convergent sequence \(\{a_n\} \to a_\infty \in \Omega\), a convergent sequence of positive numbers \(\{\rho_n\} \to 0\) and a sequence of functions \(\{f_n\} \subset \mc{S}\) such that the sequence
 \[g_n(z) = f_n(a_n + \rho_n z)\]
-converges uniformly to \(g\) in the chordal metric on compact subsets of \(\mbb{C}\) where \(g\) is nonconstant and meromorphic on all of \(\mbb{C}\).
+converges uniformly to \(g\) in the chordal metric on compact subsets of \(\mbb{C}\) where \(g\) is nonconstant and meromorphic on all of \(\mbb{C}\). Moreover, in the case where \(\mc{S}\) is not normal, then we can choose the data above such that
+\[\forall z \in \mbb{C}, g^\sharp(z) \leq g^\sharp(0) = 1\]
 \end{lemma}
+So, what's strange about this lemma? Of course, it's strange because normality is about the existence of convergent sequences: non-normal should be that the stuff doesn't converge, and yet here we're saying that we can give a criterion for non-normality in terms of a convergent sequence. So, why should that be? I mean, like, what about the case where \(\mc{S}\) \textit{were} normal and we did this kind of construction: why would we get something worse? Or \textit{would} we get something worse?
+That's sort of a quandry, and the point is in the case that \(\mc{S}\) is normal, i.e. every sequence in \(\mc{S}\) contains a convergent subsequence, it's not that we get something worse, it's that we get something better: we can still perform the above construction, but \(g\) would be constant!
+
+So, what's an example? Consider \(\mc{S} = \{f_n(z) = z^n\}\). Of course, this is uniformly convergent on compact subsets of the unit disc, and actually, is also uniformly convergent in the chordal metric on compact subsets of the complement of the closed disc. But, it's not uniformly convergent on compact subsets of a \textit{bigger} open disc, e.g. \(|z| < 2\). The issue is that it's not uniformly continuous on the unit circle, as the limit would not be continuous there. So let's look at this situation, and take \(a_n = 1\), \(\rho_n = \frac{1}{n}\). That means that
+\[g(z) = \lim_{n \to \infty}g_n(z) = \lim_{n \to \infty}\left(1 + \frac{z}{n}\right)^n = e^z\]
+which is obviously nonconstant and entire. We know this from a proof from first year calculus, coming from the fact that
+\[n\log(1 + z/n) \to z \iff \frac{\log(1 + z/n)}{z/n} \to 1\]
+So, how do you compute the spherical derivative of \(g\)? So, it's just from the formula,
+\[g^\sharp(z) = \frac{2|g'(z)|}{1 + |g(z)|^2} = \frac{2|e^z|}{1 + |e^z|^2} \implies g^\sharp(0) = \frac{2}{2} = 1, \quad g^\sharp(z) \leq 1 \impliedby \forall t \in \reals^+, 1 + t^2 \leq 2t\]
+So that's sort of a phenomenon.
 
 \end{document}
