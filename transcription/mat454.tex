@@ -136,6 +136,108 @@ So what was the point about compatibility? Well, what's the relationship between
 \[z \cdot z' = \frac{x^2 + y^2}{(1 - t)^2} = 1 \implies z' = \frac{1}{z}\]
 This is a holomorphic function from \(\mbb{C} \setminus \{0\} \to \mbb{C} \setminus \{0\}\) with a holomorphic inverse. So the two complex structures defined on the sphere minus the north pole and the sphere minus the south pole are compatible. By a \textit{complex structure} on a set, we mean a homeomorphism between an open subset that set and an open subset of the complex plane. If you're familiar with the language of manifolds, each of these two mappings is a \textit{coordinate chart}. These are even better than manifolds, though, because the coordinate charts are not just differentiable or infinitely differentiable, but holomorphic, or even better, \textit{rational}.
 
+\TODO{January 8}
+
+\TODO{January 10}
+
+\TODO{January 13}
+
+\subsection{Cauchy's Inequalities}
+
+Let's, as we usually do, consider a holomorphic function \(f(z)\) in an open set \(\Omega \subseteq \mbb{C}\). Last time, we showed that \(f\) has a convergent power series expansion in any open disc in \(\Omega\) (centered at the center of the disc). For example, around \(a = 0 \in \Omega\), we can write
+\[f(z) = \sum_{n = 0}^\infty a_nz^n\]
+Writing \(z = re^{i\theta}\), we get
+\[f(re^{i\theta}) = \sum_{n = 0}^\infty a_nr^ne^{in\theta}\]
+We can write out the following formula for these Fourier coefficients:
+\[a_nr^n = \frac{1}{2\pi}\int_0^{2\pi}e^{-in\theta}f(re^{i\theta})d\theta\]
+Today we're going to be looking at the consequences of this formula. First of all, this formula gives a simple but useful upper bound on \(a_n\): if we take the maximum absolute value of \(f\) along the circle of radius \(r\), written
+\[M(r) = \sup_\theta|f(re^{i\theta})|\]
+we get
+\[|a_n| \leq \frac{M(r)}{r^n}\]
+These are called \textbf{Cauchy's inequalities}. These have some important consequences, like \textbf{Liouville's theorem}: a bounded holomorphic function on all of \(\mbb{C}\) is a constant. How does this follow? Well, if \(c\) is the upper bound of \(f\) on \(\mbb{C}\), we have each
+\[\forall r \in \reals^+, M(r) \leq c \implies |a_n| \leq \frac{M(r)}{r^n} \leq \frac{c}{r^n}\]
+Hence, for \(n > 0\), \(0 \leq a_n \leq \epsilon\) for all \(\epsilon > 0\), implying \(a_n = 0\). It follows that \(f = a_0 = c\), a constant. Another consequence is that we can write, for any \(r\)
+\[f(0) = a_0 = a_0r^0 = \frac{1}{2\pi}\int_0^{2\pi}f(re^{i\theta})d\theta\]
+This generalizes readily to stating that holomorphic functions satisfy the \textbf{Mean Value Property (MVP)}:
+\[f(\text{center of disk}) = \ \text{mean value on boundary}\]
+Another property which we won't prove is the \textbf{Maximum Modulus Principle (MMP)}: if \(f\) is a continuous complex-valued function on an open \(\Omega \subseteq \mbb{C}\) with the MVP, then it satisfies the MMP, that is, if \(|f|\) has a local maximum at a point \(a\) of \(\Omega\), then \(f\) is constant in a neighborhood of \(a\).
+
+We can use this to prove \textbf{Schwarz's Lemma}:
+\begin{theorem}[Schwarz's Lemma]
+Suppose \(f(z)\) is holomorphic in \(|z| < 1\), \(f(0) = 0\) and \(|f(z)| < 1\). Then
+\begin{enumerate}
+
+  \item \(|f(z)| \leq |z|\) if \(|z| < 1\)
+
+  \item If \(|f(z_0)| = |z_0|\) at some \(z_0 \neq 0\), then \(f(z) = \lambda z\) for some \(|\lambda| = 1\).
+
+\end{enumerate}
+\end{theorem}
+We recall a sketch of the proof
+\begin{proof} (Sketch)
+By the convergent power series expansion, \(g(z) / z\) is holomorphic, and can hence have the maximum modulus principle applied to it.
+\end{proof}
+So let's spend a little time looking at functions with the MVP in general. Continuous functions with the MVP are precisely the \underline{harmonic functions}. The real and imaginary parts of a complex valued function with the MVP also satisfy the MVP. A real valued harmonic function \(g\) is locally the real part of a holomorphic function, uniquely determined up to addition of a constant:
+\[
+\prt{^2g}{z\partial\bar{z}} = 0 \implies \prt{g}{z} \ \text{holomorphic}
+\]
+Therefore, \(\prt{g}{z}\) locally has primitive \(f\), defined up to a constant. Since \(g\) is real valued, we can write
+\[df = \prt{g}{z}dz, \quad d\bar{f} = \prt{g}{\bar{z}}d\bar{z}\]
+Hence,
+\[d(f + \bar{f}) = dg \implies g = 2\Re f + \ \text{const}\]
+So harmonic functions satisfy the MVP and MMP, and conversely, a continuous function in an open set \(\Omega \subseteq \mbb{C}\) satisfying the MVP is harmonic. Just a couple of words as to why this is true, as this is really something that you should review: this comes from the solution to what's called the Dirichlet problem for a disk. What is this problem? It says that, given any continuous function \(f\) on the boundary of a disk \(|z| < r\), you can extend it to a continous function \(F\) on the whole disk which is harmonic on the interior.
+
+
+\subsection{Zeros and Poles}
+
+\begin{definition}[Zero]
+If \(f\) is holomorphic in a neighborhood of \(z_0 \in \mbb{C}\) and \(f(z_0) = 0\), we can write, for some \(k \in \mbb{N}\),
+\[f(z) = (z - z_0)^kf_1(z)\]
+where\(f_1(z)\) is nonvanishing near \(z_0\). In this case \(k\) is called the \textbf{order} or \textbf{multiplicity} of the \textbf{zero} \(z_0\)
+\end{definition}
+Zeros of holomorphic functions form a discrete set. We want to study, however, not only holomorphic functions, but also quotients of holomorphic functions
+\begin{definition}[Meromorphic]
+A function \(f\) is \textbf{meromorphic} on an open \(\Omega \subseteq \mbb{C}\) if it is defined and holomorphic in the complement of a discrete set such that in some neighborhood of every point of \(\Omega\) we can write
+\(f(z) = g(z)/h(z)\)
+where \(g, h\) are holomorphic and \(h\) is not identically zero.
+\end{definition}
+Why is it interesting to work with meromorphic and not just holomorphic functions? Essentially, it's because meromorphic functions in a domain \(\Omega\) form a field (whereas holomorphic functions only form a ring). Note that, in this course, when we say ``domain", what we mean is a connected open set.
+If \(f(z), g(z)\) are holomorphic near \(z_0\), like before, we can write
+\[f(z) = (z - z_0)^kf_1(z), \qquad g(z) = (z - z_0)^\ell g_1(z)\]
+where \(f_1(z_0), g_1(z_0) \neq 0\). Near \(z_0\), then, the quotient looks like
+\[\frac{f(z)}{g(z)} = (z - z_0)^{k - \ell}\frac{f_1(z)}{g_1(z)}\]
+So what are the different possibilities? If \(k \geq \ell\), then this function extends to be holomorphic at \(z_0\). On the other hand, if \(k < \ell\), then, of course,
+\[\lim_{z \to z_0}\left|\frac{f(z)}{g(z)}\right| = \infty\]
+Note: \textit{not} undefined, but \(\infty\). In this case, we say that \(z_0\) is a pole of order \(\ell - k\).
+Holomorphic functions in an annulus \(r < |z| < R\) have a convergent Laurent expansion in an annulus
+\[\sum_{n = -\infty}^\infty a_nz^n = \sum_{n < 0}a_nz^n + \sum_{n \geq 0}a_nz^n\]
+Note that the LHS converges when \(r < |z|\), whereas the RHS converges when \(|z| < R\). This actually comes from Cauchy's theorem, just in the case of a convergent power series expansion of a holomorphic function. So this is from Cauchy's integral formula:
+\[f(z) = \frac{1}{2\pi i}\int_{\gamma_1}\frac{f(\xi)}{\xi - z}d\xi - \frac{1}{2\pi i}\int_{\gamma_2}\frac{f(\xi)}{\xi - z}d\xi = \sum_{n = -\infty}^\infty a_nz^n\]
+for \(z\) between \(\gamma_1, \gamma_2\).
+So
+\[a_n = \frac{1}{2\pi i}\int_{\gamma_?}\frac{f(\xi)}{\xi^{n + 1}}d\xi\]
+So of course, this should be just like before for the positive part. Note that this is the integral over \(\gamma_1\) if \(n \geq 0\) and over \(\gamma_2\) if \(n < 0\).
+
+Previously, we talked about holomorphic functions on the Riemann sphere, noting there were very few of them: namely, constants. Now, there are a few more meromorphic functions on the Riemann sphere, but not much. Specifically,
+\begin{theorem}
+Every meromorphic function \(f\) on \(S^2\) is rational.
+\end{theorem}
+\begin{proof}
+This theorem uses what is probably the only thing in first year calculus you don't prove: the partial fraction decomposition. So we prove it now.
+Say \(f(z)\) has poles \(b_1,...,b_k\) (finite) and maybe \(\infty\). So what can we say about the Laurent expansion at a pole? There's only finitely many negative terms, specifically, the order of the pole.
+
+So these negative parts of the Laurent expansions around each \(b_j\) are like polynomials \(P_j(\frac{1}{z - b_j})\). We'll call these principal parts. What about the principal part at \(\infty\)? It's a polynomial in \(z\), as it's a polynomial in \(\frac{1}{z'}\), where \(z'\) is the coordinate at \(\infty\), which is \(1/z\). Call this \(P_\infty(z)\). So we can write
+\[f(z) - P_\infty(z) - \sum_{j = 1}^kP_j\left(\frac{1}{z - b_j}\right)\]
+which is holomorphic on \(S^2\), and hence must be a constant \(a\). So we can write
+\[f(z) = a + P_\infty(z) + \sum_{j = 1}^kP_j\left(\frac{1}{z - b_j}\right)\]
+And that's rational.
+\end{proof}
+\begin{definition}[Isolated singularity]
+A holomorphic function in a \underline{punctured} disk \(0 < |z| < R\) has an \textbf{isolated singularity} at \(0\) if \(f(z)\) cannot be extended to be holomorphic at \(0\).
+\end{definition}
+Extension is possible if and only if \(f\) is bounded in a neighborhood of \(0\) in this punctured disk.
+
+
 \section{Elliptic Functions}
 
 ...
