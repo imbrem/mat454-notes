@@ -266,4 +266,42 @@ Let \(g \in \mc{A}\). Then \(g(\Omega) = D\) if and only if
 \end{itemize}
 \end{proof}
 
+TODO: this
+
+
+We're interested in a biholomorphism \(w = f(z)\) from a polygonal region enclosed by\(z_1,...,z_n\), with \(w_k = f(z_k)\) to the unit disc, where
+\begin{itemize}
+
+  \item \(0 < \alpha_k < 2\)
+
+  \item \(-1 < \beta_k < 1, \sum\beta_k = 2\)
+
+  \item \(\alpha_k + \beta_k = 1\),
+
+  \item The intersection of the line between \(z_{k - 1}\) and \(z_k\) and the line between \(z_k\) and \(z_{k + 1}\) has angle \(\alpha_k\pi\) inside the polygon and \(\beta_k\pi\) outside the polygon
+
+\end{itemize}
+We want to find a formula for the inverse function \(z = F(w)\). The statement of the theorem (though last time we wrote it as an integral) is that, for some constant \(c\),
+\[F'(w) = c\prod(w - w_k)^{\beta_k}\]
+We have that \(\zeta = (z - z_k)^{1/\alpha_k}\) is invertible and maps the ``angle" \(\alpha_k\) to the half-disc. Writing
+\[w = f(z_k + \zeta^{\alpha_k}) = g(\zeta), \zeta = (w - w_k)g(w) \implies F(w) = z_k + (w - w_k)^\alpha_kG_k(w)\]
+\[\implies F'(w) = (w - w_k)^{\alpha_k - 1}G_k(w)\]
+So
+\[F'(w)(w - w_k)^{\beta_k}\]
+is holomorphic and nonzero near \(w_h\). So
+\[H(w) = F'(w)\prod(w - w_k)^\beta_k\]
+is holomorphic and nonzero in a neighborhood of the closed unit disk. To show that \(H(w)\) is constant, it is enough to show that \(\arg H(w) = \Im\log H(w)\) is constant on \(S^1\) (this is well defined as zero is not included so there is a branch of log). This works because \(H\) is a harmonic function, and therefore we can use the Mean Value Property and the Maximum Modulus Principle.
+
+So we just have to compute the argument. Let's look at what happens at a point \(e^{i\theta}\) on the arc between \(w_{k - 1}\) and \(w_k\). We compute
+\[\frac{d}{d\theta}F(e^{i\theta}) = F'(e^{i\theta})ie^{i\theta}\]
+We have that, since \(F(e^{i\theta})\) is a parametrization of a straight line,
+\[\arg\frac{d}{d\theta}F(e^{i\theta}) = 0 \implies \arg F'(e^{i\theta}) = const - (\theta + \pi/2)\]
+We have that
+\[\arg(e^{i\theta} - w_k) = \theta/2 + const \implies \arg F'(e^{i\theta})\prod(e^{i\theta} - w_k)^{\beta_k} = const - \theta + (\sum\beta_k)\frac{\theta}{2} = const\]
+This shows \(\arg H(w)\) is constant on the open arc from \(w_k\) to \(w_{k + 1}\) for all \(k\), but it's continuous because \(\log H(w)\) is well-defined. Therefore, \(H\) is constant on \(S^1\), completing the proof.
+
+As a special case for this, I wanted to look at the integral formula for a mapping onto a rectangle, because we can use the reflection principle in this case to extend this map to one on the entire constant plane, giving us a doubly periodic (elliptic) function.
+
+I don't want to spend that time going over it, because I'm concerned about how much actual class time we're going to have left this term, so one of the thing I definitely want to go finish is some of the applications to prove the big Picard theorem, leaving one important topic in the course, namely Riemann surfaces. But go read about it in Ahlfors.
+
 \end{document}
