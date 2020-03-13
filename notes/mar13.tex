@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{MAT454 Notes}
+\author{Jad Elkhaleq Ghalayini}
+\date{March 13 2020}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{cancel}
+\usepackage{mathabx}
+
+\usepackage[margin=1in]{geometry}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{claim}{Claim}
+
+\newcommand{\brac}[1]{\left(#1\right)}
+\newcommand{\sbrac}[1]{\left[#1\right]}
+\newcommand{\eval}[3]{\left.#3\right|_{#1}^{#2}}
+\newcommand{\ip}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\mb}[1]{\mathbf{#1}}
+\newcommand{\mbb}[1]{\mathbb{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\prt}[2]{{\frac{\partial {#1}}{\partial {#2}}}}
+\def\ries{{\hat{\mbb{C}}}}
+\newcommand{\reals}{\mbb{R}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\BigP}{P}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Arg}{arg}
+\DeclareMathOperator{\Id}{id}
+\newcommand{\Prj}[2]{\BigP^{#1}({#2})}
+
+\begin{document}
+
+\maketitle
+
+\section*{Proof of Zalcman's Lemma}
+
+Let \(\mc{S}\) be a family of meromorphic functions on a domain \(\Omega\) which is \underline{not normal} in the chordal metric. We wish to find \(a_n \to a_\infty \in \Omega\), \(\rho_n \to 0\) such that
+\[g_n(z) = f_n(a_n + \rho_n z)\]
+converges to a nonconstant meromorphic function \(g\) in the chordal metric on compact subsets of \(\mbb{C}\) such that
+\[g^\sharp(z) \leq g^\sharp(0) = 1\]
+So, not normal means that
+\[S^\sharp = \{f^\sharp: f \in \mc{S}\}\]
+is not locally bounded (as per the theorem by Marty). This means, in particular, that there is a sequence of points \(b_n \to b_\infty \in \Omega\), \(f_n \in \mc{S}\) such that \(f_n^\sharp(b_n) \to \infty\). Of course, we can assume \(b_\infty = 0\), and hence in particular that there issomedisc \(\{|z| \leq r\} \subset \Omega\).
+
+Let
+\[M_n = \max(r - |\zeta|)f_n^\sharp(\zeta)\]
+This is a continous function on a compact set, and so it takes on its maximum at some point \(a_n\), at which we have that this is equal to
+\[(r - |a_n|)f_n^\sharp(a_n)\]
+In particular, \(a_n \to \infty\) since \(b_n \to 0\). So the sequence we're going to construct is
+\[g_n(z) = f_n(a_n + z/f_n^\sharp(a_n))\]
+As \(n\) goes to infinity, this function is defined on bigger and bigger compact sets, as
+\[\left|a_n + \frac{z}{f_n^\sharp(a_n)}\right| \leq |a_n| + \frac{|z|}{|f_n^\sharp(a_n)|} \leq |a_n| + r - |a_n|\]
+That means that this is defined on \(|z| \leq M_n\). Fix \(R \geq 0\). If \(|z| \leq R \leq M_n\), then by the chain rule for spherical derivatives
+\[|g_n^\sharp(z)| \leq \frac{|f_n^\sharp(a_n + z/f_n^\sharp(a_n))|}{|f_n^\sharp(a_n)|} \leq \frac{\cancel{M_n}}{r - |a_n + z/f_n^\sharp(a_n)|}\frac{r - |a_n|}{\cancel{M_n}} \leq \frac{r - |a_n|}{r - |a_n| - |z|/f_n^\sharp(a_n)} = \frac{1}{1  - |z|/M_n} \to 1\]
+as \(n \to \infty\). This tells us by Marty's theorem that \(\{g_n\}\) contains a convergent subsequence in the chordal metric. Of course, taking that convergent subsequence and re-labeliling, we can just assume it is given by \(\{g_n\}\). \(g\) is meromorphic by this ``lemma", non-constant since \(g^\sharp(0) = 1\) and the endnote shows \(g^\sharp(z) \leq 1\).
+
+
+\end{document}
