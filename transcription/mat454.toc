@@ -7,13 +7,11 @@
 \contentsline {subsection}{\numberline {1.6}Cauchy's Inequalities}{5}{subsection.1.6}% 
 \contentsline {subsection}{\numberline {1.7}Zeros and Poles}{6}{subsection.1.7}% 
 \contentsline {subsection}{\numberline {1.8}Residue Calculus}{8}{subsection.1.8}% 
-\contentsline {subsection}{\numberline {1.9}Poisson's integral formula}{8}{subsection.1.9}% 
-\contentsline {subsection}{\numberline {1.10}Dirichlet's problem}{8}{subsection.1.10}% 
 \contentsline {section}{\numberline {2}Topology of the Space of Holomorphic Functions}{8}{section.2}% 
 \contentsline {subsection}{\numberline {2.1}Series of Meromorphic Functions}{9}{subsection.2.1}% 
 \contentsline {subsection}{\numberline {2.2}The Weierstrass \(\wp \)-function}{9}{subsection.2.2}% 
 \contentsline {subsection}{\numberline {2.3}Complex Projective Space}{9}{subsection.2.3}% 
 \contentsline {section}{\numberline {3}Normal Families}{11}{section.3}% 
 \contentsline {subsection}{\numberline {3.1}The Conformal Mapping Problem}{11}{subsection.3.1}% 
-\contentsline {subsection}{\numberline {3.2}The Riemann Mapping Theorem}{14}{subsection.3.2}% 
+\contentsline {subsection}{\numberline {3.2}The Riemann Mapping Theorem}{13}{subsection.3.2}% 
 \contentsline {subsection}{\numberline {3.3}Theorems of Montel and Picard}{16}{subsection.3.3}% 
