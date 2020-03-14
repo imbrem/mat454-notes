@@ -144,12 +144,13 @@ This is a holomorphic function from \(\mbb{C} \setminus \{0\} \to \mbb{C} \setmi
 
 We now proceed to some basic properties of differential forms:
 \begin{theorem}[Cauchy's Theorem]
-Let \(\Omega \subset \reals^2\) be simply connected, and let \(\omega = Pdx + Qdy\) be a differential form with \(P, Q\) continuous and real or complex-valued. Let \(\gamma = (x, y): [a, b] \to \Omega\) be a piecewise \(C^1\) curve in \(\Omega\). Then
+Let \(\Omega \subset \reals^2\), and let \(\omega = Pdx + Qdy\) be a differential form with \(P, Q\) continuous and real or complex-valued. Let \(\gamma = (x, y): [a, b] \to \Omega\) be a piecewise \(C^1\) curve in \(\Omega\). Then
 \[\int_\gamma\omega = \int_a^bf(t)dt, \quad f(t) = P(x(t), y(t))x'(t) + Q(x(t), y(t))y'(t) = \gamma^*\omega\]
 \end{theorem}
 Note we can define \(\gamma^*\) recursively by
 \[\gamma^*(P) = P\circ \gamma, \quad \gamma^*(dx) = d(x \circ \gamma) = x'(t)dt, \quad \gamma^*(dy) = d(y \circ \gamma) = y'(t)dt\]
 
+\TODO{independence of parameter}
 
 \subsection{Taylor and Laurent Series}
 
