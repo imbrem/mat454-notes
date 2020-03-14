@@ -360,7 +360,35 @@ Let \(\sum f_n\) be a series of meromorphic functions on \(\Omega\). If the seri
 \end{theorem}
 We remark that the pole sets obey the inclusion \(P(f) \subset \bigcup_nP(f_n)\), with equality if the \(P(f_n)\) are pointwise disjoint, in which case if \(p\) is a pole of degree \(k\) for any \(f_n\) then it is a pole of degree \(k\) for \(f\).
 
+\TODO{examples}
+
 \subsection{The Weierstrass \(\wp\)-function}
+
+\begin{definition}
+Let \(e_1, e_2 \in \mbb{C}\) be linearly independent over \(\mbb{R}\). We can define a discrete subgroup of \(\mbb{C}\) with \textbf{basis} \(e_1, e_2\)
+\[\Gamma = \{n_1e_1 + n_2e_2 : n_1, n_2 \in \mbb{Z}\}\]
+We say that \(f\) has \(\Gamma\) as \textbf{group of periods} if
+\[\forall z \in \mbb{C}, f(z) = f(z + e_1) = f(z + e_2)\]
+\end{definition}
+\begin{definition}[Weierstrass \(\wp\)-function]
+We define the Weierstrass \(\wp\)-function by the infinite sum
+\[\wp(z) = \frac{1}{z^2} + \sum_{\substack{w \in \Gamma \\ w \neq 0}}\left[
+  \frac{1}{(z - w)^2} - \frac{1}{w^2}
+\right]\]
+\end{definition}
+We'll see that \(\wp\) converges uniformly and absolutely on compact subsets of \(\mbb{C}\).
+\begin{lemma}
+\(\sum_{\substack{w \in \Gamma \\ w \neq 0}}\frac{1}{|w|^2}\) converges
+\end{lemma}
+\begin{proof}
+\TODO{this}
+\end{proof}
+\begin{claim}
+\(\wp\) converges uniformly absolutely in any disc \(|z| \leq r\)
+\end{claim}
+\begin{proof}
+\TODO{this}
+\end{proof}
 
 \subsection{Complex Projective Space}
 
