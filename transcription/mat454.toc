@@ -9,9 +9,9 @@
 \contentsline {subsection}{\numberline {1.8}Residue Calculus}{8}{subsection.1.8}% 
 \contentsline {section}{\numberline {2}Topology of the Space of Holomorphic Functions}{8}{section.2}% 
 \contentsline {subsection}{\numberline {2.1}Series of Meromorphic Functions}{9}{subsection.2.1}% 
-\contentsline {subsection}{\numberline {2.2}The Weierstrass \(\wp \)-function}{9}{subsection.2.2}% 
-\contentsline {subsection}{\numberline {2.3}Complex Projective Space}{9}{subsection.2.3}% 
+\contentsline {subsection}{\numberline {2.2}The Weierstrass \(\wp \)-function}{10}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}Complex Projective Space}{10}{subsection.2.3}% 
 \contentsline {section}{\numberline {3}Normal Families}{12}{section.3}% 
 \contentsline {subsection}{\numberline {3.1}The Conformal Mapping Problem}{12}{subsection.3.1}% 
 \contentsline {subsection}{\numberline {3.2}The Riemann Mapping Theorem}{14}{subsection.3.2}% 
-\contentsline {subsection}{\numberline {3.3}Theorems of Montel and Picard}{16}{subsection.3.3}% 
+\contentsline {subsection}{\numberline {3.3}Theorems of Montel and Picard}{17}{subsection.3.3}% 
