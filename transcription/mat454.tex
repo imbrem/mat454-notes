@@ -625,8 +625,34 @@ By the Arzelà–Ascoli theorem, namely that normality is equivalent to equicont
 \[g(z) = \lim_{n \to \infty}g_n(z) = \lim_{n \to \infty}f_n(a_n + \rho_nz) = f(a_\infty)\]
 i.e. \(g\) is a constant.
 \end{proof}
+We now want to prove Zalcman's lemma
+\begin{proof}
+Let \(\mc{S}\) be a family of meromorphic functions on a domain \(\Omega\) which is \underline{not normal} in the chordal metric. We wish to find \(a_n \to a_\infty \in \Omega\), \(\rho_n \to 0\) such that
+\[g_n(z) = f_n(a_n + \rho_n z)\]
+converges to a nonconstant meromorphic function \(g\) in the chordal metric on compact subsets of \(\mbb{C}\) such that
+\[g^\sharp(z) \leq g^\sharp(0) = 1\]
+So, not normal means that
+\[S^\sharp = \{f^\sharp: f \in \mc{S}\}\]
+is not locally bounded (as per the theorem by Marty). This means, in particular, that there is a sequence of points \(b_n \to b_\infty \in \Omega\), \(f_n \in \mc{S}\) such that \(f_n^\sharp(b_n) \to \infty\). Of course, we can assume \(b_\infty = 0\), and hence in particular that there is some disc \(\{|z| \leq r\} \subset \Omega\).
 
-As an exercise, let's look at a sequence \(\{f_n\}\) of holomorphic functions on a domain \(\Omega\) which converges uniformly on compact subsets of \(\Omega\) in the chordal metric. Then the limit is either holomorphic or identically equal to \(\infty\), and moreover, in the case that it is holomorphic, the convergence is uniform not only in the chordal metric but also in the usual Euclidean metric. Try to do this for next time, and if its not clear to you, tell me so I'll put it on the problem set. So I think I'm going to stop here today rather than getting into the middle.
+Let
+\[M_n = \max(r - |\zeta|)f_n^\sharp(\zeta)\]
+This is a continous function on a compact set, and so it takes on its maximum at some point \(a_n\), at which we have that this is equal to
+\[(r - |a_n|)f_n^\sharp(a_n)\]
+In particular, \(a_n \to \infty\) since \(b_n \to 0\). So the sequence we're going to construct is
+\[g_n(z) = f_n(a_n + z/f_n^\sharp(a_n))\]
+As \(n\) goes to infinity, this function is defined on bigger and bigger compact sets, as
+\[\left|a_n + \frac{z}{f_n^\sharp(a_n)}\right| \leq |a_n| + \frac{|z|}{|f_n^\sharp(a_n)|} \leq |a_n| + r - |a_n|\]
+That means that this is defined on \(|z| \leq M_n\). Fix \(R \geq 0\). If \(|z| \leq R \leq M_n\), then by the chain rule for spherical derivatives
+\[|g_n^\sharp(z)| \leq \frac{|f_n^\sharp(a_n + z/f_n^\sharp(a_n))|}{|f_n^\sharp(a_n)|} \leq \frac{\cancel{M_n}}{r - |a_n + z/f_n^\sharp(a_n)|}\frac{r - |a_n|}{\cancel{M_n}} \leq \frac{r - |a_n|}{r - |a_n| - |z|/f_n^\sharp(a_n)} = \frac{1}{1  - |z|/M_n} \to 1\]
+as \(n \to \infty\). This tells us by Marty's theorem that \(\{g_n\}\) contains a convergent subsequence in the chordal metric. Of course, taking that convergent subsequence and re-labeliling, we can just assume it is given by \(\{g_n\}\). \(g\) is meromorphic by this ``lemma", non-constant since \(g^\sharp(0) = 1\) and the endnote shows \(g^\sharp(z) \leq 1\).
+\end{proof}
+
+We now turn our attention to Montel's theorem. We've already seen a result of Montel, that was the consequence of the Arzela-Ascoli theorem characterising normality in terms of uniformly bounded. This is a ``much souped up" version of that theorem, which says that if you have a family \(\mc{S}\) of meromorphic functions on a domain \(\Omega\) of \(\mbb{C}\) which omits three distinct values (\textit{including} \(\infty\)) in \(\mbb{C}^*\)l is normal in the chordal metric.
+
+We'll do this on Monday (too bad there's a virus...), and we're going to see how the Big Picard Theorem follows from this. So, Big Picard's Theorem says that if \(f\) is meromorphic in a punctured disk \(0 < |z - z_0| < \rho\) and omits three distinct values in \(\mbb{C}^*\) then it extends to be meromorphic in \(|z - z_0| < \rho\).
+
+Of course, this doesn't look like Picard's theorem as we stated it before, but they're in fact very easily seen to be equivalent.
 
 
 \end{document}
