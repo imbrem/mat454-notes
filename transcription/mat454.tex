@@ -301,6 +301,17 @@ We note that the sequence \(\{f_n\}\) converges to \(f\) uniformly on compact su
 In a similar vein, open neighborhoods of any \(f \in \mbb{C}(\Omega)\) can be defined by translating neighborhoods of 0 by \(f\), determining a basis for a topology in which convergence is equivalent to uniform convergence on compact subsets, i.e. we define the basis of the \textbf{compact-open topology} to be
 \[\mc{B} = \bigcup_{f, K, \epsilon}\{f + V(K, \epsilon)\}\]
 \end{definition}
+In this topology, \(\mc{C}(\Omega)\) is metrizable, and in fact, this topology can alternatively be defined by a translation-invariant metric as follows:
+\begin{definition}[Exhausion]
+An infinite sequence of compact subsets \(K_1 \subset K_2 \subset ...\) such that \(\Omega = \bigcup_i K_i\) is called an \textbf{exhaustion of \(\Omega\)}
+\end{definition}
+\begin{definition}[Translation-invariant metric]
+Given an exhaustion \(K_i\) of \(\Omega\), we define a metric
+\[d(f) = \sum_{i = 1}^\infty\frac{1}{2^i}\min\{1, M_i(f)\}, \quad M_i(f) = \max_{K_i}f\]
+\end{definition}
+This is a metric as
+\[d(f) = 0 \iff f = 0, \quad d(f + g) = d(f) + d(g) \leq d(f) + d(g)\]
+We have that \(\mc{C}(\Omega)\) is \textbf{complete}, i.e. the limit of a sequence of functions that converges uniformly on compact sets is continuous. We given \(\mc{H}(\Omega)\) the subspace topology.
 
 \section{Elliptic Functions}
 
