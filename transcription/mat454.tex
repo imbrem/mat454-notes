@@ -142,11 +142,14 @@ So what was the point about compatibility? Well, what's the relationship between
 \[z \cdot z' = \frac{x^2 + y^2}{(1 - t)^2} = 1 \implies z' = \frac{1}{z}\]
 This is a holomorphic function from \(\mbb{C} \setminus \{0\} \to \mbb{C} \setminus \{0\}\) with a holomorphic inverse. So the two complex structures defined on the sphere minus the north pole and the sphere minus the south pole are compatible. By a \textit{complex structure} on a set, we mean a homeomorphism between an open subset that set and an open subset of the complex plane. If you're familiar with the language of manifolds, each of these two mappings is a \textit{coordinate chart}. These are even better than manifolds, though, because the coordinate charts are not just differentiable or infinitely differentiable, but holomorphic, or even better, \textit{rational}.
 
-\TODO{January 8}
+We now proceed to some basic properties of differential forms:
+\begin{theorem}[Cauchy's Theorem]
+Let \(\Omega \subset \reals^2\) be simply connected, and let \(\omega = Pdx + Qdy\) be a differential form with \(P, Q\) continuous and real or complex-valued. Let \(\gamma = (x, y): [a, b] \to \Omega\) be a piecewise \(C^1\) curve in \(\Omega\). Then
+\[\int_\gamma\omega = \int_a^bf(t)dt, \quad f(t) = P(x(t), y(t))x'(t) + Q(x(t), y(t))y'(t) = \gamma^*\omega\]
+\end{theorem}
+Note we can define \(\gamma^*\) recursively by
+\[\gamma^*(P) = P\circ \gamma, \quad \gamma^*(dx) = d(x \circ \gamma) = x'(t)dt, \quad \gamma^*(dy) = d(y \circ \gamma) = y'(t)dt\]
 
-\TODO{January 10}
-
-\TODO{January 13}
 
 \subsection{Taylor and Laurent Series}
 
