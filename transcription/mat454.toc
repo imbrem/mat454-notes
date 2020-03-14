@@ -10,11 +10,11 @@
 \contentsline {subsection}{\numberline {1.9}Poisson's integral formula}{8}{subsection.1.9}% 
 \contentsline {subsection}{\numberline {1.10}Dirichlet's problem}{8}{subsection.1.10}% 
 \contentsline {section}{\numberline {2}Topology of the Space of Holomorphic Functions}{8}{section.2}% 
-\contentsline {section}{\numberline {3}Elliptic Functions}{8}{section.3}% 
-\contentsline {subsection}{\numberline {3.1}The Weierstrass \(\wp \)-function}{8}{subsection.3.1}% 
-\contentsline {subsection}{\numberline {3.2}Complex Projective Space}{8}{subsection.3.2}% 
-\contentsline {section}{\numberline {4}Conformal Mapping}{10}{section.4}% 
-\contentsline {subsection}{\numberline {4.1}The Conformal Mapping Problem}{10}{subsection.4.1}% 
+\contentsline {section}{\numberline {3}Elliptic Functions}{9}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}The Weierstrass \(\wp \)-function}{9}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.2}Complex Projective Space}{9}{subsection.3.2}% 
+\contentsline {section}{\numberline {4}Conformal Mapping}{11}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}The Conformal Mapping Problem}{11}{subsection.4.1}% 
 \contentsline {subsection}{\numberline {4.2}The Riemann Mapping Theorem}{13}{subsection.4.2}% 
-\contentsline {section}{\numberline {5}Theorems of Montel and Picard}{15}{section.5}% 
-\contentsline {subsection}{\numberline {5.1}Picard's Big Theorem}{15}{subsection.5.1}% 
+\contentsline {section}{\numberline {5}Theorems of Montel and Picard}{16}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Picard's Big Theorem}{16}{subsection.5.1}% 

@@ -292,6 +292,15 @@ We want to assign a topology to \(\mc{C}(\Omega)\). We begin by defining some pr
 We say that a sequence of functions \(\{f_n\} \subset \mc{C}(\Omega)\) \textbf{converges uniformly on compact subsets} if for all compact subsets \(K \subset \Omega\), \(\{f_n | K\}\) converges uniformly, i.e.
 \[\forall \ \text{compact} \ K \subset \Omega, \forall \epsilon > 0, \exists N \in \mbb{N}, \forall m, n \geq N, \forall z \in K, |f_m(x) - f_n(x)| < \epsilon\]
 \end{definition}
+Uniform convergence on compact subsets can be used to determine a topology on \(\mc{C}(\Omega)\) as follows:
+\begin{definition}[The Compact-Open Topology]
+We define the \textbf{fundamental system of open neighborhoods of 0} as
+\[\forall \ \text{compact} \ K \subset \Omega, \forall \epsilon > 0, V(K, \epsilon) = \{f: \forall z \in K, |f(z)| < \epsilon\}\]
+We note that the sequence \(\{f_n\}\) converges to \(f\) uniformly on compact subsets if and only if
+\[\forall K, \epsilon, \exists N \in \mbb{N}, \forall n \geq N, f - f_n \in V(K, \epsilon)\]
+In a similar vein, open neighborhoods of any \(f \in \mbb{C}(\Omega)\) can be defined by translating neighborhoods of 0 by \(f\), determining a basis for a topology in which convergence is equivalent to uniform convergence on compact subsets, i.e. we define the basis of the \textbf{compact-open topology} to be
+\[\mc{B} = \bigcup_{f, K, \epsilon}\{f + V(K, \epsilon)\}\]
+\end{definition}
 
 \section{Elliptic Functions}
 
