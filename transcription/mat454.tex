@@ -404,7 +404,25 @@ We'll see that \(\wp\) converges uniformly and absolutely on compact subsets of 
 \end{proof}
 In summary, \(\wp\) is a meromorphic function with \(\Gamma\) as group of periods, and poles precisely at points of \(\Gamma\) each with prime part \(\frac{1}{(z - w)^2}\).
 
-\TODO{Laurent expansion of \(\wp\)}
+In some neighborhood of 0, we can write, because \(\wp\) is even,
+\[\wp(z) = \frac{1}{z^2} + a_2z^2 + a_4z^4 + ...\]
+It follows that \(g(z) = \wp(z) - \frac{1}{z^2}\) vanishes at 0. We can find these coefficients by differentiating term-by term:
+\[a_2 = 3\sum_{w \neq 0}\frac{1}{w^4}, \quad a_4 = 5\sum_{w \neq 0}\frac{1}{w^6}, \quad ... \quad a_k = (2k + 1)\sum_{w \neq 0}\frac{1}{w^{2(k = 1)}}\]
+
+\subsection{Differential equations solved by \(\wp\)}
+
+Differentiating \(\wp\) term-by-term, we obtain
+\[\wp'(z) = -\frac{2}{z^3} + 2a_2z + 4a_4z^3 + ...\]
+Squaring both sides, we obtain
+\[\wp'(z)^2 = \frac{4}{z^6} + \frac{8a_2}{z^2} - 16a_4 + ...\]
+We note, however, that
+\[\wp(z)^3 = \frac{1}{z^6} + \frac{3a_2}{z^2} + 3a_4 + ...\]
+Therefore, we compute that
+\[\wp'(z)^2 - 4\wp(z)^3 = -\frac{20a_2}{z_2} - 28a_4 + z^2(...)\]
+Hence,
+\[(\wp')^2 - 4\wp^3 + 20a_2\wp + 28a_4\]
+is holomorphic near zero, and zero at zero. Since it has \(\Gamma\)as group of periods, it is holomorphic near each \(w \in \Gamma\), and \(0\) at \(w \in \Gamma\). In fact, it is holomorphic in \(\mbb{C}\) as it has no poles outside \(\Gamma\), and therefore bounded in \(\mbb{C}\) by periodicity. It folows by Liouville's theorem that it is identically zero, and hence that
+\[\wp'^2 = 4\wp^3 - 20a_2\wp - 28a_4\]
 
 \subsection{Doubly Periodic Functions}
 
