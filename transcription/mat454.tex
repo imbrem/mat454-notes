@@ -552,12 +552,15 @@ Recall that we proved that \(\mc{C}(\Omega)\) is metrizable and has \(\mc{H}(\Om
 A metric space is \textbf{compact} if and only if every infinite sequence has an (infinite) convergent subsequence. Note that this is equivalent to topological compactness, i.e. every open cover has a finite subcover.
 \end{definition}
 \begin{definition}
-We say that \(\mc{S} \subset \mc{H}(\Omega)\) is a \textbf{normal family} if every sequence in \(\mc{S}\) has a subsequence that convergs uniformly on compact subsets of \(\Omega\) (i.e. converges in \(\mc{H}(\Omega)\)). Thus, \(\mc{S}\) is compact if and only if it is normal and the limit functions themselves are in \(\mc{S}\).
+We say that \(\mc{S} \subset \mc{C}(\Omega)\) is a \textbf{normal family} if every sequence in \(\mc{S}\) has a subsequence that convergs uniformly on compact subsets of \(\Omega\) (i.e. converges in \(\mc{C}(\Omega)\)). Thus, \(\mc{S}\) is compact if and only if it is normal and the limit functions themselves are in \(\mc{S}\).
 \end{definition}
 As an exercise, we can show that if \(\mc{S}\) is normal, \(\overline{\mc{S}}\) is.
-\begin{proposition}
+\begin{lemma}
 \(\mc{S}\) is normal if and only if \(\overline{\mc{S}}\) is compact.
-\end{proposition}
+\end{lemma}
+\begin{lemma}
+If \(\Omega = \bigcup_iE_i\) is a union of closed disks, then \(\mc{S} \subset \mc{C}(\Omega)\) is normal if and only if, for every \(i\), every sequence in \(\mc{S}\) converges a sequence that converges uniformly on \(E_i\).
+\end{lemma}
 
 \TODO{this}
 
