@@ -589,7 +589,26 @@ For families of holomorphic functions, Arzela-Ascoli and the Cauchy inequalities
 \begin{definition}
 \(\mc{S} \subset \mc{C}(\Omega)\) is \textbf{locally bounded} on \(\Omega\) if
 \[\forall z_0 \in \Omega, \exists \delta > 0, M < \infty, \forall z \in \Omega, f \in \mc{S}, |z - z_0| < \delta \implies |f(z)| \leq M\]
+This is true if and only if \(\mc{S}\) is \textbf{uniformly bounded on compact subsets of \(\Omega\)}, i.e. for all \(K \subset \Omega\) compact,
+\[\exists M = M(K), \forall z \in K, \forall f \in \mc{S}, |f(z)| \leq M\]
 \end{definition}
+\begin{theorem}[Montel]
+Let \(\mc{S} \subset \mc{H}(\Omega)\) where \(\Omega \subset \mbb{C}\) is a domain. Then the following are equivalent:
+\begin{enumerate}
+
+  \item \(\mc{S}\) is normal
+
+  \item \(\mc{S}\) is locally bounded
+
+  \item \(\mc{S}' = \{f' : f \in \mc{S}\}\) is locally bounded and there exists \(z_0 \in\Omega\) such that \(\{f(z_0) : f \in \mc{S}\}\) is bounded in \(\mbb{C}\).
+
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+
+\TODO{this}
+
+\end{proof}
 
 \subsection{The Conformal Mapping Problem}
 
