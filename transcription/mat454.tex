@@ -609,6 +609,34 @@ Let \(\mc{S} \subset \mc{H}(\Omega)\) where \(\Omega \subset \mbb{C}\) is a doma
 \TODO{this}
 
 \end{proof}
+Proof of Arzela-Ascoli:
+\begin{proof}
+
+\TODO{this}
+
+\end{proof}
+The Arzela-Ascoili theorem holds for families of continuous functions with values in a complete metric space, e.g. continuos functions with values in the Riemann sphere \(S^2\) (or the extended complex plane \(\mbb{C}^* = \mbb{C} \cup \{\infty\}\)) with the (induced) \textbf{chordal metric}
+\[d(z, w) = \frac{2|z - w|}{\sqrt{(1 + |z|)^2(1 + |w|)^2}}\]
+(we note that the topology induced by \(\mbb{C}\) by the chordal metric is the usual Euclidean topology).
+\begin{definition}[Normal in the chordal metric]
+A family \(\mc{S}\) of continuous functions on \(\Omega\) is \textbf{normal in the chordal metric} if and only if it is equicontinuous in the chordal metric: condition (2) of the Arzela-Ascoli theorem is not needed because \(\mbb{C}^*\) or \(S^2\) is compact in this topology.
+\end{definition}
+We can use this definition to analyze, e.g., a family \(\mc{S}\) of meromorphic functions on \(\Omega \subset \mbb{C}\) (or \(\Omega \subset S^2\)), since these can be considered holomorphic functions with values in \(S^2\).
+\begin{lemma}
+Let \(\{f_n\}\) be a sequence of meromorphic functions which converges uniformly on compact subsets of the domain \(\Omega \subset \mbb{C}\) (on \(S^2\), in the chordal metric). Thenthe limit function is either meromorphic or identically \(\infty\).
+\end{lemma}
+\begin{proof}
+\TODO{this}
+\end{proof}
+\begin{definition}[Spherical derivative]
+If \(f\) is meromorphic on a domain \(\Omega \subset \mbb{C}\) (or \(S^2\)), we define the \textbf{spherical derivative of \(f\)} at \(z \in \Omega\) by
+\[f^\sharp(z) = \lim_{w \to z}\frac{d(f(z), f(w))}{|z - w|}\]
+If \(z\) is not a pole, we have
+\[f^\sharp(z) = \lim_{w \to z}\frac{2|f(z) - f(w)|}{|z - w|\sqrt{(1 + |f(z)|^2)(1 + |f(w)|^2)}} = \frac{2|f'(z)|}{1 + |f(z)|^2}\]
+\end{definition}
+We have that
+\[\left(\frac{1}{f}\right)^\sharp = f^\sharp\]
+implying that \(f^\sharp(z)\) is finite and continuous at all \(z \in \Omega\), and greater than zero at \(z\) if and only if \(f\) is one-to-one near \(z\).
 
 \subsection{The Conformal Mapping Problem}
 
