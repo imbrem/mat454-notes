@@ -561,8 +561,35 @@ As an exercise, we can show that if \(\mc{S}\) is normal, \(\overline{\mc{S}}\) 
 \begin{lemma}
 If \(\Omega = \bigcup_iE_i\) is a union of closed disks, then \(\mc{S} \subset \mc{C}(\Omega)\) is normal if and only if, for every \(i\), every sequence in \(\mc{S}\) converges a sequence that converges uniformly on \(E_i\).
 \end{lemma}
+\begin{proof}
+\TODO{this}
+\end{proof}
 
 \TODO{this}
+
+\begin{definition}
+Let \(X \subset \mbb{C}\) and \(\mc{S} \subset \mc{C}(X)\). We say that \(\mc{S}\) is \textbf{equicontinuous} at \(a \in X\) if
+\[\forall \epsilon > 0, \exists \delta > 0, \forall z \in X, |z - a| < \delta \implies \forall f \in \mc{S}, |f(z) - f(a)| < \epsilon\]
+\(\mc{S}\) is \textbf{equicontinuous on \(X\)} if it is equicontinous at each \(a \in X\). It is \textbf{uniformly equicontinuous on \(X\)} if
+\[\forall \epsilon > 0, \exists \delta > 0, \forall z, w \in X, |z - w| <\delta \implies \forall f \in \mc{S}, |f(z) - f(w)| < \epsilon\]
+\end{definition}
+A family of functions that this equicontinuous on compact sets can be shown to be uniformly equicontinuous.
+
+\begin{theorem}[Arzela-Ascoli]
+Let \(\Omega \subset \mbb{C}\) be a \textbf{domain}. Then\(\mc{S} \subset \mc{C}(\Omega)\) is normal if and only if
+\begin{enumerate}
+
+  \item \(\mc{S}\) is equicontinuous on \(\Omega\)
+
+  \item There exists \(z_0 \in \Omega\) such that \(\{f(z_0) : f \in \mc{S}\) is a bounded subset of \(\mbb{C}\)
+
+\end{enumerate}
+\end{theorem}
+For families of holomorphic functions, Arzela-Ascoli and the Cauchy inequalities give a criterion for normality:
+\begin{definition}
+\(\mc{S} \subset \mc{C}(\Omega)\) is \textbf{locally bounded} on \(\Omega\) if
+\[\forall z_0 \in \Omega, \exists \delta > 0, M < \infty, \forall z \in \Omega, f \in \mc{S}, |z - z_0| < \delta \implies |f(z)| \leq M\]
+\end{definition}
 
 \subsection{The Conformal Mapping Problem}
 
