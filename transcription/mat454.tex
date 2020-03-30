@@ -996,4 +996,19 @@ Let \(\omega\) be a holomorphic differential form in the complement of a discret
 \[\int_\Gamma\omega = 2\pi i \sum_{a \in E \cap K}\Res_a(\omega)\]
 \end{theorem}
 
+\subsection{Riemann Surfaces}
+
+\begin{definition}[Riemann Surface]
+Let \(Y\) be a complex curve (e.g. \(\mbb{C}\) or \(S^2\)). A \textbf{Riemann surface over \(Y\)} is a non-constant holomorphic mapping \(\varphi: X \to Y\) where \(X\) is a connected complex curve.
+\end{definition}
+
+\begin{definition}[Ramification Point]
+A \textbf{ramification point} of a Riemann surface \(\varphi\) is a point with multiplicity greater than one. A Riemann surface \(\varphi\) with no ramification points is said to be \textbf{unramified}
+\end{definition}
+
+If \(\varphi\) is a Riemann surface, then it is an open mapping with isolated ramification points, with the inverse image of a point in \(Y\) being discrete. \(\varphi\) is not necessarily surjective, even if it is unramified.
+An example of a Riemann surface is given by, taking \(Y = \mbb{C}^*\) and \(X = \mbb{C}\), the function \(\varphi = z \mapsto e^t\).
+
+In this example, \(\varphi: X \to Y\) is a \textbf{covering space} of \(Y\), e.g. an unramified Riemann surface such that every \(h \in Y\) has a neighborhood \(V\) such that \(\varphi^{-1}(V)\) is a disjoint union of open \(U_i \subset X\), with each mapped isomorphically onto \(V\) by \(\varphi\).
+
 \end{document}
