@@ -925,6 +925,11 @@ For an example of a complex manifold, consider the Riemann sphere \(S^2\). Letti
 \[\varphi_U: U \to \mbb{C} = (x, y, t) \mapsto \frac{x + iy}{1 - t}, \qquad \varphi_V: V \to \mbb{C} = (x, y, t) \mapsto \frac{x - iy}{1 + t}\]
 We have that
 \[\varphi_U \circ \varphi_V^{-1}: \mbb{C} \setminus \{0\} \to \mbb{C} \setminus \{0\} = z \mapsto 1/z\]
-is holomorphic, and hence this gives \(S^2\) a complex structure. 
+is holomorphic, and hence this gives \(S^2\) a complex structure.
+
+\begin{definition}[Holomorphic mapping]
+If \(M, N\) are complex manifolds, \(f: M \to N\) is called a \textbf{holomorphic mapping} if, for all coordinate charts \(\varphi_j: U_j \to \mbb{C}\) of \(M\) and \(\psi_i: V_i \to \mbb{C}\) of \(N\),
+\[\psi_i \circ f \circ \varphi_j^{-1}: \varphi_j(U_j \cap f^{-1}(V_i))\]
+\end{definition}
 
 \end{document}
