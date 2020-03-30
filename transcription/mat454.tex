@@ -917,10 +917,11 @@ Equivalently, a holomorphic function omits at most one complex value in a neighb
 An \textbf{\(n\)-dimensional topological manifold} is a Hausdorff, paracompact, topological space locally homeomorphic to \(\reals^n\).
 \end{definition}
 
-\begin{definition}[Complex manifold]
-A \textbf{complex manifold} is a manifold with a complex structure. A \textbf{complex structure} on a manifold \(M\) is given by an open cover of \(\{U_i\}\) of \(M\) and a set of \textbf{coordinate charts} \(\varphi_i: U_i \to \mbb{C}\) such that each composition \(\varphi_i \circ \varphi_j^{-1}: \varphi_j(U_j) \to \mbb{C}\) is holomorphic.
+\begin{definition}[Complex Structure]
+A \textbf{complex structure} on a manifold \(M\) is given by an open cover of \(\{U_i\}\) of \(M\) and a set of \textbf{coordinate charts} \(\varphi_i: U_i \to \mbb{C}\) such that each composition \(\varphi_i \circ \varphi_j^{-1}: \varphi_j(U_j) \to \mbb{C}\) is holomorphic.
 \end{definition}
 
+\label{example:riemann_complex_structure}
 For an example of a complex manifold, consider the Riemann sphere \(S^2\). Letting \(N, S\) denote the north and south poles respectively, and letting \(U = S^2 \setminus \{N\}\), \(V = S^2 \setminus \{S\}\), we can define coordinate charts
 \[\varphi_U: U \to \mbb{C} = (x, y, t) \mapsto \frac{x + iy}{1 - t}, \qquad \varphi_V: V \to \mbb{C} = (x, y, t) \mapsto \frac{x - iy}{1 + t}\]
 We have that
@@ -933,7 +934,11 @@ If \(M, N\) are complex manifolds, \(f: M \to N\) is called a \textbf{holomorphi
 \end{definition}
 
 \begin{definition}[Isomorphism/Biholomorphism]
-A holomorphic homeomorphism \(f: M \to N\) is called an \textbf{isomorphism} or \textbf{biholomorphism} of \(M\) onto \(N\). We say that two complex structures on some topological manifold \(M\) are \textbf{equivalent} if the identity map is an isomorphism. In this way, we can view a complex manifold as a topological manifold \(M\) together with an equivalence calls of complex structures
+A holomorphic homeomorphism \(f: M \to N\) is called an \textbf{isomorphism} or \textbf{biholomorphism} of \(M\) onto \(N\). We say that two complex structures on some topological manifold \(M\) are \textbf{equivalent} if the identity map is an isomorphism.
+\end{definition}
+
+\begin{definition}[Complex Manifold]
+A \textbf{complex manifold} is a topological manifold \(M\) together with an equivalence class of complex structures
 \end{definition}
 
 Examples include:
@@ -941,7 +946,7 @@ Examples include:
 
   \item Open subsets of \(\mbb{C}\)
 
-  \item The Riemann sphere \(S^2 = P^1(\mbb{C})\). Note this is compact.
+  \item The Riemann sphere \(S^2 = P^1(\mbb{C})\) with the complex structure assigned \hyperref[example:riemann_complex_structure]{above}. Note this is compact.
 
   \item \(\mbb{C}/\mbb{Z}\) with \(\mbb{Z}\) taken as an additive subgroup of \(\mbb{Z}\): equivalence classes of points where the difference is in \(\mbb{Z}\).
 
