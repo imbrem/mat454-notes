@@ -979,4 +979,21 @@ Examples of meromorphic functions include
 
 \end{enumerate}
 
+\subsection{Integration of Holomorphic Differential Forms}
+
+\TODO{definitions}
+
+\begin{definition}[Residue of a holomorphic differential form]
+Let \(\omega\) be a holomorphic differential form in the complement of a discrete set \(E \subset M\). Consider \(a \in E\), and let \(z\) denote local coordinates at \(a\) with \(z(a) = 0\) such that, for \(\omega_1\) holomorphic at \(a\),
+\[\omega = f(z)dz = \left(\omega_1 + \left(\frac{c_1}{z} + \frac{c_2}{z^2} + ...\right)\right)dz\]
+using the Laurent expansion of \(f\) at \(a\). Let \(\gamma\) be a closed path in a small neighborhood of \(a\) such that the winding number of \(\gamma\) with respect to \(a\) is \(+1\). We define the \textbf{residue} of \(\omega\) at \(a\) to be
+\[\Res_a(\omega) = \frac{1}{2\pi i}\int_\gamma\omega = c_1\]
+Note in particular that this implies that \(c_1\) is independent of local coordinates.
+\end{definition}
+
+\begin{theorem}[Residue Theorem]
+Let \(\omega\) be a holomorphic differential form in the complement of a discrete set \(E\), and let \(\Gamma\) be the \underline{oriented} (complex manifolds have a natural orientation, so this makes sense) boundary of a compact set \(K\) such that \(\Gamma\) contains no point in \(E\). Then
+\[\int_\Gamma\omega = 2\pi i \sum_{a \in E \cap K}\Res_a(\omega)\]
+\end{theorem}
+
 \end{document}

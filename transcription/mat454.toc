@@ -22,3 +22,4 @@
 \contentsline {subsection}{\numberline {3.3}Theorems of Montel and Picard}{21}{subsection.3.3}% 
 \contentsline {section}{\numberline {4}Riemann Surfaces}{24}{section.4}% 
 \contentsline {subsection}{\numberline {4.1}Complex Manifolds}{24}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}Integration of Holomorphic Differential Forms}{25}{subsection.4.2}% 
