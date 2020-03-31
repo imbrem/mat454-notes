@@ -1037,6 +1037,13 @@ We now consider some examples:
     \end{tikzcd}
   \end{equation}
 
+  \item Consider the relation (which we will here consider as a multi-valued function) \(y = \sqrt{x}\). We make this multi-valued function single-valued by introducing a Riemann surface
+  \begin{equation}
+  \begin{tikzcd}
+    X = \{(x, y) : x - y^2 = 0\} \arrow[d, "{\varphi: X \to Y = (x, y) \mapsto x}"] \\ Y = \mbb{C}
+  \end{tikzcd}
+  \end{equation}
+  \(x\) is a local coordinate on \(x\) \underline{outside} of 0.
 
   \item As another example, we consider a Riemann surface to make the multi-valued function \(y = (1 - x^3)^{1/3}\) single-valued: we define
   \begin{equation}X = \{(x, y) \in \mbb{C}^2 : x^3 + y^3 = 1\}, \qquad \varphi: X \to \mbb{C} = (x, y) \mapsto x\end{equation}
