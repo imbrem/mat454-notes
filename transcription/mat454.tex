@@ -12,6 +12,8 @@
 \usepackage{graphicx}
 \usepackage{cancel}
 \usepackage{mathabx}
+\usepackage{tikz}
+\usepackage{tikz-cd}
 \usepackage{xcolor}
 
 \usepackage[margin=1in]{geometry}
@@ -1010,6 +1012,8 @@ A \textbf{ramification point} of a Riemann surface \(\varphi\) is a point with m
 A \textbf{covering space} of a complex manifold \(Y\) is an unramified Riemann surface such that every \(b \in Y\) has a neighborhood \(V\) such that \(\varphi^{-1}(V)\) is a disjoint union of open \(U_i \subset X\), with each mapped isomorphically onto \(V\) by \(\varphi\).
 \end{definition}
 
+\label{example:et_riemann_surface}
+
 If \(\varphi\) is a Riemann surface, then it is an open mapping with isolated ramification points, with the inverse image of a point in \(Y\) being discrete. \(\varphi\) is not necessarily surjective, even if it is unramified.
 An example of a Riemann surface is given by, taking \(Y = \mbb{C}^*\) and \(X = \mbb{C}\), the function \(\varphi = z \mapsto e^t\). In this example, \(\varphi: X \to Y\) is in fact a covering space of \(Y\). In particular, fixing \(b \in Y\), each branch of \(\log z\) defines an isomorphism from the open set \(V = \{z : |z - b| < |b|\}\) to an open set \(U_i\) in \(\mbb{C}\), and these open sets are disjoint, with
 \[\bigcup_iU_i = \varphi^{-1}(V), \qquad \varphi^{-1}|_{U_i}: U_i \xrightarrow{\sim} V\]
@@ -1018,9 +1022,16 @@ An example of a Riemann surface is given by, taking \(Y = \mbb{C}^*\) and \(X = 
 Any connected open set in \(\mbb{C}\) (or any connected complex manifold \(Y\)) has a simply connected covering space.
 \end{theorem}
 
-In the example, \(z = e^t\) is a local coordinate in a neighborhood of any point of \(X\) (i.e. a holomorphic function on \(X\) can be expressed \underline{locally} as a holomorphic function of \(z\), but not in general \underline{globally}). For example, \(t\) is a holomorphic function on \(X\) in a neighborhood of each point, as it is a brnach of \(\log z\). We make \(\log z\) single valued by lifting it to the Riemann surface.
+In the example \hyperref[et_riemann_surface]{above}, \(z = e^t\) is a local coordinate in a neighborhood of any point of \(X\) (i.e. a holomorphic function on \(X\) can be expressed \underline{locally} as a holomorphic function of \(z\), but not in general \underline{globally}). For example, \(t\) is a holomorphic function on \(X\) in a neighborhood of each point, as it is a branch of \(\log z\). In other words, ``we make \(\log z\) single valued by lifting it to the Riemann surface."
 
-\TODO{clarify}
+\[
+\begin{tikzcd}
+\mbb{C} = X \arrow[dd, "\varphi(t) = e^t"] \arrow[rd, "t"] \\
+& \mbb{C} \\
+\mbb{C}^* = Y \arrow[ru, "\log z"]
+\end{tikzcd}
+\]
+
 
 As another example, we consider a Riemann surface to make the multi-valued function \(y = (1 - x^3)^{1/3}\) single-valued: we define
 \[X = \{(x, y) \in \mbb{C}^2 : x^3 + y^3 = 1\}, \qquad \varphi: X \to \mbb{C} = (x, y) \mapsto x\]
