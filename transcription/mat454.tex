@@ -1023,10 +1023,27 @@ In the example, \(z = e^t\) is a local coordinate in a neighborhood of any point
 
 \TODO{clarify}
 
-As another example, we consider a Riemann surface to make the multi-valued function \(y = (1 - x^2)^{1/3}\) single-valued: we define
+As another example, we consider a Riemann surface to make the multi-valued function \(y = (1 - x^3)^{1/3}\) single-valued: we define
 \[X = \{(x, y) \in \mbb{C}^2 : x^3 + y^3 = 1\}, \qquad \varphi: X \to \mbb{C} = (x, y) \mapsto x\]
 \(X\) is a manifold. Local coordinates at a point \((x_0, y_0) \in X\)...
 
 \TODO{rest}
+
+\subsubsection{Evaluation of Integrals by Residues on Riemann Surfaces}
+
+As an example, we compute
+\[\int_0^1\frac{dx}{(1 - x^3)^{1/3}}\]
+Consider the Riemann surface of \(y = (1 - x^2)^{1/3}\). We have, as before, \(X = \{(x, y) \in \mbb{C}^2 : x^3 + y^3 = 1\}\) with branch points, \(i, j, j^2\) where \(j = e^{2\pi i/3}\). There are three closed curves on \(X\) with the image \(\gamma\) since \((1 - x^3)^{1/3}\) returns to the same branch as \(x\) describes \(\gamma\).
+
+\TODO{rest}
+
+\subsubsection{Riemann Surface Associated with an Elliptic Curve}
+
+Recall the cubic equation associated with the Weierstrass function,
+\[y^2 = 4x^3 - 20a_2x - 28a_4 = p(x)\]
+Assume the RHS \(p(x)\) has three distinct roots so the equation defines a nonsingular curve (note that every nonsingular cubic has a equation of this form in suitable affine coordinates: \textbf{Weierstrass normal form}). We define a Riemann surface over \(\mbb{C}\) with
+\[X = \{(x, y) : y^2 = p(x)\}\]
+
+\TODO{Diagram}
 
 \end{document}
