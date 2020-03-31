@@ -70,44 +70,44 @@ These notes are based off a combination of my class notes and handwritten notes 
 The main objects of study in this course are holomorphic functions.
 \begin{definition}[Holomorphic function]
 \(f(t)\) is called \textbf{holomorphic at \(z \in \mbb{C}\)} if
-\[\lim_{h \to 0}\frac{f(z + h) - f(z)}{h}\]
+\begin{equation}\lim_{h \to 0}\frac{f(z + h) - f(z)}{h}\end{equation}
 exists, i.e. there is \(c \in \mbb{C}\) such that
-\[f(z + h) = f(z) + c \cdot h + \varphi(h) \cdot h, \lim_{h \to 0}\varphi(h) = 0\]
+\begin{equation}f(z + h) = f(z) + c \cdot h + \varphi(h) \cdot h, \lim_{h \to 0}\varphi(h) = 0\end{equation}
 \end{definition}
 Now, from this perspective, this looks no different from the usual case of a differentiable function. But it is different, because the variables are complex, and hence we can write
-\[z = x + iy, \qquad f(z) = u(z) + iv(z)\]
+\begin{equation}z = x + iy, \qquad f(z) = u(z) + iv(z)\end{equation}
 Hence, this function mapping \(z \mapsto f(z)\) is, from the real perspective, a function from
 \(\reals^2 \to \reals^2\), taking
-\[\begin{pmatrix} x \\ y \end{pmatrix} \mapsto \begin{pmatrix} u(x, y) \\ v(x, y) \end{pmatrix}\]
+\begin{equation}\begin{pmatrix} x \\ y \end{pmatrix} \mapsto \begin{pmatrix} u(x, y) \\ v(x, y) \end{pmatrix}\end{equation}
 Naturally, in the above definition, we can also write \(a + ib\) and \(h = \xi + i\eta\). Hence the derivative \(h \mapsto c \cdot h\) can be written as
-\[\begin{pmatrix} \xi \\ \eta \end{pmatrix} \mapsto
+\begin{equation}\begin{pmatrix} \xi \\ \eta \end{pmatrix} \mapsto
 \begin{pmatrix} a & -b \\ b & a \end{pmatrix}
   \begin{pmatrix} \xi \\ \eta \end{pmatrix}
 = \begin{pmatrix}\prt{f}{x} & \prt{f}{y}\end{pmatrix}
-  \begin{pmatrix} \xi \\ \eta \end{pmatrix}\]
+  \begin{pmatrix} \xi \\ \eta \end{pmatrix}\end{equation}
 In other words, this says that
-\[\prt{f}{x} + i\prt{f}{y} = 0
-\iff \prt{u}{x} = \prt{v}{y} \land \prt{u}{y} = -\prt{v}{x}\]
+\begin{equation}\prt{f}{x} + i\prt{f}{y} = 0
+\iff \prt{u}{x} = \prt{v}{y} \land \prt{u}{y} = -\prt{v}{x}\end{equation}
 These are what is called the Cauchy-Riemann equations. So the moral of the story is that holomorphic is \textit{not} the same as differentiable as a function of two real variables. It' the same as differentiable as a function of two real variables \textit{plus} satisfying the Cauchy-Riemann equations.
 
 It's going to convenient throughout this course to think about derivatives in terms of differential forms. Let's suppose, to begin a bit more generally, that we're considering a complex-valued \textit{differentiable} (not necessarily holomorphic) function \(f(x, y)\).
 \begin{definition}
 The \textbf{differential} of \(f\) is given by
-\[df = \prt{f}{x}dx + \prt{f}{x}dy\]
+\begin{equation}df = \prt{f}{x}dx + \prt{f}{x}dy\end{equation}
 \end{definition}
 But, we're thinking about \(x\) and \(y\) as parts of a complex number, with \(z = x + iy\) and \(\bar{z} = x - iy\). So we can solve for \(x\) and \(y\) in terms of \(z\) and \(\bar{z}\). We can also compute the differentials
-\[dz = dx + idy, \qquad d\bar{z} = dx - idy\]
+\begin{equation}dz = dx + idy, \qquad d\bar{z} = dx - idy\end{equation}
 So we can solve for \(dz\) and \(d\bar{z}\) in terms of \(dz\) and \(d\bar{z}\), getting
-\[dx = \frac{1}{2}(dz + d\bar{z}), \qquad dy = \frac{1}{2i}(dz - d\bar{z})\]
+\begin{equation}dx = \frac{1}{2}(dz + d\bar{z}), \qquad dy = \frac{1}{2i}(dz - d\bar{z})\end{equation}
 In particular, we can take \(df\) and rewrite it in terms of \(dz\) and \(d\bar{z}\) by substituting in these expressions. So if we do that we get
-\[df = \frac{1}{2}\left(\prt{f}{x} - i\prt{f}{y}\right)dz + \frac{1}{2}\left(\prt{f}{x} + i\prt{f}{y}\right)d\bar{z}\]
+\begin{equation}df = \frac{1}{2}\left(\prt{f}{x} - i\prt{f}{y}\right)dz + \frac{1}{2}\left(\prt{f}{x} + i\prt{f}{y}\right)d\bar{z}\end{equation}
 So, if we would like to define partial derivatives with respect to \(z\) and \(\bar{z}\), how should we define them? Well... the coefficients above seem to be natural choices, giving
-\[\prt{f}{z} = \frac{1}{2}\left(\prt{f}{x} - i\prt{f}{y}\right),
+\begin{equation}\prt{f}{z} = \frac{1}{2}\left(\prt{f}{x} - i\prt{f}{y}\right),
   \qquad \prt{f}{\bar{z}}
 = \frac{1}{2}\left(\prt{f}{x} + i\prt{f}{y}\right)
-\implies df = \prt{f}{z}dz + \prt{f}{\bar{z}}d\bar{z}\]
+\implies df = \prt{f}{z}dz + \prt{f}{\bar{z}}d\bar{z}\end{equation}
 In terms of \textit{this} expression, what's a third way of writing the Cauchy-Riemann equations? It's simply
-\[\prt{f}{\bar{z}} = 0\]
+\begin{equation}\prt{f}{\bar{z}} = 0\end{equation}
 And of course, this basically captures your ``feeling" of what a holomorphic function should be: it's supposed to be a function of \(z\), and not \(\bar{z}\). Ok, so this is the basic definition of holomorphic.
 
 \subsection{Harmonic Functions}
@@ -115,12 +115,12 @@ And of course, this basically captures your ``feeling" of what a holomorphic fun
 We'll now say a few words about harmonic functions. Recall the following definition
 \begin{definition}[Harmonic]
 We say a real or complex valued function \(f(x, y)\) is \textbf{harmonic} if \(f\) is \(\mc{C}^2\) and
-\[\prt{^2f}{x^2} + \prt{^2f}{y^2} \iff \prt{^2f}{z\partial\bar{z}} = 0\]
+\begin{equation}\prt{^2f}{x^2} + \prt{^2f}{y^2} \iff \prt{^2f}{z\partial\bar{z}} = 0\end{equation}
 \end{definition}
 The above is known as \textbf{Laplace's equation}. It's immediate from the definition that a complex valued function is harmonic if and only if its real and imaginary parts are harmonic, and furthemore that every holomorphic function is harmonic. In particular, then, the real and imaginary parts of a holomorphic function are harmonic. On the other hand, maybe a slightly less immediate thing is that every real-valued harmonic function is, not necessarily everywhere but at least \textit{locally}, the real part of a holomorphic function. Why?
 
 Well let's look at Laplace's equation. We know that Laplace's equation is satisfied, which tells us that
-\[\prt{}{\bar{z}}\left(\prt{g}{z}\right) = 0\]
+\begin{equation}\prt{}{\bar{z}}\left(\prt{g}{z}\right) = 0\end{equation}
 So this of course tells us that \(\prt{g}{z}\) is holomorphic. And why does the result follow from this? Because every holomorphic function locally has a primitive which is holomorphic. Where does that come from? The fact that a closed form is locally exact, which is essentially saying it is a consequence of Cauchy's theorem. Another way of thinking about it, which is really also saying it is a consequence of Cauchy's theorem, is that \(\prt{g}{z}\) is given by a convergent power series and hence can be locally integrated into another convergent power series. So this is really ``one way or another by Cauchy's theorem".
 
 The global result, on the other hand, does not necessarily follow, in brief, because we can ``loop around once". For example, \(\log|z|\) is a real-valued harmonic function in \(\mbb{C} \setminus \{0\}\), but it's not \textit{globally} the real part of a holomorphic function in \(\mbb{C} \setminus \{0\}\), because \(\log z\) has no single-valued branch here. This is a counterexample, but not on \(\mbb{C}\). Whether there are counterexamples in \(\mbb{C}\) is a very good question, and we'll deal with that when we get to Cauchy's theorem. It definitely is a topological question.
@@ -134,29 +134,29 @@ Of course, complex-valued functions which are holomorphic on the \textit{whole} 
 
 \begin{definition}[Stereographic Projection]
 Consider the unit sphere \(S^2 = \{x^2 + y^2 + z^2 = 1\}\), and identify \(\reals^2\) with \(\mbb{C}\) by the isomorphism \((x, y) \mapsto z = x + iy\). Define the north pole \((0, 0, 1)\). We can define the \textbf{stereographic projection from the north pole} from \(\pi: S^2 \setminus N \to \mbb{C}\) to map a point \(s \in S \setminus N\) to the intersection of the line between \(s = (x, y, t)\) and \(N\) and the \(xy\) plane. Because the points \(s, N, (x/(1 - t), y/(1 - t), 0)\) must be colinear, we can define
-\[\pi(x, y, t) = \frac{x + iy}{1 - t}\]
+\begin{equation}\pi(x, y, t) = \frac{x + iy}{1 - t}\end{equation}
 This is a homeomorphism from \(S^2 \setminus N\) to \(\mbb{C}\).
 \end{definition}
 A quick question: is this a \textit{metric} isomorphism? \textbf{No}: points very close together on the sphere can map to points very far from each other in the plane. This, however, is going to be a very important point in this course: we will study the behaviour of holomorphic functions according to the two natural metrics on the sphere: the induced metric on \(\reals^3\) i.e. the \textbf{chordal metric}, equivalent to the \textbf{geodesic metric}.
 
 So the above homeomorphism gives a complex structure to the unit sphere minus the north pole. If we wanted to, we could get a complex structure on the unit sphere minus the south pole \(S = (0, 0, -1)\) by taking the stereographic projection from there. But we don't want to do that, because the complex structure we'd get would be incompatible. Instead, we want to take the \textit{complex conjugate} of a stereographic projection from the south pole,
-\[z' = \frac{x - iy}{1 + t}\]
+\begin{equation}z' = \frac{x - iy}{1 + t}\end{equation}
 So what was the point about compatibility? Well, what's the relationship between \(z\) and \(z'\)? We have
-\[z \cdot z' = \frac{x^2 + y^2}{(1 - t)^2} = 1 \implies z' = \frac{1}{z}\]
+\begin{equation}z \cdot z' = \frac{x^2 + y^2}{(1 - t)^2} = 1 \implies z' = \frac{1}{z}\end{equation}
 This is a holomorphic function from \(\mbb{C} \setminus \{0\} \to \mbb{C} \setminus \{0\}\) with a holomorphic inverse. So the two complex structures defined on the sphere minus the north pole and the sphere minus the south pole are compatible. By a \textit{complex structure} on a set, we mean a homeomorphism between an open subset that set and an open subset of the complex plane. If you're familiar with the language of manifolds, each of these two mappings is a \textit{coordinate chart}. These are even better than manifolds, though, because the coordinate charts are not just differentiable or infinitely differentiable, but holomorphic, or even better, \textit{rational}.
 
 We now proceed to some basic properties of differential forms:
 \begin{theorem}[Cauchy's Theorem]
 Let \(\Omega \subset \reals^2\), and let \(\omega = Pdx + Qdy\) be a differential form with \(P, Q\) continuous and real or complex-valued. Let \(\gamma = (x, y): [a, b] \to \Omega\) be a piecewise \(C^1\) curve in \(\Omega\). Then
-\[\int_\gamma\omega = \int_a^bf(t)dt, \quad f(t) = P(x(t), y(t))x'(t) + Q(x(t), y(t))y'(t) = \gamma^*\omega\]
+\begin{equation}\int_\gamma\omega = \int_a^bf(t)dt, \quad f(t) = P(x(t), y(t))x'(t) + Q(x(t), y(t))y'(t) = \gamma^*\omega\end{equation}
 \end{theorem}
 Note we can define \(\gamma^*\) recursively by
-\[\gamma^*(P) = P\circ \gamma, \quad \gamma^*(dx) = d(x \circ \gamma) = x'(t)dt, \quad \gamma^*(dy) = d(y \circ \gamma) = y'(t)dt\]
+\begin{equation}\gamma^*(P) = P\circ \gamma, \quad \gamma^*(dx) = d(x \circ \gamma) = x'(t)dt, \quad \gamma^*(dy) = d(y \circ \gamma) = y'(t)dt\end{equation}
 
 \TODO{independence of parameter}
 
 \begin{theorem}[Green's formula]
-\[\int_\gamma Pdx + Qdy = \iint_A\left(\prt{Q}{x} - \prt{P}{y}\right)dxdy\]
+\begin{equation}\int_\gamma Pdx + Qdy = \iint_A\left(\prt{Q}{x} - \prt{P}{y}\right)dxdy\end{equation}
 \end{theorem}
 
 \TODO{text}
@@ -174,21 +174,21 @@ Note we can define \(\gamma^*\) recursively by
 \subsection{Cauchy's Inequalities}
 
 Let's, as we usually do, consider a holomorphic function \(f(z)\) in an open set \(\Omega \subseteq \mbb{C}\). Last time, we showed that \(f\) has a convergent power series expansion in any open disc in \(\Omega\) (centered at the center of the disc). For example, around \(a = 0 \in \Omega\), we can write
-\[f(z) = \sum_{n = 0}^\infty a_nz^n\]
+\begin{equation}f(z) = \sum_{n = 0}^\infty a_nz^n\end{equation}
 Writing \(z = re^{i\theta}\), we get
-\[f(re^{i\theta}) = \sum_{n = 0}^\infty a_nr^ne^{in\theta}\]
+\begin{equation}f(re^{i\theta}) = \sum_{n = 0}^\infty a_nr^ne^{in\theta}\end{equation}
 We can write out the following formula for these Fourier coefficients:
-\[a_nr^n = \frac{1}{2\pi}\int_0^{2\pi}e^{-in\theta}f(re^{i\theta})d\theta\]
+\begin{equation}a_nr^n = \frac{1}{2\pi}\int_0^{2\pi}e^{-in\theta}f(re^{i\theta})d\theta\end{equation}
 Today we're going to be looking at the consequences of this formula. First of all, this formula gives a simple but useful upper bound on \(a_n\): if we take the maximum absolute value of \(f\) along the circle of radius \(r\), written
-\[M(r) = \sup_\theta|f(re^{i\theta})|\]
+\begin{equation}M(r) = \sup_\theta|f(re^{i\theta})|\end{equation}
 we get
-\[|a_n| \leq \frac{M(r)}{r^n}\]
+\begin{equation}|a_n| \leq \frac{M(r)}{r^n}\end{equation}
 These are called \textbf{Cauchy's inequalities}. These have some important consequences, like \textbf{Liouville's theorem}: a bounded holomorphic function on all of \(\mbb{C}\) is a constant. How does this follow? Well, if \(c\) is the upper bound of \(f\) on \(\mbb{C}\), we have each
-\[\forall r \in \reals^+, M(r) \leq c \implies |a_n| \leq \frac{M(r)}{r^n} \leq \frac{c}{r^n}\]
+\begin{equation}\forall r \in \reals^+, M(r) \leq c \implies |a_n| \leq \frac{M(r)}{r^n} \leq \frac{c}{r^n}\end{equation}
 Hence, for \(n > 0\), \(0 \leq a_n \leq \epsilon\) for all \(\epsilon > 0\), implying \(a_n = 0\). It follows that \(f = a_0 = c\), a constant. Another consequence is that we can write, for any \(r\)
-\[f(0) = a_0 = a_0r^0 = \frac{1}{2\pi}\int_0^{2\pi}f(re^{i\theta})d\theta\]
+\begin{equation}f(0) = a_0 = a_0r^0 = \frac{1}{2\pi}\int_0^{2\pi}f(re^{i\theta})d\theta\end{equation}
 This generalizes readily to stating that holomorphic functions satisfy the \textbf{Mean Value Property (MVP)}:
-\[f(\text{center of disk}) = \ \text{mean value on boundary}\]
+\begin{equation}f(\text{center of disk}) = \ \text{mean value on boundary}\end{equation}
 Another property which we won't prove is the \textbf{Maximum Modulus Principle (MMP)}: if \(f\) is a continuous complex-valued function on an open \(\Omega \subseteq \mbb{C}\) with the MVP, then it satisfies the MMP, that is, if \(|f|\) has a local maximum at a point \(a\) of \(\Omega\), then \(f\) is constant in a neighborhood of \(a\).
 
 We can use this to prove \textbf{Schwarz's Lemma}:
@@ -207,20 +207,20 @@ We recall a sketch of the proof
 By the convergent power series expansion, \(g(z) / z\) is holomorphic, and can hence have the maximum modulus principle applied to it.
 \end{proof}
 So let's spend a little time looking at functions with the MVP in general. Continuous functions with the MVP are precisely the \underline{harmonic functions}. The real and imaginary parts of a complex valued function with the MVP also satisfy the MVP. A real valued harmonic function \(g\) is locally the real part of a holomorphic function, uniquely determined up to addition of a constant:
-\[
+\begin{equation}
 \prt{^2g}{z\partial\bar{z}} = 0 \implies \prt{g}{z} \ \text{holomorphic}
-\]
+\end{equation}
 Therefore, \(\prt{g}{z}\) locally has primitive \(f\), defined up to a constant. Since \(g\) is real valued, we can write
-\[df = \prt{g}{z}dz, \quad d\bar{f} = \prt{g}{\bar{z}}d\bar{z}\]
+\begin{equation}df = \prt{g}{z}dz, \quad d\bar{f} = \prt{g}{\bar{z}}d\bar{z}\end{equation}
 Hence,
-\[d(f + \bar{f}) = dg \implies g = 2\Re f + \ \text{const}\]
+\begin{equation}d(f + \bar{f}) = dg \implies g = 2\Re f + \ \text{const}\end{equation}
 So harmonic functions satisfy the MVP and MMP, and conversely, a continuous function in an open set \(\Omega \subseteq \mbb{C}\) satisfying the MVP is harmonic. Just a couple of words as to why this is true, as this is really something that you should review: this comes from the solution to what's called the Dirichlet problem for a disk. What is this problem? It says that, given any continuous function \(f\) on the boundary of a disk \(|z| < r\), you can extend it to a continous function \(F\) on the whole disk which is harmonic on the interior.
 
 \subsection{Zeros and Poles}
 
 \begin{definition}[Zero]
 If \(f\) is holomorphic in a neighborhood of \(z_0 \in \mbb{C}\) and \(f(z_0) = 0\), we can write, for some \(k \in \mbb{N}\),
-\[f(z) = (z - z_0)^kf_1(z)\]
+\begin{equation}f(z) = (z - z_0)^kf_1(z)\end{equation}
 where\(f_1(z)\) is nonvanishing near \(z_0\). In this case \(k\) is called the \textbf{order} or \textbf{multiplicity} of the \textbf{zero} \(z_0\)
 \end{definition}
 Zeros of holomorphic functions form a discrete set. We want to study, however, not only holomorphic functions, but also quotients of holomorphic functions
@@ -231,19 +231,19 @@ where \(g, h\) are holomorphic and \(h\) is not identically zero.
 \end{definition}
 Why is it interesting to work with meromorphic and not just holomorphic functions? Essentially, it's because meromorphic functions in a domain \(\Omega\) form a field (whereas holomorphic functions only form a ring). Note that, in this course, when we say ``domain", what we mean is a connected open set.
 If \(f(z), g(z)\) are holomorphic near \(z_0\), like before, we can write
-\[f(z) = (z - z_0)^kf_1(z), \qquad g(z) = (z - z_0)^\ell g_1(z)\]
+\begin{equation}f(z) = (z - z_0)^kf_1(z), \qquad g(z) = (z - z_0)^\ell g_1(z)\end{equation}
 where \(f_1(z_0), g_1(z_0) \neq 0\). Near \(z_0\), then, the quotient looks like
-\[\frac{f(z)}{g(z)} = (z - z_0)^{k - \ell}\frac{f_1(z)}{g_1(z)}\]
+\begin{equation}\frac{f(z)}{g(z)} = (z - z_0)^{k - \ell}\frac{f_1(z)}{g_1(z)}\end{equation}
 So what are the different possibilities? If \(k \geq \ell\), then this function extends to be holomorphic at \(z_0\). On the other hand, if \(k < \ell\), then, of course,
-\[\lim_{z \to z_0}\left|\frac{f(z)}{g(z)}\right| = \infty\]
+\begin{equation}\lim_{z \to z_0}\left|\frac{f(z)}{g(z)}\right| = \infty\end{equation}
 Note: \textit{not} undefined, but \(\infty\). In this case, we say that \(z_0\) is a pole of order \(\ell - k\).
 Holomorphic functions in an annulus \(r < |z| < R\) have a convergent Laurent expansion in an annulus
-\[\sum_{n = -\infty}^\infty a_nz^n = \sum_{n < 0}a_nz^n + \sum_{n \geq 0}a_nz^n\]
+\begin{equation}\sum_{n = -\infty}^\infty a_nz^n = \sum_{n < 0}a_nz^n + \sum_{n \geq 0}a_nz^n\end{equation}
 Note that the LHS converges when \(r < |z|\), whereas the RHS converges when \(|z| < R\). This actually comes from Cauchy's theorem, just in the case of a convergent power series expansion of a holomorphic function. So this is from Cauchy's integral formula:
-\[f(z) = \frac{1}{2\pi i}\int_{\gamma_1}\frac{f(\xi)}{\xi - z}d\xi - \frac{1}{2\pi i}\int_{\gamma_2}\frac{f(\xi)}{\xi - z}d\xi = \sum_{n = -\infty}^\infty a_nz^n\]
+\begin{equation}f(z) = \frac{1}{2\pi i}\int_{\gamma_1}\frac{f(\xi)}{\xi - z}d\xi - \frac{1}{2\pi i}\int_{\gamma_2}\frac{f(\xi)}{\xi - z}d\xi = \sum_{n = -\infty}^\infty a_nz^n\end{equation}
 for \(z\) between \(\gamma_1, \gamma_2\).
 So
-\[a_n = \frac{1}{2\pi i}\int_{\gamma_?}\frac{f(\xi)}{\xi^{n + 1}}d\xi\]
+\begin{equation}a_n = \frac{1}{2\pi i}\int_{\gamma_?}\frac{f(\xi)}{\xi^{n + 1}}d\xi\end{equation}
 So of course, this should be just like before for the positive part. Note that this is the integral over \(\gamma_1\) if \(n \geq 0\) and over \(\gamma_2\) if \(n < 0\).
 
 Previously, we talked about holomorphic functions on the Riemann sphere, noting there were very few of them: namely, constants. Now, there are a few more meromorphic functions on the Riemann sphere, but not much. Specifically,
@@ -255,9 +255,9 @@ This theorem uses what is probably the only thing in first year calculus you don
 Say \(f(z)\) has poles \(b_1,...,b_k\) (finite) and maybe \(\infty\). So what can we say about the Laurent expansion at a pole? There's only finitely many negative terms, specifically, the order of the pole.
 
 So these negative parts of the Laurent expansions around each \(b_j\) are like polynomials \(P_j(\frac{1}{z - b_j})\). We'll call these principal parts. What about the principal part at \(\infty\)? It's a polynomial in \(z\), as it's a polynomial in \(\frac{1}{z'}\), where \(z'\) is the coordinate at \(\infty\), which is \(1/z\). Call this \(P_\infty(z)\). So we can write
-\[f(z) - P_\infty(z) - \sum_{j = 1}^kP_j\left(\frac{1}{z - b_j}\right)\]
+\begin{equation}f(z) - P_\infty(z) - \sum_{j = 1}^kP_j\left(\frac{1}{z - b_j}\right)\end{equation}
 which is holomorphic on \(S^2\), and hence must be a constant \(a\). So we can write
-\[f(z) = a + P_\infty(z) + \sum_{j = 1}^kP_j\left(\frac{1}{z - b_j}\right)\]
+\begin{equation}f(z) = a + P_\infty(z) + \sum_{j = 1}^kP_j\left(\frac{1}{z - b_j}\right)\end{equation}
 And that's rational.
 \end{proof}
 \begin{definition}[Isolated singularity]
@@ -289,16 +289,16 @@ Let \(\Omega \subset \mbb{C}\) be open. We define \(\mbb{C}(\Omega)\) to be the 
 We want to assign a topology to \(\mc{C}(\Omega)\). We begin by defining some primitive notions:
 \begin{definition}[Uniform convergence on compact subsets]
 We say that a sequence of functions \(\{f_n\} \subset \mc{C}(\Omega)\) \textbf{converges uniformly on compact subsets} if for all compact subsets \(K \subset \Omega\), \(\{f_n | K\}\) converges uniformly, i.e.
-\[\forall \ \text{compact} \ K \subset \Omega, \forall \epsilon > 0, \exists N \in \mbb{N}, \forall m, n \geq N, \forall z \in K, |f_m(x) - f_n(x)| < \epsilon\]
+\begin{equation}\forall \ \text{compact} \ K \subset \Omega, \forall \epsilon > 0, \exists N \in \mbb{N}, \forall m, n \geq N, \forall z \in K, |f_m(x) - f_n(x)| < \epsilon\end{equation}
 \end{definition}
 Uniform convergence on compact subsets can be used to determine a topology on \(\mc{C}(\Omega)\) as follows:
 \begin{definition}[The Compact-Open Topology]
 We define the \textbf{fundamental system of open neighborhoods of 0} as
-\[\forall \ \text{compact} \ K \subset \Omega, \forall \epsilon > 0, V(K, \epsilon) = \{f: \forall z \in K, |f(z)| < \epsilon\}\]
+\begin{equation}\forall \ \text{compact} \ K \subset \Omega, \forall \epsilon > 0, V(K, \epsilon) = \{f: \forall z \in K, |f(z)| < \epsilon\}\end{equation}
 We note that the sequence \(\{f_n\}\) converges to \(f\) uniformly on compact subsets if and only if
-\[\forall K, \epsilon, \exists N \in \mbb{N}, \forall n \geq N, f - f_n \in V(K, \epsilon)\]
+\begin{equation}\forall K, \epsilon, \exists N \in \mbb{N}, \forall n \geq N, f - f_n \in V(K, \epsilon)\end{equation}
 In a similar vein, open neighborhoods of any \(f \in \mbb{C}(\Omega)\) can be defined by translating neighborhoods of 0 by \(f\), determining a basis for a topology in which convergence is equivalent to uniform convergence on compact subsets, i.e. we define the basis of the \textbf{compact-open topology} to be
-\[\mc{B} = \bigcup_{f, K, \epsilon}\{f + V(K, \epsilon)\}\]
+\begin{equation}\mc{B} = \bigcup_{f, K, \epsilon}\{f + V(K, \epsilon)\}\end{equation}
 \end{definition}
 In this topology, \(\mc{C}(\Omega)\) is metrizable, and in fact, this topology can alternatively be defined by a translation-invariant metric as follows:
 \begin{definition}[Exhausion]
@@ -306,10 +306,10 @@ An infinite sequence of compact subsets \(K_1 \subset K_2 \subset ...\) such tha
 \end{definition}
 \begin{definition}[Translation-invariant metric]
 Given an exhaustion \(K_i\) of \(\Omega\), we define a metric
-\[d(f) = \sum_{i = 1}^\infty\frac{1}{2^i}\min\{1, M_i(f)\}, \quad M_i(f) = \max_{K_i}f\]
+\begin{equation}d(f) = \sum_{i = 1}^\infty\frac{1}{2^i}\min\{1, M_i(f)\}, \quad M_i(f) = \max_{K_i}f\end{equation}
 \end{definition}
 This is a metric as
-\[d(f) = 0 \iff f = 0, \quad d(f + g) = d(f) + d(g) \leq d(f) + d(g)\]
+\begin{equation}d(f) = 0 \iff f = 0, \quad d(f + g) = d(f) + d(g) \leq d(f) + d(g)\end{equation}
 We have that \(\mc{C}(\Omega)\) is \textbf{complete}, i.e. the limit of a sequence of functions that converges uniformly on compact sets is continuous. We given \(\mc{H}(\Omega)\) the subspace topology.
 \begin{theorem}[Weierstrass]
 \begin{enumerate}
@@ -330,7 +330,7 @@ We have that \(\mc{C}(\Omega)\) is \textbf{complete}, i.e. the limit of a sequen
 We now consider an application of this result to series of holomorphic functions:
 \begin{corollary}
 Let \(\{f_n\}\) be a series of holomorphic functions. If \(\{g_n = \sum_{k = 0}^nf_k\}\) converges uniformly on compact subsets of \(\Omega\), then the sum
-\[f = \sum f_n\]
+\begin{equation}f = \sum f_n\end{equation}
 is holomorphic on \(\Omega\) and the series can be differentiated term by term.
 \end{corollary}
 \begin{proposition}
@@ -355,7 +355,7 @@ Let \(\{f_n\}\) denote a sequence of meromorphic functions on an open set \(\Ome
 We say that \(\sum_{n = 1}^\infty f_n\) \textbf{converges uniformly} (respectively \textbf{converges uniformly absolutely}) on \(X \subset \Omega\) if all but finitely many \(f_n\) have no pole in \(X\) and form a uniformly convergent (respectively uniformly absolutely convergent) series on \(X\).
 \end{definition}
 We consider series of meromorphic functions that converge uniformly on compact subsets of \(\Omega\). We can define the sum on relatively compact open \(U \subset \Omega\) as
-\[\sum_{n \leq n_0}f_n + \sum_{n > n_0}f_n\]
+\begin{equation}\sum_{n \leq n_0}f_n + \sum_{n > n_0}f_n\end{equation}
 where \(f_n\) is meromorphic for \(n \leq n_0\) and \(f_n\) has no pole on \(U\) for \(n > n_0\) with the sum uniformly convergent on \(U\).
 \begin{theorem}
 Let \(\sum f_n\) be a series of meromorphic functions on \(\Omega\). If the series is uniformly convergent on compact subsets of \(\Omega\), then the sum is a meromorphic function \(f\) on \(\Omega\) and \(\sum f_n'\) converges uniformly on compact sets of \(\Omega\) to \(f'\).
@@ -368,15 +368,15 @@ We remark that the pole sets obey the inclusion \(P(f) \subset \bigcup_nP(f_n)\)
 
 \begin{definition}
 Let \(e_1, e_2 \in \mbb{C}\) be linearly independent over \(\mbb{R}\). We can define a discrete subgroup of \(\mbb{C}\) with \textbf{basis} \(e_1, e_2\)
-\[\Gamma = \{n_1e_1 + n_2e_2 : n_1, n_2 \in \mbb{Z}\}\]
+\begin{equation}\Gamma = \{n_1e_1 + n_2e_2 : n_1, n_2 \in \mbb{Z}\}\end{equation}
 We say that \(f\) has \(\Gamma\) as \textbf{group of periods} if
-\[\forall z \in \mbb{C}, f(z) = f(z + e_1) = f(z + e_2)\]
+\begin{equation}\forall z \in \mbb{C}, f(z) = f(z + e_1) = f(z + e_2)\end{equation}
 \end{definition}
 \begin{definition}[Weierstrass \(\wp\)-function]
 We define the Weierstrass \(\wp\)-function by the infinite sum
-\[\wp(z) = \frac{1}{z^2} + \sum_{\substack{w \in \Gamma \\ w \neq 0}}\left[
+\begin{equation}\wp(z) = \frac{1}{z^2} + \sum_{\substack{w \in \Gamma \\ w \neq 0}}\left[
   \frac{1}{(z - w)^2} - \frac{1}{w^2}
-\right]\]
+\right]\end{equation}
 \end{definition}
 We'll see that \(\wp\) converges uniformly and absolutely on compact subsets of \(\mbb{C}\).
 \begin{lemma}
@@ -407,26 +407,26 @@ We'll see that \(\wp\) converges uniformly and absolutely on compact subsets of 
 In summary, \(\wp\) is a meromorphic function with \(\Gamma\) as group of periods, and poles precisely at points of \(\Gamma\) each with prime part \(\frac{1}{(z - w)^2}\).
 
 In some neighborhood of 0, we can write, because \(\wp\) is even,
-\[\wp(z) = \frac{1}{z^2} + a_2z^2 + a_4z^4 + ...\]
+\begin{equation}\wp(z) = \frac{1}{z^2} + a_2z^2 + a_4z^4 + ...\end{equation}
 It follows that \(g(z) = \wp(z) - \frac{1}{z^2}\) vanishes at 0. We can find these coefficients by differentiating term-by term:
-\[a_2 = 3\sum_{w \neq 0}\frac{1}{w^4}, \quad a_4 = 5\sum_{w \neq 0}\frac{1}{w^6}, \quad ... \quad a_k = (2k + 1)\sum_{w \neq 0}\frac{1}{w^{2(k = 1)}}\]
+\begin{equation}a_2 = 3\sum_{w \neq 0}\frac{1}{w^4}, \quad a_4 = 5\sum_{w \neq 0}\frac{1}{w^6}, \quad ... \quad a_k = (2k + 1)\sum_{w \neq 0}\frac{1}{w^{2(k = 1)}}\end{equation}
 
 \subsection{Differential equations solved by \(\wp\)}
 
 Differentiating \(\wp\) term-by-term, we obtain
-\[\wp'(z) = -\frac{2}{z^3} + 2a_2z + 4a_4z^3 + ...\]
+\begin{equation}\wp'(z) = -\frac{2}{z^3} + 2a_2z + 4a_4z^3 + ...\end{equation}
 Squaring both sides, we obtain
-\[\wp'(z)^2 = \frac{4}{z^6} + \frac{8a_2}{z^2} - 16a_4 + ...\]
+\begin{equation}\wp'(z)^2 = \frac{4}{z^6} + \frac{8a_2}{z^2} - 16a_4 + ...\end{equation}
 We note, however, that
-\[\wp(z)^3 = \frac{1}{z^6} + \frac{3a_2}{z^2} + 3a_4 + ...\]
+\begin{equation}\wp(z)^3 = \frac{1}{z^6} + \frac{3a_2}{z^2} + 3a_4 + ...\end{equation}
 Therefore, we compute that
-\[\wp'(z)^2 - 4\wp(z)^3 = -\frac{20a_2}{z_2} - 28a_4 + z^2(...)\]
+\begin{equation}\wp'(z)^2 - 4\wp(z)^3 = -\frac{20a_2}{z_2} - 28a_4 + z^2(...)\end{equation}
 Hence,
-\[(\wp')^2 - 4\wp^3 + 20a_2\wp + 28a_4\]
+\begin{equation}(\wp')^2 - 4\wp^3 + 20a_2\wp + 28a_4\end{equation}
 is holomorphic near zero, and zero at zero. Since it has \(\Gamma\)as group of periods, it is holomorphic near each \(w \in \Gamma\), and \(0\) at \(w \in \Gamma\). In fact, it is holomorphic in \(\mbb{C}\) as it has no poles outside \(\Gamma\), and therefore bounded in \(\mbb{C}\) by periodicity. It folows by Liouville's theorem that it is identically zero, and hence that
-\[\wp'^2 = 4\wp^3 - 20a_2\wp - 28a_4\]
+\begin{equation}\wp'^2 = 4\wp^3 - 20a_2\wp - 28a_4\end{equation}
 Letting \(x = \wp(z), y = \wp'(z)\), gives a parametric representation of the algebraic curve
-\[y^2 = 4x_3 - 20a_2x - 28a_4\]
+\begin{equation}y^2 = 4x_3 - 20a_2x - 28a_4\end{equation}
 We'll show that any point \((x, y)\) of this curve is the image of a point \(z \in \mbb{C}\) which is uniquely determined up to addition by an element of \(\Gamma\).
 
 \subsection{Doubly Periodic Functions}
@@ -446,7 +446,7 @@ Otherwise, the number of zeros of \(f(z) - a\) is equal to the number of poles, 
 \end{proof}
 \begin{proposition}
 Let \(f\) be a nonconstant meromorphic function in \(\mbb{C}\) with \(\Gamma\) as group of periods, and let \(a \in \mbb{C}\). Let \(\alpha_k\) be the roots of \(f(z) = a\) (counted with multiplicity) and \(\beta_k\) be the poles of \(f(z)\) (again counted with multiplicity) contained in a period parallelogram. Then
-\[\sum\alpha_k = \sum\beta_k\]
+\begin{equation}\sum\alpha_k = \sum\beta_k\end{equation}
 (in particular, \(\sum\alpha_j \mod \Gamma\) is independent of \(\alpha\))
 \end{proposition}
 \begin{proof}
@@ -454,9 +454,9 @@ Let \(f\) be a nonconstant meromorphic function in \(\mbb{C}\) with \(\Gamma\) a
 \end{proof}
 \begin{theorem}
 Given a discrete group \(\Gamma\), the equation \(4x^3 - 20a_2x - 28a_4 = 0\) where
-\[a_2 = 3\sum_{w \neq 0}\frac{1}{w^4}, \quad a_4 = 5\sum_{w \neq 0}\frac{1}{w^6}\]
+\begin{equation}a_2 = 3\sum_{w \neq 0}\frac{1}{w^4}, \quad a_4 = 5\sum_{w \neq 0}\frac{1}{w^6}\end{equation}
 has three distinct roots. Moreover, \(\forall (x, y) \in \mbb{C}^2\) on the algebraic curve
-\[y^2 = 4x^3 - 20a_2x - 28a_4\]
+\begin{equation}y^2 = 4x^3 - 20a_2x - 28a_4\end{equation}
 there is unique \(z \in \mbb{C}\) modulo \(\Gamma\) such that \(x = \wp(z)\), \(y = \wp'(z)\).
 
 Conversely, given equation \(y^2 = 4x^3 - 20a_2x - 28a_4\) where the RHS has 3 distinct roots (any nonzero cubic!), there exists \(\Gamma\) such that \(a_2, a_4\) are given as above (and so if \(\wp\) is the Weierstrass \(\wp\)-function associated to \(\Gamma\), then \(x = \wp(z)\), \(y = \wp'(z)\) gives a parametrization of the curve as above).
@@ -469,62 +469,62 @@ Conversely, given equation \(y^2 = 4x^3 - 20a_2x - 28a_4\) where the RHS has 3 d
 
 \begin{definition}[\(n\)-dimensional complex projective space]
 We define
-\[\Prj{n}{\mbb{C}} = \mbb{C}^{n + 1} \setminus \{0\} / \sim\]
+\begin{equation}\Prj{n}{\mbb{C}} = \mbb{C}^{n + 1} \setminus \{0\} / \sim\end{equation}
 where
-\[(x_0,...,x_n) \sim (x_0',...,x_n') \iff \exists \lambda \in \mbb{C}, (x_0',...,x_n') = (\lambda x_0,..., \lambda x_n)\]
+\begin{equation}(x_0,...,x_n) \sim (x_0',...,x_n') \iff \exists \lambda \in \mbb{C}, (x_0',...,x_n') = (\lambda x_0,..., \lambda x_n)\end{equation}
 We denote the equivalence class of \((x_0,...,x_n)\) by \([x_0,...,x_n]\).
 \end{definition}
 \begin{definition}[Homogeneous coordinates]
 We define coordinate charts \(U_i = \{[x_0, ..., x_n] \in \Prj{n}{\mbb{C}} : x_i \neq 0\}\) with affine coordinates \(U_i \to \mbb{C}^n\),
-\[[x_0,...,x_n] \mapsto \left(\frac{x_0}{x_i},...,\frac{x_{i - 1}}{x_i}, \frac{x_{i + 1}}{x_i},...,\frac{x_n}{x_i}\right)\]
+\begin{equation}[x_0,...,x_n] \mapsto \left(\frac{x_0}{x_i},...,\frac{x_{i - 1}}{x_i}, \frac{x_{i + 1}}{x_i},...,\frac{x_n}{x_i}\right)\end{equation}
 with inverse
-\[(g_1,...,g_n) \mapsto [g_1,...,g_{i - 1}, 1, g_{i + 1},..,g_n]\]
+\begin{equation}(g_1,...,g_n) \mapsto [g_1,...,g_{i - 1}, 1, g_{i + 1},..,g_n]\end{equation}
 \end{definition}
 Using these coordinates, we have that \(\Prj{n}{\mbb{C}}\) has the structure of an \(n\)-dimensional complex manifold, as the transition mappings are rational. Let's take one of the charts here, say \(U_0\), to be \(\mbb{C}^n\). So
-\[\Prj{n}{\mbb{C}} = U_0 \cup \ \text{everything else}\]
+\begin{equation}\Prj{n}{\mbb{C}} = U_0 \cup \ \text{everything else}\end{equation}
 But what's everything else? So \(U_0\) is all the points where \(x_0 \neq 0\), so everything else is the set of points
-\[\{x_0 = 0\} = \{[0, x_1,...,x_n]\} \simeq \Prj{n - 1}{\mbb{C}} \implies \Prj{n}{C} = U_0 \cup \Prj{n - 1}{\mbb{C}}\]
+\begin{equation}\{x_0 = 0\} = \{[0, x_1,...,x_n]\} \simeq \Prj{n - 1}{\mbb{C}} \implies \Prj{n}{C} = U_0 \cup \Prj{n - 1}{\mbb{C}}\end{equation}
 We call this copy of \(\Prj{n - 1}{\mbb{C}} \simeq \{x_0 = 0\}\) the \textbf{hyperplane at infinity}. This is like a generation of the Riemann sphere which we saw before, which we saw was given by \(S^2 = \Prj{1}{\mbb{C}}\). So when we talk about \(\Prj{2}{\mbb{C}}\), that's like having 2-complex coordinates with a line at infinity. Specifically, we can write it as
-\[\Prj{2}{\mbb{C}} = \{[x, y, t]\} = \mbb{C}^2_{(x, y)} \cup \{t = 0\}\]
+\begin{equation}\Prj{2}{\mbb{C}} = \{[x, y, t]\} = \mbb{C}^2_{(x, y)} \cup \{t = 0\}\end{equation}
 the \textbf{projective line at infinity}.
 Now assume we have a curve \(X \subset \mbb{C}^2\) generated by the equation
-\[y^2 = 4x^3 - 20a_2x - 28a_4\]
+\begin{equation}y^2 = 4x^3 - 20a_2x - 28a_4\end{equation}
 where the RHS has three distinct roots. We want to compute the \textbf{compactification of \(X\) in \(\Prj{2}{\mbb{C}}\)}. We can write this down in homogeneous coordinates
-\[y^2t = 4x^3 - 20a^2xt^2 - 28a_4t^3\]
+\begin{equation}y^2t = 4x^3 - 20a^2xt^2 - 28a_4t^3\end{equation}
 taking \(X'\) to be the solution set of this.
 Why is this the right thing? When you look at \(\Prj{2}{\mbb{C}}\), and look in here at the set of points
-\[\{[x, y, t]: t \neq 0\} \simeq \mbb{C}^2_{(x, y)}\]
+\begin{equation}\{[x, y, t]: t \neq 0\} \simeq \mbb{C}^2_{(x, y)}\end{equation}
 we see that it is has homomorphism
-\[[x, y, t] \mapsto \left(\frac{x}{t}, \frac{y}{t}\right)\]
+\begin{equation}[x, y, t] \mapsto \left(\frac{x}{t}, \frac{y}{t}\right)\end{equation}
 Hence, we rewrite our eqaution in our new coordinates for \(\mbb{C}^2\),
-\[\frac{y^2}{t^2} = 4\frac{x^3}{t^3} - 20a_2\frac{x}{t} - 28a_4\]
+\begin{equation}\frac{y^2}{t^2} = 4\frac{x^3}{t^3} - 20a_2\frac{x}{t} - 28a_4\end{equation}
 Now we can just multiply both sides by \(t^3\). So if you haven't seen this before, this takes a little bit of familiarity, but the actual operations involved are very simple operations. Of course, our \textit{original} \(X\) is a subspace of \(X'\). But how much have we added to \(X\)? Well, if we set \(t = 0\), we get \(x = 0\). So, how many points are we adding? One point, at \(\infty\):
-\[X' = X \cup \{[0, 1, 0]\}\]
+\begin{equation}X' = X \cup \{[0, 1, 0]\}\end{equation}
 Now, in the neighborhood of any finite point, \(X'\) just looks like \(X\). What about in a neighborhood of the point at \(\infty\), \([0, 1, 0]\)? What does it look like?
 So this point \([0, 1, 0]\) doesn't actually lie in the coordinate chart \(U_0 = \{x \neq 0\}\), it lies in \(U_1 = \{y \neq 0\}\). This chart has affine coordinates given by \((x', t') = (x/y, t/y)\). So what's the equation of \(X'\) in \textit{this} coordinate chart? It's
-\[t' = 4x'^3 - 20a_2x't'^2 - 28a_4t'^3\]
+\begin{equation}t' = 4x'^3 - 20a_2x't'^2 - 28a_4t'^3\end{equation}
 In some neighborhood of \((x', t') = (0, 0)\) (the point at infinity), the implicit function theorem tells us that \(t'\) is a holomorphic function of \(x'\):
-\[t' = 4x'^3 - 320a_2x'^7 + ...\]
+\begin{equation}t' = 4x'^3 - 320a_2x'^7 + ...\end{equation}
 As an extercise, we can take the Taylor series
-\[t' = b_0 + b_1x + b_2x^2 + ...\]
+\begin{equation}t' = b_0 + b_1x + b_2x^2 + ...\end{equation}
 plug it into the equation and solve successively for the coefficients. If you haven't done that before, do the exercise.
 
 This tells us, in general, though, that \(t'\) is a function of \(x'\). So in a neighborhood of the point at infinity, \(X'\) looks like the graph of this function.
 Therefore, in the chart where \(y \neq 0\), \(X'\) consists of the points given by the formula
-\[[x', 1, t' = 4x'^3 - 320a_2x'^7 + ...]\]
+\begin{equation}[x', 1, t' = 4x'^3 - 320a_2x'^7 + ...]\end{equation}
 Let's now consider a map \(\varphi' = \varphi\) on \(X\), \(\infty \mapsto \infty\) in the Riemann sphere. \(\varphi\) sends the above point to \(\frac{x'}{t'} \in \mbb{C}\) or\(\frac{t'}{x'}\) in coordinates at \(\infty\), i.e. to \([x', t'] \in \Prj{1}{\mbb{C}} = S^2\). So this is a well-defined holomorphic function.
 
 Now suppose
-\[
+\begin{equation}
 a_2 = 3\sum_{\substack{w \in \Gamma \\ w \neq 0}}\frac{1}{w^4},
 \qquad a_4 = 5\sum_{\substack{w \in \Gamma \\ w \neq 0}}frac{1}{w^6}
-\]
+\end{equation}
 and let's look at the meromorphic mapping \((x, y) = (\wp(z), \wp'(z))\), i.e.
-\[z \mapsto [\wp(z), \wp'(z), 1]\]
+\begin{equation}z \mapsto [\wp(z), \wp'(z), 1]\end{equation}
 We claim that this defines a homeomorphism from \(\mbb{C}/\Gamma\) to \(X'\).
 
 If \(\wp'(z) \neq 0\), this is the same thing in homogeneous coordinates as
-\[\left[\frac{\wp(z)}{\wp'(z)}, 1, \frac{1}{\wp'(z)}\right]\]
+\begin{equation}\left[\frac{\wp(z)}{\wp'(z)}, 1, \frac{1}{\wp'(z)}\right]\end{equation}
 Now, what does this look like? \(\wp\) begins with \(a/z^2\), whereas \(\wp'\) begins with \(b/z^3\), so \(\frac{\wp}{\wp'}\) begins with \(cz\), whereas \(\frac{1}{\wp'}\) begins with \(dz^3\). On the other hand, \(0 \mapsto \infty\), and in fact \(\Gamma \mapsto \infty\).
 
 \TODO{February 7}
@@ -571,9 +571,9 @@ If \(\Omega = \bigcup_iE_i\) is a union of closed disks, then \(\mc{S} \subset \
 
 \begin{definition}
 Let \(X \subset \mbb{C}\) and \(\mc{S} \subset \mc{C}(X)\). We say that \(\mc{S}\) is \textbf{equicontinuous} at \(a \in X\) if
-\[\forall \epsilon > 0, \exists \delta > 0, \forall z \in X, |z - a| < \delta \implies \forall f \in \mc{S}, |f(z) - f(a)| < \epsilon\]
+\begin{equation}\forall \epsilon > 0, \exists \delta > 0, \forall z \in X, |z - a| < \delta \implies \forall f \in \mc{S}, |f(z) - f(a)| < \epsilon\end{equation}
 \(\mc{S}\) is \textbf{equicontinuous on \(X\)} if it is equicontinous at each \(a \in X\). It is \textbf{uniformly equicontinuous on \(X\)} if
-\[\forall \epsilon > 0, \exists \delta > 0, \forall z, w \in X, |z - w| <\delta \implies \forall f \in \mc{S}, |f(z) - f(w)| < \epsilon\]
+\begin{equation}\forall \epsilon > 0, \exists \delta > 0, \forall z, w \in X, |z - w| <\delta \implies \forall f \in \mc{S}, |f(z) - f(w)| < \epsilon\end{equation}
 \end{definition}
 A family of functions that this equicontinuous on compact sets can be shown to be uniformly equicontinuous.
 
@@ -590,9 +590,9 @@ Let \(\Omega \subset \mbb{C}\) be a \textbf{domain}. Then \(\mc{S} \subset \mc{C
 For families of holomorphic functions, Arzela-Ascoli and the Cauchy inequalities give a criterion for normality:
 \begin{definition}
 \(\mc{S} \subset \mc{C}(\Omega)\) is \textbf{locally bounded} on \(\Omega\) if
-\[\forall z_0 \in \Omega, \exists \delta > 0, M < \infty, \forall z \in \Omega, f \in \mc{S}, |z - z_0| < \delta \implies |f(z)| \leq M\]
+\begin{equation}\forall z_0 \in \Omega, \exists \delta > 0, M < \infty, \forall z \in \Omega, f \in \mc{S}, |z - z_0| < \delta \implies |f(z)| \leq M\end{equation}
 This is true if and only if \(\mc{S}\) is \textbf{uniformly bounded on compact subsets of \(\Omega\)}, i.e. for all \(K \subset \Omega\) compact,
-\[\exists M = M(K), \forall z \in K, \forall f \in \mc{S}, |f(z)| \leq M\]
+\begin{equation}\exists M = M(K), \forall z \in K, \forall f \in \mc{S}, |f(z)| \leq M\end{equation}
 \end{definition}
 \begin{theorem}[Montel]
 Let \(\mc{S} \subset \mc{H}(\Omega)\) where \(\Omega \subset \mbb{C}\) is a domain. Then the following are equivalent:
@@ -618,7 +618,7 @@ Proof of Arzela-Ascoli:
 
 \end{proof}
 The Arzela-Ascoili theorem holds for families of continuous functions with values in a complete metric space, e.g. continuos functions with values in the Riemann sphere \(S^2\) (or the extended complex plane \(\mbb{C}^* = \mbb{C} \cup \{\infty\}\)) with the (induced) \textbf{chordal metric}
-\[d(z, w) = \frac{2|z - w|}{\sqrt{(1 + |z|)^2(1 + |w|)^2}}\]
+\begin{equation}d(z, w) = \frac{2|z - w|}{\sqrt{(1 + |z|)^2(1 + |w|)^2}}\end{equation}
 (we note that the topology induced by \(\mbb{C}\) by the chordal metric is the usual Euclidean topology).
 \begin{definition}[Normal in the chordal metric]
 A family \(\mc{S}\) of continuous functions on \(\Omega\) is \textbf{normal in the chordal metric} if and only if it is equicontinuous in the chordal metric: condition (2) of the Arzela-Ascoli theorem is not needed because \(\mbb{C}^*\) or \(S^2\) is compact in this topology.
@@ -632,16 +632,16 @@ Let \(\{f_n\}\) be a sequence of meromorphic functions which converges uniformly
 \end{proof}
 \begin{definition}[Spherical derivative]
 If \(f\) is meromorphic on a domain \(\Omega \subset \mbb{C}\) (or \(S^2\)), we define the \textbf{spherical derivative of \(f\)} at \(z \in \Omega\) by
-\[f^\sharp(z) = \lim_{w \to z}\frac{d(f(z), f(w))}{|z - w|}\]
+\begin{equation}f^\sharp(z) = \lim_{w \to z}\frac{d(f(z), f(w))}{|z - w|}\end{equation}
 If \(z\) is not a pole, we have
-\[f^\sharp(z) = \lim_{w \to z}\frac{2|f(z) - f(w)|}{|z - w|\sqrt{(1 + |f(z)|^2)(1 + |f(w)|^2)}} = \frac{2|f'(z)|}{1 + |f(z)|^2}\]
+\begin{equation}f^\sharp(z) = \lim_{w \to z}\frac{2|f(z) - f(w)|}{|z - w|\sqrt{(1 + |f(z)|^2)(1 + |f(w)|^2)}} = \frac{2|f'(z)|}{1 + |f(z)|^2}\end{equation}
 \end{definition}
 We have that
-\[\left(\frac{1}{f}\right)^\sharp = f^\sharp\]
+\begin{equation}\left(\frac{1}{f}\right)^\sharp = f^\sharp\end{equation}
 implying that \(f^\sharp(z)\) is finite and continuous at all \(z \in \Omega\), and greater than zero at \(z\) if and only if \(f\) is one-to-one near \(z\).
 \begin{theorem}[Marty's Theorem]
 Let \(\mc{S}\) be a family of meromorphic functions on a domain \(\Omega\). Then \(\mc{S}\) is normal in the chordal metric if and only if
-\[\mc{S}^\sharp = \{f^\sharp : f \in \mc{S}\}\]
+\begin{equation}\mc{S}^\sharp = \{f^\sharp : f \in \mc{S}\}\end{equation}
 is bounded.
 \end{theorem}
 \begin{proof}
@@ -663,16 +663,16 @@ We are now faced with the \textbf{conformal mapping problem}:
 
 \end{itemize}
 We note that, for \(f, g: \Omega \to \Omega'\), \(f, g\) are biholomorphisms if and only if \(g^{-1} \circ f \in \Aut\Omega\), the group of biholomorphisms of \(\Omega\) with itself. Furthermore, \(f\) induces a conjugation map
-\[\Aut\Omega \to \Aut\Omega', \quad S \mapsto f \circ S \circ f^{-1}\]
+\begin{equation}\Aut\Omega \to \Aut\Omega', \quad S \mapsto f \circ S \circ f^{-1}\end{equation}
 Now let's consider some examples, starting with the complex plane itself. We have that
-\[\Aut\mbb{C} = \{\text{linear transformations} \ w = az + b, \quad a \neq 0\}\]
+\begin{equation}\Aut\mbb{C} = \{\text{linear transformations} \ w = az + b, \quad a \neq 0\}\end{equation}
 Suppose \(w = f(z) \in \Aut\mbb{C}\). At \(\infty\), \(f\) has either an essential signularity or a pole. But we can show we don't have an essential singularity. On the other hand, what about when \(f\) is a polynomial, say of degree \(n\), then that must mean it is not one-to-one, because
 \(f(z) = w\) has \(n\) distinct roots for almost every value of \(w\), except at roots of the derivative \(w = f(z), f'(z) = 0\). So \(n = 1\).
 
 What about the Riemann sphere, \(\Aut S^2\). What should this group of biholomorphisms look like? Wec consider fractional linear transformations
-\[w = \frac{az + b}{cz + d}, \quad ad - bc \neq 0\]
+\begin{equation}w = \frac{az + b}{cz + d}, \quad ad - bc \neq 0\end{equation}
 These coefficient, of course, are not uniquely determined, being only determined up to a constant. The inverse of a fractional linear transformation is that given by the inverse matrix, namely
-\[\frac{dz - b}{-cz + a}\]
+\begin{equation}\frac{dz - b}{-cz + a}\end{equation}
 (uniquely determined up to a constant, so we don't have to write the \(\frac{1}{ad - bc}\)).
 
 \begin{lemma}
@@ -680,17 +680,17 @@ Suppose \(G\) is a subgroup of \(\Aut\Omega\) such that \(G\) is transitive on \
 \end{lemma}
 \begin{proof}
 Let \(S \in \Aut\Omega\) be arbitrary. We have to show that \(S \in G\). To do so, we note that since \(G\) acts transitively, we can take \(T \in G\) such that \(T(z_0) = S(z_0)\). There exists such a \(T\) because it acts transitively. Then of course we can write
-\[S = T \circ (T^{-1} \circ S), \quad (T^{-1} \circ S)(z_0) = z_0 \implies T^{-1} \circ S \in G \implies S \in G\]
+\begin{equation}S = T \circ (T^{-1} \circ S), \quad (T^{-1} \circ S)(z_0) = z_0 \implies T^{-1} \circ S \in G \implies S \in G\end{equation}
 being the composition of elements of \(G\).
 \end{proof}
 So that's what we've shown here: the subgroup of automorphisms fixing \(\infty\) lies in this subgroup of fractional linear transformations, and the subgroup is transitive, and hence it composes the entire automorphism group \(\Aut S^2\).
 
 Time for another example: the unit disc \(D\). So what would \(\Aut D\) look like? What would we like to show here? I guess we'd like to show that they're all fractional linear transformations, but which ones? This is sort of like what Schwarz's lemma tells you: if you have an automorphism of the disk that fixes just zero, then it should be a rotation. So in general, it's like a rotation times a factor
-\[w = e^{i\theta}\frac{z - z_0}{1 - \bar{z_0}z}\]
+\begin{equation}w = e^{i\theta}\frac{z - z_0}{1 - \bar{z_0}z}\end{equation}
 So how do you check that this actually is an automorphism of \(D\)? First of all, we should check that the boundary goes to the boundary. We can check this by just checking three points that are particularly nice, say \(1, i, -i\). Once we know this, we just need to check that the inside goes to the inside, since being an automorphism of \(S^2 \to S^2\), it either takes the inside to the inside biholomorphically or takes the inside to the outside. So if we add the condition \(|z_0| < 1\), we get that they take the inside to the inside.
 
 Now how do we show that these compose \textit{all} automorphisms. It's not actually going to be by the previous lemma, rather, we will use Schwarz's lemma. Suppose \(T \in \Aut D\), and consider
-\[S(z) = e^{i\theta}\frac{z - z_0}{1 - \bar{z_0}z}, \qquad \text{where} \ z_0 = T(0), \quad \theta = \Arg T'(z_0)\]
+\begin{equation}S(z) = e^{i\theta}\frac{z - z_0}{1 - \bar{z_0}z}, \qquad \text{where} \ z_0 = T(0), \quad \theta = \Arg T'(z_0)\end{equation}
 We want to show that \(T = S\), by Schwarz's lemma. So what should we apply the lemma to? \(f = S \circ T^{-1}\) is an obvious choice (we could also try \(T \circ S^{-1}\), etc...). So what do we know? We have that:
 \begin{itemize}
 
@@ -700,21 +700,21 @@ We want to show that \(T = S\), by Schwarz's lemma. So what should we apply the 
 
 \end{itemize}
 So by Schwarz's lemma \(|f(z)| \leq z\) for all \(z \in D\). We can also apply Scharz's lemma to \(f^{-1}\) and we get \(|z| \leq |f(z)|\), which says that in modulus
-\[|f(z)| = |z|\]
+\begin{equation}|f(z)| = |z|\end{equation}
 which, again by Schwarz's lemma, says \(f\) is a rotation \(e^{i\alpha}z\). Now, we're basically done here, as choosing \(z_0 = 0\), this lies in the subgroup \(G\) and hence \(S \in G\). But we want to go further and show \(\alpha = 0\) implying \(S = T\). To do so, we merely note that
-\[S'(z_0) = T'(z_0) \implies \alpha = 0\]
+\begin{equation}S'(z_0) = T'(z_0) \implies \alpha = 0\end{equation}
 So this is in fact what we really need for the Riemann mapping theorem. Let's finish this up: what's the other nice domain we should look at? The upper half plane!
 
 So what's \(\Aut\mbb{H}^+\)? So first of all, the upper half-plane is actually biholomorphic to the unit disc \(D\), by, for example, the mapping
-\[\frac{z - i}{z + i}\]
+\begin{equation}\frac{z - i}{z + i}\end{equation}
 To see this, we note that the boundary goes to the boundary, by checking the three points \(0, 1, \infty\) (which go to \(-1, -i, 1\) respectively). Of course the upper half-plane goes to the interior of the disc since \(i \mapsto 0\). Hence, the automorphism groups of \(D\) and \(\mbb{H}^+\) are the same, as we can transport elements between the two by composing with a biholomorphism as above. Geometrically, however, this is not going to tell us the form of these holomorphisms. So what should \(\Aut\mbb{H}^+\) look like in terms of holomorphisms of the Riemann sphere? Well, it should be the one with real coefficients, as it should be the subgroup of \(\Aut S^2\) taking \(\mbb{H}^+\) to itself and hence the real line to itself. So I claim the best form is
-\[w = \frac{az + b}{cz + d}, \quad a, b, c, d \in \mbb{R}\]
+\begin{equation}w = \frac{az + b}{cz + d}, \quad a, b, c, d \in \mbb{R}\end{equation}
 Since these are only determined up to a constant, for convenience we can say \(ad - bc = \pm 1\). This is the subgroup of \(\Aut S^2\) taking the real axis \(\mbb{R}\) to itself. But if it takes the upper half plane to itself, that says that
-\[\Im\left(\frac{ai + b}{ci + d}\right) = \frac{ad - bc}{c^2 + d^2} > 0 \iff ad - bc > 0 \iff ad > bc\]
+\begin{equation}\Im\left(\frac{ai + b}{ci + d}\right) = \frac{ad - bc}{c^2 + d^2} > 0 \iff ad - bc > 0 \iff ad > bc\end{equation}
 So we have a subgroup \(G\) of fractional linear transformations in the form above satisfying the given conditions, i.e. with
-\[w = \frac{az + b}{cz + d}, \quad ad - bc = 1, a, b, c, d \in \mbb{R}\]
+\begin{equation}w = \frac{az + b}{cz + d}, \quad ad - bc = 1, a, b, c, d \in \mbb{R}\end{equation}
 So we want to see that \(\Aut\mbb{H}^+ = G\). This time, we'll use the Lemma: \(G\) is a subgroup of \(\Aut\mbb{H}^+\), it's transitive on \(\Aut\mbb{H}^+\), as we can show that it can take \(i\) to any given element of \(\mbb{H}^+\), since
-\[i \mapsto ai + b, b > 0, ... TODO\]
+\begin{equation}i \mapsto ai + b, b > 0, ... TODO\end{equation}
 So we have to show that the subgroup of \(\Aut\mbb{H}^+\) which fixes some point lies inside of this. So which point do we want to use? \(i\). How do we show this?
 
 \(G\) is the subgroup of all fractional linear transformations which take the upper half-plane to itself. So all we have to do is show that this subgroup consists of fractional linear transformations. Why does it consist of fractional linear transformations? It's enough to show that the subgroup of \(\Aut\mbb{H}^+\) which fixes \(i\) consists of fractional linear transformations. That's because this subgroup of \(\Aut\mbb{H}^+\) which fixes \(i\) is just obtained from the group of automorphisms of \(D\) which fix zero by conjugation with \(\frac{z - i}{z + i}\). Anthing in here is a composite of three fractional linear transformations, and so is a fractional linear transformation.
@@ -733,16 +733,16 @@ There is a biholomorphism of \(\Omega\) onto a bounded open subset of \(\mbb{C}\
 Let \(a \notin \Omega\) be a point, which exists as \(\Omega \neq \mbb{C}\). Then \(\frac{1}{z - a}\) is a nonvanishing holomorphic function on the simply connected open set \(\Omega\), and so it has a primitive, some holomorphic function \(g(z)\).
 
 Now, a primitive of \(\frac{1}{z - a}\) is like a branch of \(\log(z - a)\), which means that
-\[z - a = e^{g(z)}\]
+\begin{equation}z - a = e^{g(z)}\end{equation}
 One thing this tells us right away is that \(g(z)\) is one to one, because \(z - a\) is one to one and if the composition of a function with something else is one to one, then that function must be one to one.
 
 Take a point \(z_0 \in \Omega\). Since \(\Omega\) is open and \(g\) is one to one, implying it is nonconstant, there is an open disc centered at \(g(z_0)\) inside \(g(\Omega)\). Now, I claim that if you look at this disc translated by \(2\pi i\) it's outside of \(g(\Omega)\), i.e. \(E + 2\pi i \cap g(\Omega) = \varnothing\). Intuitively, this is the case because it's on a different branch of the log function. A cleaner way of saying this is that this is because \(\exp \circ g\) is one-to-one, but \(\exp\) will take two translated points to the same point, yielding a contradiction.
 So then, how do we get a biholomorphism of \(\Omega\) onto a bounded open subset of \(\mbb{C}\)? Well, we have that
-\[h(z) = \frac{1}{g(z) - (g(z_0) + 2\pi i)}\]
+\begin{equation}h(z) = \frac{1}{g(z) - (g(z_0) + 2\pi i)}\end{equation}
 is one to one and bounded on \(\Omega\). As \(g\) and \(h\) are biholomorphisms, there is a biholomorphism \(h \circ g\) from \(\Omega\) onto a bounded open set.
 \end{proof}
 So as we have a biholomorphsm from \(\Omega\) to a bounded open subset of \(\mbb{C}\), we can assume \(0 \in \Omega \subset D\) by simply making a translation and scaling appropriately. We're interested in defining a convenient normal family now, but it's going to come about in a very natural way. Let's look at the set of functions that are holomorphic in \(\Omega\) and are biholomorphisms into \(D\) taking the origin to itself, i.e. let
-\[\mc{A} = \{f \in \mc{H}(\Omega) : f \ \text{is one to one}, f(0) = 0, |f(z)| < 1\}\]
+\begin{equation}\mc{A} = \{f \in \mc{H}(\Omega) : f \ \text{is one to one}, f(0) = 0, |f(z)| < 1\}\end{equation}
 We're going to find the element of this set with the largest possible derivative at the origin, which is going to force the image to be as large as possible. We'll show that that means it must be all of \(D\).
 We first show that the maximum derivative at zero is actually taken on
 \begin{lemma}
@@ -750,18 +750,18 @@ We first show that the maximum derivative at zero is actually taken on
 \end{lemma}
 \begin{proof}
 We note that the function from \(\mc{H}(\Omega) \to \mbb{C}\) taking \(f\) to \(|f'(0)|\) is continuous. Hence, taking
-\[\mc{B} = \{f \in \mc{A} : |f'(0) | \geq 1\} \supseteq \{\Id\} \neq \varnothing\]
+\begin{equation}\mc{B} = \{f \in \mc{A} : |f'(0) | \geq 1\} \supseteq \{\Id\} \neq \varnothing\end{equation}
 it is enough to show that \(\mc{B}\) is compact. \(\mc{B}\) is a normal family, i.e. locally bounded, as it is bounded uniformly on all of \(\Omega\). That means the only thing we really have to show is that \(\mc{B}\) is closed, i.e.,
-\[f \in \mc{H}(\Omega), \exists f_n \in \mc{B}, f = \lim_{n \to \infty}f_n \implies f \in \mc{B}\]
+\begin{equation}f \in \mc{H}(\Omega), \exists f_n \in \mc{B}, f = \lim_{n \to \infty}f_n \implies f \in \mc{B}\end{equation}
 We trivially have that
-\[f(0) = \lim_{n \to \infty}f_n(0) = \lim_{n \to \infty}0 = 0\]
-\[|f'(0)| = \lim_{n \to \infty}|f_n'(0)| \geq 1 \ \text{since} \ [1, \infty) \ \text{is closed}\]
+\begin{equation}f(0) = \lim_{n \to \infty}f_n(0) = \lim_{n \to \infty}0 = 0\end{equation}
+\begin{equation}|f'(0)| = \lim_{n \to \infty}|f_n'(0)| \geq 1 \ \text{since} \ [1, \infty) \ \text{is closed}\end{equation}
 So \(f\) is one to one because it's not constant. Then the only other thing to prove is \(|f(z)| < 1\). So what about that? We know that \(|f(z)| \leq 1\) since \((-\infty, 1]\) is closed, but \(f(z) \neq 1\) at every point \(z \in \Omega\) by the maximum modulus principle (as if it was this would imply \(f\) was constant, contradicting both the fact that it is one-to-one and that \(f(0) = 0\)).
 \end{proof}
 We prove the second part of the above statement, completing the theorem
 \begin{lemma}
 Let \(g \in \mc{A}\). Then \(g(\Omega) = D\) if and only if
-\[|g'(0)| = \sup_{f \in \mc{A}}|f'(0)|\]
+\begin{equation}|g'(0)| = \sup_{f \in \mc{A}}|f'(0)|\end{equation}
 \end{lemma}
 \begin{proof}
 \begin{itemize}
@@ -769,9 +769,9 @@ Let \(g \in \mc{A}\). Then \(g(\Omega) = D\) if and only if
   \item ``Only if": suppose \(g \in \mc{A}\), \(g(\Omega) = D\). Let \(f \in \mc{A}\), and let \(h = f \circ g^{-1}: D \to f(\Omega) \subset D\), \(h(0) = 0\). Then \(|h'(0)| \leq 1\) by Schwarz's lemma. \(f = h \circ g\), and \(|f'(0)| \leq |g'(0)|\).
 
   \item ``if": suppose \(f \in \mc{A}\), \(a \in D \setminus f(\Omega)\). To find \(g \in \mc{A}\), \(|g'(0)| > |f'(0)|\), let
-  \[\varphi(z) = \frac{z - a}{1 - \bar{a}z} \implies (\varphi \circ f)(z) = \frac{f(z) - a}{1 - \bar{a}f(z)}\]
+  \begin{equation}\varphi(z) = \frac{z - a}{1 - \bar{a}z} \implies (\varphi \circ f)(z) = \frac{f(z) - a}{1 - \bar{a}f(z)}\end{equation}
   is non-vanishing on \(\Omega\). Since \(\Omega\) is simply connected, \(\varphi \circ f\) has holomorphic square root \(F(z)\). We let, where \(\theta(w) = w^2\),
-  \[f = \varphi^{-1} \circ \theta \circ F = \varphi^{-1} \circ \theta \circ \psi^{-1} \circ \psi \circ F, \quad \psi(\eta) = \frac{\eta - F(0)}{1 - \overline{F(0)}\eta}\]
+  \begin{equation}f = \varphi^{-1} \circ \theta \circ F = \varphi^{-1} \circ \theta \circ \psi^{-1} \circ \psi \circ F, \quad \psi(\eta) = \frac{\eta - F(0)}{1 - \overline{F(0)}\eta}\end{equation}
   We define \(g = \psi \circ F\), \(h = \varphi^{-1} \circ \theta \circ \Psi^{-1}\). We have \(g \in \mc{A}\), and \(h: D \to D\), \(h(0) = 0\) and \(|h'(0)| < 1\) by Schwarz's lemma, because \(h\) is not one to one and hence is not a rotation.
 
 \end{itemize}
@@ -792,22 +792,22 @@ We're interested in a biholomorphism \(w = f(z)\) from a polygonal region enclos
 
 \end{itemize}
 We want to find a formula for the inverse function \(z = F(w)\). The statement of the theorem (though last time we wrote it as an integral) is that, for some constant \(c\),
-\[F'(w) = c\prod(w - w_k)^{\beta_k}\]
+\begin{equation}F'(w) = c\prod(w - w_k)^{\beta_k}\end{equation}
 We have that \(\zeta = (z - z_k)^{1/\alpha_k}\) is invertible and maps the ``angle" \(\alpha_k\) to the half-disc. Writing
-\[w = f(z_k + \zeta^{\alpha_k}) = g(\zeta), \zeta = (w - w_k)g(w) \implies F(w) = z_k + (w - w_k)^\alpha_kG_k(w)\]
-\[\implies F'(w) = (w - w_k)^{\alpha_k - 1}G_k(w)\]
+\begin{equation}w = f(z_k + \zeta^{\alpha_k}) = g(\zeta), \zeta = (w - w_k)g(w) \implies F(w) = z_k + (w - w_k)^\alpha_kG_k(w)\end{equation}
+\begin{equation}\implies F'(w) = (w - w_k)^{\alpha_k - 1}G_k(w)\end{equation}
 So
-\[F'(w)(w - w_k)^{\beta_k}\]
+\begin{equation}F'(w)(w - w_k)^{\beta_k}\end{equation}
 is holomorphic and nonzero near \(w_h\). So
-\[H(w) = F'(w)\prod(w - w_k)^\beta_k\]
+\begin{equation}H(w) = F'(w)\prod(w - w_k)^\beta_k\end{equation}
 is holomorphic and nonzero in a neighborhood of the closed unit disk. To show that \(H(w)\) is constant, it is enough to show that \(\arg H(w) = \Im\log H(w)\) is constant on \(S^1\) (this is well defined as zero is not included so there is a branch of log). This works because \(H\) is a harmonic function, and therefore we can use the Mean Value Property and the Maximum Modulus Principle.
 
 So we just have to compute the argument. Let's look at what happens at a point \(e^{i\theta}\) on the arc between \(w_{k - 1}\) and \(w_k\). We compute
-\[\frac{d}{d\theta}F(e^{i\theta}) = F'(e^{i\theta})ie^{i\theta}\]
+\begin{equation}\frac{d}{d\theta}F(e^{i\theta}) = F'(e^{i\theta})ie^{i\theta}\end{equation}
 We have that, since \(F(e^{i\theta})\) is a parametrization of a straight line,
-\[\arg\frac{d}{d\theta}F(e^{i\theta}) = 0 \implies \arg F'(e^{i\theta}) = const - (\theta + \pi/2)\]
+\begin{equation}\arg\frac{d}{d\theta}F(e^{i\theta}) = 0 \implies \arg F'(e^{i\theta}) = const - (\theta + \pi/2)\end{equation}
 We have that
-\[\arg(e^{i\theta} - w_k) = \theta/2 + const \implies \arg F'(e^{i\theta})\prod(e^{i\theta} - w_k)^{\beta_k} = const - \theta + (\sum\beta_k)\frac{\theta}{2} = const\]
+\begin{equation}\arg(e^{i\theta} - w_k) = \theta/2 + const \implies \arg F'(e^{i\theta})\prod(e^{i\theta} - w_k)^{\beta_k} = const - \theta + (\sum\beta_k)\frac{\theta}{2} = const\end{equation}
 This shows \(\arg H(w)\) is constant on the open arc from \(w_k\) to \(w_{k + 1}\) for all \(k\), but it's continuous because \(\log H(w)\) is well-defined. Therefore, \(H\) is constant on \(S^1\), completing the proof.
 
 As a special case for this, I wanted to look at the integral formula for a mapping onto a rectangle, because we can use the reflection principle in this case to extend this map to one on the entire constant plane, giving us a doubly periodic (elliptic) function.
@@ -840,47 +840,47 @@ So why does Picard's Little Theorem follow from Picard's Big Theorem (of course,
 So, we're going to prove Picard's big theorem using the theory of normal families, and in fact we're going to deduce it as well as a closely related, very strong theorem by Montel, from a strange lemma. This is going to be a necessary and sufficient condition for normality, but we'll express it as a necessary and sufficient condition for \textit{failure} of normality:
 \begin{lemma}[Zalcman's Lemma]
 Let \(\mc{S}\) be a family of meromorphic functions on a domain \(\Omega\). \(f\) is \underline{not} normal in the chordal metric if and only if there is a convergent sequence \(\{a_n\} \to a_\infty \in \Omega\), a convergent sequence of positive numbers \(\{\rho_n\} \to 0\) and a sequence of functions \(\{f_n\} \subset \mc{S}\) such that the sequence
-\[g_n(z) = f_n(a_n + \rho_n z)\]
+\begin{equation}g_n(z) = f_n(a_n + \rho_n z)\end{equation}
 converges uniformly to \(g\) in the chordal metric on compact subsets of \(\mbb{C}\) where \(g\) is nonconstant and meromorphic on all of \(\mbb{C}\). Moreover, in the case where \(\mc{S}\) is not normal, then we can choose the data above such that
-\[\forall z \in \mbb{C}, g^\sharp(z) \leq g^\sharp(0) = 1\]
+\begin{equation}\forall z \in \mbb{C}, g^\sharp(z) \leq g^\sharp(0) = 1\end{equation}
 \end{lemma}
 So, what's strange about this lemma? Of course, it's strange because normality is about the existence of convergent sequences: non-normal should be that the stuff doesn't converge, and yet here we're saying that we can give a criterion for non-normality in terms of a convergent sequence. So, why should that be? I mean, like, what about the case where \(\mc{S}\) \textit{were} normal and we did this kind of construction: why would we get something worse? Or \textit{would} we get something worse?
 That's sort of a quandry, and the point is in the case that \(\mc{S}\) is normal, i.e. every sequence in \(\mc{S}\) contains a convergent subsequence, it's not that we get something worse, it's that we get something better: we can still perform the above construction, but \(g\) would be constant!
 
 So, what's an example? Consider \(\mc{S} = \{f_n(z) = z^n\}\). Of course, this is uniformly convergent on compact subsets of the unit disc, and actually, is also uniformly convergent in the chordal metric on compact subsets of the complement of the closed disc. But, it's not uniformly convergent on compact subsets of a \textit{bigger} open disc, e.g. \(|z| < 2\). The issue is that it's not uniformly continuous on the unit circle, as the limit would not be continuous there. So let's look at this situation, and take \(a_n = 1\), \(\rho_n = \frac{1}{n}\). That means that
-\[g(z) = \lim_{n \to \infty}g_n(z) = \lim_{n \to \infty}\left(1 + \frac{z}{n}\right)^n = e^z\]
+\begin{equation}g(z) = \lim_{n \to \infty}g_n(z) = \lim_{n \to \infty}\left(1 + \frac{z}{n}\right)^n = e^z\end{equation}
 which is obviously nonconstant and entire. We know this from a proof from first year calculus, coming from the fact that
-\[n\log(1 + z/n) \to z \iff \frac{\log(1 + z/n)}{z/n} \to 1\]
+\begin{equation}n\log(1 + z/n) \to z \iff \frac{\log(1 + z/n)}{z/n} \to 1\end{equation}
 So, how do you compute the spherical derivative of \(g\)? So, it's just from the formula,
-\[g^\sharp(z) = \frac{2|g'(z)|}{1 + |g(z)|^2} = \frac{2|e^z|}{1 + |e^z|^2} \implies g^\sharp(0) = \frac{2}{2} = 1, \quad g^\sharp(z) \leq 1 \impliedby \forall t \in \reals^+, 1 + t^2 \leq 2t\]
+\begin{equation}g^\sharp(z) = \frac{2|g'(z)|}{1 + |g(z)|^2} = \frac{2|e^z|}{1 + |e^z|^2} \implies g^\sharp(0) = \frac{2}{2} = 1, \quad g^\sharp(z) \leq 1 \impliedby \forall t \in \reals^+, 1 + t^2 \leq 2t\end{equation}
 So that's sort of a phenomenon. Now let's prove it:
 \begin{proof}
 Suppose \(\mc{S}\) is normal. Then, by definition, any sequence \(\{f_n\} \subset \mc{S}\) has a convergent subsequence: let's relabel \(\{f_n\}\) to denote this subsequence, in other words, we can assume that \(\{f_n\} \to f\). Let's look at any choice of data \(\{a_n\} \to a_\infty \in \omega, \{\rho_n\} \to 0\) like in the theorem. We have
-\[g_n(z) = f_n(a_n + \rho_nz)\]
+\begin{equation}g_n(z) = f_n(a_n + \rho_nz)\end{equation}
 By the Arzelà–Ascoli theorem, namely that normality is equivalent to equicontinuity, we have that the sequence \(\{f_n\}\) is equicontinuous, and in fact, if we want to restrict our attention to a relatively compact neighborhood of \(a_\infty\), it will tell us that \(\{f_n\}\) is uniformly equicontinuous in a neighborhood of \(a_\infty\). That means that
-\[g(z) = \lim_{n \to \infty}g_n(z) = \lim_{n \to \infty}f_n(a_n + \rho_nz) = f(a_\infty)\]
+\begin{equation}g(z) = \lim_{n \to \infty}g_n(z) = \lim_{n \to \infty}f_n(a_n + \rho_nz) = f(a_\infty)\end{equation}
 i.e. \(g\) is a constant.
 \end{proof}
 We now want to prove Zalcman's lemma
 \begin{proof}
 Let \(\mc{S}\) be a family of meromorphic functions on a domain \(\Omega\) which is \underline{not normal} in the chordal metric. We wish to find \(a_n \to a_\infty \in \Omega\), \(\rho_n \to 0\) such that
-\[g_n(z) = f_n(a_n + \rho_n z)\]
+\begin{equation}g_n(z) = f_n(a_n + \rho_n z)\end{equation}
 converges to a nonconstant meromorphic function \(g\) in the chordal metric on compact subsets of \(\mbb{C}\) such that
-\[g^\sharp(z) \leq g^\sharp(0) = 1\]
+\begin{equation}g^\sharp(z) \leq g^\sharp(0) = 1\end{equation}
 So, not normal means that
-\[S^\sharp = \{f^\sharp: f \in \mc{S}\}\]
+\begin{equation}S^\sharp = \{f^\sharp: f \in \mc{S}\}\end{equation}
 is not locally bounded (as per the theorem by Marty). This means, in particular, that there is a sequence of points \(b_n \to b_\infty \in \Omega\), \(f_n \in \mc{S}\) such that \(f_n^\sharp(b_n) \to \infty\). Of course, we can assume \(b_\infty = 0\), and hence in particular that there is some disc \(\{|z| \leq r\} \subset \Omega\).
 
 Let
-\[M_n = \max(r - |\zeta|)f_n^\sharp(\zeta)\]
+\begin{equation}M_n = \max(r - |\zeta|)f_n^\sharp(\zeta)\end{equation}
 This is a continous function on a compact set, and so it takes on its maximum at some point \(a_n\), at which we have that this is equal to
-\[(r - |a_n|)f_n^\sharp(a_n)\]
+\begin{equation}(r - |a_n|)f_n^\sharp(a_n)\end{equation}
 In particular, \(a_n \to \infty\) since \(b_n \to 0\). So the sequence we're going to construct is
-\[g_n(z) = f_n(a_n + z/f_n^\sharp(a_n))\]
+\begin{equation}g_n(z) = f_n(a_n + z/f_n^\sharp(a_n))\end{equation}
 As \(n\) goes to infinity, this function is defined on bigger and bigger compact sets, as
-\[\left|a_n + \frac{z}{f_n^\sharp(a_n)}\right| \leq |a_n| + \frac{|z|}{|f_n^\sharp(a_n)|} \leq |a_n| + r - |a_n|\]
+\begin{equation}\left|a_n + \frac{z}{f_n^\sharp(a_n)}\right| \leq |a_n| + \frac{|z|}{|f_n^\sharp(a_n)|} \leq |a_n| + r - |a_n|\end{equation}
 That means that this is defined on \(|z| \leq M_n\). Fix \(R \geq 0\). If \(|z| \leq R \leq M_n\), then by the chain rule for spherical derivatives
-\[|g_n^\sharp(z)| \leq \frac{|f_n^\sharp(a_n + z/f_n^\sharp(a_n))|}{|f_n^\sharp(a_n)|} \leq \frac{\cancel{M_n}}{r - |a_n + z/f_n^\sharp(a_n)|}\frac{r - |a_n|}{\cancel{M_n}} \leq \frac{r - |a_n|}{r - |a_n| - |z|/f_n^\sharp(a_n)} = \frac{1}{1  - |z|/M_n} \to 1\]
+\begin{equation}|g_n^\sharp(z)| \leq \frac{|f_n^\sharp(a_n + z/f_n^\sharp(a_n))|}{|f_n^\sharp(a_n)|} \leq \frac{\cancel{M_n}}{r - |a_n + z/f_n^\sharp(a_n)|}\frac{r - |a_n|}{\cancel{M_n}} \leq \frac{r - |a_n|}{r - |a_n| - |z|/f_n^\sharp(a_n)} = \frac{1}{1  - |z|/M_n} \to 1\end{equation}
 as \(n \to \infty\). This tells us by Marty's theorem that \(\{g_n\}\) contains a convergent subsequence in the chordal metric. Of course, taking that convergent subsequence and re-labeliling, we can just assume it is given by \(\{g_n\}\). \(g\) is meromorphic by this ``lemma", non-constant since \(g^\sharp(0) = 1\) and the endnote shows \(g^\sharp(z) \leq 1\).
 \end{proof}
 
@@ -898,7 +898,7 @@ We now prove Montel's theorem
 As an exercise, show that if \(\{f_n\}\) is a sequence of holomorphic functions on a domain \(\Omega \subset \mbb{C}\) wich converges uniformly in the chordal metric, then the limit is either holomorphic or identically \(\infty\). Moreover, if the limit is holomorphic, then theconvergence is uniform in the Euclidean metric on compact subsets of \(\Omega\).
 
 We remark that the families \(\mc{S}_n\) in the proof above are not closed (as the constant functions \(0, 1, \infty\) are in the closure). For example,
-\[\left\{z \mapsto \left(\frac{1 + z}{z}\right)^n : n \in \mbb{N}\right\}\]
+\begin{equation}\left\{z \mapsto \left(\frac{1 + z}{z}\right)^n : n \in \mbb{N}\right\}\end{equation}
 omits \(0, 1\) in \(D\), but converges to \(0\) in \(D\) as \(n\) goes to infinity. However, in the proof of Montel's theorem, Zalc's lemma yields limit functions that are not constant, and therefore in the family \(\mc{S}_m\) by Hurwitz.
 
 We can now finally move on to Picard's big theorem:
@@ -925,14 +925,14 @@ A \textbf{\(n\)-dimensional complex structure} on a manifold \(M\) is given by a
 
 \label{example:riemann_complex_structure}
 For an example of a complex manifold, consider the Riemann sphere \(S^2\). Letting \(N, S\) denote the north and south poles respectively, and letting \(U = S^2 \setminus \{N\}\), \(V = S^2 \setminus \{S\}\), we can define coordinate charts
-\[\varphi_U: U \to \mbb{C} = (x, y, t) \mapsto \frac{x + iy}{1 - t}, \qquad \varphi_V: V \to \mbb{C} = (x, y, t) \mapsto \frac{x - iy}{1 + t}\]
+\begin{equation}\varphi_U: U \to \mbb{C} = (x, y, t) \mapsto \frac{x + iy}{1 - t}, \qquad \varphi_V: V \to \mbb{C} = (x, y, t) \mapsto \frac{x - iy}{1 + t}\end{equation}
 We have that
-\[\varphi_U \circ \varphi_V^{-1}: \mbb{C} \setminus \{0\} \to \mbb{C} \setminus \{0\} = z \mapsto 1/z\]
+\begin{equation}\varphi_U \circ \varphi_V^{-1}: \mbb{C} \setminus \{0\} \to \mbb{C} \setminus \{0\} = z \mapsto 1/z\end{equation}
 is holomorphic, and hence this gives \(S^2\) a complex structure.
 
 \begin{definition}[Holomorphic mapping]
 If \(M, N\) are complex manifolds, \(f: M \to N\) is called a \textbf{holomorphic mapping} if, for all coordinate charts \(\varphi_j: U_j \to \mbb{C}\) of \(M\) and \(\psi_i: V_i \to \mbb{C}\) of \(N\),
-\[\psi_i \circ f \circ \varphi_j^{-1}: \varphi_j(U_j \cap f^{-1}(V_i))\]
+\begin{equation}\psi_i \circ f \circ \varphi_j^{-1}: \varphi_j(U_j \cap f^{-1}(V_i))\end{equation}
 \end{definition}
 
 \begin{definition}[Isomorphism/Biholomorphism]
@@ -987,15 +987,15 @@ Examples of meromorphic functions include
 
 \begin{definition}[Residue of a holomorphic differential form]
 Let \(\omega\) be a holomorphic differential form in the complement of a discrete set \(E \subset M\). Consider \(a \in E\), and let \(z\) denote local coordinates at \(a\) with \(z(a) = 0\) such that, for \(\omega_1\) holomorphic at \(a\),
-\[\omega = f(z)dz = \left(\omega_1 + \left(\frac{c_1}{z} + \frac{c_2}{z^2} + ...\right)\right)dz\]
+\begin{equation}\omega = f(z)dz = \left(\omega_1 + \left(\frac{c_1}{z} + \frac{c_2}{z^2} + ...\right)\right)dz\end{equation}
 using the Laurent expansion of \(f\) at \(a\). Let \(\gamma\) be a closed path in a small neighborhood of \(a\) such that the winding number of \(\gamma\) with respect to \(a\) is \(+1\). We define the \textbf{residue} of \(\omega\) at \(a\) to be
-\[\Res_a(\omega) = \frac{1}{2\pi i}\int_\gamma\omega = c_1\]
+\begin{equation}\Res_a(\omega) = \frac{1}{2\pi i}\int_\gamma\omega = c_1\end{equation}
 Note in particular that this implies that \(c_1\) is independent of local coordinates.
 \end{definition}
 
 \begin{theorem}[Residue Theorem]
 Let \(\omega\) be a holomorphic differential form in the complement of a discrete set \(E\), and let \(\Gamma\) be the \underline{oriented} (complex manifolds have a natural orientation, so this makes sense) boundary of a compact set \(K\) such that \(\Gamma\) contains no point in \(E\). Then
-\[\int_\Gamma\omega = 2\pi i \sum_{a \in E \cap K}\Res_a(\omega)\]
+\begin{equation}\int_\Gamma\omega = 2\pi i \sum_{a \in E \cap K}\Res_a(\omega)\end{equation}
 \end{theorem}
 
 \subsection{Riemann Surfaces}
@@ -1016,7 +1016,7 @@ A \textbf{covering space} of a complex manifold \(Y\) is an unramified Riemann s
 
 If \(\varphi\) is a Riemann surface, then it is an open mapping with isolated ramification points, with the inverse image of a point in \(Y\) being discrete. \(\varphi\) is not necessarily surjective, even if it is unramified.
 An example of a Riemann surface is given by, taking \(Y = \mbb{C}^*\) and \(X = \mbb{C}\), the function \(\varphi = z \mapsto e^t\). In this example, \(\varphi: X \to Y\) is in fact a covering space of \(Y\). In particular, fixing \(b \in Y\), each branch of \(\log z\) defines an isomorphism from the open set \(V = \{z : |z - b| < |b|\}\) to an open set \(U_i\) in \(\mbb{C}\), and these open sets are disjoint, with
-\[\bigcup_iU_i = \varphi^{-1}(V), \qquad \varphi^{-1}|_{U_i}: U_i \xrightarrow{\sim} V\]
+\begin{equation}\bigcup_iU_i = \varphi^{-1}(V), \qquad \varphi^{-1}|_{U_i}: U_i \xrightarrow{\sim} V\end{equation}
 
 \begin{theorem}
 Any connected open set in \(\mbb{C}\) (or any connected complex manifold \(Y\)) has a simply connected covering space.
@@ -1024,17 +1024,17 @@ Any connected open set in \(\mbb{C}\) (or any connected complex manifold \(Y\)) 
 
 In the example \hyperref[et_riemann_surface]{above}, \(z = e^t\) is a local coordinate in a neighborhood of any point of \(X\) (i.e. a holomorphic function on \(X\) can be expressed \underline{locally} as a holomorphic function of \(z\), but not in general \underline{globally}). For example, \(t\) is a holomorphic function on \(X\) in a neighborhood of each point, as it is a branch of \(\log z\). In other words, ``we make \(\log z\) single valued by lifting it to the Riemann surface."
 
-\[
+\begin{equation}
 \begin{tikzcd}
 \mbb{C} = X \arrow[dd, "\varphi(t) = e^t"] \arrow[rd, "t"] \\
 & \mbb{C} \\
 \mbb{C}^* = Y \arrow[ru, "\log z"]
 \end{tikzcd}
-\]
+\end{equation}
 
 
 As another example, we consider a Riemann surface to make the multi-valued function \(y = (1 - x^3)^{1/3}\) single-valued: we define
-\[X = \{(x, y) \in \mbb{C}^2 : x^3 + y^3 = 1\}, \qquad \varphi: X \to \mbb{C} = (x, y) \mapsto x\]
+\begin{equation}X = \{(x, y) \in \mbb{C}^2 : x^3 + y^3 = 1\}, \qquad \varphi: X \to \mbb{C} = (x, y) \mapsto x\end{equation}
 \(X\) is a manifold. Local coordinates at a point \((x_0, y_0) \in X\)...
 
 \TODO{rest}
@@ -1042,7 +1042,7 @@ As another example, we consider a Riemann surface to make the multi-valued funct
 \subsubsection{Evaluation of Integrals by Residues on Riemann Surfaces}
 
 As an example, we compute
-\[\int_0^1\frac{dx}{(1 - x^3)^{1/3}}\]
+\begin{equation}\int_0^1\frac{dx}{(1 - x^3)^{1/3}}\end{equation}
 Consider the Riemann surface of \(y = (1 - x^2)^{1/3}\). We have, as before, \(X = \{(x, y) \in \mbb{C}^2 : x^3 + y^3 = 1\}\) with branch points, \(i, j, j^2\) where \(j = e^{2\pi i/3}\). There are three closed curves on \(X\) with the image \(\gamma\) since \((1 - x^3)^{1/3}\) returns to the same branch as \(x\) describes \(\gamma\).
 
 \TODO{rest}
@@ -1050,9 +1050,9 @@ Consider the Riemann surface of \(y = (1 - x^2)^{1/3}\). We have, as before, \(X
 \subsubsection{Riemann Surface Associated with an Elliptic Curve}
 
 Recall the cubic equation associated with the Weierstrass function,
-\[y^2 = 4x^3 - 20a_2x - 28a_4 = p(x)\]
+\begin{equation}y^2 = 4x^3 - 20a_2x - 28a_4 = p(x)\end{equation}
 Assume the RHS \(p(x)\) has three distinct roots so the equation defines a nonsingular curve (note that every nonsingular cubic has a equation of this form in suitable affine coordinates: \textbf{Weierstrass normal form}). We define a Riemann surface over \(\mbb{C}\) with
-\[X = \{(x, y) : y^2 = p(x)\}\]
+\begin{equation}X = \{(x, y) : y^2 = p(x)\}\end{equation}
 
 \TODO{Diagram}
 
