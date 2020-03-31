@@ -1007,13 +1007,12 @@ A \textbf{ramification point} of a Riemann surface \(\varphi\) is a point with m
 \end{definition}
 
 \begin{definition}[Covering Space]
-A \textbf{covering space} of a complex manifold \(Y\) is an unramified Riemann surface such that every \(h \in Y\) has a neighborhood \(V\) such that \(\varphi^{-1}(V)\) is a disjoint union of open \(U_i \subset X\), with each mapped isomorphically onto \(V\) by \(\varphi\).
+A \textbf{covering space} of a complex manifold \(Y\) is an unramified Riemann surface such that every \(b \in Y\) has a neighborhood \(V\) such that \(\varphi^{-1}(V)\) is a disjoint union of open \(U_i \subset X\), with each mapped isomorphically onto \(V\) by \(\varphi\).
 \end{definition}
 
 If \(\varphi\) is a Riemann surface, then it is an open mapping with isolated ramification points, with the inverse image of a point in \(Y\) being discrete. \(\varphi\) is not necessarily surjective, even if it is unramified.
-An example of a Riemann surface is given by, taking \(Y = \mbb{C}^*\) and \(X = \mbb{C}\), the function \(\varphi = z \mapsto e^t\).
-
-In fact, in the above example, \(\varphi: X \to Y\) is a covering space of \(Y\). In particular, each branch of \(\log z\) defines an isomorphism from \(V\) to an open set in \(\mbb{C}\).
+An example of a Riemann surface is given by, taking \(Y = \mbb{C}^*\) and \(X = \mbb{C}\), the function \(\varphi = z \mapsto e^t\). In this example, \(\varphi: X \to Y\) is in fact a covering space of \(Y\). In particular, fixing \(b \in Y\), each branch of \(\log z\) defines an isomorphism from the open set \(V = \{z : |z - b| < |b|\}\) to an open set \(U_i\) in \(\mbb{C}\), and these open sets are disjoint, with
+\[\bigcup_iU_i = \varphi^{-1}(V), \qquad \varphi^{-1}|_{U_i}: U_i \xrightarrow{\sim} V\]
 
 \begin{theorem}
 Any connected open set in \(\mbb{C}\) (or any connected complex manifold \(Y\)) has a simply connected covering space.
