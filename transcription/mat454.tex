@@ -258,7 +258,9 @@ A holomorphic function \(f(z)\) locally has a proimitive, which is holomorphic (
 
 \begin{definition}
 Let \(\gamma: S^1 \to \Omega\) be a closed curve and \(a \notin \gamma(S^1)\) be a point not in the image of \(\gamma\). Then the \textbf{winding number of \(\gamma\) with respect to \(a\)} is given by the integral
-\[w(\gamma, a) = \frac{1}{2\pi i}\int_\gamma\frac{dz}{z - a}\]
+\begin{equation}
+  w(\gamma, a) = \frac{1}{2\pi i}\int_\gamma\frac{dz}{z - a}
+\end{equation}
 This integral is an integer as
 \TODO{why}
 \end{definition}
@@ -266,7 +268,9 @@ As a function of \(a\), \(w(\gamma, a)\) is continuous on connected components o
 
 \begin{theorem}[Cauchy's Integral Formula]
 If \(f(z)\) is holomorphic in \(\Omega\), \(a \in \Omega\) and \(\gamma: S^1 \to \Omega\) is a closed curve with \(a \notin \gamma\), then
-\[\frac{1}{2\pi i}\int_\gamma\frac{f(z)dz}{z - a} = w(\gamma, a)f(a)\]
+\begin{equation}
+  \frac{1}{2\pi i}\int_\gamma\frac{f(z)dz}{z - a} = w(\gamma, a)f(a)
+\end{equation}
 \end{theorem}
 
 \subsection{Taylor and Laurent Series}
