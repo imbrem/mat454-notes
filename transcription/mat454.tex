@@ -175,13 +175,38 @@ Let \(t: [c, d] \to [a, b]\) be an arbitrary differentiable function such that \
 Integration by substitution.
 \end{proof}
 
+\begin{definition}[Exterior Derivative, Primitive]
+We define the \textbf{exterior derivative \(d\)} of a differentiable function \(F: \Omega \subset \reals^2 \to \mbb{C}\) to be a differential form
+\begin{equation}
+  \omega = dF = \prt{F}{x}dx + \prt{F}{y}dy
+\end{equation}
+In this case we call \(F\) a \textbf{primitive} of \(\omega\).
+\end{definition}
+
+We note that, for holomorphic \(F: \Omega \to \mbb{C}\) and piecewise differentiable \(\gamma: [a, b] \to \Omega\), the Fundamental Theorem of Calculus yields
+\begin{equation}
+  \int\gamma dF = \int_a^b(F \circ \gamma)'(t)dt = F(\gamma(b)) - F(\gamma(a))
+\end{equation}
+This observation implies the ``only if" in the following theorem:
+\begin{theorem}
+\(\omega\) has a primitive in \(\Omega\) if and only if, for any piecewise differentiable closed curve \(\gamma: [a, b] \to \Omega\) (i.e. with \(\gamma(a) = \gamma(b)\)), or equivalently any piecewise differentiable \(\gamma: S^1 \to \Omega\), we have
+\begin{equation}
+  \int_\gamma\omega = 0
+\end{equation}
+\end{theorem}
+\begin{proof}
+As stated above, this is a necessary condition as, if \(\omega\) has a primitive \(F\),
+\begin{equation}
+  \gamma(a) = \gamma(b) \implies F(\gamma(a)) = F(\gamma(b))
+  \implies \int_\gamma\omega = \int_\gamma dF = F(\gamma(a)) - F(\gamma(b)) = 0
+\end{equation}
+This is a sufficient condition as
+\TODO{rectangle argument}
+\end{proof}
+
 \begin{theorem}[Green's formula]
 \begin{equation}\int_\gamma Pdx + Qdy = \iint_A\left(\prt{Q}{x} - \prt{P}{y}\right)dxdy\end{equation}
 \end{theorem}
-
-\begin{definition}[Primitive]
-\TODO{this}
-\end{definition}
 
 \TODO{text}
 
