@@ -52,7 +52,11 @@
 \DeclareMathOperator{\Id}{id}
 \newcommand{\Prj}[2]{\BigP^{#1}({#2})}
 
-\newcommand{\TODO}[1]{\begin{center}\huge{\textcolor{red}{\textbf{TODO:} #1}}\end{center}}
+\newcounter{todos}
+\newcommand{\TODO}[1]{{
+  \stepcounter{todos}
+  \begin{center}\large{\textcolor{red}{\textbf{TODO \arabic{todos}:} #1}}\end{center}
+}}
 
 \begin{document}
 
