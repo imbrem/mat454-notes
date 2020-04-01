@@ -152,7 +152,7 @@ We now proceed to some basic properties of differential forms, starting of cours
 \TODO{this}
 \end{definition}
 
-\begin{theorem}[Cauchy's Theorem]
+\begin{theorem}
 Let \(\Omega \subset \reals^2\), and let \(\omega = Pdx + Qdy\) be a differential form with \(P, Q\) continuous and real or complex-valued. Let \(\gamma = (x, y): [a, b] \to \Omega\) be a piecewise \(C^1\) curve in \(\Omega\). Then
 \begin{equation}
   \int_\gamma\omega = \int_a^bf(t)dt,
@@ -243,9 +243,28 @@ A closed form \(\omega\) in a domain \(\Omega\) does not necessarily have a sing
 
 \TODO{primitive over homotopy}
 
-\subsection{Taylor and Laurent Series}
+\begin{theorem}[Cauchy's Theorem]
+Let \(\Omega\) be a domain and let \(f(z)\) be continuous in \(\Omega\) and holomorphic except on a set of discrete lines and points. Then the differentiable form \(f(z)dz\) is closed.
+\end{theorem}
+\begin{proof}
+\TODO{this}
+\end{proof}
+
+\begin{corollary}
+A holomorphic function \(f(z)\) locally has a proimitive, which is holomorphic (i.e. a function \(F\) such that \(dF = f(z)dz\))
+\end{corollary}
 
 \subsection{Cauchy's Integral Formula}
+
+\begin{definition}
+Let \(\gamma: S^1 \to \Omega\) be a closed curve and \(a \notin \gamma(S^1)\) be a point not in the image of \(\gamma\). Then the \textbf{winding number of \(\gamma\) with respect to \(a\)} is given by the integral
+\[w(\gamma, a) = \frac{1}{2\pi i}\int_\gamma\frac{dz}{z - a}\]
+This integral is an integer as
+\TODO{why}
+\end{definition}
+As a function of \(a\), \(w(\gamma, a)\) is continuous on connected components of the complement of \(\gamma(S^1)\) (which we will just write as \(\gamma\) for convenence when confusion is unlikely).
+
+\subsection{Taylor and Laurent Series}
 
 \subsection{Cauchy's Inequalities}
 
