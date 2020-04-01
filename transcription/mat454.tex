@@ -1230,6 +1230,18 @@ The integral of \(\omega\) around one of the lifted curves is hence given by
 \end{equation}
 with the factor \(j^2\) in the second term from the argument of residue calculation above: the argument changes by \(\frac{2\pi}{3}\) going around the point \(1\). The third term is deduced from the second by substitution, and such.
 
+\(\omega\) has poles at \(\infty\): we calculate the residues in coordinate at infinity as follows: letting \(x = \frac{1}{u}\), we obtain
+\begin{equation}
+  \frac{dx}{(1 - x^3)^{1/3}}
+  = -\frac{du}{u^2(1 - u^{-3})^{1/3}}
+  = -\frac{du}{u(u^3 - 1)^{1/3}}
+\end{equation}
+Using one of the branches, we obtain
+\begin{equation}
+  -\frac{du}{(-1)^{1/3}u(1 - u^3)^{1/3}}
+\end{equation}
+giving residue \((-1)^{2/3} = 1\). The residues of the other poles at \(\infty\) are \(1, j^2\).
+
 \subsubsection{Riemann Surface Associated with an Elliptic Curve}
 
 Recall the cubic equation associated with the Weierstrass function,
