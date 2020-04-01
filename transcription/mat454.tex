@@ -148,12 +148,26 @@ This is a holomorphic function from \(\mbb{C} \setminus \{0\} \to \mbb{C} \setmi
 We now proceed to some basic properties of differential forms:
 \begin{theorem}[Cauchy's Theorem]
 Let \(\Omega \subset \reals^2\), and let \(\omega = Pdx + Qdy\) be a differential form with \(P, Q\) continuous and real or complex-valued. Let \(\gamma = (x, y): [a, b] \to \Omega\) be a piecewise \(C^1\) curve in \(\Omega\). Then
-\begin{equation}\int_\gamma\omega = \int_a^bf(t)dt, \quad f(t) = P(x(t), y(t))x'(t) + Q(x(t), y(t))y'(t) = \gamma^*\omega\end{equation}
+\begin{equation}
+  \int_\gamma\omega = \int_a^bf(t)dt,
+  \quad f(t) = P(x(t), y(t))x'(t) + Q(x(t), y(t))y'(t) = \gamma^*\omega
+\end{equation}
 \end{theorem}
-Note we can define \(\gamma^*\) recursively by
-\begin{equation}\gamma^*(P) = P\circ \gamma, \quad \gamma^*(dx) = d(x \circ \gamma) = x'(t)dt, \quad \gamma^*(dy) = d(y \circ \gamma) = y'(t)dt\end{equation}
 
-\TODO{independence of parameter}
+Note we can define \(\gamma^*\) recursively by
+\begin{equation}
+  \gamma^*(P) = P\circ \gamma,
+  \quad \gamma^*(dx) = d(x \circ \gamma) = x'(t)dt,
+  \quad \gamma^*(dy) = d(y \circ \gamma) = y'(t)dt
+\end{equation}
+
+\begin{theorem}[Independence of Parameter]
+Let \(t: [c, d] \to [a, b]\) be an arbitrary differentiable function such that \(t(c) = a\), \(t(d) = b\) and \(t' > 0\). Define the curve \(\delta(s) = \gamma(t(s))\). Then for any differential form \(\omega\),
+\[\int_\gamma\omega = \int_\delta\omega\]
+\end{theorem}
+\begin{proof}
+Integration by substitution.
+\end{proof}
 
 \begin{theorem}[Green's formula]
 \begin{equation}\int_\gamma Pdx + Qdy = \iint_A\left(\prt{Q}{x} - \prt{P}{y}\right)dxdy\end{equation}
