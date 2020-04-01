@@ -1240,7 +1240,16 @@ Using one of the branches, we obtain
 \begin{equation}
   -\frac{du}{(-1)^{1/3}u(1 - u^3)^{1/3}}
 \end{equation}
-giving residue \((-1)^{2/3} = 1\). The residues of the other poles at \(\infty\) are \(1, j^2\).
+giving residue \((-1)^{2/3} = 1\). The residues of the other poles at \(\infty\) are \(1, j^2\). Since \(\gamma\) is negatively oriented with respect to \(\infty\), we have
+\begin{equation}
+  3(1 - j^2)I = -2\pi i(\text{one of the residues above})
+  \label{equation:one_of_the_residues}
+\end{equation}
+Substituting \(j\) into \ref{equation:one_of_the_residues}, we obtain
+\begin{equation}
+  3(1 - j^2)I = -2\pi ij \iff 3(j^2 - j)I = -\sqrt{3}iI = -2\pi i \iff I = \frac{2\pi}{3\sqrt{3}}
+\end{equation}
+This must be the correct choice of residue because \(I\) is real, and the other residues would give the preceding answer multiplied by \(j\) or \(j^2\), which are both nonreal.
 
 \subsubsection{Riemann Surface Associated with an Elliptic Curve}
 
