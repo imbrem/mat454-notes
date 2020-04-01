@@ -216,6 +216,19 @@ This is a sufficient condition as
 
 \TODO{rest}
 
+\begin{definition}
+We say a differential form \(\omega\) on a domain \(\Omega\) is \textbf{closed} if every point in \(\Omega\) has a neighborhood in which \(\omega\) has a primitive.
+\end{definition}
+
+We can show that \(\omega\) is closed if and only if \(\int_\gamma\omega = 0\) whenever \(\gamma\) is the boundary of a small enough rectangle in \(\Omega\).
+Assuming \(\omega\) is \(\mc{C}^1\), then \(\omega\) is closed if and only if \(d\omega = 0\).
+
+For example, consider \(\Omega = \mbb{C} \setminus \{0\}\) and the differential form \(\omega = \frac{dz}{z}\). This is closed in \(\Omega\), as a primitive exists locally, namely an appropriate branch of \(\log\), but \(\omega\) has no primitive, as letting \(\gamma(\theta) = e^{i\theta}\), we have
+\begin{equation}
+  \int_\gamma\frac{dz}{z} = \int_0^{2\pi}\frac{i\cancel{e^{i\theta}}}{\cancel{e^{i\theta}}}d\theta
+  = 2i\pi \neq 0
+\end{equation}
+
 \subsection{Taylor and Laurent Series}
 
 \subsection{Cauchy's Integral Formula}
