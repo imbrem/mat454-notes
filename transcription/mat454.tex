@@ -1137,20 +1137,49 @@ Then, a point which maps to \(\infty\) on the Riemann sphere is a pole. Examples
 
 \subsection{Integration of Holomorphic Differential Forms}
 
-\TODO{definitions}
+Holomorphic differential forms are the objects of integration in this course. We've been working a little bit with holomorphic differential forms on open subsets of the complex plane, and they're going to be particularly useful as we begin working on integration on complex manifolds. Now remember our complex manifolds are all one-dimensional, i.e. complex curves. Rather than introducing differential forms in an abstract way, we're going to work in coordinate charts. So remember a complex manifold \(M\) is covered by a countable collection of coordinate charts \(U_i\). For each \(U_i\) in the covering, we have a homeomorphism \(\varphi_i: U_i \to V_i\) to an open subset of the complex plane. The manifold being holomorphic means that the transition mappings between any two charts, defined in the overlap of two charts, are all holomorphic. We're thinking of each of these charts \(\varphi_i\) as providing a local coordinate \(z_i \in \mbb{C}\) in eahc local coordinate chart \(U_i\). Therefore, the transition mapping gives an expression for a change of local coordinates. That is, the transition mapping \(g_{ij}\) allows us to express \(z_i\) in terms of \(z_j\) on the overlap of the two charts.
 
+Of course, by differentiating, this gives an expression for \(dz_i\) in terms of \(dz_j\), namely by the chain rule
+\begin{equation}
+  z_i = g_{ij}(z_j) \implies dz_i = g_{ij}'(z_j)dz_j'
+\end{equation}
+Therefore, by a holomorphic differential for \(\omega\) on \(M\), we simply mean that we will have a holomorphic differential form in the usual sense on each coordinate chart. So on \(U_i, U_j\) we can wreite expressions
+\begin{equation}
+  \omega_i = f_i(z_i)dz_i, \qquad \omega_j = f_j(z_j)dz_j
+\end{equation}
+The \textbf{transition condition} means that when we consider the expression on two different coordinate charts, then one can be obtained from the other simply by the substitution formula, i.e. change of variable. That is, we have on the overlap \(U_i \cap U_j\)
+\begin{equation}
+  \omega_j = f_i(g_{ij}(z_i))g_{ij}'(z_i)dz_i
+\end{equation}
+In other words, we define a holomorphic differential form by giving an expression in every coordinate chart where one can pass from one expression to another by the usual formula for change of variables using the transition maps. We're already familiar with the very important example of the Riemann sphere.
+
+The Riemann sphere is a compactification of the complex plane obtained by adding a point at infinity. We have our usual coordinate \(z\) in the complex plane, and we can induce a coordinate at infinity by taking a reciprocal, i.e. writing \(z = \frac{1}{z'}\) where \(z'\) denotes the coordinate at infinity, with \(z' = 0\) corresponding to the point \(\infty\). What we've done many time is that if we have a holomorphic differential form like \(\omega = f(z)dz\) in the complex plane, we can change the coordinates to those at infinity just by making the substitution \(z = \frac{1}{z'}\), giving
+\begin{equation}
+  z = \frac{1}{z'} \implies \omega = f(z)dz = f(1/z')dz = -\frac{f(1/z')}{z'^2}dz'
+\end{equation}
+That's an example of how we think about a holomorphic differential form of a manifold in general. We have an expression in each coordinate chart, and we pass from an expression in one chart to an expression in another by the usual substitution formula.
+
+Now, since when we're working on manifolds, we're really working in a local coordinate chart, that means that any of the \textit{local} things that we know about complex analysis immediately make sense in the context of manifolds. We know, for example, that in some neighborhood of any point of the manifold, \(\omega\) has a primitive, that is a holomorphic function \(g\) such that \(dg = \omega\). We know that because if we only care about the local case, that means that we're working in a coordinate chart, and that means we're just working in an open subset of \(\mbb{C}\). And we know, on \(\mbb{C}\), that locally there is always a primitive uniquely determined up to addition of a constant.
+
+It's not always true that there's a global primitive: we know that already on \(\mbb{C}\). However, if the manifold is simply connected, then \(\omega\) has a global primitive, and we can prove this exactly the same way as we did for open subsets of \(\mbb{C}\): namely, we integrate along curves to find the primitive. In general, of course, the integral of \(\omega\) on any closed curve needn't be zero: the objects that we get by integrating over closed curves are called \textbf{periods} of the integral.
+
+One very important local idea that we've used in complex analysis is of course the idea of a residue. Since it's local, of course, we can always define the idea of the residue of a holomorphic differential form on a manifold, by basically repeating what we've done in the complex plane:
 \begin{definition}[Residue of a holomorphic differential form]
 Let \(\omega\) be a holomorphic differential form in the complement of a discrete set \(E \subset M\). Consider \(a \in E\), and let \(z\) denote local coordinates at \(a\) with \(z(a) = 0\) such that, for \(\omega_1\) holomorphic at \(a\),
 \begin{equation}\omega = f(z)dz = \left(\omega_1 + \left(\frac{c_1}{z} + \frac{c_2}{z^2} + ...\right)\right)dz\end{equation}
-using the Laurent expansion of \(f\) at \(a\). Let \(\gamma\) be a closed path in a small neighborhood of \(a\) such that the winding number of \(\gamma\) with respect to \(a\) is \(+1\). We define the \textbf{residue} of \(\omega\) at \(a\) to be
+using the Laurent expansion of \(f\) at \(a\), where \(\omega_1\) is the holomorphic differential form form consisting of the sum of terms in the Laurent series with nonnegative powers. Let \(\gamma\) be a closed path in a small neighborhood of \(a\) such that the winding number of \(\gamma\) with respect to \(a\) is \(+1\). We define the \textbf{residue} of \(\omega\) at \(a\) to be
 \begin{equation}\Res_a(\omega) = \frac{1}{2\pi i}\int_\gamma\omega = c_1\end{equation}
 Note in particular that this implies that \(c_1\) is independent of local coordinates.
 \end{definition}
 
+One important thing to note here is that we integrated with respect to a closed path whose winding number with respect to the point was \(+1\). It's important to know that that winding number doesn't depend on the choice of local coordinate. Why? It's because the complex plane comes with a natural orientation: given complex coordinates, it makes sense to talk about moving around a circle in the counterclockwise direction. If we change from one local coordinate to another, then the direction of counterclockwise rotation remains counterclockwise, since the transition maps are biholomorphisms and hence conformal, and therefore orientation preserving. This in particular imply that complex manifolds have a natural orientation, which implies that we can orient, e.g., the boundary of subsets in a complex manifold. That's an important thing to know in order to transfer the residue theorem to complex manifolds. That is:
+
 \begin{theorem}[Residue Theorem]
-Let \(\omega\) be a holomorphic differential form in the complement of a discrete set \(E\), and let \(\Gamma\) be the \underline{oriented} (complex manifolds have a natural orientation, so this makes sense) boundary of a compact set \(K\) such that \(\Gamma\) contains no point in \(E\). Then
+Let \(\omega\) be a holomorphic differential form in the complement of a discrete set \(E\), and let \(\Gamma\) be the \underline{oriented} boundary of a compact set \(K\) such that \(\Gamma\) contains no point in \(E\). Then
 \begin{equation}\int_\Gamma\omega = 2\pi i \sum_{a \in E \cap K}\Res_a(\omega)\end{equation}
 \end{theorem}
+
+So this is just really recalling local stuff that we know about holomorphic functions on open subsets of the complex plane and transferring them to manifolds. This is really all I wanted to say about background material: now, we can get to the main topic of this section.
 
 \subsection{Riemann Surfaces}
 
