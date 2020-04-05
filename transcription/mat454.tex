@@ -1183,34 +1183,45 @@ So this is just really recalling local stuff that we know about holomorphic func
 
 \subsection{Riemann Surfaces}
 
+What a Riemann surface is going to be is, not just a complex curve, but rather a mapping from a complex curve onto another. The target of the mapping is usually going to be the complex plane, the Riemann sphere, or an open subset of one of those two things. So we begin with a complex curve \(Y\), which is usually going to be one of the aforementioned things, and then by a Riemann surface spread over \(Y\), we mean a (non-constant) holomorphic mapping from a connected complex curve \(X\) to \(Y\). That is,
 \begin{definition}[Riemann Surface]
-Let \(Y\) be a complex curve (e.g. \(\mbb{C}\) or \(S^2\)). A \textbf{Riemann surface over \(Y\)} is a non-constant holomorphic mapping \(\varphi: X \to Y\) where \(X\) is a connected complex curve.
+Let \(Y\) be a complex curve (e.g. \(\mbb{C}\) or \(S^2\)). A \textbf{Riemann surface spread over \(Y\)} is a non-constant holomorphic mapping \(\varphi: X \to Y\) where \(X\) is a connected complex curve.
 \end{definition}
 
+This mapping, we're going to see, is very nice at almost every point of \(X\). The points where it's not so nice are the points that we have what are called ramification points of \(\varphi\). Recall that for a holomorphic function \(\varphi\), the \textbf{order} or \textbf{multiplicity} at a point \(z\) is the degree of the lowest degree term of the Taylor expansion of \(\varphi\) around \(z\). So \(z^k\) has multiplicity \(k\). We define:
 \begin{definition}[Ramification Point]
-A \textbf{ramification point} of a Riemann surface \(\varphi\) is a point with multiplicity greater than one. A Riemann surface \(\varphi\) with no ramification points is said to be \textbf{unramified}
+A \textbf{ramification point} of a Riemann surface \(\varphi\) is a point with multiplicity (i.e. order) greater than one. A Riemann surface with no ramification points is called \textbf{unramified}.
 \end{definition}
+So, if \(\varphi\) is not ramified at a given point, that means it has multiplicity one at that point and is therefore of course a local isomorphism.
 
-\begin{definition}[Covering Space]
-A \textbf{covering space} of a complex manifold \(Y\) is an unramified Riemann surface such that every \(b \in Y\) has a neighborhood \(V\) such that \(\varphi^{-1}(V)\) is a disjoint union of open \(U_i \subset X\), with each mapped isomorphically onto \(V\) by \(\varphi\).
-\end{definition}
+Of course, there are a number of things that we know about non-constant holomorphic mappings: they are open (the image, whether surjective or not, is an open set), we know that its ramification points are isolated, and the inverse image of any point is a discrete set. On the other hand, just like the case of any holomorphic mapping from \(\mbb{C}\) to itself, \(\varphi\) is not necessarily injective even if it's unramified.
 
-We note the following fact:
-\begin{theorem}
-Any connected open set in \(\mbb{C}\) (or any connected complex manifold \(Y\)) has a simply connected covering space.
-\end{theorem}
-
-We now consider some examples:
+Maybe to clarify things, it's good to think in terms of an example, and starting with really kind of the most basic example in order to illustrate what we want to think about.
 
 \begin{enumerate}
 
 
   \item \label{example:et_riemann_surface}
-  If \(\varphi\) is a Riemann surface, then it is an open mapping with isolated ramification points, with the inverse image of a point in \(Y\) being discrete. \(\varphi\) is not necessarily surjective, even if it is unramified.
-  An example of a Riemann surface is given by, taking \(Y = \mbb{C}^*\) and \(X = \mbb{C}\), the function \(\varphi = z \mapsto e^t\). In this example, \(\varphi: X \to Y\) is in fact a covering space of \(Y\). In particular, fixing \(b \in Y\), each branch of \(\log z\) defines an isomorphism from the open set \(V = \{z : |z - b| < |b|\}\) to an open set \(U_i\) in \(\mbb{C}\), and these open sets are disjoint, with
-  \begin{equation}\bigcup_iU_i = \varphi^{-1}(V), \qquad \varphi^{-1}|_{U_i}: U_i \xrightarrow{\sim} V\end{equation}
+  Let's take \(Y = \mbb{C} \setminus \{0\}\), and \(X = \mbb{C}\). Note that \(Y\) here is connected but not simply connected. Let's consider the Riemann surface given by the mapping \(\varphi = z \mapsto e^t\).
 
-  In this example, \(z = e^t\) is a local coordinate in a neighborhood of any point of \(X\) (i.e. a holomorphic function on \(X\) can be expressed \underline{locally} as a holomorphic function of \(z\), but not in general \underline{globally}). For example, \(t\) is a holomorphic function on \(X\) in a neighborhood of each point, as it is a branch of \(\log z\). In other words, ``we make \(\log z\) single valued by lifting it to the Riemann surface."
+  Before we begin our analysis, we note that in this example, \(\varphi: X \to Y\) is in fact what's called a covering space of \(Y\). We define:
+  \begin{definition}[Covering Space]
+  A \textbf{covering space} of a complex manifold \(Y\) is an unramified Riemann surface such that every \(b \in Y\) has a neighborhood \(V\) such that \(\varphi^{-1}(V)\) is a disjoint union of open \(U_i \subset X\), with each mapped isomorphically onto \(V\) by \(\varphi\).
+  \end{definition}
+  In other words, every point in the image has a neighborhood \(V\) over which \(X\) just looks like a ``stack of pancakes" each mapped biholomorphically onto \(V\) by \(\varphi\).
+
+  In this particular example, given a point \(b \in Y\), what can we use for the open set \(V\)? Well, given \(b \in \mbb{C} \setminus \{0\}\), we can take \(V = B_{|b|}(b)\), that is, the open disc with radius \(|b|\) centered at \(b\). So that's an open disc which does not include the origin. Since the open disc doesn't include the origin, \(\log z\) can be well-defined on that disc. Hence, each branch of \(\log z\) defines an isomorphism from \(V\) to an open set \(U_i\) in \(\mbb{C}\), and these open sets are disjoint, with their union being the entire inverse image of \(V\)
+  \begin{equation}
+    \bigcup_iU_i = \varphi^{-1}(V), \qquad \varphi^{-1}|_{U_i}: U_i \xrightarrow{\sim} V
+  \end{equation}
+
+  Just as an aside, for those of you who have taken topology, you probably know that \textit{any} connected open set in \(\mbb{C}\), or in fact any connected complex manifold \(Y\), has a simply connected covering space. This is a standard result in topology. We won't use it, but this is in the background of a lot of things that we're going to be discussing. So in this example, \(Y\) is not simply connected, but \(X\) is. In fact, \(X\) is what's called the \textbf{universal covering space} of \(\mbb{C} \setminus \{0\}\).
+
+  Now, we have that \(z = e^t\) is a local coordinate in a neighborhood of any point of \(X\). \(t\) is the global coordinate on \(X\), but around any point we can use \(z\) as a local coordinate, implying that a holomorphic function on \(X\) can be expressed \underline{locally} as a holomorphic function of \(z\), but not in general \underline{globally}.
+
+  For instance, \(t\) itself is a holomorphic function on \(X\), and can be recovered locally using a branch of \(\log\). Globally, however, we cannot define a branch of log on \(\mbb{C} \setminus \{0\}\) since we must exclude a line segment.
+
+  Now, this is a very important way of thinking about what I just said, because it's in fact the way that we're going to use Riemann surfaces. \(\log z\) can be defined on the complex plane minus the origin, but it doesn't make sense as a single-valued function. 
 
   \begin{equation}
     \begin{tikzcd}
@@ -1246,6 +1257,15 @@ We now consider some examples:
   \TODO{rest}
 
 \end{enumerate}
+
+\begin{definition}[Covering Space]
+A \textbf{covering space} of a complex manifold \(Y\) is an unramified Riemann surface such that every \(b \in Y\) has a neighborhood \(V\) such that \(\varphi^{-1}(V)\) is a disjoint union of open \(U_i \subset X\), with each mapped isomorphically onto \(V\) by \(\varphi\).
+\end{definition}
+
+We note the following fact:
+\begin{theorem}
+Any connected open set in \(\mbb{C}\) (or any connected complex manifold \(Y\)) has a simply connected covering space.
+\end{theorem}
 
 \subsection{Evaluation of Integrals by Residues on Riemann Surfaces}
 
