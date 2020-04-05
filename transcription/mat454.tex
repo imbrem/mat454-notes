@@ -1092,37 +1092,42 @@ We've defined the idea of a complex structure, and we want to say when it makes 
 A \textbf{\(n\)-dimensional complex manifold} is a topological manifold \(M\) together with an equivalence class of \(n\)-dimensional complex structures where two complex structures are considered equivalent if the identity mapping on \(M\) induces an isomorphism between them.
 \end{definition}
 
-Examples include:
+Let's now go through some examples, all of which are things which in some sense we've already looked at in the course:
 \begin{enumerate}
 
-  \item Open subsets of \(\mbb{C}\)
+  \item Of course, open subsets of \(\mbb{C}\) are complex manifolds in a trivial way, being covered in one coordinate chart given by the identity mapping. Likewise, if we're given any complex manifold and take an open subset of that, we can consider the subset a complex manifold with the induced complex structure.
 
-  \item The Riemann sphere \(S^2 = P^1(\mbb{C})\) with the complex structure assigned \hyperref[example:riemann_complex_structure]{above}. Note this is compact.
+  \item The Riemann sphere \(S^2 = P^1(\mbb{C})\) with the complex structure assigned \hyperref[example:riemann_complex_structure]{above}. The Riemann surface of course is distinguished from a topological point of view by the fact that it's compact, and in fact can be viewed as the one-point compactification of \(\mbb{C}\) \label{example:riemann_complex_manifold}.
 
-  \item \(\mbb{C}/\mbb{Z}\) with \(\mbb{Z}\) taken as an additive subgroup of \(\mbb{Z}\): equivalence classes of points where the difference is in \(\mbb{Z}\).
+  \item As another example, let's look at the quotient of \(\mbb{C}\) by the action of an additive subgroup. We consider the action of the integers on \(\mbb{C}\) by taking a point \(z\) to \(z + n\). The quotient \(\mbb{C}/\mbb{Z}\) means the set of equivalence classes where two points are equivalent if their difference belongs to \(\mbb{Z}\), or equivalently if there is an \(n \in \mbb{Z}\) taking one point to another.
 
-  This is a Hausdorff space with quotient topology induced by the projection map \(\pi: \mbb{C} \to \mbb{C}/\mbb{Z}\). To place a complex manifold structure on this space, we choose \(V \subset \mbb{C}\) small enough that \(\pi|_V\) is injective (e.g. open balls with diameter \(\leq 1\)) and define, for \(U = p(V)\), local coordinates given by \(\pi^{-1}\) (which is defined in \(U\) since \(\pi\) is injective on \(V\)).
+  This is a Hausdorff space if we give it the quotient topology, that is the induced by the projection map \(\pi: \mbb{C} \to \mbb{C}/\mbb{Z}\) where a set in \(\mbb{C}/\mbb{Z}\) is open provided that it is the image of an open set \(U \subset \mbb{C}\) in the projection \(\pi\). To place a complex manifold structure on this space, we can choose \(V \subset \mbb{C}\) small enough that \(\pi|_V\) is injective (e.g. open balls with diameter \(\leq 1\)) and define, for \(U = p(V)\), local coordinates given by \(\pi^{-1}\) (which is defined in \(U\) since \(\pi\) is injective on \(V\)).
   \label{example:cmodints}
 
-  \item \(M = \mbb{C}/\Gamma\), where \(\Gamma\) is a discrete group with generators \(e_1, e_2\) as before. We define a complex structure on \(\mbb{C}/\Gamma\) in a manner analogous to \ref{example:cmodints}.
+  \item More generally, we may take \(M = \mbb{C}/\Gamma\), where \(\Gamma\) is a discrete group with generators \(e_1, e_2\) as before. We define a complex structure on \(\mbb{C}/\Gamma\) in a manner analogous to \ref{example:cmodints}.
 
-  We note that \(M\) is compact, as \(M = p(\text{closed period parallelogram})\). Topologically, \(M\) is a torus.
+  In contrast to the \hyperref[example:cmodints]{third example}, the situation here is significant as the quotient here is compact, as we can write \(M = p(\text{closed period parallelogram})\), i.e. the image of a compact set under a continuous map. Being the image of a closed period parallelogram, we also know that topologically the manifold \(M\) is a torus \label{example:torus_complex_manifold}.
 
 \end{enumerate}
+
+So already this series of examples includes two significantly different examples of compact complex manifolds, because the \hyperref[example:riemann_complex_manifold]{Riemann sphere} is compact, and the \hyperref[example:torus_complex_manifold]{quotient by a discrete group} is compact, but topologically those manifolds are very different: the Riemann sphere is a sphere, while the quotient by a discrete group is a torus, which has a hole in it. So these are basic examples of complex manifolds.
+
+In this course, we're going to be interested almost exclusively in \textit{one-dimensional} complex manifold. One dimensional, of course, means one \textit{complex} dimension, like the complex plane \(\mbb{C}\) has one complex dimension. As real manifolds, of course, they're two dimensional, but as complex manifolds they're one dimensional. We'll call such a manifold a ``complex curve" or a ``Riemann surface", but a Riemann surface in a kind of abstract sense. When we really talk about Riemann surfaces next time, we'll mean not just a complex curve, but a complex curve with a mapping to open subsets of the Riemann sphere. But for now, we define:
 
 \begin{definition}[Complex Curve/Abstract Riemann Surface]
 A \textbf{complex curve} or \textbf{abstract Riemann surface} is a 1-dimensional complex manifold \(M\).
 \end{definition}
-Local properties of holomorphic functions extend to complex curves, e.g. the principle of analytic continuation (two holomorphic maps coincide if they coincide on a set with a limit point) and the maximum modulus principle.
 
+Now, all of the usual local properties of holomorphic functions that you've studied in this or previous courses extend to complex curve. For example the principle of analytic continuation (that two holomorphic maps coincide if they coincide on a set with a limit point) extends in a simple way to manifolds, as does the maximum modulus principle, and in fact all the usual properties which are purely local.
+
+Local notions and definitions also extend to complex manifolds. For example, we can define a meromorphic function on a complex manifold \(M\) exactly as you do on an open subset of the complex plane: you can say that locally it's given by the quotient of holomorphic functions. Another, maybe better way of saying that meromorphic means, is to say that it means a holomorphic mapping from \(M\) to the Riemann sphere, that is:
 \begin{definition}[Meromorphic functions]
 For a complex manifold \(M\), a holomorphic mapping \(f: M \to S^2\) is called a \textbf{meromorphic function on \(M\)}
 \end{definition}
-
-Examples of meromorphic functions include
+Then, a point which maps to \(\infty\) on the Riemann sphere is a pole. Examples of meromorphic functions include
 \begin{enumerate}
 
-  \item Given a projection \(\pi: \mbb{C} \to \mbb{C}/\Gamma\), where \(\Gamma\) is a group of periods, the mapping \(f \mapsto f \circ p\) gives a bijection between meromorphic functions on \(\mbb{C}/\Gamma\) and meromorphic functions on \(\mbb{C}\) with \(\Gamma\) as group of periods.
+  \item Let's go back to the quotient by a discrete group, i.e. the \hyperref[example:torus_complex_manifold]{torus}. Given a projection \(\pi: \mbb{C} \to \mbb{C}/\Gamma\), where \(\Gamma\) is a group of periods, the mapping \(f \mapsto f \circ p\) gives a bijection between meromorphic functions on \(\mbb{C}/\Gamma\) and meromorphic functions on \(\mbb{C}\) with \(\Gamma\) as group of periods.
 
   \item The mapping \(z \mapsto e^{2\pi iz}: \mbb{C} \to \mbb{C}^*\) induces a holomorphic mapping \(\mbb{C}/\mbb{Z} \to \mbb{C}^*\) (which is in fact one-to-one and onto, and therefore a biholomorphism and in fact an isomorphism of topological spaces).
 
