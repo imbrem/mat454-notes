@@ -16,7 +16,7 @@
 \usepackage{tikz-cd}
 \usepackage{xcolor}
 
-\usepackage[backend=biber]{biblatex} 
+\usepackage[backend=biber]{biblatex}
 \addbibresource{references.bib}
 
 \usepackage[margin=1in]{geometry}
@@ -1041,16 +1041,21 @@ Equivalently, a holomorphic function omits at most one complex value in a neighb
 
 \subsection{Complex Manifolds}
 
+The remaining topic in this course is Riemann surfaces. We will begin with an introduction to complex manifolds, with Riemann surfaces being mappings between complex manifolds of dimension one. The goal is to go through some of the basic definitions, especially for those who have not seen manifolds before. So, let's begin: what is a manifold?
+
 \begin{definition}[Topological \(n\)-manifold]
 An \textbf{\(n\)-dimensional topological manifold} is a Hausdorff, paracompact, topological space locally homeomorphic to \(\reals^n\).
+\label{def:topological_manifold}
 \end{definition}
 
+In other words, an \(n\)-dimensional topological manifold means a topological space which is Hausdorff and paracompact (i.e. ``not too big", meaning every open covering has a countable subcovering) to avoid pathologies which locally ``looks like an open subset of \(\reals^n\)." That is, it can be covered with open sets \(U_i\) each of which admits a homeomorphism \(\varphi_i: U_i \to V_i\) where \(V_i \subset \reals^n\) is open. We are going to be interested in complex manifolds, which is just a manfiold to which we add a complex structure. The way we do that is that in the \hyperref[def:topological_manifold]{definition}, we simply replace \(\reals^n\) by \(\mbb{C}^n\) and we assume that the ``\textbf{transition mappings}" between any two of these coordinate charts are \textit{homeomorphisms}. That is, we define
+
 \begin{definition}[Complex Structure]
-A \textbf{\(n\)-dimensional complex structure} on a manifold \(M\) is given by an open cover of \(\{U_i\}\) of \(M\) and a set of \textbf{coordinate charts} \(\varphi_i: U_i \to \mbb{C}^n\) such that each composition \(\varphi_i \circ \varphi_j^{-1}: \varphi_j(U_j) \to \mbb{C}^n\) is holomorphic.
+A \textbf{\(n\)-dimensional complex structure} on a manifold \(M\) is given by an open cover of \(\{U_i\}\) of \(M\) and a set of \textbf{coordinate charts} \(\varphi_i: U_i \to \mbb{C}^n\) such that each composition (\textbf{transition mapping}) \(\varphi_i \circ \varphi_j^{-1}: \varphi_j(U_j) \to \mbb{C}^n\) is holomorphic.
 \end{definition}
 
 \label{example:riemann_complex_structure}
-For an example of a complex manifold, consider the Riemann sphere \(S^2\). Letting \(N, S\) denote the north and south poles respectively, and letting \(U = S^2 \setminus \{N\}\), \(V = S^2 \setminus \{S\}\), we can define coordinate charts
+For an example of a complex structure on a topological manifold, consider the Riemann sphere \(S^2\). Letting \(N, S\) denote the north and south poles respectively, and letting \(U = S^2 \setminus \{N\}\), \(V = S^2 \setminus \{S\}\), we can define coordinate charts
 \begin{equation}\varphi_U: U \to \mbb{C} = (x, y, t) \mapsto \frac{x + iy}{1 - t}, \qquad \varphi_V: V \to \mbb{C} = (x, y, t) \mapsto \frac{x - iy}{1 + t}\end{equation}
 We have that
 \begin{equation}\varphi_U \circ \varphi_V^{-1}: \mbb{C} \setminus \{0\} \to \mbb{C} \setminus \{0\} = z \mapsto 1/z\end{equation}
