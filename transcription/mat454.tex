@@ -1070,18 +1070,26 @@ We have that
 \begin{equation}\varphi_U \circ \varphi_V^{-1}: \mbb{C} \setminus \{0\} \to \mbb{C} \setminus \{0\} = z \mapsto 1/z\end{equation}
 is holomorphic, and hence this gives \(S^2\) a complex structure. Note that this is defined not everywhere, but rather on the overlap of the regions of \(\mbb{C}\) corresponding to each chart, namely \(\mbb{C} \setminus \{0\}\) (as on the north pole chart, we have \(N \mapsto \infty, S \mapsto 0\), and vice versa for the south pole chart).
 
-Naturally, we extend the idea of a holomorphic function to a holomorphic mapping
+Naturally, we want extend the idea of a holomorphic function to a holomorphic mapping. If we have two manifolds \(M, N\), each of which have a complex structure (i.e. each of which is covered by coordinate charts which admit mappings to open subsets of \(\mbb{C}^m\)/\(\mbb{C}^n\)) then we'll say that a continuous mapping \(f: M \to N\) is holomorphic if, when we look at it as a mapping between open subsets of \(\mbb{C}^m\) to open subsets of \(\mbb{C}^n\) by the coordinate charts, it's holomorphic. In other words, if we go from the image of \(\varphi_j\) in \(\mbb{C}^m\) back to \(M\), and then by \(f\) to \(N\), and then by \(\psi_i\) to \(\mbb{C}^n\),
+we'll get a mapping which is holomorphic for all \(i\) and \(j\). Of course these composite mappings are not necessarily defined on the entire image of \(\varphi_i\), rather, they're only defined on that part of \(U_j\) which is in the inverse image of \(V_i\) by \(f\). In other words, this makes sense as a holomorphic mapping on the set on which it's well defined. So that's the idea of the following definition:
+
 \begin{definition}[Holomorphic mapping]
 If \(M, N\) are complex manifolds, \(f: M \to N\) is called a \textbf{holomorphic mapping} if, for all coordinate charts \(\varphi_j: U_j \to \mbb{C}\) of \(M\) and \(\psi_i: V_i \to \mbb{C}\) of \(N\),
 \begin{equation}\psi_i \circ f \circ \varphi_j^{-1}: \varphi_j(U_j \cap f^{-1}(V_i))\end{equation}
 \end{definition}
 
+If a holomorphic mapping has an inverse which is also holomorphic, we'll say that it's an isomorphism or a biholomorphism; in other words, we have a homeomorphism between the manifolds \(f\) such that \(f, f^{-1}\) are holomorphic. That is,
+
 \begin{definition}[Isomorphism/Biholomorphism]
 A holomorphic homeomorphism \(f: M \to N\) is called an \textbf{isomorphism} or \textbf{biholomorphism} of \(M\) onto \(N\). We say that two complex structures on some topological manifold \(M\) are \textbf{equivalent} if the identity map is an isomorphism.
 \end{definition}
 
+So this is the notion of holomorphic functions and holomorphic mappings between manifolds with complex structures. Why have I been saying complex structure rather than complex manifold? So a complex structure as we've defined it means that we have a topological manifold as we've defined it together with an open covering by complex coordinates. We don't want to consider two different coverings by complex coordinate charts to define different manifolds if they're essentially the same. If for example we've got a covering by complex coordinate charts, and we add one more chart just by taking an open subset of one of the ones that's given, we shouldn't consider that to be a different manifold. So in order to avoid that situation, let's be a little bit more careful in our definition.
+
+We've defined the idea of a complex structure, and we want to say when it makes sense to consider two complex structures to be equivalent. One simple way to say this is to require that the identity mapping between two complex structures on the same manifold is an isomorphism. Then, we can say that a topological manifold \(M\) is a topological manifold \(M\) together with an \textit{equivalence class} of complex structures, and that way we avoid the issue of whether we should consider two different complex structures as defining the same manifold or not. That is,
+
 \begin{definition}[Complex Manifold]
-A \textbf{\(n\)-dimensional complex manifold} is a topological manifold \(M\) together with an equivalence class of \(n\)-dimensional complex structures
+A \textbf{\(n\)-dimensional complex manifold} is a topological manifold \(M\) together with an equivalence class of \(n\)-dimensional complex structures where two complex structures are considered equivalent if the identity mapping on \(M\) induces an isomorphism between them.
 \end{definition}
 
 Examples include:
