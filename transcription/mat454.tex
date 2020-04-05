@@ -1057,9 +1057,8 @@ A \textbf{\(n\)-dimensional complex structure} on a manifold \(M\) is given by a
 
 On manifolds, we want to talk about the usual notions of analysis, like functions and mapping between spaces and so on, and we'll want to describe their properties. The way that we'll talk about properties of a function, for example, is by saying that the function has that property in any coordinate chart. So for example, if we want to say that a continuous complex-valued function \(f: M \to \mbb{C}\) on our function is holomorphic, we'll express that by saying that for every coordinate chart \(\varphi_i\) on our manifold, the mapping \(f \circ \varphi_i^{-1}: \varphi_i(U_i) \to \mbb{C}\) is holomorphic. That is,
 
-\begin{definition}[Holomorphic mapping]
-If \(M, N\) are complex manifolds, \(f: M \to N\) is called a \textbf{holomorphic mapping} if, for all coordinate charts \(\varphi_j: U_j \to \mbb{C}\) of \(M\) and \(\psi_i: V_i \to \mbb{C}\) of \(N\),
-\begin{equation}\psi_i \circ f \circ \varphi_j^{-1}: \varphi_j(U_j \cap f^{-1}(V_i))\end{equation}
+\begin{definition}[Holomorphic function]
+We say a continuous, complex-valued function \(f: M \to \mbb{C}\) is \textbf{holomorphic} if, for each coordinate chart \(\varphi_i\) on \(M\), \(f \circ \varphi_i^{-1}: \varphi(U_i) \to \mbb{C}\)
 \end{definition}
 
 We think about coordinate charts as using a system of local coordinates to the open subset \(U_i\) of the manifold. So \(\varphi_i\) is a mapping from \(U_i\) into \(\mbb{C}^n\), so we can write it in components, i.e. \(\varphi_{i1},...,\varphi_{in}\), and the image of that corresponds to a coordinate system, well, corresponds to the standard coordinates on \(\mbb{C}^n\). So saying that \(f\) is holomorphic means that when expressed by local coordinates given by a chart, it's a holomorphic function with respect to those coordinates.
@@ -1070,6 +1069,12 @@ A very basic example of a complex structure on a topological manifold which we s
 We have that
 \begin{equation}\varphi_U \circ \varphi_V^{-1}: \mbb{C} \setminus \{0\} \to \mbb{C} \setminus \{0\} = z \mapsto 1/z\end{equation}
 is holomorphic, and hence this gives \(S^2\) a complex structure. Note that this is defined not everywhere, but rather on the overlap of the regions of \(\mbb{C}\) corresponding to each chart, namely \(\mbb{C} \setminus \{0\}\) (as on the north pole chart, we have \(N \mapsto \infty, S \mapsto 0\), and vice versa for the south pole chart).
+
+Naturally, we extend the idea of a holomorphic function to a holomorphic mapping
+\begin{definition}[Holomorphic mapping]
+If \(M, N\) are complex manifolds, \(f: M \to N\) is called a \textbf{holomorphic mapping} if, for all coordinate charts \(\varphi_j: U_j \to \mbb{C}\) of \(M\) and \(\psi_i: V_i \to \mbb{C}\) of \(N\),
+\begin{equation}\psi_i \circ f \circ \varphi_j^{-1}: \varphi_j(U_j \cap f^{-1}(V_i))\end{equation}
+\end{definition}
 
 \begin{definition}[Isomorphism/Biholomorphism]
 A holomorphic homeomorphism \(f: M \to N\) is called an \textbf{isomorphism} or \textbf{biholomorphism} of \(M\) onto \(N\). We say that two complex structures on some topological manifold \(M\) are \textbf{equivalent} if the identity map is an isomorphism.
