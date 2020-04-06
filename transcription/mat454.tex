@@ -1273,6 +1273,12 @@ Maybe to clarify things, it's good to think in terms of an example, and starting
   \end{itemize}
   Thinking about the definition of a manifold, we should ask ourselves ``why are these two different coordinates compatible in the overlap of two coordinate charts." That means, if we're looking at a point at which we can use either \(x\) or \(y\) as a local coordinate, i.e. a point where \(x_0, y_0 \neq 0\), is the transition mapping holomorphic? The answer here is yes: we need to check that \(y\) is a holomorphic function of \(x\) and vice versa. We can do this by simply choosing brnaches of \(y = (1 - x^3)^{1/3}\) and \(x = (1 - y^3)^{1/3}\), which are locally holomorphic.
 
+  So this accomplishes what we wanted to do: we found a one-dimensional complex manifold \(X\) and a mapping over \(\mbb{C}\) such that the given multi-valued holomorphic function \(y = (1 - x^3)^{1/3}\) becomes a single valued holomorphic function on \(X\).
+
+  Again, the point about this is, last time we talked about this for the case \(y = \sqrt{x}\), if you replace \(\sqrt{x}\) with just the projection function, we're sort of ``losing all the information about \(\sqrt{x}\)", but we're not really, we're just describing all this information in a very conceptual, geometric way. Same here. So if we want to examine the geometry of \(X\) over \(\mbb{C}\), what does it look like? Well, \(X\) has three points lying over ``most" points in \(\mbb{C}\), corresponding to the three branches of our multi-valued function. That means that \(X\) at most points over \(\mbb{C}\), just looks like a stack of three sheets.
+
+  There are, however, three exceptional points of \(\mbb{C}\) over which there's only a single point: namely, the points given by the cube roots of unity. Because, over these points, the multi-valued function only takes the value zero.
+
 \end{enumerate}
 
 We note the following fact:
