@@ -1248,9 +1248,9 @@ Maybe to clarify things, it's good to think in terms of an example, and starting
   Let's recall that two-dimensional complex projective space, \(\CP{2}\), is the space with homogeneous coordinates \([x, y, z]\), and we think of our original \(\mbb{C}^2\), \((x, y)\)-space, as the subset of \(\CP{2}\) where \(z = 1\). \(\CP{2}\) itself consists of \(\mbb{C}^2\) together with the ``points at infinity", the additional points we introduce, where \(z = 0\). Of course, the points where \(z = 0\) are a copy of one-dimensional complex projective space \(\CP{1}\) with homogeneous coordinates \([x, y]\). So \(\CP{2}\) is a compactification of our complex 2-dimensional space \(\mbb{C}^2\),
   in which we take \(\mbb{C}^2\) and compactify it by adding a curve \(\CP{1}\) by infinity.
 
-  Then, the closure of our new space \(X\) given by \(x^3 + y^3 = 1\) is given by homogeneizing it's equation, because, in terms of the homogeneous coordinates, \([x, y, 1]\) is like \([x/z, y/z, z]\), so we homogeneize the equation by making that substitution, and we get a homogeneous equation
+  Then, the closure of our new space \(X\) given by \(x^3 + y^3 = 1\) is given by homogeneizing it's equation, because, in terms of the homogeneous coordinates, \([x, y, z]\) is like \([x/z, y/z, 1]\), so we homogeneize the equation by making that substitution, and we get a homogeneous equation
   \begin{equation}
-    x^3 + y^3 = z^3
+    \frac{x^3}{z^3} + \frac{y^3}{z^3} = 1 \iff x^3 + y^3 = z^3
   \end{equation}
   This is a globally defined complex curve \(X'\) in \(\CP{2}\), and consists of our original curve \(X\) together with what we've added at infinity. It's a closed subspace of \(\CP{2}\) so it inherits the property of being a Hausdorff space (via the subspace topology) and it itself has a manifold structure.
 
@@ -1267,6 +1267,16 @@ Maybe to clarify things, it's good to think in terms of an example, and starting
   In this case we can fix \(y\), looking at \(\frac{x}{y}\), and we get three points at infinity, given by \([i, -1, 0]\), \([j, -1, 0]\) and \([j^2, -1, 0]\) where \(j = e^{2\pi i/3}\).
 
   That means that when we look at this structure of three sheets lying over \(\mbb{C}\), those sheets are actually distinct at infinity, meaning they don't come together or anything like that, i.e. there's not a branch point at infinity. Now, how do we see this?
+
+  One way of constructing Riemann surfaces is to think of them by ``cutting and pasting." Remember, when we constructed the Riemann surface of \(y = \sqrt{x}\), that was given by \(x = y^2\). We got a Riemann surface that had two distinct sheets over the complex plane everywhere except at the origin. One can construct a geometric model by taking two copies of the complex plane and cutting them along a line from the branch point to \(\infty\) (e.g. the positive real axis). On one copy, we label the positive edge of the cut \(1\) and the negative edge \(2\); on the other copy, we do the opposite, and then we glue the edges with the same labels together.
+
+  This represents the fact that, going around the origin, when we come to the branch cut, we move to the second sheet, and then go around the second sheet, until we come back again to the cut and there we're back to the first sheet. Of course, that's the way the square root behaves: there are two determinations of the square root, and in order to get back to the original determination, we have to go back to the origin twice.
+
+  When we're looking at the Riemann surface itself, this ``cut" of course doesn't appear anywhere. What appears is the branch point: Riemann surfaces otherwise are perfectly well-defined surfaces looking like two flat pancakes lying over \(\mbb{C}\), but those two sheets come together in a more complicated way at the branch point. What happens at infinity? It could be at infinity that there are two distinct sheets, or maybe infinity is another branch point. What do you think it is in this case of \(y = \sqrt{x}\)? In this case, when we look at \(x = y^2\), how many points lie over the point at infinity: two or one?
+
+  There's only one point: infinity is a branch point. You should really, as an exercise, homogeneize this curve as one in complex projective space, and look at what happens at infinity.
+
+  
 
 \end{enumerate}
 
