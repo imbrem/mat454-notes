@@ -1221,7 +1221,9 @@ Maybe to clarify things, it's good to think in terms of an example, and starting
 
   For instance, \(t\) itself is a holomorphic function on \(X\), and can be recovered locally using a branch of \(\log\). Globally, however, we cannot define a branch of log on \(\mbb{C} \setminus \{0\}\) since we must exclude a line segment.
 
-  Now, this is a very important way of thinking about what I just said, because it's in fact the way that we're going to use Riemann surfaces. \(\log z\) can be defined on the complex plane minus the origin, but it doesn't make sense as a single-valued function. 
+  Now, this is a very important way of thinking about what I just said, because it's in fact the way that we're going to use Riemann surfaces. \(\log z\) can be defined on the complex plane minus the origin, but it doesn't make sense as a single-valued function. The way to think about Riemann surfaces, then, is ``can we make this multi-valued function single valued by lifting it to some other space." In particular, we're thinking of Riemann surfaces as introducing the space \(X\) for the purpose of making a given multi-valued function single valued. What that means is that, given our multi-valued function, we want to find a space \(X\) and a mapping to \(X\) with the property that if we lift our multi-valued function to \(X\) it becomes single-value.
+
+  In the example, this is true for a value which is extremely simple and hence maybe at first glance a little bit confusing: because \(\log \circ e^t = t\), and \(t\) is a well-defined single-valued holomorphic function on \(X\). So the purpose of introducing our Riemann surface \(X\) is in order to make our multi-valued function \(\log\) single-valued by lifting it to the Riemann surface. As in the diagram
 
   \begin{equation}
     \begin{tikzcd}
@@ -1231,13 +1233,18 @@ Maybe to clarify things, it's good to think in terms of an example, and starting
     \end{tikzcd}
   \end{equation}
 
-  \item Consider the relation (which we will here consider as a multi-valued function) \(y = \sqrt{x}\). We make this multi-valued function single-valued by introducing a Riemann surface
+  This example and this picture is something you should really try to absorb. Let's move on to a second one now, though.
+
+  \item This example will have a feature which is simpler than this because of the fact that the function \(\log z\) in the first example is a rather complicated function, because it is not algebraic. In this example, however, we consider the \textit{algebraic} relation (which we will here consider as a multi-valued function) \(y = \sqrt{x}\).
+
+  Again, locally, outside of the origin, \(\sqrt{x}\) has a holomorphic determination. It's not single-valued, but it has two holomorphic branches. Globally, however, it's multi-valued: over any point in \(\mbb{C}\setminus\{0\}\), \(\sqrt{x}\) has two possible values. So the question is: can we make this multi-valued function simple by inducing an appropriate covering. What makes this example simple is that, as we stated above, \(\sqrt{x}\) is algebraic, i.e. it satisfies the polynomial equation \(y^2 = x \iff y^2 - x = 0\).
+
+  We can use this algebraic equation to introduce a Riemann surface: for our Riemann surface \(X\), we'll take the set of points \((x, y)\) in \(\mbb{C}^2\) satisfying the polynomial equation. Our mapping \(\varphi\) from \(X\) into \(\mbb{C}\) is then just projection \((x, y) \mapsto x\): i.e. we write
   \begin{equation}
   \begin{tikzcd}
     X = \{(x, y) : x - y^2 = 0\} \arrow[d, "{\varphi: X \to Y = (x, y) \mapsto x}"] \\ Y = \mbb{C}
   \end{tikzcd}
   \end{equation}
-  \(x\) is a local coordinate on \(x\) \underline{outside} of 0.
 
   \item As another example, we consider a Riemann surface to make the multi-valued function \(y = (1 - x^3)^{1/3}\) single-valued: we define
   \begin{equation}
