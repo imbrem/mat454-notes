@@ -56,4 +56,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.4}Evaluation of Integrals by Residues on Riemann Surfaces}{34}{subsection.4.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5}Riemann Surface Associated with an Elliptic Curve}{35}{subsection.4.5}% 
+\contentsline {subsection}{\numberline {4.5}Riemann Surface Associated with an Elliptic Curve}{36}{subsection.4.5}% 

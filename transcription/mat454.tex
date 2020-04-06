@@ -1284,6 +1284,26 @@ Maybe to clarify things, it's good to think in terms of an example, and starting
 
   Now one important point: if we travel in a circle either within \textit{or} outside the unit circle, as long as we don't touch the branch points, we stay within \textit{one} sheet. While that one sheet isn't all one color (assuming the different sheets we glued together had different colors), we have three sheets joined at the branch points.
 
+  I want to make another very important remark about this Riemann surface that we've constructed: this is a cubic curve, and we've just checked that its nonsingular. This should remind you of stuff that we talked about when we were discussing the Weierstrass \(\wp\)-function. You'll remember that I told you that \textit{every} nonsingular cubic curve can be parametrized by the Weierstrass \(\wp\)-function, and that's something that we're going to come to in the remaining lectures. But why is that? After all, this equation, \(x^3 + y^3 = z^3\), doesn't look anything like the equation that we had that was parametrized by the Weierstrass \(\wp\)-function.
+
+  There, we had an equation like
+  \begin{equation}
+    y^2 = 4x^3 - 20a_2x - 28a_4
+  \end{equation}
+  And remember, this is like saying that \(y^2\) is equal to a cubic polynomial in \(x\) with three distinct roots. Here, our equation doesn't look like that at all. But the point is, you can put it in this form by a change of coordinates. In fact, we can make a global homogeneous change of coordinates of projective space such that this complex curve actually takes this form. How do we do that?
+
+  Well, we can do a very simple substitution: let's change from homogeneous coordinates \([x, y, z]\) to new homogeneous coordinates \([\xi, \eta, \zeta]\) by this very simple substitution:
+  \begin{equation}
+    x = \xi + \eta, \qquad y = \xi - \eta, \qquad z = \zeta \implies (\xi + \eta)^3 + (\xi - \eta)^3 = 2\xi^3 + 6\xi\eta^2 = \zeta^3
+  \end{equation}
+  Now, remember that \(\CP{2}\) is covered by three affine coordinate charts. You can look at this curve in any of those charts by dehomogeneizing to one of the variables. Dehomogeneizing with respect to \(\xi\), i.e. dividing the equation by \(\xi^3\), we get
+  \begin{equation}
+    2 + 6\eta^2 = \zeta^3 \iff 6\eta^2 = \zeta^3 - 2
+  \end{equation}
+  So this is like \(y^2\) equals a homogeneous polynomial with three distinct roots: in fact, from here, we can just make a very simple linear change of variable, and write this as \(y^2 - x^3 - 1\). And that's precisely the kind of equation we were looking for.
+
+  This is an example of how you can take any non-singular smooth cubic curve and by homogeneous linear transformation write it in one coordinate chart as \(y^2\) equals a cubic polynomial in \(x\) with three distinct roots: \textbf{Weierstrass normal form}.
+
 \end{enumerate}
 
 \subsection{Evaluation of Integrals by Residues on Riemann Surfaces}
