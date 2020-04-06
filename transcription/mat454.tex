@@ -1248,14 +1248,25 @@ Maybe to clarify things, it's good to think in terms of an example, and starting
   Let's recall that two-dimensional complex projective space, \(\CP{2}\), is the space with homogeneous coordinates \([x, y, z]\), and we think of our original \(\mbb{C}^2\), \((x, y)\)-space, as the subset of \(\CP{2}\) where \(z = 1\). \(\CP{2}\) itself consists of \(\mbb{C}^2\) together with the ``points at infinity", the additional points we introduce, where \(z = 0\). Of course, the points where \(z = 0\) are a copy of one-dimensional complex projective space \(\CP{1}\) with homogeneous coordinates \([x, y]\). So \(\CP{2}\) is a compactification of our complex 2-dimensional space \(\mbb{C}^2\),
   in which we take \(\mbb{C}^2\) and compactify it by adding a curve \(\CP{1}\) by infinity.
 
-  Then,
+  Then, the closure of our new space \(X\) given by \(x^3 + y^3 = 1\) is given by homogeneizing it's equation, because, in terms of the homogeneous coordinates, \([x, y, 1]\) is like \([x/z, y/z, z]\), so we homogeneize the equation by making that substitution, and we get a homogeneous equation
+  \begin{equation}
+    x^3 + y^3 = z^3
+  \end{equation}
+  This is a globally defined complex curve \(X'\) in \(\CP{2}\), and consists of our original curve \(X\) together with what we've added at infinity. It's a closed subspace of \(\CP{2}\) so it inherits the property of being a Hausdorff space (via the subspace topology) and it itself has a manifold structure.
+
+  As an exercise (problem 4 on the current problem set), you're supposed to complete this discussion to include the points at infinity.
+
+  So \(X\) itself is a subspace of \(X'\), and in fact we can map \(X\) into \(X'\) via
+  \begin{equation}
+    (x, y) \mapsto [x, y, 1]
+  \end{equation}
+  Now, what else is there in \(X'\)? Well, there are the points satisfying this equation where \(z = 0\), i.e. points
+  \begin{equation}
+    \{[x, y, 0] : x^3 + y^3 = 0\}
+  \end{equation}
+  In this case we can fix \(y\), looking at \(\frac{x}{y}\), and we get three points at infinity, given by \([i, -1, 0]\), \([j, -1, 0]\) and \([j^2, -1, 0]\) where \(j = e^{2\pi i/3}\).
 
 \end{enumerate}
-
-We note the following fact:
-\begin{theorem}
-Any connected open set in \(\mbb{C}\) (or any connected complex manifold \(Y\)) has a simply connected covering space.
-\end{theorem}
 
 \subsection{Evaluation of Integrals by Residues on Riemann Surfaces}
 
