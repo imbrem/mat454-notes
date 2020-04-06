@@ -1,25 +1,9 @@
 \documentclass{article}
-\usepackage[utf8]{inputenc}
-
-\title{MAT454 Notes}
-\author{Jad Elkhaleq Ghalayini}
-
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage{mathtools}
-\usepackage{enumitem}
-\usepackage{graphicx}
-\usepackage{cancel}
-\usepackage{mathabx}
-\usepackage{tikz}
-\usepackage{tikz-cd}
-\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{mat454}
 
 \usepackage[backend=biber]{biblatex}
 \addbibresource{references.bib}
-
-\usepackage[margin=1in]{geometry}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -29,37 +13,8 @@
   urlcolor={blue!80!black}
 }
 
-\newtheorem{theorem}{Theorem}
-\newtheorem{lemma}{Lemma}
-\newtheorem{corollary}{Corollary}
-\newtheorem*{claim}{Claim}
-
-\newcommand{\brac}[1]{\left(#1\right)}
-\newcommand{\sbrac}[1]{\left[#1\right]}
-\newcommand{\eval}[3]{\left.#3\right|_{#1}^{#2}}
-\newcommand{\ip}[2]{\left\langle#1,#2\right\rangle}
-\newcommand{\mb}[1]{\mathbf{#1}}
-\newcommand{\mbb}[1]{\mathbb{#1}}
-\newcommand{\mc}[1]{\mathcal{#1}}
-\newcommand{\prt}[2]{{\frac{\partial {#1}}{\partial {#2}}}}
-\def\ries{{\hat{\mbb{C}}}}
-\newcommand{\reals}{\mbb{R}}
-
-\newtheorem{definition}{Definition}
-\newtheorem{proposition}{Proposition}
-
-\DeclareMathOperator{\Res}{Res}
-\DeclareMathOperator{\BigP}{P}
-\DeclareMathOperator{\Aut}{Aut}
-\DeclareMathOperator{\Arg}{arg}
-\DeclareMathOperator{\Id}{id}
-\newcommand{\Prj}[2]{\BigP^{#1}({#2})}
-
-\newcounter{todos}
-\newcommand{\TODO}[1]{{
-  \stepcounter{todos}
-  \begin{center}\large{\textcolor{red}{\textbf{TODO \arabic{todos}:} #1}}\end{center}
-}}
+\title{MAT454 Notes}
+\author{Jad Elkhaleq Ghalayini}
 
 \begin{document}
 
