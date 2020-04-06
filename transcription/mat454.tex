@@ -1317,9 +1317,13 @@ We now want to understand how to compute integrals using the residue calculus on
 \end{equation}
 We're going to see how to compute this using the Riemann surface we talked about last time introduced for the purpose of making the multi-valued function which is the denominator of this integral (taken as a complex function) into a single-valued function.
 
-The Riemann surface was given by the algebraic equation \(y = (1 - x^3)^{1/3}\) in \(\mbb{C}^2\). We described this Riemann surface in detail: of course it lies over the complex plane in three sheets except for the fact that there are three branch points at the cube roots of unity: \(1, j, j^2\). We're going to compute the integral by using the residue calculus to evaluate the complex integral over a lifting of this curve (the line from \(0\) to \(1\)) to the Riemann surface.
+The Riemann surface was given by the algebraic equation \(y = (1 - x^3)^{1/3}\) in \(\mbb{C}^2\). We described this Riemann surface in detail: of course it lies over the complex plane in three sheets except for the fact that there are three branch points at the cube roots of unity: \(1, j, j^2\). We're going to compute the integral by using the residue calculus to evaluate the complex integral over a lifting of this curve to the Riemann surface.
 
-First of all, the question is, what \textit{does} lie on the Riemann surface over this curve?
+First of all, the question is, what \textit{does} lie on the Riemann surface over this curve? The curve lifts to three distinct pieces, each isomorphic to a piece of a curve. But what are the possibilites for the global lifting of the entire curve?
+
+Well, it could lift to one curve that must spiral around three times to get to the original point. Or maybe it could lift to three distinct curves. And in fact, that's what we're going to show in this case: that there are three distinct closed curves whose image is the curve \(\gamma\) in this picture (not included for now).
+
+Now, actually, this is something that we understood last time, if you like, geometrically from our construction of the Riemann surface.
 
 As \(x\) describes \(\gamma\), the argument of \((1 - x^3)^{1/3}\) varies as \(2\pi\) times
 \begin{equation}
