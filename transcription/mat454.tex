@@ -1366,8 +1366,11 @@ So, first of all, what does it mean to integrate this ``thing" over a curve in t
 
   \item On the other hand, near a point \((x_0, 0)\), that means that \(y\) is a local coordinate, and then \(\omega\) should be given by the relationship between \(dx\) and \(dy\) that comes from taking the differential of the relation defining \(X\) (Equation \ref{equation:differential_dx_dy}), that is, \(\omega = -\frac{ydy}{x^2}\).
 
+  This shows us in particular that if we define our differential form \(\omega\) as above at a point where \(y\) is a local coordinate, it agrees with the original definition at points in which both \(x\) and \(y\) are local coordinates (i.e. where the original definition is valid), which is what we require for a well-defined differential form on the Riemann surface.
+
 \end{itemize}
-i.e. \(\omega\) is the differential form \(\frac{dx}{(1 - x^3)^{1/3}}\) on \(\mbb{C}\), made holomorphic by introducing the Riemann surface \(X\).
+In other words, the original the differential form \(\frac{dx}{(1 - x^3)^{1/3}}\), which is not really a differential form at all as it only makes sense in a multi-valued way on \(\mbb{C}\), lifts to a genuine holomorphic differential form by introducing a Riemann surface, just like the multi-valued function lifts to a genuine holomorphic function on the Riemann surface.
+
 The integral of \(\omega\) around one of the lifted curves is hence given by
 \begin{equation}
   \int_0^1\omega + j^2\int_1^0\omega + \int_0^1\omega + j^2\int_1^0\omega + \int_0^1\omega + j^2\int_1^0\omega = 3(1 - j^2)I
