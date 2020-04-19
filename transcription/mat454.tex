@@ -1503,14 +1503,19 @@ We're going to actually show that the composite in \ref{equation:abel_holo_cd} i
 We're going to show this essentially by a computation. First, however, we're going to need a little bit of stuff which we really did earlier in the course. When we talked about the completion of \(X\) to give us a Riemann surface, defined by the homogeneized equation, we examined what it looks like near the point at infinity, which we showed to be \([0, 1, 0]\). So in particular we can use the affine coordinates \([x', 1, t']\) as coordinates near infinity. We showed earlier on in the course that near infinity, we can solve for \(t'\) in terms of \(x'\), and in particular we wrote down the beginning of its Laurent expansion in Equation \ref{equation:tprime_from_xprime}, yielding
 \begin{equation}
   [x', 1, z'] = [x', 1, 4x'^3 - 320a_2x' + ...]
+  \label{equation:tprime_from_xprime_homo}
 \end{equation}
 On the other hand, from our differential form \(\omega\), we also know that we can use \(z\) as well as a coordinate at infinity. So near the point at infinity, we can use \(x'\) and \(z\) both as local coordinates. Of course, then, there is a relationship between them. So first of all, remember, \(\omega\) is the differential form \(\frac{dx}{y}\). Let's rewrite this in terms of the coordinates \((x', t')\) at infinity. So that means of course we're identifying a point \([x, y, 1]\) in the original coordinates with a point \([x', 1, t']\) at infinity. So under this identification, as these are homogeneous coordinates, if we divide everything by \(y\) here (assuming \(y \neq 0\)), we see that
 \begin{equation}
 [x, y, 1] = [x/y, 1, 1/y] = [x', 1, t'] = [x'/t', 1/t', 1] \implies t' = 1/y, \quad x = x'/t'
 \end{equation}
-Hence, we have
+Hence, we have by the product rule that
 \begin{equation}
-  \omega = \frac{dx}{y} = t'd(x'/t') = dx' - x'\frac{dt'}{t'} = dx' - \frac{12x'^2 + ...}{4x'^2 + ...}dx' = -2dx'(1 + g(x'))
+  \omega = \frac{dx}{y} = t'd(x'/t') = dx' - x'\frac{dt'}{t'}
+\end{equation}
+Now, remember that \(x'\) is a local coordinate, and \(t'\) can be written in terms of \(x'\) by Equation \ref{equation:tprime_from_xprime_homo}. So, we can write \(dt'\) in terms of \(dx'\) using this expression to obtain
+\begin{equation}
+  dx' - \frac{12x'^2 + ...}{4x'^2 + ...}dx' = -2dx'(1 + g(x'))
 \end{equation}
 where \(g\) is holomorphic near \(0\) and has \(g(0) = 0\).
 \end{proof}
