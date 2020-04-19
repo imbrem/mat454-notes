@@ -1513,9 +1513,13 @@ Hence, we have by the product rule that
 \begin{equation}
   \omega = \frac{dx}{y} = t'd(x'/t') = dx' - x'\frac{dt'}{t'}
 \end{equation}
-Now, remember that \(x'\) is a local coordinate, and \(t'\) can be written in terms of \(x'\) by Equation \ref{equation:tprime_from_xprime_homo}. So, we can write \(dt'\) in terms of \(dx'\) using this expression to obtain
+Now, remember that \(x'\) is a local coordinate, and \(t'\) can be written in terms of \(x'\) by Equation \ref{equation:tprime_from_xprime_homo}. So, we can write \(t', dt'\) in terms of \(x', dx'\) using this expression to obtain
 \begin{equation}
-  dx' - \frac{12x'^2 + ...}{4x'^2 + ...}dx' = -2dx'(1 + g(x'))
+  dx' - \frac{12x'^2 + ...}{4x'^2 + ...}dx'
+\end{equation}
+Here, we can divide top and bottom by \(4x'^2\), and then this fraction becomes
+\begin{equation}
+  dx' - (3 + ...)dx' = -2dx'(1 + g(x'))
 \end{equation}
 where \(g\) is holomorphic near \(0\) and has \(g(0) = 0\).
 \end{proof}
