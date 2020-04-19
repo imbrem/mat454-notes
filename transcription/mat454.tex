@@ -50,7 +50,7 @@ Naturally, in the above definition, we can also write \(a + ib\) and \(h = \xi +
 In other words, this says that
 \begin{equation}\prt{f}{x} + i\prt{f}{y} = 0
 \iff \prt{u}{x} = \prt{v}{y} \land \prt{u}{y} = -\prt{v}{x}\end{equation}
-These are what is called the Cauchy-Riemann equations. So the moral of the story is that holomorphic is \textit{not} the same as differentiable as a function of two real variables. It' the same as differentiable as a function of two real variables \textit{plus} satisfying the Cauchy-Riemann equations.
+These are what is called the Cauchy-Riemann equations. So the moral of the story is that holomorphic is \textit{not} the same as differentiable as a function of two real variables. It's the same as differentiable as a function of two real variables \textit{plus} satisfying the Cauchy-Riemann equations.
 
 It's going to convenient throughout this course to think about derivatives in terms of differential forms. Let's suppose, to begin a bit more generally, that we're considering a complex-valued \textit{differentiable} (not necessarily holomorphic) function \(f(x, y)\).
 \begin{definition}
@@ -593,11 +593,18 @@ Now we can just multiply both sides by \(t^3\). So if you haven't seen this befo
 \begin{equation}X' = X \cup \{[0, 1, 0]\}\end{equation}
 Now, in the neighborhood of any finite point, \(X'\) just looks like \(X\). What about in a neighborhood of the point at \(\infty\), \([0, 1, 0]\)? What does it look like?
 So this point \([0, 1, 0]\) doesn't actually lie in the coordinate chart \(U_0 = \{x \neq 0\}\), it lies in \(U_1 = \{y \neq 0\}\). This chart has affine coordinates given by \((x', t') = (x/y, t/y)\). So what's the equation of \(X'\) in \textit{this} coordinate chart? It's
-\begin{equation}t' = 4x'^3 - 20a_2x't'^2 - 28a_4t'^3\end{equation}
+\begin{equation}
+  t' = 4x'^3 - 20a_2x't'^2 - 28a_4t'^3
+\end{equation}
 In some neighborhood of \((x', t') = (0, 0)\) (the point at infinity), the implicit function theorem tells us that \(t'\) is a holomorphic function of \(x'\):
-\begin{equation}t' = 4x'^3 - 320a_2x'^7 + ...\end{equation}
+\begin{equation}
+  t' = 4x'^3 - 320a_2x'^7 + ...
+  \label{equation:tprime_from_xprime}
+\end{equation}
 As an extercise, we can take the Taylor series
-\begin{equation}t' = b_0 + b_1x + b_2x^2 + ...\end{equation}
+\begin{equation}
+  t' = b_0 + b_1x + b_2x^2 + ...
+\end{equation}
 plug it into the equation and solve successively for the coefficients. If you haven't done that before, do the exercise.
 
 This tells us, in general, though, that \(t'\) is a function of \(x'\). So in a neighborhood of the point at infinity, \(X'\) looks like the graph of this function.
@@ -1492,6 +1499,11 @@ which is just to say we're looking at a branch that equals zero at infinity.
 \end{lemma}
 Now, we're going to see how to complete the theorem assuming both Lemmas \ref{lemma:abel_first} and \ref{lemma:abel_second}. So \(z\) is like the coordinate in \(\mbb{C}\). \((x, y)\) are the coordinates on \(\mbb{C}^2\) in which \(X'\) is defined. So saying that \(z\) is an isomorphism means we can go in the other direction, i.e. the coordinates \((x, y)\) of a point in \(X'\) are meromorphic functions of \(z\) with \(\Gamma\) as group of periods.
 We're going to actually show that the composite in \ref{equation:abel_holo_cd} is the identity mapping, and therefore, of course, \(X' = X''\) as desired.
+
+We're going to show this essentially by a computation. First, however, we're going to need a little bit of stuff which we really did earlier in the course. When we talked about the completion of \(X\) to give us a Riemann surface, defined by the homogeneized equation, we examined what it looks like near the point at infinity, which we showed to be \([0, 1, 0]\). So in particular we can use the affine coordinates \([x', 1, t']\) as coordinates near infinity. We showed earlier on in the course that near infinity, we can solve for \(t'\) in terms of \(x'\), and in particular we wrote down the beginning of its Laurent expansion in Equation \ref{equation:tprime_from_xprime}, yielding
+\begin{equation}
+  [x', 1, z'] = [x', 1, 4x'^3 - 320a_2x' + ...]
+\end{equation}
 
 \end{proof}
 
