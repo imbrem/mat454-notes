@@ -1427,8 +1427,20 @@ So, let's suppose for a minute that \(a_2, a_4\), the coefficients, come from a 
 \begin{equation}
 a_2 = 3\sum_{\substack{\omega \in \Gamma \\ \omega \neq 0}}\frac{1}{\omega^4}, \qquad a_4 = 5\sum_{\substack{\omega \in \Gamma \\ \omega \neq 0}}\frac{1}{\omega^6}
 \end{equation}
-So what we showed earlier in the year is that if we introduced the meromorphic transformation given by the Weierstrass \(\wp\)-function, so \(x = \wp(z)\) and \(y = \wp'(z)\), then in fact this transformation defines a biholomorphic mapping with a biholomorphic inverse from \(\mbb{C}/\Gamma\) to our compactified Riemann surface \(X'\). This was something that we proved in full earlier in the year.
+So what we showed earlier in the year is that if we introduced the meromorphic transformation given by the Weierstrass \(\wp\)-function, that is,
+\begin{equation}
+  x = \wp(z), \qquad y = \wp'(z)
+  \label{equation:meromorphic_weierstrass}
+\end{equation}
+then in fact this transformation defines a biholomorphic mapping with a biholomorphic inverse from \(\mbb{C}/\Gamma\) to our compactified Riemann surface \(X'\). This was something that we proved in full earlier in the year.
 
-So, this means in particular that the inverse defines \(z\) as a holomorphic many-valued function on \(X'\) whose branches differ by constants belonging to \(\Gamma\): that's what we proved earlier in the year.
+So, this means in particular that the inverse defines \(z\) as a holomorphic many-valued function on \(X'\) whose branches differ by constants belonging to \(\Gamma\): that's what we proved earlier in the year. Now, equation \ref{equation:meromorphic_weierstrass} tells us that
+\begin{equation}
+\frac{dx}{dz} = y \iff dx = ydz \iff dz = \frac{dx}{y} = \omega
+\end{equation}
+where \(\omega\) is the differential form described in our last class. So this multi-valued function \(z\) satisfies \(dz = \omega\), which means that even though \(z\) is a multi-valued function, locally any of its branches give us a primitive of the holomorphic differential form \(\omega\). If you go back to our discussion earlier in the course about integrating over complex curves, you could always get a local primitive of \(\omega\) by integrating from a basepoint to a given point, i.e. writing
+\begin{equation}
+  z = \int\omega
+\end{equation}
 
 \end{document}
