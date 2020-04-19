@@ -1481,6 +1481,18 @@ So writing \((X'', \varphi'')\) be the Riemann surface over the Riemann sphere t
 (the holomorphic mapping being the second arrow in Equation \ref{equation:abel_holo_cd}). Because the coefficients here come from the Weierstrass \(\wp\)-function, we know that \(X'' \simeq \mbb{C}/\Gamma\), with the isomorphism given by \((\wp, \wp')\) in affine coordinates and \([\wp, \wp', 1]\) in homogeneous coordinates. \(z\), remember, came from our original Riemann surface \(X'\). \(z\) is a holomorphic many-valued function on \(X'\),
 and Lemma \ref{lemma:abel_first} tells us that the different branches of \(z\) differ by elements of \(\Gamma\), so that tells us that \(z\) induces a holomorphic mapping from \(X'\) to \(\mbb{C}/\Gamma\).
 
+So we have these two arrows. The latter is an isomorphism because it comes from the Weierstrass \(\wp\)-function. The second lemma tells us that the former is \textit{also} a biholomorphism. That is,
+\begin{lemma}
+\(z = \int\omega\) defines a biholomorphism \(X' \to \mbb{C}/\Gamma\). We can always obtain a primitive of \(\omega\) by fixing a basepoint, e.g. taking the point at infinity
+\begin{equation}
+  z = \int_{[0, 1, 0]}\omega
+\end{equation}
+which is just to say we're looking at a branch that equals zero at infinity.
+\label{lemma:abel_second}
+\end{lemma}
+
+Now, we're going to see how to complete the theorem assuming both Lemmas \ref{lemma:abel_first} and \ref{lemma:abel_second}
+
 \end{proof}
 
 \end{document}
