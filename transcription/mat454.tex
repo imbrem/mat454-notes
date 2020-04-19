@@ -1506,9 +1506,13 @@ We're going to show this essentially by a computation. First, however, we're goi
 \end{equation}
 On the other hand, from our differential form \(\omega\), we also know that we can use \(z\) as well as a coordinate at infinity. So near the point at infinity, we can use \(x'\) and \(z\) both as local coordinates. Of course, then, there is a relationship between them. So first of all, remember, \(\omega\) is the differential form \(\frac{dx}{y}\). Let's rewrite this in terms of the coordinates \((x', t')\) at infinity. So that means of course we're identifying a point \([x, y, 1]\) in the original coordinates with a point \([x', 1, t']\) at infinity. So under this identification, as these are homogeneous coordinates, if we divide everything by \(y\) here (assuming \(y \neq 0\)), we see that
 \begin{equation}
-[x, y, 1] = [x/y, 1, 1/y] = [x', 1, t'] \implies x' = x/y, \quad t' = 1/y
+[x, y, 1] = [x/y, 1, 1/y] = [x', 1, t'] = [x'/t', 1/t', 1] \implies t' = 1/y, \quad x = x'/t'
 \end{equation}
-
+Hence, we have
+\begin{equation}
+  \omega = \frac{dx}{y} = t'd(x'/t') = dx' - x'\frac{dt'}{t'} = dx' - \frac{12x'^2 + ...}{4x'^2 + ...}dx' = -2dx'(1 + g(x'))
+\end{equation}
+where \(g\) is holomorphic near \(0\) and has \(g(0) = 0\).
 \end{proof}
 
 \end{document}
