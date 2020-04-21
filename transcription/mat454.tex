@@ -299,7 +299,13 @@ The coefficients we obtain by substituting \(\zeta = re^{i\theta}\), \(d\zeta = 
 \begin{equation}
   f(re^{i\theta}) = \sum_{n = 0}^\infty a_nr^ne^{i\pi\theta}, \qquad a_nr^n = \frac{1}{2\pi}\int_0^{2\pi}e^{-in\theta}f(re^{i\theta})d\theta
 \end{equation}
-are called the \textbf{Fourier coefficients of \(f\)}.
+are called the \textbf{Fourier coefficients of \(f\)}. Note that we can also derive these as follows:
+\begin{equation}
+  \frac{1}{\zeta - z} = \frac{1}{\zeta}\frac{\zeta}{z - \zeta}
+  = \frac{1}{\zeta}\left(1 - \frac{z}{\zeta}\right)^{-1}
+  = \frac{1}{\zeta}\sum_{k = 0}^\infty\frac{\zeta^k}{z^k}
+  \implies f(z) = \frac{1}{2\pi i}\int_\gamma\sum_{k = 0}^\infty z^n\frac{f(\zeta)}{\zeta^{n + 1}}d\zeta
+\end{equation}
 .
 \subsection{Cauchy's Inequalities}
 
