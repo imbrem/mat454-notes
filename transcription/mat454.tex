@@ -454,6 +454,26 @@ In fact, we'll show later on in the course that we can do a lot better: see Theo
 
 \subsection{Residue Calculus}
 
+\begin{definition}[Residue]
+Let \(f(z)\) be a holomorphic function in a punctured disc centered around \(a\), and let \(\gamma\) be a closed curve lying entirely in the punctured disc (in particular, never touching \(a\)) with winding number \(w(\gamma, a) = 1\). We define the \textbf{residue} of the differential form \(f(z)dz\) (or ``of \(f\)") at \(a\) to be
+\begin{equation}
+  \Res_a(f) = \frac{1}{2\pi i}\int_\gamma f(z)dz = a_{-1}
+\end{equation}
+where \(a_n\) are the coefficients in the Laurent expansion of \(f\) at \(a\). Note that this is independent of the choice of curve \(\gamma\).
+\end{definition}
+Our goal is to eventually compute the residue of a meromorphic function \(f\) around all its poles. While we can use the above definition for poles \(a \in \mbb{C}\), we must also consider the case of functions like \(f(z) = z\), which have a ``\textbf{pole at infinity}". We do so with the following definition
+\begin{definition}[Residue at \(\infty\)]
+  Writing \(z = \frac{1}{z'}\), we have in coordinates at \(\infty\)
+  \begin{equation}
+    f(z)dz = -\frac{1}{z'^2}f(1/z')dz' = g(z')dz'
+  \end{equation}
+  We define
+  \begin{equation}
+    \Res_\infty(f) = \Res_0(g) = -a_{-1}
+  \end{equation}
+  where \(a_n\) are the terms of the Laurent expansion in \(|z| > R\).
+\end{definition}
+
 \newpage
 
 \section{Topology of the Space of Holomorphic Functions}
