@@ -435,21 +435,22 @@ And that's rational.
 \begin{definition}[Isolated singularity]
 A holomorphic function in a \underline{punctured} disk \(0 < |z| < R\) has an \textbf{isolated singularity} at \(0\) if \(f(z)\) cannot be extended to be holomorphic at \(0\).
 \end{definition}
-Extension is possible if and only if \(f\) is bounded in a neighborhood of \(0\) in this punctured disk.
-
-\TODO{January 20}
-
-\TODO{January 23}
-
-\TODO{January 25}
-
-\TODO{January 27}
-
-\TODO{January 30}
-
-\TODO{Feb 1}
-
-\TODO{Feb 4}
+It turns out that we can show that, if \(f\) is holomorphic on a punctured disc around \(0\), extending \(f\) to the disc \(|z| < R\) is possible if and only if \(f(z)\) is bounded in a neighborhood of zero: writing out the Laurent series, we have
+\begin{equation}
+  \forall \rho < |z| < R, f(z) = \sum_{n = -\infty}^\infty a_nz^n \implies \forall \rho < r < R, f(re^{i\theta}) = \sum_{n = -\infty}^\infty a_nr^ne^{-in\theta}
+\end{equation}
+with
+\begin{equation}
+  \forall n \in \ints, a_nr^n = \frac{1}{2\pi}\int_0^{2\pi}e^{-in\theta}f(re^{i\theta})d\theta \implies |a_n| \leq \frac{M(r)}{r^n}
+\end{equation}
+where \(M(r)\) denotes the upper bound for \(|f(z)|\), \(|z| = r\). If \(f\) is bounded in the punctured disc, then \(|a_n| \leq \frac{M}{r^n}\) for all small \(r\), implying that \(a_n = 0\) for all \(n < 0\). This leads to the Weierstrass theorem:
+\begin{theorem}[Weierstrass Theorem]
+If \(0\) is an essential singularity, then for all \(\epsilon > 0\), \(f(\{0 \leq |z| \leq \epsilon\})\) is dense in \(\mbb{C}\).
+\end{theorem}
+\begin{proof}
+\TODO{this}
+\end{proof}
+In fact, we'll show later on in the course that we can do a lot better: see Theorem \ref{theorem:big_picard}.
 
 \subsection{Residue Calculus}
 
@@ -1018,6 +1019,7 @@ I don't want to spend that time going over it, because I'm concerned about how m
 Picard's big theorem says that in the neighborhood of an essential singularity a holomorphic function omits at most one complex value. That is,
 \begin{theorem}[Picard's Big Theorem]
 If \(z_0\) is an isolated essential singularity of a holomorphic function \(f(z)\), then \(f\) takes every complex value with one possible exception in any neighborhood \(\Omega\) of \(z_0\), i.e. \(\#(\mbb{C}\setminus f(\Omega)) \leq 1\).
+\label{theorem:big_picard}
 \end{theorem}
 So, is this \textit{really} the best possible statement of this kind: that is, is it really possible that a complex function can omit one possible value? Yes: for example, \(e^{1/z} \neq 0\), so it omits value \(0\) even though it has an essential singularity at the origin.
 
