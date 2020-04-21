@@ -284,15 +284,19 @@ In summary, we have that, for \(f\) continuous on a domain \(\Omega\), the follo
 \end{enumerate}
 e.g. if \(f\) is continuous and holomorphic except on a line, it is holomorphic.
 
-\subsection{Integral Formulas for Taylor Coefficients}
+\subsection{Integral Formulas for Taylor Coefficients and Cauchy's Inequalities}
 
-Assume \(f(z)\) is holomorphic in \(D = \{|z| < R\}\), and let \(\gamma(\theta) = re^{i\theta}\) for some \(r < R\). We have by Cauchy's integral formula that
+Let's, as we usually do, consider a holomorphic function \(f(z)\) in an open set \(\Omega \subseteq \mbb{C}\). Last time, we showed that \(f\) has a convergent power series expansion in any open disc in \(\Omega\) (centered at the center of the disc). For example, around \(a = 0 \in \Omega\), we can write
+\begin{equation}
+  f(z) = \sum_{n = 0}^\infty a_nz^n
+\end{equation}
+Writing \(z = re^{i\theta}\), we get
+\begin{equation}
+  f(re^{i\theta}) = \sum_{n = 0}^\infty a_nr^ne^{in\theta}
+\end{equation}
+Now let \(\gamma(\theta) = re^{i\theta}\) for some \(r < R\). We have by Cauchy's integral formula that
 \begin{equation}
   f(z) = \frac{1}{2\pi i}\int_\gamma\frac{f(\zeta)d\zeta}{\zeta - z} \implies f^{(n)}(z) = \frac{n!}{2\pi i}\int_\gamma\frac{f(\zeta)d\zeta}{(\zeta - z)^{n + 1}}
-\end{equation}
-Writing the Taylor series, we obtain
-\begin{equation}
-  f(z) = \sum_{n = 0}^\infty a_nz^n, \qquad a_n = \frac{f^{(n)}(0)}{n!} = \frac{1}{2\pi i}\int_\gamma\frac{f(\zeta)d\zeta}{\zeta^{n + 1}}
   \label{equation:taylor_to_fourier}
 \end{equation}
 The coefficients we obtain by substituting \(\zeta = re^{i\theta}\), \(d\zeta = ire^{i\theta}d\theta\) into Equation \ref{equation:taylor_to_fourier},
@@ -306,15 +310,6 @@ are called the \textbf{Fourier coefficients of \(f\)}. Note that we can also der
   = \frac{1}{\zeta}\sum_{k = 0}^\infty\frac{\zeta^k}{z^k}
   \implies f(z) = \frac{1}{2\pi i}\int_\gamma\sum_{k = 0}^\infty z^n\frac{f(\zeta)}{\zeta^{n + 1}}d\zeta
 \end{equation}
-.
-\subsection{Cauchy's Inequalities}
-
-Let's, as we usually do, consider a holomorphic function \(f(z)\) in an open set \(\Omega \subseteq \mbb{C}\). Last time, we showed that \(f\) has a convergent power series expansion in any open disc in \(\Omega\) (centered at the center of the disc). For example, around \(a = 0 \in \Omega\), we can write
-\begin{equation}f(z) = \sum_{n = 0}^\infty a_nz^n\end{equation}
-Writing \(z = re^{i\theta}\), we get
-\begin{equation}f(re^{i\theta}) = \sum_{n = 0}^\infty a_nr^ne^{in\theta}\end{equation}
-We can write out the following formula for these Fourier coefficients:
-\begin{equation}a_nr^n = \frac{1}{2\pi}\int_0^{2\pi}e^{-in\theta}f(re^{i\theta})d\theta\end{equation}
 Today we're going to be looking at the consequences of this formula. First of all, this formula gives a simple but useful upper bound on \(a_n\): if we take the maximum absolute value of \(f\) along the circle of radius \(r\), written
 \begin{equation}M(r) = \sup_\theta|f(re^{i\theta})|\end{equation}
 we get

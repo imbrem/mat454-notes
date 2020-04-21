@@ -12,15 +12,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.5}Cauchy's Integral Formula}{7}{subsection.1.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.6}Integral Formulas for Taylor Coefficients}{7}{subsection.1.6}% 
+\contentsline {subsection}{\numberline {1.6}Integral Formulas for Taylor Coefficients and Cauchy's Inequalities}{7}{subsection.1.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.7}Cauchy's Inequalities}{8}{subsection.1.7}% 
+\contentsline {subsection}{\numberline {1.7}Zeros and Poles}{9}{subsection.1.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.8}Zeros and Poles}{9}{subsection.1.8}% 
+\contentsline {subsection}{\numberline {1.8}Residue Calculus}{10}{subsection.1.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.9}Residue Calculus}{11}{subsection.1.9}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Topology of the Space of Holomorphic Functions}{11}{section.2}% 
+\contentsline {section}{\numberline {2}Topology of the Space of Holomorphic Functions}{10}{section.2}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1}Series of Meromorphic Functions}{12}{subsection.2.1}% 
 \defcounter {refsection}{0}\relax 
@@ -30,17 +28,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4}Doubly Periodic Functions}{14}{subsection.2.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5}Complex Projective Space}{15}{subsection.2.5}% 
+\contentsline {subsection}{\numberline {2.5}Complex Projective Space}{14}{subsection.2.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6}Remark on Holomorphic Functions of Several Variables}{17}{subsection.2.6}% 
+\contentsline {subsection}{\numberline {2.6}Remark on Holomorphic Functions of Several Variables}{16}{subsection.2.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7}Theorem of Mittey-Leffer (1877)}{17}{subsection.2.7}% 
+\contentsline {subsection}{\numberline {2.7}Theorem of Mittey-Leffer (1877)}{16}{subsection.2.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8}Infinite Products of Holomorphic Functions}{17}{subsection.2.8}% 
+\contentsline {subsection}{\numberline {2.8}Infinite Products of Holomorphic Functions}{16}{subsection.2.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Normal Families}{17}{section.3}% 
+\contentsline {section}{\numberline {3}Normal Families}{16}{section.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}The Conformal Mapping Problem}{19}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.1}The Conformal Mapping Problem}{18}{subsection.3.1}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2}The Riemann Mapping Theorem}{21}{subsection.3.2}% 
 \defcounter {refsection}{0}\relax 
