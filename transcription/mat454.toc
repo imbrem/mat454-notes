@@ -32,7 +32,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.6}Remark on Holomorphic Functions of Several Variables}{17}{subsection.2.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7}Theorem of Mittey-Leffer (1877)}{18}{subsection.2.7}% 
+\contentsline {subsection}{\numberline {2.7}Theorem of Mittag-Leffer (1877)}{18}{subsection.2.7}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.8}Infinite Products of Holomorphic Functions}{18}{subsection.2.8}% 
 \defcounter {refsection}{0}\relax 

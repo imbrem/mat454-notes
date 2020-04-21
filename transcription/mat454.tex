@@ -417,6 +417,7 @@ So of course, this should be just like before for the positive part. Note that t
 Previously, we talked about holomorphic functions on the Riemann sphere, noting there were very few of them: namely, constants. Now, there are a few more meromorphic functions on the Riemann sphere, but not much. Specifically,
 \begin{theorem}
   Every meromorphic function \(f\) on \(S^2\) is rational.
+  \label{theorem:meromorphic_rational}
 \end{theorem}
 \begin{proof}
 This theorem uses what is probably the only thing in first year calculus you don't prove: the partial fraction decomposition. So we prove it now.
@@ -782,7 +783,19 @@ Similarly to in multivariable calculus, we have a form of the implicit function 
   \TODO{this}
 \end{proof}
 
-\subsection{Theorem of Mittey-Leffer (1877)}
+\subsection{Theorem of Mittag-Leffer (1877)}
+
+Recall that a meromorphic function in \(S^2\) is rational (see Theorem \ref{theorem:meromorphic_rational}, proved using the partial fraction decomposition). We have that \(\tan z\) and \(\sec z\) are meromorphic in \(\mbb{C}\).
+\begin{theorem}[Mittag-Leffer]
+Let \(b_k \in \mbb{C}\) such that \(\lim_{k \to \infty}b_k = \infty\), and \(P_k(z)\) be a polynomial without a constant term (i.e. with \(P_k(0) = 0\)). Then there exists a meromorphic function on \(\mbb{C}\) with poles \(b_k\) and corresponding principal parts \(P_k\left(\frac{1}{z - b_k}\right)\). Furthermore, the most general meromorphic function with these poles and prime parts can be written
+\begin{equation}
+  f(z) = \sum_k\left(P_k\left(\frac{1}{z - b_k}\right) - p_k(z)\right) + g(z)
+\end{equation}
+where \(g(z)\) is holomorphic in \(\mbb{C}\) and \(p_k(z)\) are polynomials such that the series converges uniformly and absolutely on compact subsets of \(\mbb{C}\).
+\end{theorem}
+\begin{proof}
+\TODO{this}
+\end{proof}
 
 \subsection{Infinite Products of Holomorphic Functions}
 
