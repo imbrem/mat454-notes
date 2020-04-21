@@ -369,25 +369,35 @@ So harmonic functions satisfy the MVP and MMP, and conversely, a continuous func
 
 \begin{definition}[Zero]
 If \(f\) is holomorphic in a neighborhood of \(z_0 \in \mbb{C}\) and \(f(z_0) = 0\), we can write, for some \(k \in \mbb{N}\),
-\begin{equation}f(z) = (z - z_0)^kf_1(z)\end{equation}
+\begin{equation}
+  f(z) = (z - z_0)^kf_1(z)
+\end{equation}
 where\(f_1(z)\) is nonvanishing near \(z_0\). In this case \(k\) is called the \textbf{order} or \textbf{multiplicity} of the \textbf{zero} \(z_0\)
 \end{definition}
 Zeros of holomorphic functions form a discrete set. We want to study, however, not only holomorphic functions, but also quotients of holomorphic functions
 \begin{definition}[Meromorphic]
-A function \(f\) is \textbf{meromorphic} on an open \(\Omega \subseteq \mbb{C}\) if it is defined and holomorphic in the complement of a discrete set such that in some neighborhood of every point of \(\Omega\) we can write
-\(f(z) = g(z)/h(z)\)
-where \(g, h\) are holomorphic and \(h\) is not identically zero.
+  A function \(f\) is \textbf{meromorphic} on an open \(\Omega \subseteq \mbb{C}\) if it is defined and holomorphic in the complement of a discrete set such that in some neighborhood of every point of \(\Omega\) we can write
+  \(f(z) = g(z)/h(z)\)
+  where \(g, h\) are holomorphic and \(h\) is not identically zero.
 \end{definition}
 Why is it interesting to work with meromorphic and not just holomorphic functions? Essentially, it's because meromorphic functions in a domain \(\Omega\) form a field (whereas holomorphic functions only form a ring). Note that, in this course, when we say ``domain", what we mean is a connected open set.
 If \(f(z), g(z)\) are holomorphic near \(z_0\), like before, we can write
-\begin{equation}f(z) = (z - z_0)^kf_1(z), \qquad g(z) = (z - z_0)^\ell g_1(z)\end{equation}
+\begin{equation}
+  f(z) = (z - z_0)^kf_1(z), \qquad g(z) = (z - z_0)^\ell g_1(z)
+\end{equation}
 where \(f_1(z_0), g_1(z_0) \neq 0\). Near \(z_0\), then, the quotient looks like
-\begin{equation}\frac{f(z)}{g(z)} = (z - z_0)^{k - \ell}\frac{f_1(z)}{g_1(z)}\end{equation}
+\begin{equation}
+  \frac{f(z)}{g(z)} = (z - z_0)^{k - \ell}\frac{f_1(z)}{g_1(z)}
+\end{equation}
 So what are the different possibilities? If \(k \geq \ell\), then this function extends to be holomorphic at \(z_0\). On the other hand, if \(k < \ell\), then, of course,
-\begin{equation}\lim_{z \to z_0}\left|\frac{f(z)}{g(z)}\right| = \infty\end{equation}
+\begin{equation}
+  \lim_{z \to z_0}\left|\frac{f(z)}{g(z)}\right| = \infty
+\end{equation}
 Note: \textit{not} undefined, but \(\infty\). In this case, we say that \(z_0\) is a pole of order \(\ell - k\).
 Holomorphic functions in an annulus \(r < |z| < R\) have a convergent Laurent expansion in an annulus
-\begin{equation}\sum_{n = -\infty}^\infty a_nz^n = \sum_{n < 0}a_nz^n + \sum_{n \geq 0}a_nz^n\end{equation}
+\begin{equation}
+  \sum_{n = -\infty}^\infty a_nz^n = \sum_{n < 0}a_nz^n + \sum_{n \geq 0}a_nz^n
+\end{equation}
 Note that the LHS converges when \(r < |z|\), whereas the RHS converges when \(|z| < R\). This actually comes from Cauchy's theorem, just in the case of a convergent power series expansion of a holomorphic function. So this is from Cauchy's integral formula:
 \begin{equation}
   f(z) =
@@ -404,7 +414,7 @@ So of course, this should be just like before for the positive part. Note that t
 
 Previously, we talked about holomorphic functions on the Riemann sphere, noting there were very few of them: namely, constants. Now, there are a few more meromorphic functions on the Riemann sphere, but not much. Specifically,
 \begin{theorem}
-Every meromorphic function \(f\) on \(S^2\) is rational.
+  Every meromorphic function \(f\) on \(S^2\) is rational.
 \end{theorem}
 \begin{proof}
 This theorem uses what is probably the only thing in first year calculus you don't prove: the partial fraction decomposition. So we prove it now.
