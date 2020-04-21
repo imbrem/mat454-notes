@@ -10,25 +10,25 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.4}Differential Forms}{5}{subsection.1.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5}Cauchy's Integral Formula}{6}{subsection.1.5}% 
+\contentsline {subsection}{\numberline {1.5}Cauchy's Integral Formula}{7}{subsection.1.5}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.6}Integral Formulas for Taylor Coefficients}{7}{subsection.1.6}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.7}Cauchy's Inequalities}{7}{subsection.1.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.8}Zeros and Poles}{8}{subsection.1.8}% 
+\contentsline {subsection}{\numberline {1.8}Zeros and Poles}{9}{subsection.1.8}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.9}Residue Calculus}{10}{subsection.1.9}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Topology of the Space of Holomorphic Functions}{10}{section.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Series of Meromorphic Functions}{11}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.1}Series of Meromorphic Functions}{12}{subsection.2.1}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2}The Weierstrass \(\wp \)-function}{12}{subsection.2.2}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3}Differential equations solved by \(\wp \)}{13}{subsection.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}Doubly Periodic Functions}{13}{subsection.2.4}% 
+\contentsline {subsection}{\numberline {2.4}Doubly Periodic Functions}{14}{subsection.2.4}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5}Complex Projective Space}{14}{subsection.2.5}% 
 \defcounter {refsection}{0}\relax 
@@ -42,7 +42,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1}The Conformal Mapping Problem}{18}{subsection.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}The Riemann Mapping Theorem}{20}{subsection.3.2}% 
+\contentsline {subsection}{\numberline {3.2}The Riemann Mapping Theorem}{21}{subsection.3.2}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3}Theorems of Montel and Picard}{23}{subsection.3.3}% 
 \defcounter {refsection}{0}\relax 
@@ -50,10 +50,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1}Complex Manifolds}{26}{subsection.4.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Integration of Holomorphic Differential Forms}{28}{subsection.4.2}% 
+\contentsline {subsection}{\numberline {4.2}Integration of Holomorphic Differential Forms}{29}{subsection.4.2}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3}Riemann Surfaces}{30}{subsection.4.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Evaluation of Integrals by Residues on Riemann Surfaces}{35}{subsection.4.4}% 
+\contentsline {subsection}{\numberline {4.4}Evaluation of Integrals by Residues on Riemann Surfaces}{36}{subsection.4.4}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.5}Riemann Surface Associated with an Elliptic Curve}{38}{subsection.4.5}% 

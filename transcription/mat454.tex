@@ -236,8 +236,20 @@ Let \(\Omega\) be a domain and let \(f(z)\) be continuous in \(\Omega\) and holo
 \end{proof}
 
 \begin{corollary}
-A holomorphic function \(f(z)\) locally has a proimitive, which is holomorphic (i.e. a function \(F\) such that \(dF = f(z)dz\))
+A holomorphic function \(f(z)\) locally has a primitive, which is holomorphic (i.e. a function \(F\) such that \(dF = f(z)dz\))
 \end{corollary}
+
+As a corollary, we can also prove the converse of Cauchy's theorem: Morera's theorem.
+\begin{corollary}[Morera's Theorem]
+  If \(f(z)\) is continuous in \(\Omega\) and \(df = f(z)dz\) is closed, then \(f(z)\) is holomorphic.
+\end{corollary}
+\begin{proof}
+ We have that, locally, \(f(z)\) has a primitive \(g(z)\): hence,
+ \begin{equation}
+  f(z)dz = dg = \prt{g}{t}dz + \prt{g}{\ol{z}}d\ol{z} \implies \prt{g}{\ol{z}} = 0 \implies g \ \text{holomorphic} \implies f = \frac{dg}{dz} \ \text{holomorphic}
+ \end{equation}
+
+\end{proof}
 
 \subsection{Cauchy's Integral Formula}
 
