@@ -756,21 +756,23 @@ If \(\wp'(z) \neq 0\), this is the same thing in homogeneous coordinates as
 \begin{equation}\left[\frac{\wp(z)}{\wp'(z)}, 1, \frac{1}{\wp'(z)}\right]\end{equation}
 Now, what does this look like? \(\wp\) begins with \(a/z^2\), whereas \(\wp'\) begins with \(b/z^3\), so \(\frac{\wp}{\wp'}\) begins with \(cz\), whereas \(\frac{1}{\wp'}\) begins with \(dz^3\). On the other hand, \(0 \mapsto \infty\), and in fact \(\Gamma \mapsto \infty\).
 
-\TODO{February 7}
-
-\TODO{February 10}
-
-\TODO{February 12}
-
-\TODO{February 14}
-
-\TODO{February 24}
-
-\TODO{February 26}
-
-\TODO{February 28}
-
 \subsection{Remark on Holomorphic Functions of Several Variables}
+
+\begin{definition}[Holomorphic function of several variables]
+Let \(\Omega \subset \mbb{C}^n\) be open. We say \(f: \mbb{C}^n \to \mbb{C}\) is \textbf{holomorphic} if it is \(\mc{C}^1\) and
+\begin{equation}
+  df = \sum\prt{f}{z_j}dz_j \iff \forall j, \prt{f}{\ol{z_j}} = 0
+\end{equation}
+It is not hard to show that a several-valued variable being holomorphic is equivalent to:
+\begin{enumerate}
+
+  \item \(f\) is continuous and separately holomorphic functions in each variable (use the Cauchy integral).
+
+  \item \(f\) is analytic
+
+\end{enumerate}
+In fact, separately holomorphic in each variable on its own implies holomorphic (though this is hard to show).
+\end{definition}
 
 \subsection{Theorem of Mittey-Leffer (1877)}
 
