@@ -394,11 +394,13 @@ So what are the different possibilities? If \(k \geq \ell\), then this function 
   \lim_{z \to z_0}\left|\frac{f(z)}{g(z)}\right| = \infty
 \end{equation}
 Note: \textit{not} undefined, but \(\infty\). In this case, we say that \(z_0\) is a pole of order \(\ell - k\).
-Holomorphic functions in an annulus \(r < |z| < R\) have a convergent Laurent expansion in an annulus
+\begin{definition}[Laurent expansion]
+Holomorphic functions in an annulus \(r < |z| < R\) have a convergent \textbf{Laurent expansion} in an annulus
 \begin{equation}
-  \sum_{n = -\infty}^\infty a_nz^n = \sum_{n < 0}a_nz^n + \sum_{n \geq 0}a_nz^n
+  \sum_{n = -\infty}^\infty a_nz^n = P(z) + R(z), \qquad P(z) = \sum_{n < 0}a_nz^n, \qquad R(z) = \sum_{n \geq 0}a_nz^n
 \end{equation}
-Note that the LHS converges when \(r < |z|\), whereas the RHS converges when \(|z| < R\). This actually comes from Cauchy's theorem, just in the case of a convergent power series expansion of a holomorphic function. So this is from Cauchy's integral formula:
+\end{definition}
+Note that the \(P(z)\) converges when \(r < |z|\), whereas \(R(z)\) converges when \(|z| < R\). This actually comes from Cauchy's theorem, just in the case of a convergent power series expansion of a holomorphic function. So this is from Cauchy's integral formula:
 \begin{equation}
   f(z) =
     \frac{1}{2\pi i}\int_{\gamma_1}\frac{f(\xi)}{\xi - z}d\xi
