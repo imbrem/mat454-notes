@@ -473,6 +473,14 @@ Our goal is to eventually compute the residue of a meromorphic function \(f\) ar
   \end{equation}
   where \(a_n\) are the terms of the Laurent expansion in \(|z| > R\).
 \end{definition}
+We may now state one of the most important practical results in complex analysis: the Residue theorem
+\begin{theorem}[Residue Theorem]
+  Let \(\Omega \subset S^2\) be open and let \(f(z)\) be holomorphic in \(\Omega\) except perhaps on a discrete set of isolated points. Let \(\Gamma\) be the oriented (piecewise \(\mc{C}^1\)) boundary of a compact set \(K \subset \Omega\) not containing any singularity (either essential singularities or poles). Then
+  \begin{equation}
+    \int_\Gamma f(z)dz = 2\pi i\sum_a\Res_a(f)
+  \end{equation}
+  where \(a\) ranges over the singularities contained in \(K\), perhaps including \(\infty\).
+\end{theorem}
 
 \newpage
 
