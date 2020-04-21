@@ -36,24 +36,24 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.8}Infinite Products of Holomorphic Functions}{18}{subsection.2.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Normal Families}{19}{section.3}% 
+\contentsline {section}{\numberline {3}Normal Families}{20}{section.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}The Conformal Mapping Problem}{21}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.1}The Conformal Mapping Problem}{22}{subsection.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}The Riemann Mapping Theorem}{23}{subsection.3.2}% 
+\contentsline {subsection}{\numberline {3.2}The Riemann Mapping Theorem}{24}{subsection.3.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Theorems of Montel and Picard}{25}{subsection.3.3}% 
+\contentsline {subsection}{\numberline {3.3}Theorems of Montel and Picard}{26}{subsection.3.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Riemann Surfaces}{29}{section.4}% 
+\contentsline {section}{\numberline {4}Riemann Surfaces}{30}{section.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Complex Manifolds}{29}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.1}Complex Manifolds}{30}{subsection.4.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Integration of Holomorphic Differential Forms}{31}{subsection.4.2}% 
+\contentsline {subsection}{\numberline {4.2}Integration of Holomorphic Differential Forms}{32}{subsection.4.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Riemann Surfaces}{33}{subsection.4.3}% 
+\contentsline {subsection}{\numberline {4.3}Riemann Surfaces}{34}{subsection.4.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Evaluation of Integrals by Residues on Riemann Surfaces}{38}{subsection.4.4}% 
+\contentsline {subsection}{\numberline {4.4}Evaluation of Integrals by Residues on Riemann Surfaces}{39}{subsection.4.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5}Riemann Surface Associated with an Elliptic Curve}{41}{subsection.4.5}% 
+\contentsline {subsection}{\numberline {4.5}Riemann Surface Associated with an Elliptic Curve}{42}{subsection.4.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{44}{section*.2}% 
+\contentsline {section}{References}{45}{section*.2}% 

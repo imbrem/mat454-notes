@@ -799,6 +799,42 @@ where \(g(z)\) is holomorphic in \(\mbb{C}\) and \(p_k(z)\) are polynomials such
 
 \subsection{Infinite Products of Holomorphic Functions}
 
+Consider the expression, for some \(b_n \in \mbb{C}\),
+\begin{equation}
+  P = \prod_{n = 1}^\infty b_n
+  \label{equation:infinite_product}
+\end{equation}
+The obvious way to define it's value would be as a limit of partial products:
+\begin{equation}
+  p_n = \prod_{k = 1}^n b_k, \qquad P = \lim_{n \to \infty}p_n
+\end{equation}
+if the limit exists and is nonzero. This, however, is too restrictive: we'll say instead that \(P\) in equation \ref{equation:infinite_product} \textbf{converges} if all but \textit{finitely many} factors are nonzero, and the partial products formed by the nonzero factors have a nonzero limit. Hence, we have that, \textit{omitting zero factors},
+\begin{equation}
+  \prod_{n = 1}^\infty b_n \ \text{converges} \implies \lim_{n \to \infty}b_n = \lim-{n \to \infty}\frac{p_n}{p_{n - 1}} = 1
+\end{equation}
+Therefore, we can instead write the above product as
+\begin{equation}
+  P = \prod_{n = 1}^\infty(1 + a_n), \qquad \lim_{n \to \infty} a_n = 0
+\end{equation}
+Hence, choosing a prime branch of log, which is defined for \(n\) large enough, we can take partial sums
+\[s_n = \sum_{n = 1}^k\log(1 + a_n) \implies p_n = e^{s_n}\]
+Hence, if \(s_n\) converges, \(p_n\) converges, and if \(p_n\) converges, \(s_n\) converges. The only problem is the convergence of the imaginary part of \(S_n\). To address this, fix \(\log p = \log|p| + i\arg p\). Set
+\begin{equation}
+  \log p_n = \log |p_n| + i\arg p_n, \qquad \arg p_n \in (\arg p - \pi, \arg p + \pi)
+\end{equation}
+Then \(s_n = \log p_n + 2\pi ik_n\) for \(k_n \in \ints\). Hence, we have
+\begin{equation}
+  \log(1 + a_{n + 1}) = s_{n + 1} - s_n = \log p_{n + 1} - \log p_n + 2\pi i(k_{n + 1} - k_n)
+\end{equation}
+For \(n\) large enough, \(|\arg(1 + a_{n + 1})|\) and \(|\arg(p_n) - \arg(p)|\) are all less than \(\frac{2\pi}{3}\), and therefore \(|k_{n + 1} - k_n| < 1\), implying, as these are integers, \(k_{n + 1} = k_n\). Hence, for \(n\) large enough, \(k_n = k\) is eventually constant. Hence,
+\begin{equation}
+  \lim_{n \to \infty}s_n = \log p + 2\pi ik
+\end{equation}
+\begin{definition}
+We say that \(P = \prod_{k = 1}^\infty(1 + a_n)\) \textbf{converges} if \(\sum\log(1 + a_n)\) converges absolutely.
+\end{definition}
+This is equivalent to absolute convergence of \(\sum a_n\):
+\TODO{why}
 
 
 \newpage
