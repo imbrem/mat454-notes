@@ -371,10 +371,17 @@ Note: \textit{not} undefined, but \(\infty\). In this case, we say that \(z_0\) 
 Holomorphic functions in an annulus \(r < |z| < R\) have a convergent Laurent expansion in an annulus
 \begin{equation}\sum_{n = -\infty}^\infty a_nz^n = \sum_{n < 0}a_nz^n + \sum_{n \geq 0}a_nz^n\end{equation}
 Note that the LHS converges when \(r < |z|\), whereas the RHS converges when \(|z| < R\). This actually comes from Cauchy's theorem, just in the case of a convergent power series expansion of a holomorphic function. So this is from Cauchy's integral formula:
-\begin{equation}f(z) = \frac{1}{2\pi i}\int_{\gamma_1}\frac{f(\xi)}{\xi - z}d\xi - \frac{1}{2\pi i}\int_{\gamma_2}\frac{f(\xi)}{\xi - z}d\xi = \sum_{n = -\infty}^\infty a_nz^n\end{equation}
+\begin{equation}
+  f(z) =
+    \frac{1}{2\pi i}\int_{\gamma_1}\frac{f(\xi)}{\xi - z}d\xi
+    - \frac{1}{2\pi i}\int_{\gamma_2}\frac{f(\xi)}{\xi - z}d\xi
+  = \sum_{n = -\infty}^\infty a_nz^n
+\end{equation}
 for \(z\) between \(\gamma_1, \gamma_2\).
 So
-\begin{equation}a_n = \frac{1}{2\pi i}\int_{\gamma_?}\frac{f(\xi)}{\xi^{n + 1}}d\xi\end{equation}
+\begin{equation}
+  a_n = \frac{1}{2\pi i}\int_{\gamma_?}\frac{f(\xi)}{\xi^{n + 1}}d\xi
+\end{equation}
 So of course, this should be just like before for the positive part. Note that this is the integral over \(\gamma_1\) if \(n \geq 0\) and over \(\gamma_2\) if \(n < 0\).
 
 Previously, we talked about holomorphic functions on the Riemann sphere, noting there were very few of them: namely, constants. Now, there are a few more meromorphic functions on the Riemann sphere, but not much. Specifically,
@@ -386,9 +393,13 @@ This theorem uses what is probably the only thing in first year calculus you don
 Say \(f(z)\) has poles \(b_1,...,b_k\) (finite) and maybe \(\infty\). So what can we say about the Laurent expansion at a pole? There's only finitely many negative terms, specifically, the order of the pole.
 
 So these negative parts of the Laurent expansions around each \(b_j\) are like polynomials \(P_j(\frac{1}{z - b_j})\). We'll call these principal parts. What about the principal part at \(\infty\)? It's a polynomial in \(z\), as it's a polynomial in \(\frac{1}{z'}\), where \(z'\) is the coordinate at \(\infty\), which is \(1/z\). Call this \(P_\infty(z)\). So we can write
-\begin{equation}f(z) - P_\infty(z) - \sum_{j = 1}^kP_j\left(\frac{1}{z - b_j}\right)\end{equation}
+\begin{equation}
+  f(z) - P_\infty(z) - \sum_{j = 1}^kP_j\left(\frac{1}{z - b_j}\right)
+\end{equation}
 which is holomorphic on \(S^2\), and hence must be a constant \(a\). So we can write
-\begin{equation}f(z) = a + P_\infty(z) + \sum_{j = 1}^kP_j\left(\frac{1}{z - b_j}\right)\end{equation}
+\begin{equation}
+  f(z) = a + P_\infty(z) + \sum_{j = 1}^kP_j\left(\frac{1}{z - b_j}\right)
+\end{equation}
 And that's rational.
 \end{proof}
 \begin{definition}[Isolated singularity]
@@ -425,11 +436,16 @@ We say that a sequence of functions \(\{f_n\} \subset \mc{C}(\Omega)\) \textbf{c
 Uniform convergence on compact subsets can be used to determine a topology on \(\mc{C}(\Omega)\) as follows:
 \begin{definition}[The Compact-Open Topology]
 We define the \textbf{fundamental system of open neighborhoods of 0} as
-\begin{equation}\forall \ \text{compact} \ K \subset \Omega, \forall \epsilon > 0, V(K, \epsilon) = \{f: \forall z \in K, |f(z)| < \epsilon\}\end{equation}
+\begin{equation}
+  \forall \ \text{compact} \ K \subset \Omega, \forall \epsilon > 0,
+    V(K, \epsilon) = \{f: \forall z \in K, |f(z)| < \epsilon\}
+\end{equation}
 We note that the sequence \(\{f_n\}\) converges to \(f\) uniformly on compact subsets if and only if
 \begin{equation}\forall K, \epsilon, \exists N \in \mbb{N}, \forall n \geq N, f - f_n \in V(K, \epsilon)\end{equation}
 In a similar vein, open neighborhoods of any \(f \in \mbb{C}(\Omega)\) can be defined by translating neighborhoods of 0 by \(f\), determining a basis for a topology in which convergence is equivalent to uniform convergence on compact subsets, i.e. we define the basis of the \textbf{compact-open topology} to be
-\begin{equation}\mc{B} = \bigcup_{f, K, \epsilon}\{f + V(K, \epsilon)\}\end{equation}
+\begin{equation}
+  \mc{B} = \bigcup_{f, K, \epsilon}\{f + V(K, \epsilon)\}
+\end{equation}
 \end{definition}
 In this topology, \(\mc{C}(\Omega)\) is metrizable, and in fact, this topology can alternatively be defined by a translation-invariant metric as follows:
 \begin{definition}[Exhausion]
@@ -437,10 +453,15 @@ An infinite sequence of compact subsets \(K_1 \subset K_2 \subset ...\) such tha
 \end{definition}
 \begin{definition}[Translation-invariant metric]
 Given an exhaustion \(K_i\) of \(\Omega\), we define a metric
-\begin{equation}d(f) = \sum_{i = 1}^\infty\frac{1}{2^i}\min\{1, M_i(f)\}, \quad M_i(f) = \max_{K_i}f\end{equation}
+\begin{equation}
+  d(f) = \sum_{i = 1}^\infty\frac{1}{2^i}\min\{1, M_i(f)\},
+  \quad M_i(f) = \max_{K_i}f
+\end{equation}
 \end{definition}
 This is a metric as
-\begin{equation}d(f) = 0 \iff f = 0, \quad d(f + g) = d(f) + d(g) \leq d(f) + d(g)\end{equation}
+\begin{equation}
+  d(f) = 0 \iff f = 0, \quad d(f + g) = d(f) + d(g) \leq d(f) + d(g)
+\end{equation}
 We have that \(\mc{C}(\Omega)\) is \textbf{complete}, i.e. the limit of a sequence of functions that converges uniformly on compact sets is continuous. We given \(\mc{H}(\Omega)\) the subspace topology.
 \begin{theorem}[Weierstrass]
 \begin{enumerate}
