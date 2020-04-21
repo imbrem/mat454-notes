@@ -339,13 +339,24 @@ By the convergent power series expansion, \(g(z) / z\) is holomorphic, and can h
 \end{proof}
 So let's spend a little time looking at functions with the MVP in general. Continuous functions with the MVP are precisely the \underline{harmonic functions}. The real and imaginary parts of a complex valued function with the MVP also satisfy the MVP. A real valued harmonic function \(g\) is locally the real part of a holomorphic function, uniquely determined up to addition of a constant:
 \begin{equation}
-\prt{^2g}{z\partial\bar{z}} = 0 \implies \prt{g}{z} \ \text{holomorphic}
+  \prt{^2g}{z\partial\bar{z}} = 0 \implies \prt{g}{z} \ \text{holomorphic}
 \end{equation}
 Therefore, \(\prt{g}{z}\) locally has primitive \(f\), defined up to a constant. Since \(g\) is real valued, we can write
-\begin{equation}df = \prt{g}{z}dz, \quad d\bar{f} = \prt{g}{\bar{z}}d\bar{z}\end{equation}
+\begin{equation}
+  df = \prt{g}{z}dz, \quad d\bar{f} = \prt{g}{\bar{z}}d\bar{z}
+\end{equation}
 Hence,
-\begin{equation}d(f + \bar{f}) = dg \implies g = 2\Re f + \ \text{const}\end{equation}
-So harmonic functions satisfy the MVP and MMP, and conversely, a continuous function in an open set \(\Omega \subseteq \mbb{C}\) satisfying the MVP is harmonic. Just a couple of words as to why this is true, as this is really something that you should review: this comes from the solution to what's called the Dirichlet problem for a disk. What is this problem? It says that, given any continuous function \(f\) on the boundary of a disk \(|z| < r\), you can extend it to a continous function \(F\) on the whole disk which is harmonic on the interior.
+\begin{equation}
+  d(f + \bar{f}) = dg \implies g = 2\Re f + \ \text{const}
+\end{equation}
+So harmonic functions satisfy the MVP and MMP, and conversely, a continuous function in an open set \(\Omega \subseteq \mbb{C}\) satisfying the MVP is harmonic. Just a couple of words as to why this is true, as this is really something that you should review: this comes from the solution to what's called the \textbf{Dirichlet problem for a disk}: given any continuous function \(f\) on the boundary of a disk \(|z| < r\), can you extend it to a continous function \(F\) on the whole disk which is harmonic on the interior?
+
+\begin{theorem}[Dirichlet Problem]
+  The Dirichlet problem for a closed disk has a \underline{unique} solution.
+\end{theorem}
+\begin{proof}
+  \TODO{this}
+\end{proof}
 
 \subsection{Zeros and Poles}
 
