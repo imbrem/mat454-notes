@@ -71,6 +71,18 @@ We say a real or complex valued function \(f(x, y)\) is \textbf{harmonic} if \(f
   Any closed differential form \(\omega\) in a simply-connected open set \(\Omega\) has a primitive.
 \end{theorem}
 
+\begin{theorem}[Cauchy's Theorem]
+  Let \(\Omega\) be a domain and let \(f(z)\) be continuous in \(\Omega\) and holomorphic except on a set of discrete lines and points. Then the differentiable form \(f(z)dz\) is closed.
+\end{theorem}
+
+\begin{corollary}
+  A holomorphic function \(f(z)\) locally has a primitive, which is holomorphic (i.e. a function \(F\) such that \(dF = f(z)dz\))
+\end{corollary}
+
+\begin{corollary}[Morera's Theorem]
+  If \(f(z)\) is continuous in \(\Omega\) and \(df = f(z)dz\) is closed, then \(f(z)\) is holomorphic.
+\end{corollary}
+
 \section{Useful Tools}
 
 \begin{itemize}
@@ -86,6 +98,11 @@ We say a real or complex valued function \(f(x, y)\) is \textbf{harmonic} if \(f
       \int_\gamma Pdx + Qdy
       = \iint_A\left(\prt{Q}{x} - \prt{P}{y}\right)dxdy
     \end{equation}
+  \end{theorem}
+
+  \item Schwarz Reflection Principle:
+  \begin{theorem}[Schwarz Reflection Principle]
+    If \(f: H \to \mbb{C}\) is continuous on the closed upper half-plane \(H\), holomorphic on the open upper half-plane and takes real values on the real axis (i.e. \(f(\reals) \subseteq \reals\)) then it can be extended to an entire function by \(f(\ol{z}) = \ol{f(z)}\). More generally, this can be applied to reflecting any half-domain over any line.
   \end{theorem}
 
 \end{itemize}
