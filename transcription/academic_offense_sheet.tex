@@ -102,6 +102,40 @@ We say a real or complex valued function \(f(x, y)\) is \textbf{harmonic} if \(f
   A bounded holomorphic function on all of \(\mbb{C}\) is a constant.
 \end{theorem}
 
+\begin{definition}[Zero]
+If \(f\) is holomorphic in a neighborhood of \(z_0 \in \mbb{C}\) and \(f(z_0) = 0\), we can write, for some \(k \in \mbb{N}\),
+\begin{equation}
+  f(z) = (z - z_0)^kf_1(z)
+\end{equation}
+where\(f_1(z)\) is nonvanishing near \(z_0\). In this case \(k\) is called the \textbf{order} or \textbf{multiplicity} of the \textbf{zero} \(z_0\)
+\end{definition}
+
+\begin{definition}[Meromorphic]
+  A function \(f\) is \textbf{meromorphic} on an open \(\Omega \subseteq \mbb{C}\) if it is defined and holomorphic in the complement of a discrete set such that in some neighborhood of every point of \(\Omega\) we can write
+  \(f(z) = g(z)/h(z)\)
+  where \(g, h\) are holomorphic and \(h\) is not identically zero.
+\end{definition}
+
+\begin{definition}[Laurent expansion]
+Holomorphic functions in an annulus \(r < |z| < R\) have a convergent \textbf{Laurent expansion} in an annulus
+\begin{equation}
+  \sum_{n = -\infty}^\infty a_nz^n = P(z) + R(z), \qquad P(z) = \sum_{n < 0}a_nz^n, \qquad R(z) = \sum_{n \geq 0}a_nz^n
+\end{equation}
+\end{definition}
+
+\begin{theorem}
+  Every meromorphic function \(f\) on \(S^2\) is rational.
+  \label{theorem:meromorphic_rational}
+\end{theorem}
+
+\begin{definition}[Isolated singularity]
+A holomorphic function in a \underline{punctured} disk \(0 < |z| < R\) has an \textbf{isolated singularity} at \(0\) if \(f(z)\) cannot be extended to be holomorphic at \(0\).
+\end{definition}
+
+\begin{theorem}[Weierstrass Theorem]
+If \(0\) is an essential singularity, then for all \(\epsilon > 0\), \(f(\{0 \leq |z| \leq \epsilon\})\) is dense in \(\mbb{C}\).
+\end{theorem}
+
 \section{Useful Tools}
 
 \begin{itemize}
@@ -159,6 +193,34 @@ We say a real or complex valued function \(f(x, y)\) is \textbf{harmonic} if \(f
 \end{itemize}
 
 \section{Residues and Integrals}
+
+\begin{definition}[Residue]
+Let \(f(z)\) be a holomorphic function in a punctured disc centered around \(a\), and let \(\gamma\) be a closed curve lying entirely in the punctured disc (in particular, never touching \(a\)) with winding number \(w(\gamma, a) = 1\). We define the \textbf{residue} of the differential form \(f(z)dz\) (or ``of \(f\)") at \(a\) to be
+\begin{equation}
+  \Res_a(f) = \frac{1}{2\pi i}\int_\gamma f(z)dz = a_{-1}
+\end{equation}
+where \(a_n\) are the coefficients in the Laurent expansion of \(f\) at \(a\). Note that this is independent of the choice of curve \(\gamma\).
+\end{definition}
+
+\begin{definition}[Residue at \(\infty\)]
+  Writing \(z = \frac{1}{z'}\), we have in coordinates at \(\infty\)
+  \begin{equation}
+    f(z)dz = -\frac{1}{z'^2}f(1/z')dz' = g(z')dz'
+  \end{equation}
+  We define
+  \begin{equation}
+    \Res_\infty(f) = \Res_0(g) = -a_{-1}
+  \end{equation}
+  where \(a_n\) are the terms of the Laurent expansion in \(|z| > R\).
+\end{definition}
+
+\begin{theorem}[Residue Theorem]
+  Let \(\Omega \subset S^2\) be open and let \(f(z)\) be holomorphic in \(\Omega\) except perhaps on a discrete set of isolated points. Let \(\Gamma\) be the oriented (piecewise \(\mc{C}^1\)) boundary of a compact set \(K \subset \Omega\) not containing any singularity (either essential singularities or poles). Then
+  \begin{equation}
+    \int_\Gamma f(z)dz = 2\pi i\sum_a\Res_a(f)
+  \end{equation}
+  where \(a\) ranges over the singularities contained in \(K\), perhaps including \(\infty\).
+\end{theorem}
 
 \section{Elliptic Curves}
 
