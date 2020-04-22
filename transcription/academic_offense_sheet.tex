@@ -27,10 +27,15 @@ A quick collection of useful facts, theorems, and definitions for complex analys
 \newpage
 
 \section{Basic Definitions and Theorems}
+For \(f = u + iv\) holomorphic, we have
+\begin{equation}
+  2\prt{f}{\bar{z}} = \prt{f}{x} + i\prt{f}{y} = 0
+  \iff \prt{u}{x} = \prt{v}{y} \land \prt{u}{y} = -\prt{v}{x}
+\end{equation}
 \begin{definition}
 The \textbf{differential} of \(f\) is given by
 \begin{equation}
-  df = \prt{f}{x}dx + \prt{f}{y}dy
+  df = \prt{f}{x}dx + \prt{f}{y}dy = \prt{f}{z}dz + \prt{f}{\bar{z}}d\bar{z}
 \end{equation}
 \end{definition}
 \begin{align}
@@ -44,7 +49,8 @@ The \textbf{differential} of \(f\) is given by
 \begin{definition}[Harmonic]
 We say a real or complex valued function \(f(x, y)\) is \textbf{harmonic} if \(f\) is \(\mc{C}^2\) and
 \begin{equation}
-  \prt{^2f}{x^2} + \prt{^2f}{y^2} \iff \prt{^2f}{z\partial\bar{z}} = 0\end{equation}
+  \prt{^2f}{x^2} + \prt{^2f}{y^2} \iff \prt{^2f}{z\partial\bar{z}} = 0
+\end{equation}
 \end{definition}
 \begin{proposition}
   Every real-valued harmonic function is, not necessarily everywhere but at least \textit{locally}, the real part of a holomorphic function.

@@ -37,19 +37,27 @@ exists, i.e. there is \(c \in \mbb{C}\) such that
 \begin{equation}f(z + h) = f(z) + c \cdot h + \varphi(h) \cdot h, \lim_{h \to 0}\varphi(h) = 0\end{equation}
 \end{definition}
 Now, from this perspective, this looks no different from the usual case of a differentiable function. But it is different, because the variables are complex, and hence we can write
-\begin{equation}z = x + iy, \qquad f(z) = u(z) + iv(z)\end{equation}
+\begin{equation}
+  z = x + iy, \qquad f(z) = u(z) + iv(z)
+\end{equation}
 Hence, this function mapping \(z \mapsto f(z)\) is, from the real perspective, a function from
 \(\reals^2 \to \reals^2\), taking
-\begin{equation}\begin{pmatrix} x \\ y \end{pmatrix} \mapsto \begin{pmatrix} u(x, y) \\ v(x, y) \end{pmatrix}\end{equation}
+\begin{equation}
+  \begin{pmatrix} x \\ y \end{pmatrix} \mapsto \begin{pmatrix} u(x, y) \\ v(x, y) \end{pmatrix}
+\end{equation}
 Naturally, in the above definition, we can also write \(a + ib\) and \(h = \xi + i\eta\). Hence the derivative \(h \mapsto c \cdot h\) can be written as
-\begin{equation}\begin{pmatrix} \xi \\ \eta \end{pmatrix} \mapsto
-\begin{pmatrix} a & -b \\ b & a \end{pmatrix}
+\begin{equation}
+  \begin{pmatrix} \xi \\ \eta \end{pmatrix} \mapsto
+  \begin{pmatrix} a & -b \\ b & a \end{pmatrix}
   \begin{pmatrix} \xi \\ \eta \end{pmatrix}
-= \begin{pmatrix}\prt{f}{x} & \prt{f}{y}\end{pmatrix}
-  \begin{pmatrix} \xi \\ \eta \end{pmatrix}\end{equation}
+  = \begin{pmatrix}\prt{f}{x} & \prt{f}{y}\end{pmatrix}
+  \begin{pmatrix} \xi \\ \eta \end{pmatrix}
+\end{equation}
 In other words, this says that
-\begin{equation}\prt{f}{x} + i\prt{f}{y} = 0
-\iff \prt{u}{x} = \prt{v}{y} \land \prt{u}{y} = -\prt{v}{x}\end{equation}
+\begin{equation}
+  \prt{f}{x} + i\prt{f}{y} = 0
+  \iff \prt{u}{x} = \prt{v}{y} \land \prt{u}{y} = -\prt{v}{x}
+\end{equation}
 These are what is called the Cauchy-Riemann equations. So the moral of the story is that holomorphic is \textit{not} the same as differentiable as a function of two real variables. It's the same as differentiable as a function of two real variables \textit{plus} satisfying the Cauchy-Riemann equations.
 
 It's going to convenient throughout this course to think about derivatives in terms of differential forms. Let's suppose, to begin a bit more generally, that we're considering a complex-valued \textit{differentiable} (not necessarily holomorphic) function \(f(x, y)\).
