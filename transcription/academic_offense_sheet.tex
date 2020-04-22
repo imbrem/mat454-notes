@@ -56,7 +56,22 @@ We say a real or complex valued function \(f(x, y)\) is \textbf{harmonic} if \(f
   Every real-valued harmonic function is, not necessarily everywhere but at least \textit{locally}, the real part of a holomorphic function.
 \end{proposition}
 
-\section{Common Formulas}
+\begin{theorem}
+  \(\omega\) has a primitive in \(\Omega\) if and only if, for any piecewise differentiable closed curve \(\gamma: [a, b] \to \Omega\) (i.e. with \(\gamma(a) = \gamma(b)\)), or equivalently any piecewise differentiable \(\gamma: S^1 \to \Omega\), we have
+  \begin{equation}
+    \int_\gamma\omega = 0
+  \end{equation}
+\end{theorem}
+
+\begin{definition}
+  We say a differential form \(\omega\) on a domain \(\Omega\) is \textbf{closed} if every point in \(\Omega\) has a neighborhood in which \(\omega\) has a primitive.
+\end{definition}
+
+\begin{theorem}
+  Any closed differential form \(\omega\) in a simply-connected open set \(\Omega\) has a primitive.
+\end{theorem}
+
+\section{Useful Tools}
 
 \begin{itemize}
 
@@ -65,9 +80,15 @@ We say a real or complex valued function \(f(x, y)\) is \textbf{harmonic} if \(f
     \pi: S^2 \setminus \{N\} \to \mbb{C}, \pi(x, y, t) = \frac{x + iy}{1 - t}
   \end{equation}
 
-\end{itemize}
+  \item Green's Formula:
+  \begin{theorem}[Green's formula]
+    \begin{equation}
+      \int_\gamma Pdx + Qdy
+      = \iint_A\left(\prt{Q}{x} - \prt{P}{y}\right)dxdy
+    \end{equation}
+  \end{theorem}
 
-\section{Useful Tools}
+\end{itemize}
 
 \section{Residues and Integrals}
 
