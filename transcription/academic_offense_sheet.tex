@@ -27,6 +27,28 @@ A quick collection of useful facts, theorems, and definitions for complex analys
 \newpage
 
 \section{Basic Definitions and Theorems}
+\begin{definition}
+The \textbf{differential} of \(f\) is given by
+\begin{equation}
+  df = \prt{f}{x}dx + \prt{f}{y}dy
+\end{equation}
+\end{definition}
+\begin{align}
+  dz = dx + idy, \qquad d\bar{z} = dx - idy \iff
+  dx = \frac{1}{2}(dz + d\bar{z}), \qquad dy = \frac{1}{2i}(dz - d\bar{z}) \\
+  \prt{f}{z} = \frac{1}{2}\left(\prt{f}{x} - i\prt{f}{y}\right),
+    \qquad \prt{f}{\bar{z}}
+    = \frac{1}{2}\left(\prt{f}{x} + i\prt{f}{y}\right)
+    \implies df = \prt{f}{z}dz + \prt{f}{\bar{z}}d\bar{z}
+\end{align}
+\begin{definition}[Harmonic]
+We say a real or complex valued function \(f(x, y)\) is \textbf{harmonic} if \(f\) is \(\mc{C}^2\) and
+\begin{equation}
+  \prt{^2f}{x^2} + \prt{^2f}{y^2} \iff \prt{^2f}{z\partial\bar{z}} = 0\end{equation}
+\end{definition}
+\begin{proposition}
+  Every real-valued harmonic function is, not necessarily everywhere but at least \textit{locally}, the real part of a holomorphic function.
+\end{proposition}
 
 \section{Useful Tools}
 

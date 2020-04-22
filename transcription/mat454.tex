@@ -55,21 +55,34 @@ These are what is called the Cauchy-Riemann equations. So the moral of the story
 It's going to convenient throughout this course to think about derivatives in terms of differential forms. Let's suppose, to begin a bit more generally, that we're considering a complex-valued \textit{differentiable} (not necessarily holomorphic) function \(f(x, y)\).
 \begin{definition}
 The \textbf{differential} of \(f\) is given by
-\begin{equation}df = \prt{f}{x}dx + \prt{f}{x}dy\end{equation}
+\begin{equation}
+  df = \prt{f}{x}dx + \prt{f}{y}dy
+\end{equation}
 \end{definition}
 But, we're thinking about \(x\) and \(y\) as parts of a complex number, with \(z = x + iy\) and \(\bar{z} = x - iy\). So we can solve for \(x\) and \(y\) in terms of \(z\) and \(\bar{z}\). We can also compute the differentials
-\begin{equation}dz = dx + idy, \qquad d\bar{z} = dx - idy\end{equation}
+\begin{equation}
+  dz = dx + idy, \qquad d\bar{z} = dx - idy
+\end{equation}
 So we can solve for \(dz\) and \(d\bar{z}\) in terms of \(dz\) and \(d\bar{z}\), getting
-\begin{equation}dx = \frac{1}{2}(dz + d\bar{z}), \qquad dy = \frac{1}{2i}(dz - d\bar{z})\end{equation}
+\begin{equation}
+  dx = \frac{1}{2}(dz + d\bar{z}), \qquad dy = \frac{1}{2i}(dz - d\bar{z})
+\end{equation}
 In particular, we can take \(df\) and rewrite it in terms of \(dz\) and \(d\bar{z}\) by substituting in these expressions. So if we do that we get
-\begin{equation}df = \frac{1}{2}\left(\prt{f}{x} - i\prt{f}{y}\right)dz + \frac{1}{2}\left(\prt{f}{x} + i\prt{f}{y}\right)d\bar{z}\end{equation}
+\begin{equation}
+  df = \frac{1}{2}\left(\prt{f}{x} - i\prt{f}{y}\right)dz
+  + \frac{1}{2}\left(\prt{f}{x} + i\prt{f}{y}\right)d\bar{z}
+\end{equation}
 So, if we would like to define partial derivatives with respect to \(z\) and \(\bar{z}\), how should we define them? Well... the coefficients above seem to be natural choices, giving
-\begin{equation}\prt{f}{z} = \frac{1}{2}\left(\prt{f}{x} - i\prt{f}{y}\right),
-  \qquad \prt{f}{\bar{z}}
-= \frac{1}{2}\left(\prt{f}{x} + i\prt{f}{y}\right)
-\implies df = \prt{f}{z}dz + \prt{f}{\bar{z}}d\bar{z}\end{equation}
+\begin{equation}
+  \prt{f}{z} = \frac{1}{2}\left(\prt{f}{x} - i\prt{f}{y}\right),
+    \qquad \prt{f}{\bar{z}}
+    = \frac{1}{2}\left(\prt{f}{x} + i\prt{f}{y}\right)
+    \implies df = \prt{f}{z}dz + \prt{f}{\bar{z}}d\bar{z}
+\end{equation}
 In terms of \textit{this} expression, what's a third way of writing the Cauchy-Riemann equations? It's simply
-\begin{equation}\prt{f}{\bar{z}} = 0\end{equation}
+\begin{equation}
+  \prt{f}{\bar{z}} = 0
+\end{equation}
 And of course, this basically captures your ``feeling" of what a holomorphic function should be: it's supposed to be a function of \(z\), and not \(\bar{z}\). Ok, so this is the basic definition of holomorphic.
 
 \subsection{Harmonic Functions}
@@ -77,12 +90,15 @@ And of course, this basically captures your ``feeling" of what a holomorphic fun
 We'll now say a few words about harmonic functions. Recall the following definition
 \begin{definition}[Harmonic]
 We say a real or complex valued function \(f(x, y)\) is \textbf{harmonic} if \(f\) is \(\mc{C}^2\) and
-\begin{equation}\prt{^2f}{x^2} + \prt{^2f}{y^2} \iff \prt{^2f}{z\partial\bar{z}} = 0\end{equation}
+\begin{equation}
+  \prt{^2f}{x^2} + \prt{^2f}{y^2} \iff \prt{^2f}{z\partial\bar{z}} = 0\end{equation}
 \end{definition}
 The above is known as \textbf{Laplace's equation}. It's immediate from the definition that a complex valued function is harmonic if and only if its real and imaginary parts are harmonic, and furthemore that every holomorphic function is harmonic. In particular, then, the real and imaginary parts of a holomorphic function are harmonic. On the other hand, maybe a slightly less immediate thing is that every real-valued harmonic function is, not necessarily everywhere but at least \textit{locally}, the real part of a holomorphic function. Why?
 
 Well let's look at Laplace's equation. We know that Laplace's equation is satisfied, which tells us that
-\begin{equation}\prt{}{\bar{z}}\left(\prt{g}{z}\right) = 0\end{equation}
+\begin{equation}
+  \prt{}{\bar{z}}\left(\prt{g}{z}\right) = 0
+\end{equation}
 So this of course tells us that \(\prt{g}{z}\) is holomorphic. And why does the result follow from this? Because every holomorphic function locally has a primitive which is holomorphic. Where does that come from? The fact that a closed form is locally exact, which is essentially saying it is a consequence of Cauchy's theorem. Another way of thinking about it, which is really also saying it is a consequence of Cauchy's theorem, is that \(\prt{g}{z}\) is given by a convergent power series and hence can be locally integrated into another convergent power series. So this is really ``one way or another by Cauchy's theorem".
 
 The global result, on the other hand, does not necessarily follow, in brief, because we can ``loop around once". For example, \(\log|z|\) is a real-valued harmonic function in \(\mbb{C} \setminus \{0\}\), but it's not \textit{globally} the real part of a holomorphic function in \(\mbb{C} \setminus \{0\}\), because \(\log z\) has no single-valued branch here. This is a counterexample, but not on \(\mbb{C}\). Whether there are counterexamples in \(\mbb{C}\) is a very good question, and we'll deal with that when we get to Cauchy's theorem. It definitely is a topological question.
