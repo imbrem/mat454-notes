@@ -119,10 +119,12 @@ We have to say what the complex structure of that space is in a neighborhood of 
 Of course, complex-valued functions which are holomorphic on the \textit{whole} Riemann sphere are rather uninteresting, considering they are all constant by Liouville's principle. If we're allowed to consider holomorphic functions on the Riemann sphere \textit{with values on the Riemann sphere}, however, then we're back in interesting territory.
 
 \begin{definition}[Stereographic Projection]
-Consider the unit sphere \(S^2 = \{x^2 + y^2 + z^2 = 1\}\), and identify \(\reals^2\) with \(\mbb{C}\) by the isomorphism \((x, y) \mapsto z = x + iy\). Define the north pole \((0, 0, 1)\). We can define the \textbf{stereographic projection from the north pole} from \(\pi: S^2 \setminus N \to \mbb{C}\) to map a point \(s \in S \setminus N\) to the intersection of the line between \(s = (x, y, t)\) and \(N\) and the \(xy\) plane. Because the points \(s, N, (x/(1 - t), y/(1 - t), 0)\) must be colinear, we can define
-\begin{equation}\pi(x, y, t) = \frac{x + iy}{1 - t}\end{equation}
-This is a homeomorphism from \(S^2 \setminus N\) to \(\mbb{C}\).
-\label{def:stereographic}
+  Consider the unit sphere \(S^2 = \{x^2 + y^2 + z^2 = 1\}\), and identify \(\reals^2\) with \(\mbb{C}\) by the isomorphism \((x, y) \mapsto z = x + iy\). Define the north pole \((0, 0, 1)\). We can define the \textbf{stereographic projection from the north pole} from \(\pi: S^2 \setminus N \to \mbb{C}\) to map a point \(s \in S \setminus N\) to the intersection of the line between \(s = (x, y, t)\) and \(N\) and the \(xy\) plane. Because the points \(s, N, (x/(1 - t), y/(1 - t), 0)\) must be colinear, we can define
+  \begin{equation}
+    \pi(x, y, t) = \frac{x + iy}{1 - t}
+  \end{equation}
+  This is a homeomorphism from \(S^2 \setminus N\) to \(\mbb{C}\).
+  \label{def:stereographic}
 \end{definition}
 A quick question: is this a \textit{metric} isomorphism? \textbf{No}: points very close together on the sphere can map to points very far from each other in the plane. This, however, is going to be a very important point in this course: we will study the behaviour of holomorphic functions according to the two natural metrics on the sphere: the induced metric on \(\reals^3\) i.e. the \textbf{chordal metric}, equivalent to the \textbf{geodesic metric}.
 
@@ -198,10 +200,10 @@ We note that, for holomorphic \(F: \Omega \to \mbb{C}\) and piecewise differenti
 \end{equation}
 This observation implies the ``only if" in the following theorem:
 \begin{theorem}
-\(\omega\) has a primitive in \(\Omega\) if and only if, for any piecewise differentiable closed curve \(\gamma: [a, b] \to \Omega\) (i.e. with \(\gamma(a) = \gamma(b)\)), or equivalently any piecewise differentiable \(\gamma: S^1 \to \Omega\), we have
-\begin{equation}
-  \int_\gamma\omega = 0
-\end{equation}
+  \(\omega\) has a primitive in \(\Omega\) if and only if, for any piecewise differentiable closed curve \(\gamma: [a, b] \to \Omega\) (i.e. with \(\gamma(a) = \gamma(b)\)), or equivalently any piecewise differentiable \(\gamma: S^1 \to \Omega\), we have
+  \begin{equation}
+    \int_\gamma\omega = 0
+  \end{equation}
 \end{theorem}
 \begin{proof}
 As stated above, this is a necessary condition as, if \(\omega\) has a primitive \(F\),

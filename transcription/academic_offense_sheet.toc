@@ -2,8 +2,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Basic Definitions and Theorems}{2}{section.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Useful Tools}{2}{section.2}% 
+\contentsline {section}{\numberline {2}Common Formulas}{2}{section.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Residues and Integrals}{2}{section.3}% 
+\contentsline {section}{\numberline {3}Useful Tools}{2}{section.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Elliptic Curves}{2}{section.4}% 
+\contentsline {section}{\numberline {4}Residues and Integrals}{2}{section.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Elliptic Curves}{2}{section.5}% 
