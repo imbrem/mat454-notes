@@ -263,7 +263,7 @@ A non-constant entire function \(f\) omits at most a point, i.e. \(\#(\mbb{C}\se
 \begin{theorem}[Picard's Big Theorem]
   If \(z_0\) is an isolated essential singularity of a holomorphic function \(f(z)\), then \(f\) takes every complex value with one possible exception in any neighborhood \(\Omega\) of \(z_0\), i.e. \(\#(\mbb{C}\setminus f(\Omega)) \leq 1\).
   \label{theorem:big_picard}
-\end{theorem} 
+\end{theorem}
 
 \section{Useful Results and Formulas}
 
@@ -369,6 +369,15 @@ where \(a_n\) are the coefficients in the Laurent expansion of \(f\) at \(a\). N
   \end{equation}
   where \(a\) ranges over the singularities contained in \(K\), perhaps including \(\infty\).
 \end{theorem}
+
+At a simple pole \(a\), we have
+\begin{equation}
+  \Res_a(f) = \lim_{z \to a}(z - a)f(z)
+\end{equation}
+More generally, for a pole of degree \(n\), we have
+\begin{equation}
+  \Res_a(f) = \frac{1}{(n - 1)!}\lim_{z \to a}\frac{d^{n - 1}}{dz^{n - 1}}((z - c)^nf(z))
+\end{equation}
 
 \section{Elliptic Curves}
 
