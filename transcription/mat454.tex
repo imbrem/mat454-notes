@@ -533,8 +533,12 @@ Let \(\Omega \subset \mbb{C}\) be open. We define \(\mbb{C}(\Omega)\) to be the 
 \end{definition}
 We want to assign a topology to \(\mc{C}(\Omega)\). We begin by defining some primitive notions:
 \begin{definition}[Uniform convergence on compact subsets]
-We say that a sequence of functions \(\{f_n\} \subset \mc{C}(\Omega)\) \textbf{converges uniformly on compact subsets} if for all compact subsets \(K \subset \Omega\), \(\{f_n | K\}\) converges uniformly, i.e.
-\begin{equation}\forall \ \text{compact} \ K \subset \Omega, \forall \epsilon > 0, \exists N \in \mbb{N}, \forall m, n \geq N, \forall z \in K, |f_m(x) - f_n(x)| < \epsilon\end{equation}
+  We say that a sequence of functions \(\{f_n\} \subset \mc{C}(\Omega)\) \textbf{converges uniformly on compact subsets} if for all compact subsets \(K \subset \Omega\), \(\{f_n | K\}\) converges uniformly, i.e.
+  \begin{equation}
+    \forall \ \text{compact} \ K \subset \Omega, \forall \epsilon > 0,
+      \exists N \in \mbb{N}, \forall m, n \geq N, \forall z \in K,
+        |f_m(x) - f_n(x)| < \epsilon
+  \end{equation}
 \end{definition}
 Uniform convergence on compact subsets can be used to determine a topology on \(\mc{C}(\Omega)\) as follows:
 \begin{definition}[The Compact-Open Topology]
@@ -567,10 +571,10 @@ This is a metric as
 \end{equation}
 We have that \(\mc{C}(\Omega)\) is \textbf{complete}, i.e. the limit of a sequence of functions that converges uniformly on compact sets is continuous. We given \(\mc{H}(\Omega)\) the subspace topology.
 \begin{theorem}[Weierstrass]
-\begin{enumerate}
-  \item \(\mc{H}(\Omega)\) is a closed subspace of \(\mc{C}(\Omega)\), i.e. if \(\{f_n\} \subset \mc{H}(\Omega)\) converges uniformly to \(f\) on compact sets then \(f = \lim_{n \to \infty}f_n \in \mc{H}(\Omega)\) is holomorphic.
-  \item The mapping \(\mc{H}(\Omega) \to \mc{H}(\Omega)\) \(f \mapsto f'\) is continous, i.e. if \(\{f_n\} \subset \mc{H}(\Omega)\) converges uniformly to \(f\) on compact sets then \(\{f_n'\}\) converges uniformly to \(f'\) on compact sets.
-\end{enumerate}
+  \begin{enumerate}
+    \item \(\mc{H}(\Omega)\) is a closed subspace of \(\mc{C}(\Omega)\), i.e. if \(\{f_n\} \subset \mc{H}(\Omega)\) converges uniformly to \(f\) on compact sets then \(f = \lim_{n \to \infty}f_n \in \mc{H}(\Omega)\) is holomorphic.
+    \item The mapping \(\mc{H}(\Omega) \to \mc{H}(\Omega)\) \(f \mapsto f'\) is continous, i.e. if \(\{f_n\} \subset \mc{H}(\Omega)\) converges uniformly to \(f\) on compact sets then \(\{f_n'\}\) converges uniformly to \(f'\) on compact sets.
+  \end{enumerate}
 \end{theorem}
 \begin{proof}
 \begin{enumerate}
@@ -584,18 +588,20 @@ We have that \(\mc{C}(\Omega)\) is \textbf{complete}, i.e. the limit of a sequen
 
 We now consider an application of this result to series of holomorphic functions:
 \begin{corollary}
-Let \(\{f_n\}\) be a series of holomorphic functions. If \(\{g_n = \sum_{k = 0}^nf_k\}\) converges uniformly on compact subsets of \(\Omega\), then the sum
-\begin{equation}f = \sum f_n\end{equation}
-is holomorphic on \(\Omega\) and the series can be differentiated term by term.
+  Let \(\{f_n\}\) be a series of holomorphic functions. If \(\{g_n = \sum_{k = 0}^nf_k\}\) converges uniformly on compact subsets of \(\Omega\), then the sum
+  \begin{equation}
+    f = \sum f_n
+  \end{equation}
+  is holomorphic on \(\Omega\) and the series can be differentiated term by term.
 \end{corollary}
 \begin{proposition}
-Let \(\Omega\) be a domain. If \(\{f_n\} \subset \mc{H}(\Omega)\) converges uniformly on compact sets and each \(f_n\) vanishes nowhere in \(\Omega\) then \(f = \lim_{n \to \infty}f_n\) is either never zero or identically zero.
+  Let \(\Omega\) be a domain. If \(\{f_n\} \subset \mc{H}(\Omega)\) converges uniformly on compact sets and each \(f_n\) vanishes nowhere in \(\Omega\) then \(f = \lim_{n \to \infty}f_n\) is either never zero or identically zero.
 \end{proposition}
 \begin{proof}
 \TODO{this}
 \end{proof}
 \begin{corollary}
-Let \(\Omega\) be a domain. If \(\{f_n\} \subset \mc{H}(\Omega)\) converges uniformly on compact sets and each \(f_n\) is one-to-one, then \(\lim_{n \to \infty}f_n\) is either one-to-one or constant.
+  Let \(\Omega\) be a domain. If \(\{f_n\} \subset \mc{H}(\Omega)\) converges uniformly on compact sets and each \(f_n\) is one-to-one, then \(\lim_{n \to \infty}f_n\) is either one-to-one or constant.
 \end{corollary}
 \begin{proof}
 \TODO{this}
@@ -607,13 +613,15 @@ Let \(\Omega\) be a domain. If \(\{f_n\} \subset \mc{H}(\Omega)\) converges unif
 
 Let \(\{f_n\}\) denote a sequence of meromorphic functions on an open set \(\Omega \subset \mbb{C}\).
 \begin{definition}
-We say that \(\sum_{n = 1}^\infty f_n\) \textbf{converges uniformly} (respectively \textbf{converges uniformly absolutely}) on \(X \subset \Omega\) if all but finitely many \(f_n\) have no pole in \(X\) and form a uniformly convergent (respectively uniformly absolutely convergent) series on \(X\).
+  We say that \(\sum_{n = 1}^\infty f_n\) \textbf{converges uniformly} (respectively \textbf{converges uniformly absolutely}) on \(X \subset \Omega\) if all but finitely many \(f_n\) have no pole in \(X\) and form a uniformly convergent (respectively uniformly absolutely convergent) series on \(X\).
 \end{definition}
 We consider series of meromorphic functions that converge uniformly on compact subsets of \(\Omega\). We can define the sum on relatively compact open \(U \subset \Omega\) as
-\begin{equation}\sum_{n \leq n_0}f_n + \sum_{n > n_0}f_n\end{equation}
+\begin{equation}
+  \sum_{n \leq n_0}f_n + \sum_{n > n_0}f_n
+\end{equation}
 where \(f_n\) is meromorphic for \(n \leq n_0\) and \(f_n\) has no pole on \(U\) for \(n > n_0\) with the sum uniformly convergent on \(U\).
 \begin{theorem}
-Let \(\sum f_n\) be a series of meromorphic functions on \(\Omega\). If the series is uniformly convergent on compact subsets of \(\Omega\), then the sum is a meromorphic function \(f\) on \(\Omega\) and \(\sum f_n'\) converges uniformly on compact sets of \(\Omega\) to \(f'\).
+  Let \(\sum f_n\) be a series of meromorphic functions on \(\Omega\). If the series is uniformly convergent on compact subsets of \(\Omega\), then the sum is a meromorphic function \(f\) on \(\Omega\) and \(\sum f_n'\) converges uniformly on compact sets of \(\Omega\) to \(f'\).
 \end{theorem}
 We remark that the pole sets obey the inclusion \(P(f) \subset \bigcup_nP(f_n)\), with equality if the \(P(f_n)\) are pointwise disjoint, in which case if \(p\) is a pole of degree \(k\) for any \(f_n\) then it is a pole of degree \(k\) for \(f\).
 
@@ -622,16 +630,20 @@ We remark that the pole sets obey the inclusion \(P(f) \subset \bigcup_nP(f_n)\)
 \subsection{The Weierstrass \(\wp\)-function}
 
 \begin{definition}
-Let \(e_1, e_2 \in \mbb{C}\) be linearly independent over \(\mbb{R}\). We can define a discrete subgroup of \(\mbb{C}\) with \textbf{basis} \(e_1, e_2\)
-\begin{equation}\Gamma = \{n_1e_1 + n_2e_2 : n_1, n_2 \in \mbb{Z}\}\end{equation}
-We say that \(f\) has \(\Gamma\) as \textbf{group of periods} if
-\begin{equation}\forall z \in \mbb{C}, f(z) = f(z + e_1) = f(z + e_2)\end{equation}
+  Let \(e_1, e_2 \in \mbb{C}\) be linearly independent over \(\mbb{R}\). We can define a discrete subgroup of \(\mbb{C}\) with \textbf{basis} \(e_1, e_2\)
+  \begin{equation}
+    \Gamma = \{n_1e_1 + n_2e_2 : n_1, n_2 \in \mbb{Z}\}
+  \end{equation}
+  We say that \(f\) has \(\Gamma\) as \textbf{group of periods} if
+  \begin{equation}
+    \forall z \in \mbb{C}, f(z) = f(z + e_1) = f(z + e_2)
+  \end{equation}
 \end{definition}
 \begin{definition}[Weierstrass \(\wp\)-function]
-We define the Weierstrass \(\wp\)-function by the infinite sum
-\begin{equation}\wp(z) = \frac{1}{z^2} + \sum_{\substack{w \in \Gamma \\ w \neq 0}}\left[
-  \frac{1}{(z - w)^2} - \frac{1}{w^2}
-\right]\end{equation}
+  We define the Weierstrass \(\wp\)-function by the infinite sum
+  \begin{equation}\wp(z) = \frac{1}{z^2} + \sum_{\substack{w \in \Gamma \\ w \neq 0}}\left[
+    \frac{1}{(z - w)^2} - \frac{1}{w^2}
+  \right]\end{equation}
 \end{definition}
 We'll see that \(\wp\) converges uniformly and absolutely on compact subsets of \(\mbb{C}\).
 \begin{lemma}
@@ -647,14 +659,14 @@ We'll see that \(\wp\) converges uniformly and absolutely on compact subsets of 
 \TODO{this}
 \end{proof}
 \begin{claim}
-\begin{enumerate}
-  \item \(\wp\) has a double pole at each \(w \in \Gamma\) with prime part \(\frac{1}{(z - w)^2}\)
-  \item \(\wp\) is an even function
-  \item \(\wp' = -z\sum_{w \in \Gamma}(z - w)^{-2}\) converges absolutely uniformly on compact subsets of \(\mbb{C}\)
-  \item \(\wp'\) is doubly periodic: \(\forall w \in \Gamma, \wp'(z + w) = \wp'(z)\)
-  \item \(\wp'\) is odd
-  \item \(\wp\) itself has \(\Gamma\) as group of periods
-\end{enumerate}
+  \begin{enumerate}
+    \item \(\wp\) has a double pole at each \(w \in \Gamma\) with prime part \(\frac{1}{(z - w)^2}\)
+    \item \(\wp\) is an even function
+    \item \(\wp' = -z\sum_{w \in \Gamma}(z - w)^{-2}\) converges absolutely uniformly on compact subsets of \(\mbb{C}\)
+    \item \(\wp'\) is doubly periodic: \(\forall w \in \Gamma, \wp'(z + w) = \wp'(z)\)
+    \item \(\wp'\) is odd
+    \item \(\wp\) itself has \(\Gamma\) as group of periods
+  \end{enumerate}
 \end{claim}
 \begin{proof}
 \TODO{this}
@@ -664,31 +676,50 @@ In summary, \(\wp\) is a meromorphic function with \(\Gamma\) as group of period
 In some neighborhood of 0, we can write, because \(\wp\) is even,
 \begin{equation}\wp(z) = \frac{1}{z^2} + a_2z^2 + a_4z^4 + ...\end{equation}
 It follows that \(g(z) = \wp(z) - \frac{1}{z^2}\) vanishes at 0. We can find these coefficients by differentiating term-by term:
-\begin{equation}a_2 = 3\sum_{w \neq 0}\frac{1}{w^4}, \quad a_4 = 5\sum_{w \neq 0}\frac{1}{w^6}, \quad ... \quad a_k = (2k + 1)\sum_{w \neq 0}\frac{1}{w^{2(k = 1)}}\end{equation}
+\begin{equation}
+  a_2 = 3\sum_{w \neq 0}\frac{1}{w^4},
+  \quad a_4 = 5\sum_{w \neq 0}\frac{1}{w^6},
+  \quad ...
+  \quad a_k = (2k + 1)\sum_{w \neq 0}\frac{1}{w^{2(k = 1)}}
+\end{equation}
 
 \subsection{Differential equations solved by \(\wp\)}
 
 Differentiating \(\wp\) term-by-term, we obtain
-\begin{equation}\wp'(z) = -\frac{2}{z^3} + 2a_2z + 4a_4z^3 + ...\end{equation}
+\begin{equation}
+  \wp'(z) = -\frac{2}{z^3} + 2a_2z + 4a_4z^3 + ...
+\end{equation}
 Squaring both sides, we obtain
-\begin{equation}\wp'(z)^2 = \frac{4}{z^6} + \frac{8a_2}{z^2} - 16a_4 + ...\end{equation}
+\begin{equation}
+  \wp'(z)^2 = \frac{4}{z^6} + \frac{8a_2}{z^2} - 16a_4 + ...
+\end{equation}
 We note, however, that
-\begin{equation}\wp(z)^3 = \frac{1}{z^6} + \frac{3a_2}{z^2} + 3a_4 + ...\end{equation}
+\begin{equation}
+  \wp(z)^3 = \frac{1}{z^6} + \frac{3a_2}{z^2} + 3a_4 + ...
+\end{equation}
 Therefore, we compute that
-\begin{equation}\wp'(z)^2 - 4\wp(z)^3 = -\frac{20a_2}{z_2} - 28a_4 + z^2(...)\end{equation}
+\begin{equation}
+  \wp'(z)^2 - 4\wp(z)^3 = -\frac{20a_2}{z_2} - 28a_4 + z^2(...)
+\end{equation}
 Hence,
-\begin{equation}(\wp')^2 - 4\wp^3 + 20a_2\wp + 28a_4\end{equation}
+\begin{equation}
+  (\wp')^2 - 4\wp^3 + 20a_2\wp + 28a_4
+\end{equation}
 is holomorphic near zero, and zero at zero. Since it has \(\Gamma\)as group of periods, it is holomorphic near each \(w \in \Gamma\), and \(0\) at \(w \in \Gamma\). In fact, it is holomorphic in \(\mbb{C}\) as it has no poles outside \(\Gamma\), and therefore bounded in \(\mbb{C}\) by periodicity. It folows by Liouville's theorem that it is identically zero, and hence that
-\begin{equation}\wp'^2 = 4\wp^3 - 20a_2\wp - 28a_4\end{equation}
+\begin{equation}
+  \wp'^2 = 4\wp^3 - 20a_2\wp - 28a_4
+\end{equation}
 Letting \(x = \wp(z), y = \wp'(z)\), gives a parametric representation of the algebraic curve
-\begin{equation}y^2 = 4x_3 - 20a_2x - 28a_4\end{equation}
+\begin{equation}
+  y^2 = 4x_3 - 20a_2x - 28a_4
+\end{equation}
 We'll show that any point \((x, y)\) of this curve is the image of a point \(z \in \mbb{C}\) which is uniquely determined up to addition by an element of \(\Gamma\).
 
 \subsection{Doubly Periodic Functions}
 
 Assume \(\Gamma\) is the group of periods generated by \(e_1, e_2\), which are linearly independent over \(\reals\).
 \begin{proposition}
-If \(f\) is a non-constant meromorphic function on \(\mbb{C}\) with \(\Gamma\) as group of periods, then the number of zeros of \(f\) in a period parallelogram is equal to the number of poles in the same parallelogram
+  If \(f\) is a non-constant meromorphic function on \(\mbb{C}\) with \(\Gamma\) as group of periods, then the number of zeros of \(f\) in a period parallelogram is equal to the number of poles in the same parallelogram
 \end{proposition}
 \begin{proof}
 \TODO{this}

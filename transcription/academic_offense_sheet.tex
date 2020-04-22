@@ -136,6 +136,45 @@ A holomorphic function in a \underline{punctured} disk \(0 < |z| < R\) has an \t
 If \(0\) is an essential singularity, then for all \(\epsilon > 0\), \(f(\{0 \leq |z| \leq \epsilon\})\) is dense in \(\mbb{C}\).
 \end{theorem}
 
+\begin{definition}
+  Let \(\Omega \subset \mbb{C}\) be open. We define \(\mbb{C}(\Omega)\) to be the \textbf{ring of continuous, complex-valued functions on \(\Omega\)} and \(\mc{H}(\Omega)\) to be the \textbf{subring of holomorphic functions on \(\Omega\)}
+\end{definition}
+
+\begin{definition}[Uniform convergence on compact subsets]
+  We say that a sequence of functions \(\{f_n\} \subset \mc{C}(\Omega)\) \textbf{converges uniformly on compact subsets} if for all compact subsets \(K \subset \Omega\), \(\{f_n | K\}\) converges uniformly, i.e.
+  \begin{equation}
+    \forall \ \text{compact} \ K \subset \Omega, \forall \epsilon > 0,
+      \exists N \in \mbb{N}, \forall m, n \geq N, \forall z \in K,
+        |f_m(x) - f_n(x)| < \epsilon
+  \end{equation}
+\end{definition}
+
+\begin{theorem}[Weierstrass]
+  \begin{enumerate}
+    \item \(\mc{H}(\Omega)\) is a closed subspace of \(\mc{C}(\Omega)\), i.e. if \(\{f_n\} \subset \mc{H}(\Omega)\) converges uniformly to \(f\) on compact sets then \(f = \lim_{n \to \infty}f_n \in \mc{H}(\Omega)\) is holomorphic.
+    \item The mapping \(\mc{H}(\Omega) \to \mc{H}(\Omega)\) \(f \mapsto f'\) is continous, i.e. if \(\{f_n\} \subset \mc{H}(\Omega)\) converges uniformly to \(f\) on compact sets then \(\{f_n'\}\) converges uniformly to \(f'\) on compact sets.
+  \end{enumerate}
+\end{theorem}
+
+\begin{corollary}
+  Let \(\{f_n\}\) be a series of holomorphic functions. If \(\{g_n = \sum_{k = 0}^nf_k\}\) converges uniformly on compact subsets of \(\Omega\), then the sum
+  \begin{equation}
+    f = \sum f_n
+  \end{equation}
+  is holomorphic on \(\Omega\) and the series can be differentiated term by term.
+\end{corollary}
+\begin{proposition}
+  Let \(\Omega\) be a domain. If \(\{f_n\} \subset \mc{H}(\Omega)\) converges uniformly on compact sets and each \(f_n\) vanishes nowhere in \(\Omega\) then \(f = \lim_{n \to \infty}f_n\) is either never zero or identically zero.
+\end{proposition}
+
+\begin{corollary}
+  Let \(\Omega\) be a domain. If \(\{f_n\} \subset \mc{H}(\Omega)\) converges uniformly on compact sets and each \(f_n\) is one-to-one, then \(\lim_{n \to \infty}f_n\) is either one-to-one or constant.
+\end{corollary}
+
+\begin{definition}
+  We say that \(\sum_{n = 1}^\infty f_n\) \textbf{converges uniformly} (respectively \textbf{converges uniformly absolutely}) on \(X \subset \Omega\) if all but finitely many \(f_n\) have no pole in \(X\) and form a uniformly convergent (respectively uniformly absolutely convergent) series on \(X\).
+\end{definition}
+
 \section{Useful Tools}
 
 \begin{itemize}
@@ -223,5 +262,40 @@ where \(a_n\) are the coefficients in the Laurent expansion of \(f\) at \(a\). N
 \end{theorem}
 
 \section{Elliptic Curves}
+
+\begin{definition}
+  Let \(e_1, e_2 \in \mbb{C}\) be linearly independent over \(\mbb{R}\). We can define a discrete subgroup of \(\mbb{C}\) with \textbf{basis} \(e_1, e_2\)
+  \begin{equation}
+    \Gamma = \{n_1e_1 + n_2e_2 : n_1, n_2 \in \mbb{Z}\}
+  \end{equation}
+  We say that \(f\) has \(\Gamma\) as \textbf{group of periods} if
+  \begin{equation}
+    \forall z \in \mbb{C}, f(z) = f(z + e_1) = f(z + e_2)
+  \end{equation}
+\end{definition}
+\begin{definition}[Weierstrass \(\wp\)-function]
+  We define the Weierstrass \(\wp\)-function by the infinite sum
+  \begin{equation}\wp(z) = \frac{1}{z^2} + \sum_{\substack{w \in \Gamma \\ w \neq 0}}\left[
+    \frac{1}{(z - w)^2} - \frac{1}{w^2}
+  \right]\end{equation}
+\end{definition}
+\begin{claim}
+  \begin{enumerate}
+    \item \(\wp\) has a double pole at each \(w \in \Gamma\) with prime part \(\frac{1}{(z - w)^2}\)
+    \item \(\wp\) is an even function
+    \item \(\wp' = -z\sum_{w \in \Gamma}(z - w)^{-2}\) converges absolutely uniformly on compact subsets of \(\mbb{C}\)
+    \item \(\wp'\) is doubly periodic: \(\forall w \in \Gamma, \wp'(z + w) = \wp'(z)\)
+    \item \(\wp'\) is odd
+    \item \(\wp\) itself has \(\Gamma\) as group of periods
+  \end{enumerate}
+\end{claim}
+We have
+\begin{equation}
+  (\wp')^2 - 4\wp^3 + 20a_2\wp + 28a_4
+\end{equation}
+
+\begin{proposition}
+  If \(f\) is a non-constant meromorphic function on \(\mbb{C}\) with \(\Gamma\) as group of periods, then the number of zeros of \(f\) in a period parallelogram is equal to the number of poles in the same parallelogram
+\end{proposition}
 
 \end{document}
