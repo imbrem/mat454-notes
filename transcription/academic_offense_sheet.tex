@@ -175,6 +175,74 @@ If \(0\) is an essential singularity, then for all \(\epsilon > 0\), \(f(\{0 \le
   We say that \(\sum_{n = 1}^\infty f_n\) \textbf{converges uniformly} (respectively \textbf{converges uniformly absolutely}) on \(X \subset \Omega\) if all but finitely many \(f_n\) have no pole in \(X\) and form a uniformly convergent (respectively uniformly absolutely convergent) series on \(X\).
 \end{definition}
 
+\begin{definition}
+  Let \(X \subset \mbb{C}\) and \(\mc{S} \subset \mc{C}(X)\). We say that \(\mc{S}\) is \textbf{equicontinuous} at \(a \in X\) if
+  \begin{equation}
+    \forall \epsilon > 0, \exists \delta > 0, \forall z \in X, |z - a| < \delta
+      \implies \forall f \in \mc{S}, |f(z) - f(a)| < \epsilon
+  \end{equation}
+  \(\mc{S}\) is \textbf{equicontinuous on \(X\)} if it is equicontinous at each \(a \in X\). It is \textbf{uniformly equicontinuous on \(X\)} if
+  \begin{equation}
+    \forall \epsilon > 0, \exists \delta > 0, \forall z, w \in X, |z - w| <\delta
+      \implies \forall f \in \mc{S}, |f(z) - f(w)| < \epsilon
+  \end{equation}
+\end{definition}
+
+\begin{theorem}[Arzela-Ascoli]
+Let \(\Omega \subset \mbb{C}\) be a \textbf{domain}. Then \(\mc{S} \subset \mc{C}(\Omega)\) is normal if and only if
+\begin{enumerate}
+
+  \item \(\mc{S}\) is equicontinuous on \(\Omega\)
+
+  \item There exists \(z_0 \in \Omega\) such that \(\{f(z_0) : f \in \mc{S}\) is a bounded subset of \(\mbb{C}\)
+
+\end{enumerate}
+\end{theorem}
+
+\begin{definition}
+\(\mc{S} \subset \mc{C}(\Omega)\) is \textbf{locally bounded} on \(\Omega\) if
+\begin{equation}\forall z_0 \in \Omega, \exists \delta > 0, M < \infty, \forall z \in \Omega, f \in \mc{S}, |z - z_0| < \delta \implies |f(z)| \leq M\end{equation}
+This is true if and only if \(\mc{S}\) is \textbf{uniformly bounded on compact subsets of \(\Omega\)}, i.e. for all \(K \subset \Omega\) compact,
+\begin{equation}\exists M = M(K), \forall z \in K, \forall f \in \mc{S}, |f(z)| \leq M\end{equation}
+\end{definition}
+\begin{theorem}[Montel]
+Let \(\mc{S} \subset \mc{H}(\Omega)\) where \(\Omega \subset \mbb{C}\) is a domain. Then the following are equivalent:
+\begin{enumerate}
+
+  \item \(\mc{S}\) is normal
+
+  \item \(\mc{S}\) is locally bounded
+
+  \item \(\mc{S}' = \{f' : f \in \mc{S}\}\) is locally bounded and there exists \(z_0 \in\Omega\) such that \(\{f(z_0) : f \in \mc{S}\}\) is bounded in \(\mbb{C}\).
+
+\end{enumerate}
+\end{theorem}
+
+The Arzela-Ascoili theorem holds for families of continuous functions with values in a complete metric space, e.g. continuos functions with values in the Riemann sphere \(S^2\) (or the extended complex plane \(\mbb{C}^* = \mbb{C} \cup \{\infty\}\)) with the (induced) \textbf{chordal metric}
+\begin{equation}d(z, w) = \frac{2|z - w|}{\sqrt{(1 + |z|)^2(1 + |w|)^2}}\end{equation}
+(we note that the topology induced by \(\mbb{C}\) by the chordal metric is the usual Euclidean topology).
+\begin{definition}[Normal in the chordal metric]
+A family \(\mc{S}\) of continuous functions on \(\Omega\) is \textbf{normal in the chordal metric} if and only if it is equicontinuous in the chordal metric: condition (2) of the Arzela-Ascoli theorem is not needed because \(\mbb{C}^*\) or \(S^2\) is compact in this topology.
+\end{definition}
+We can use this definition to analyze, e.g., a family \(\mc{S}\) of meromorphic functions on \(\Omega \subset \mbb{C}\) (or \(\Omega \subset S^2\)), since these can be considered holomorphic functions with values in \(S^2\).
+\begin{lemma}
+Let \(\{f_n\}\) be a sequence of meromorphic functions which converges uniformly on compact subsets of the domain \(\Omega \subset \mbb{C}\) (on \(S^2\), in the chordal metric). Then the limit function is either meromorphic or identically \(\infty\).
+\end{lemma}
+
+\begin{definition}[Spherical derivative]
+  If \(f\) is meromorphic on a domain \(\Omega \subset \mbb{C}\) (or \(S^2\)), we define the \textbf{spherical derivative of \(f\)} at \(z \in \Omega\) by
+  \begin{equation}
+    f^\sharp(z) = \lim_{w \to z}\frac{d(f(z), f(w))}{|z - w|}
+  \end{equation}
+  If \(z\) is not a pole, we have
+  \begin{equation}
+    f^\sharp(z)
+    = \lim_{w \to z}
+      \frac{2|f(z) - f(w)|}{|z - w|\sqrt{(1 + |f(z)|^2)(1 + |f(w)|^2)}}
+    = \frac{2|f'(z)|}{1 + |f(z)|^2}
+  \end{equation}
+\end{definition}
+
 \section{Useful Tools}
 
 \begin{itemize}
