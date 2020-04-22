@@ -358,19 +358,21 @@ These are called \textbf{Cauchy's inequalities}. These have some important conse
 Hence, for \(n > 0\), \(0 \leq a_n \leq \epsilon\) for all \(\epsilon > 0\), implying \(a_n = 0\). It follows that \(f = a_0 = c\), a constant. Another consequence is that we can write, for any \(r\)
 \begin{equation}f(0) = a_0 = a_0r^0 = \frac{1}{2\pi}\int_0^{2\pi}f(re^{i\theta})d\theta\end{equation}
 This generalizes readily to stating that holomorphic functions satisfy the \textbf{Mean Value Property (MVP)}:
-\begin{equation}f(\text{center of disk}) = \ \text{mean value on boundary}\end{equation}
+\begin{equation}
+  f(\text{center of disk}) = \ \text{mean value on boundary}
+\end{equation}
 Another property which we won't prove is the \textbf{Maximum Modulus Principle (MMP)}: if \(f\) is a continuous complex-valued function on an open \(\Omega \subseteq \mbb{C}\) with the MVP, then it satisfies the MMP, that is, if \(|f|\) has a local maximum at a point \(a\) of \(\Omega\), then \(f\) is constant in a neighborhood of \(a\).
 
 We can use this to prove \textbf{Schwarz's Lemma}:
 \begin{theorem}[Schwarz's Lemma]
-Suppose \(f(z)\) is holomorphic in \(|z| < 1\), \(f(0) = 0\) and \(|f(z)| < 1\). Then
-\begin{enumerate}
+  Suppose \(f(z)\) is holomorphic in \(|z| < 1\), \(f(0) = 0\) and \(|f(z)| < 1\). Then
+  \begin{enumerate}
 
-  \item \(|f(z)| \leq |z|\) if \(|z| < 1\)
+    \item \(|f(z)| \leq |z|\) if \(|z| < 1\)
 
-  \item If \(|f(z_0)| = |z_0|\) at some \(z_0 \neq 0\), then \(f(z) = \lambda z\) for some \(|\lambda| = 1\).
+    \item If \(|f(z_0)| = |z_0|\) at some \(z_0 \neq 0\), then \(f(z) = \lambda z\) for some \(|\lambda| = 1\).
 
-\end{enumerate}
+  \end{enumerate}
 \end{theorem}
 We recall a sketch of the proof
 \begin{proof} (Sketch)

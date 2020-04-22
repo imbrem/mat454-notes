@@ -98,6 +98,10 @@ We say a real or complex valued function \(f(x, y)\) is \textbf{harmonic} if \(f
   \end{equation}
 \end{theorem}
 
+\begin{theorem}[Liouville's Theorem]
+  A bounded holomorphic function on all of \(\mbb{C}\) is a constant.
+\end{theorem}
+
 \section{Useful Tools}
 
 \begin{itemize}
@@ -132,6 +136,25 @@ We say a real or complex valued function \(f(x, y)\) is \textbf{harmonic} if \(f
   \begin{equation}
     M(r) = \sup_\theta|f(re^{i\theta})| \implies |a_n| \leq \frac{M(r)}{r^n}
   \end{equation}
+
+  \item The Mean Value Property (MVP): \textit{harmonic} functions satisfy
+  \begin{equation}
+    f(\text{center of disk}) = \ \text{mean value on boundary}
+  \end{equation}
+
+  \item The Maximum Modulus Principle (MMP): if \(f\) is a continuous complex-valued function on an open \(\Omega \subseteq \mbb{C}\) with the MVP, then it satisfies the MMP, that is, if \(|f|\) has a local maximum at a point \(a\) of \(\Omega\), then \(f\) is constant in a neighborhood of \(a\).
+
+  \item Schwarz's Lemma:
+  \begin{theorem}[Schwarz's Lemma]
+    Suppose \(f(z)\) is holomorphic in \(|z| < 1\), \(f(0) = 0\) and \(|f(z)| < 1\). Then
+    \begin{enumerate}
+
+      \item \(|f(z)| \leq |z|\) if \(|z| < 1\)
+
+      \item If \(|f(z_0)| = |z_0|\) at some \(z_0 \neq 0\), then \(f(z) = \lambda z\) for some \(|\lambda| = 1\).
+
+    \end{enumerate}
+  \end{theorem}
 
 \end{itemize}
 
