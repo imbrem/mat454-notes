@@ -243,7 +243,29 @@ Let \(\{f_n\}\) be a sequence of meromorphic functions which converges uniformly
   \end{equation}
 \end{definition}
 
-\section{Useful Tools}
+We have that
+  \begin{equation}\left(\frac{1}{f}\right)^\sharp = f^\sharp\end{equation}
+  implying that \(f^\sharp(z)\) is finite and continuous at all \(z \in \Omega\), and greater than zero at \(z\) if and only if \(f\) is one-to-one near \(z\).
+  \begin{theorem}[Marty's Theorem]
+  Let \(\mc{S}\) be a family of meromorphic functions on a domain \(\Omega\). Then \(\mc{S}\) is normal in the chordal metric if and only if
+  \begin{equation}\mc{S}^\sharp = \{f^\sharp : f \in \mc{S}\}\end{equation}
+  is bounded.
+\end{theorem}
+
+\begin{theorem}[Riemann mapping theorem]
+  Any simply connected open \(\Omega \subset \mbb{C}\) except \(\mbb{C}\) itself has a biholomorphic mapping onto the open unit disc \(D\)
+\end{theorem}
+
+\begin{theorem}[Picard's Little Theorem]
+A non-constant entire function \(f\) omits at most a point, i.e. \(\#(\mbb{C}\setminus f(\mbb{C})) \leq 1\)
+\end{theorem}
+
+\begin{theorem}[Picard's Big Theorem]
+  If \(z_0\) is an isolated essential singularity of a holomorphic function \(f(z)\), then \(f\) takes every complex value with one possible exception in any neighborhood \(\Omega\) of \(z_0\), i.e. \(\#(\mbb{C}\setminus f(\Omega)) \leq 1\).
+  \label{theorem:big_picard}
+\end{theorem} 
+
+\section{Useful Results and Formulas}
 
 \begin{itemize}
 
@@ -296,6 +318,25 @@ Let \(\{f_n\}\) be a sequence of meromorphic functions which converges uniformly
 
     \end{enumerate}
   \end{theorem}
+
+  \item Automorphisms of the complex plane:
+  \begin{equation}
+    \Aut\mbb{C} = \{\text{linear transformations} \ w = az + b, \quad a \neq 0\}
+  \end{equation}
+
+  \item Automorphisms of the Riemann Sphere:
+  \begin{equation}
+    w = \frac{az + b}{cz + d}, \quad ad - bc \neq 0
+  \end{equation}
+  Inverse:
+  \begin{equation}
+    \frac{dz - b}{-cz + a}
+  \end{equation}
+
+  \item Automorphisms of the upper half-plane:
+  \begin{equation}
+    w = \frac{az + b}{cz + d}, \quad a, b, c, d \in \mbb{R}
+  \end{equation}
 
 \end{itemize}
 

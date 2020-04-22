@@ -1057,24 +1057,36 @@ We are now faced with the \textbf{conformal mapping problem}:
 
 \end{itemize}
 We note that, for \(f, g: \Omega \to \Omega'\), \(f, g\) are biholomorphisms if and only if \(g^{-1} \circ f \in \Aut\Omega\), the group of biholomorphisms of \(\Omega\) with itself. Furthermore, \(f\) induces a conjugation map
-\begin{equation}\Aut\Omega \to \Aut\Omega', \quad S \mapsto f \circ S \circ f^{-1}\end{equation}
+\begin{equation}
+  \Aut\Omega \to \Aut\Omega', \quad S \mapsto f \circ S \circ f^{-1}
+\end{equation}
 Now let's consider some examples, starting with the complex plane itself. We have that
-\begin{equation}\Aut\mbb{C} = \{\text{linear transformations} \ w = az + b, \quad a \neq 0\}\end{equation}
+\begin{equation}
+  \Aut\mbb{C} = \{\text{linear transformations} \ w = az + b, \quad a \neq 0\}
+\end{equation}
 Suppose \(w = f(z) \in \Aut\mbb{C}\). At \(\infty\), \(f\) has either an essential signularity or a pole. But we can show we don't have an essential singularity. On the other hand, what about when \(f\) is a polynomial, say of degree \(n\), then that must mean it is not one-to-one, because
 \(f(z) = w\) has \(n\) distinct roots for almost every value of \(w\), except at roots of the derivative \(w = f(z), f'(z) = 0\). So \(n = 1\).
 
 What about the Riemann sphere, \(\Aut S^2\). What should this group of biholomorphisms look like? Wec consider fractional linear transformations
-\begin{equation}w = \frac{az + b}{cz + d}, \quad ad - bc \neq 0\end{equation}
+\begin{equation}
+  w = \frac{az + b}{cz + d}, \quad ad - bc \neq 0
+\end{equation}
 These coefficient, of course, are not uniquely determined, being only determined up to a constant. The inverse of a fractional linear transformation is that given by the inverse matrix, namely
-\begin{equation}\frac{dz - b}{-cz + a}\end{equation}
+\begin{equation}
+  \frac{dz - b}{-cz + a}
+\end{equation}
 (uniquely determined up to a constant, so we don't have to write the \(\frac{1}{ad - bc}\)).
 
 \begin{lemma}
-Suppose \(G\) is a subgroup of \(\Aut\Omega\) such that \(G\) is transitive on \(\Omega\) and for some \(z_0\) the subgroup of automorphisms which fix this point lies inside of \(G\). Then \(G = \Aut\Omega\).
+  Suppose \(G\) is a subgroup of \(\Aut\Omega\) such that \(G\) is transitive on \(\Omega\) and for some \(z_0\) the subgroup of automorphisms which fix this point lies inside of \(G\). Then \(G = \Aut\Omega\).
 \end{lemma}
 \begin{proof}
 Let \(S \in \Aut\Omega\) be arbitrary. We have to show that \(S \in G\). To do so, we note that since \(G\) acts transitively, we can take \(T \in G\) such that \(T(z_0) = S(z_0)\). There exists such a \(T\) because it acts transitively. Then of course we can write
-\begin{equation}S = T \circ (T^{-1} \circ S), \quad (T^{-1} \circ S)(z_0) = z_0 \implies T^{-1} \circ S \in G \implies S \in G\end{equation}
+\begin{equation}
+  S = T \circ (T^{-1} \circ S),
+  \quad (T^{-1} \circ S)(z_0) = z_0
+  \implies T^{-1} \circ S \in G \implies S \in G
+\end{equation}
 being the composition of elements of \(G\).
 \end{proof}
 So that's what we've shown here: the subgroup of automorphisms fixing \(\infty\) lies in this subgroup of fractional linear transformations, and the subgroup is transitive, and hence it composes the entire automorphism group \(\Aut S^2\).
@@ -1084,7 +1096,10 @@ Time for another example: the unit disc \(D\). So what would \(\Aut D\) look lik
 So how do you check that this actually is an automorphism of \(D\)? First of all, we should check that the boundary goes to the boundary. We can check this by just checking three points that are particularly nice, say \(1, i, -i\). Once we know this, we just need to check that the inside goes to the inside, since being an automorphism of \(S^2 \to S^2\), it either takes the inside to the inside biholomorphically or takes the inside to the outside. So if we add the condition \(|z_0| < 1\), we get that they take the inside to the inside.
 
 Now how do we show that these compose \textit{all} automorphisms. It's not actually going to be by the previous lemma, rather, we will use Schwarz's lemma. Suppose \(T \in \Aut D\), and consider
-\begin{equation}S(z) = e^{i\theta}\frac{z - z_0}{1 - \bar{z_0}z}, \qquad \text{where} \ z_0 = T(0), \quad \theta = \Arg T'(z_0)\end{equation}
+\begin{equation}
+  S(z) = e^{i\theta}\frac{z - z_0}{1 - \bar{z_0}z},
+  \qquad \text{where} \ z_0 = T(0), \quad \theta = \Arg T'(z_0)
+\end{equation}
 We want to show that \(T = S\), by Schwarz's lemma. So what should we apply the lemma to? \(f = S \circ T^{-1}\) is an obvious choice (we could also try \(T \circ S^{-1}\), etc...). So what do we know? We have that:
 \begin{itemize}
 
@@ -1094,19 +1109,31 @@ We want to show that \(T = S\), by Schwarz's lemma. So what should we apply the 
 
 \end{itemize}
 So by Schwarz's lemma \(|f(z)| \leq z\) for all \(z \in D\). We can also apply Scharz's lemma to \(f^{-1}\) and we get \(|z| \leq |f(z)|\), which says that in modulus
-\begin{equation}|f(z)| = |z|\end{equation}
+\begin{equation}
+  |f(z)| = |z|
+\end{equation}
 which, again by Schwarz's lemma, says \(f\) is a rotation \(e^{i\alpha}z\). Now, we're basically done here, as choosing \(z_0 = 0\), this lies in the subgroup \(G\) and hence \(S \in G\). But we want to go further and show \(\alpha = 0\) implying \(S = T\). To do so, we merely note that
-\begin{equation}S'(z_0) = T'(z_0) \implies \alpha = 0\end{equation}
+\begin{equation}
+  S'(z_0) = T'(z_0) \implies \alpha = 0
+\end{equation}
 So this is in fact what we really need for the Riemann mapping theorem. Let's finish this up: what's the other nice domain we should look at? The upper half plane!
 
 So what's \(\Aut\mbb{H}^+\)? So first of all, the upper half-plane is actually biholomorphic to the unit disc \(D\), by, for example, the mapping
-\begin{equation}\frac{z - i}{z + i}\end{equation}
+\begin{equation}
+  \frac{z - i}{z + i}
+\end{equation}
 To see this, we note that the boundary goes to the boundary, by checking the three points \(0, 1, \infty\) (which go to \(-1, -i, 1\) respectively). Of course the upper half-plane goes to the interior of the disc since \(i \mapsto 0\). Hence, the automorphism groups of \(D\) and \(\mbb{H}^+\) are the same, as we can transport elements between the two by composing with a biholomorphism as above. Geometrically, however, this is not going to tell us the form of these holomorphisms. So what should \(\Aut\mbb{H}^+\) look like in terms of holomorphisms of the Riemann sphere? Well, it should be the one with real coefficients, as it should be the subgroup of \(\Aut S^2\) taking \(\mbb{H}^+\) to itself and hence the real line to itself. So I claim the best form is
-\begin{equation}w = \frac{az + b}{cz + d}, \quad a, b, c, d \in \mbb{R}\end{equation}
+\begin{equation}
+  w = \frac{az + b}{cz + d}, \quad a, b, c, d \in \mbb{R}
+\end{equation}
 Since these are only determined up to a constant, for convenience we can say \(ad - bc = \pm 1\). This is the subgroup of \(\Aut S^2\) taking the real axis \(\mbb{R}\) to itself. But if it takes the upper half plane to itself, that says that
-\begin{equation}\Im\left(\frac{ai + b}{ci + d}\right) = \frac{ad - bc}{c^2 + d^2} > 0 \iff ad - bc > 0 \iff ad > bc\end{equation}
+\begin{equation}
+  \Im\left(\frac{ai + b}{ci + d}\right) = \frac{ad - bc}{c^2 + d^2} > 0 \iff ad - bc > 0 \iff ad > bc
+\end{equation}
 So we have a subgroup \(G\) of fractional linear transformations in the form above satisfying the given conditions, i.e. with
-\begin{equation}w = \frac{az + b}{cz + d}, \quad ad - bc = 1, a, b, c, d \in \mbb{R}\end{equation}
+\begin{equation}
+  w = \frac{az + b}{cz + d}, \quad ad - bc = 1, a, b, c, d \in \mbb{R}
+\end{equation}
 So we want to see that \(\Aut\mbb{H}^+ = G\). This time, we'll use the Lemma: \(G\) is a subgroup of \(\Aut\mbb{H}^+\), it's transitive on \(\Aut\mbb{H}^+\), as we can show that it can take \(i\) to any given element of \(\mbb{H}^+\), since
 \begin{equation}i \mapsto ai + b, b > 0, ... TODO\end{equation}
 So we have to show that the subgroup of \(\Aut\mbb{H}^+\) which fixes some point lies inside of this. So which point do we want to use? \(i\). How do we show this?
@@ -1136,20 +1163,30 @@ So then, how do we get a biholomorphism of \(\Omega\) onto a bounded open subset
 is one to one and bounded on \(\Omega\). As \(g\) and \(h\) are biholomorphisms, there is a biholomorphism \(h \circ g\) from \(\Omega\) onto a bounded open set.
 \end{proof}
 So as we have a biholomorphsm from \(\Omega\) to a bounded open subset of \(\mbb{C}\), we can assume \(0 \in \Omega \subset D\) by simply making a translation and scaling appropriately. We're interested in defining a convenient normal family now, but it's going to come about in a very natural way. Let's look at the set of functions that are holomorphic in \(\Omega\) and are biholomorphisms into \(D\) taking the origin to itself, i.e. let
-\begin{equation}\mc{A} = \{f \in \mc{H}(\Omega) : f \ \text{is one to one}, f(0) = 0, |f(z)| < 1\}\end{equation}
+\begin{equation}
+  \mc{A} = \{f \in \mc{H}(\Omega) : f \ \text{is one to one}, f(0) = 0, |f(z)| < 1\}
+\end{equation}
 We're going to find the element of this set with the largest possible derivative at the origin, which is going to force the image to be as large as possible. We'll show that that means it must be all of \(D\).
 We first show that the maximum derivative at zero is actually taken on
 \begin{lemma}
-\(\sup_{f \in \mc{A}}|f'(0)|\) is attained.
+  \(\sup_{f \in \mc{A}}|f'(0)|\) is attained.
 \end{lemma}
 \begin{proof}
-We note that the function from \(\mc{H}(\Omega) \to \mbb{C}\) taking \(f\) to \(|f'(0)|\) is continuous. Hence, taking
-\begin{equation}\mc{B} = \{f \in \mc{A} : |f'(0) | \geq 1\} \supseteq \{\Id\} \neq \varnothing\end{equation}
+  We note that the function from \(\mc{H}(\Omega) \to \mbb{C}\) taking \(f\) to \(|f'(0)|\) is continuous. Hence, taking
+  \begin{equation}
+    \mc{B} = \{f \in \mc{A} : |f'(0) | \geq 1\} \supseteq \{\Id\} \neq \varnothing
+  \end{equation}
 it is enough to show that \(\mc{B}\) is compact. \(\mc{B}\) is a normal family, i.e. locally bounded, as it is bounded uniformly on all of \(\Omega\). That means the only thing we really have to show is that \(\mc{B}\) is closed, i.e.,
-\begin{equation}f \in \mc{H}(\Omega), \exists f_n \in \mc{B}, f = \lim_{n \to \infty}f_n \implies f \in \mc{B}\end{equation}
+\begin{equation}
+  f \in \mc{H}(\Omega), \exists f_n \in \mc{B}, f = \lim_{n \to \infty}f_n \implies f \in \mc{B}
+\end{equation}
 We trivially have that
-\begin{equation}f(0) = \lim_{n \to \infty}f_n(0) = \lim_{n \to \infty}0 = 0\end{equation}
-\begin{equation}|f'(0)| = \lim_{n \to \infty}|f_n'(0)| \geq 1 \ \text{since} \ [1, \infty) \ \text{is closed}\end{equation}
+\begin{equation}
+  f(0) = \lim_{n \to \infty}f_n(0) = \lim_{n \to \infty}0 = 0
+\end{equation}
+\begin{equation}
+  |f'(0)| = \lim_{n \to \infty}|f_n'(0)| \geq 1 \ \text{since} \ [1, \infty) \ \text{is closed}
+\end{equation}
 So \(f\) is one to one because it's not constant. Then the only other thing to prove is \(|f(z)| < 1\). So what about that? We know that \(|f(z)| \leq 1\) since \((-\infty, 1]\) is closed, but \(f(z) \neq 1\) at every point \(z \in \Omega\) by the maximum modulus principle (as if it was this would imply \(f\) was constant, contradicting both the fact that it is one-to-one and that \(f(0) = 0\)).
 \end{proof}
 We prove the second part of the above statement, completing the theorem
@@ -1213,8 +1250,8 @@ I don't want to spend that time going over it, because I'm concerned about how m
 
 Picard's big theorem says that in the neighborhood of an essential singularity a holomorphic function omits at most one complex value. That is,
 \begin{theorem}[Picard's Big Theorem]
-If \(z_0\) is an isolated essential singularity of a holomorphic function \(f(z)\), then \(f\) takes every complex value with one possible exception in any neighborhood \(\Omega\) of \(z_0\), i.e. \(\#(\mbb{C}\setminus f(\Omega)) \leq 1\).
-\label{theorem:big_picard}
+  If \(z_0\) is an isolated essential singularity of a holomorphic function \(f(z)\), then \(f\) takes every complex value with one possible exception in any neighborhood \(\Omega\) of \(z_0\), i.e. \(\#(\mbb{C}\setminus f(\Omega)) \leq 1\).
+  \label{theorem:big_picard}
 \end{theorem}
 So, is this \textit{really} the best possible statement of this kind: that is, is it really possible that a complex function can omit one possible value? Yes: for example, \(e^{1/z} \neq 0\), so it omits value \(0\) even though it has an essential singularity at the origin.
 
@@ -1235,7 +1272,9 @@ So why does Picard's Little Theorem follow from Picard's Big Theorem (of course,
 So, we're going to prove Picard's big theorem using the theory of normal families, and in fact we're going to deduce it as well as a closely related, very strong theorem by Montel, from a strange lemma. This is going to be a necessary and sufficient condition for normality, but we'll express it as a necessary and sufficient condition for \textit{failure} of normality:
 \begin{lemma}[Zalcman's Lemma]
 Let \(\mc{S}\) be a family of meromorphic functions on a domain \(\Omega\). \(f\) is \underline{not} normal in the chordal metric if and only if there is a convergent sequence \(\{a_n\} \to a_\infty \in \Omega\), a convergent sequence of positive numbers \(\{\rho_n\} \to 0\) and a sequence of functions \(\{f_n\} \subset \mc{S}\) such that the sequence
-\begin{equation}g_n(z) = f_n(a_n + \rho_n z)\end{equation}
+\begin{equation}
+  g_n(z) = f_n(a_n + \rho_n z)
+\end{equation}
 converges uniformly to \(g\) in the chordal metric on compact subsets of \(\mbb{C}\) where \(g\) is nonconstant and meromorphic on all of \(\mbb{C}\). Moreover, in the case where \(\mc{S}\) is not normal, then we can choose the data above such that
 \begin{equation}\forall z \in \mbb{C}, g^\sharp(z) \leq g^\sharp(0) = 1\end{equation}
 \end{lemma}
