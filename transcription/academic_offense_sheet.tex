@@ -83,6 +83,21 @@ We say a real or complex valued function \(f(x, y)\) is \textbf{harmonic} if \(f
   If \(f(z)\) is continuous in \(\Omega\) and \(df = f(z)dz\) is closed, then \(f(z)\) is holomorphic.
 \end{corollary}
 
+\begin{definition}
+  Let \(\gamma: S^1 \to \Omega\) be a closed curve and \(a \notin \gamma(S^1)\) be a point not in the image of \(\gamma\). Then the \textbf{winding number of \(\gamma\) with respect to \(a\)} is given by the integral
+  \begin{equation}
+    w(\gamma, a) = \frac{1}{2\pi i}\int_\gamma\frac{dz}{z - a}
+  \end{equation}
+  This integral is an integer as it is the difference between two branches of \(\log\).
+\end{definition}
+
+\begin{theorem}[Cauchy's Integral Formula]
+  If \(f(z)\) is holomorphic in \(\Omega\), \(a \in \Omega\) and \(\gamma: S^1 \to \Omega\) is a closed curve with \(a \notin \gamma\), then
+  \begin{equation}
+    \frac{1}{2\pi i}\int_\gamma\frac{f(z)dz}{z - a} = w(\gamma, a)f(a)
+  \end{equation}
+\end{theorem}
+
 \section{Useful Tools}
 
 \begin{itemize}
@@ -104,6 +119,19 @@ We say a real or complex valued function \(f(x, y)\) is \textbf{harmonic} if \(f
   \begin{theorem}[Schwarz Reflection Principle]
     If \(f: H \to \mbb{C}\) is continuous on the closed upper half-plane \(H\), holomorphic on the open upper half-plane and takes real values on the real axis (i.e. \(f(\reals) \subseteq \reals\)) then it can be extended to an entire function by \(f(\ol{z}) = \ol{f(z)}\). More generally, this can be applied to reflecting any half-domain over any line.
   \end{theorem}
+
+  \item Fourier coefficients and Cauchy inequalities:
+  \begin{equation}
+    f(z) = \frac{1}{2\pi i}\int_\gamma\frac{f(\zeta)d\zeta}{\zeta - z} \implies f^{(n)}(z) = \frac{n!}{2\pi i}\int_\gamma\frac{f(\zeta)d\zeta}{(\zeta - z)^{n + 1}}
+  \end{equation}
+
+  \begin{equation}
+    f(re^{i\theta}) = \sum_{n = 0}^\infty a_nr^ne^{i\pi\theta}, \qquad a_nr^n = \frac{1}{2\pi}\int_0^{2\pi}e^{-in\theta}f(re^{i\theta})d\theta
+  \end{equation}
+
+  \begin{equation}
+    M(r) = \sup_\theta|f(re^{i\theta})| \implies |a_n| \leq \frac{M(r)}{r^n}
+  \end{equation}
 
 \end{itemize}
 

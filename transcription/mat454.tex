@@ -289,19 +289,19 @@ As a corollary, we can also prove the converse of Cauchy's theorem: Morera's the
 \subsection{Cauchy's Integral Formula}
 
 \begin{definition}
-Let \(\gamma: S^1 \to \Omega\) be a closed curve and \(a \notin \gamma(S^1)\) be a point not in the image of \(\gamma\). Then the \textbf{winding number of \(\gamma\) with respect to \(a\)} is given by the integral
-\begin{equation}
-  w(\gamma, a) = \frac{1}{2\pi i}\int_\gamma\frac{dz}{z - a}
-\end{equation}
-This integral is an integer as it is the difference between two branches of \(\log\).
+  Let \(\gamma: S^1 \to \Omega\) be a closed curve and \(a \notin \gamma(S^1)\) be a point not in the image of \(\gamma\). Then the \textbf{winding number of \(\gamma\) with respect to \(a\)} is given by the integral
+  \begin{equation}
+    w(\gamma, a) = \frac{1}{2\pi i}\int_\gamma\frac{dz}{z - a}
+  \end{equation}
+  This integral is an integer as it is the difference between two branches of \(\log\).
 \end{definition}
 The winding number is invariant under a homotopy of \(\gamma\) not passing through \(a\). As a function of \(a\), \(w(\gamma, a)\) is continuous on connected components of the complement of \(\gamma(S^1)\) (which we will just write as \(\gamma\) for convenence when confusion is unlikely).
 
 \begin{theorem}[Cauchy's Integral Formula]
-If \(f(z)\) is holomorphic in \(\Omega\), \(a \in \Omega\) and \(\gamma: S^1 \to \Omega\) is a closed curve with \(a \notin \gamma\), then
-\begin{equation}
-  \frac{1}{2\pi i}\int_\gamma\frac{f(z)dz}{z - a} = w(\gamma, a)f(a)
-\end{equation}
+  If \(f(z)\) is holomorphic in \(\Omega\), \(a \in \Omega\) and \(\gamma: S^1 \to \Omega\) is a closed curve with \(a \notin \gamma\), then
+  \begin{equation}
+    \frac{1}{2\pi i}\int_\gamma\frac{f(z)dz}{z - a} = w(\gamma, a)f(a)
+  \end{equation}
 \end{theorem}
 \begin{proof}
 \TODO{this}
@@ -346,9 +346,13 @@ are called the \textbf{Fourier coefficients of \(f\)}. Note that we can also der
   \implies f(z) = \frac{1}{2\pi i}\int_\gamma\sum_{k = 0}^\infty z^n\frac{f(\zeta)}{\zeta^{n + 1}}d\zeta
 \end{equation}
 Today we're going to be looking at the consequences of this formula. First of all, this formula gives a simple but useful upper bound on \(a_n\): if we take the maximum absolute value of \(f\) along the circle of radius \(r\), written
-\begin{equation}M(r) = \sup_\theta|f(re^{i\theta})|\end{equation}
+\begin{equation}
+  M(r) = \sup_\theta|f(re^{i\theta})|
+\end{equation}
 we get
-\begin{equation}|a_n| \leq \frac{M(r)}{r^n}\end{equation}
+\begin{equation}
+  |a_n| \leq \frac{M(r)}{r^n}
+\end{equation}
 These are called \textbf{Cauchy's inequalities}. These have some important consequences, like \textbf{Liouville's theorem}: a bounded holomorphic function on all of \(\mbb{C}\) is a constant. How does this follow? Well, if \(c\) is the upper bound of \(f\) on \(\mbb{C}\), we have each
 \begin{equation}\forall r \in \reals^+, M(r) \leq c \implies |a_n| \leq \frac{M(r)}{r^n} \leq \frac{c}{r^n}\end{equation}
 Hence, for \(n > 0\), \(0 \leq a_n \leq \epsilon\) for all \(\epsilon > 0\), implying \(a_n = 0\). It follows that \(f = a_0 = c\), a constant. Another consequence is that we can write, for any \(r\)
